@@ -2,7 +2,7 @@
     <div class="copyright">
         <span style="color:white;">&copy; ${year}</span> - <a style="color:white;" href="${servePath}">${blogTitle}</a><br/>
         Powered by
-        <a href="http://b3log-solo.googlecode.com" target="_blank" class="logo">
+        <a href="http://b3log.org" target="_blank" class="logo">
             ${b3logLabel}&nbsp;
             <span style="color: orangered; font-weight: bold;">Solo</span></a>,
         ver ${version}&nbsp;&nbsp;

@@ -4,7 +4,7 @@
             <span style="color: gray;">&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>
         </div>
         Powered by
-        <a href="http://b3log-solo.googlecode.com" target="_blank" class="logo">
+        <a href="http://b3log.org" target="_blank" class="logo">
             ${b3logLabel}&nbsp;
             <span style="color: orangered; font-weight: bold;">Solo</span></a>,
         ver ${version}&nbsp;&nbsp;

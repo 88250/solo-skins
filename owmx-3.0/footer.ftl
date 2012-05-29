@@ -2,7 +2,7 @@
     <a href="http://code.google.com/appengine" target="_blank"><img src="http://code.google.com/appengine/images/appengine-noborder-120x30.gif" alt="Powered by Google App Engine" /></a>&nbsp;&nbsp;
     <span>&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>
     Powered by
-    <a href="http://b3log-solo.googlecode.com" target="_blank" class="logo">
+    <a href="http://b3log.org" target="_blank" class="logo">
         ${b3logLabel}&nbsp;
         <span style="color: orangered; font-weight: bold;">Solo</span></a>,
     ver ${version}&nbsp;&nbsp;
