@@ -18,7 +18,7 @@
  * @fileoverview ease js.
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.9, May 28, 2012
+ * @version 1.0.1.0, Jun 2, 2012
  */
 var goTranslate = function () {
     window.open("http://translate.google.com/translate?sl=auto&tl=auto&u=" + location.href);  
@@ -229,7 +229,7 @@ var ease = {
         }
         
         // archive height
-        $archives.height(heights.sort()[2]);
+        $archives.height(heights.sort()[heights.length - 1]);
     },
     
     scrollEvent: function () {

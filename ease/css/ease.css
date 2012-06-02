@@ -17,7 +17,7 @@
  * skin ease style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.1.0, May 28, 2012
+ * @version 1.0.1.1, Jun 2, 2012
 */
 /* start base */
 html, body, div, ul, li {
@@ -101,7 +101,7 @@ sup {
 
 .logo {
     padding: 0 5px;
-    text-shadow: 0 0 1px #e2e2e2;
+    text-shadow: 0 0 1px #D5D5D5;
 }
 
 .em00, .em01, .em02, .em03, .em04, .em05, .em06, .em07, .em08, .em09, 
@@ -166,7 +166,7 @@ sup {
 .translate-ico {
     background-position: 1px -125px;
     background-repeat: no-repeat;
-    border: 1px solid #e2e2e2;
+    border: 1px solid #D5D5D5;
     border-radius: 3px;
     cursor: pointer;
     float: right;
@@ -179,7 +179,7 @@ sup {
 .translate-ico:hover {
     border-color: #9a9a9a;
     box-shadow: 0 0 1px #808080;
-    background-color: #fefefe;
+    background-color: #FDFDFD;
 }
 /* end ico */
 
@@ -198,7 +198,7 @@ sup {
 .header {
     position: fixed;
     width: 100%;
-    background-color: #fefefe;
+    background-color: #FDFDFD;
     z-index: 1;
 }
 
@@ -216,7 +216,7 @@ sup {
     background-position: 7px -99px;
     background-repeat: no-repeat;
     background-color: #FFF;
-    border: 1px solid #e2e2e2;
+    border: 1px solid #D5D5D5;
     border-radius: 2px 2px 2px 2px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
     color: #808080;
@@ -232,7 +232,7 @@ sup {
 }
 
 #search:focus {
-    background-color: #FeFeFe;
+    background-color: #FDFDFD;
     width: 196px;
 }
 
@@ -247,7 +247,7 @@ sup {
 
 .nav {
     background-color: #FFF;
-    box-shadow: 0 2px 2px #e2e2e2, 0 3px 3px -3px #E2E2E2 inset;
+    box-shadow: 0 2px 2px #D5D5D5, 0 3px 3px -3px #D5D5D5 inset;
     height: 29px;
 }
 
@@ -266,13 +266,13 @@ sup {
     font-size: 14px;
     line-height: 29px;
     margin-right: 30px;
-    text-shadow: 0 0 1px #E2E2E2;
+    text-shadow: 0 0 1px #D5D5D5;
 }
 
 .nav a.current  {    
     color: #00b4d2;
     font-weight: 700;
-    text-shadow: 0px 0px 3px #E2E2E2;
+    text-shadow: 0px 0px 3px #D5D5D5;
 }
 
 .nav img {
@@ -283,14 +283,14 @@ sup {
 /* start footer */
 .footer {
     background-color: #FDFDFD;
-    border-top: 2px solid #e2e2e2;
+    border-top: 2px solid #D5D5D5;
     font-size: 11px;
     padding: 12px 0;
     -webkit-text-size-adjust: none;
 }
 
 #goTop {
-    background: url("/skins/ease/images/icons.png") no-repeat scroll 5px -51px #f6f6f6;
+    background: url("/skins/ease/images/icons.png") no-repeat scroll 5px -51px #D5D5D5;
     border-radius: 2px 2px 0 0;
     cursor: pointer;
     font-size: 11px;
@@ -303,7 +303,7 @@ sup {
 }
 
 #goTop:hover {
-    background-color: #e2e2e2;
+    background-color: #D5D5D5;
 }
 /* end footer*/
 
@@ -318,9 +318,9 @@ sup {
 }
 
 .article:hover {
-    border-bottom-color: #e2e2e2;
+    border-bottom-color: #D5D5D5;
     box-shadow: 0 0 1px #f6f6f6 inset;
-    background-color: #fefefe;
+    background-color: #FDFDFD;
 }
 
 .article-body {
@@ -359,8 +359,8 @@ sup {
 }
 
 .article-next {
-    background-color: #FEFEFE;
-    box-shadow: 0 0 3px #E2E2E2 inset;
+    background-color: #FDFDFD;
+    box-shadow: 0 0 3px #D5D5D5 inset;
     cursor: pointer;
     font-size: 14px;
     line-height: 36px;
@@ -368,14 +368,14 @@ sup {
 }
 
 .article-next:hover {
-    box-shadow: 0 0 3px #E2E2E2, 0 0 3px #E2E2E2 inset;
+    box-shadow: 0 0 3px #D5D5D5, 0 0 3px #D5D5D5 inset;
 }
 /* end article list */
 
 /* start article */
 .article-relative {
-    background-color: #FEFEFE;
-    box-shadow: 0 0 2px #E2E2E2;
+    background-color: #FDFDFD;
+    box-shadow: 0 0 2px #D5D5D5;
     float: left;
     margin: 20px 0;
     padding: 0 20px 10px;
@@ -384,7 +384,7 @@ sup {
 
 .article-relative:hover {
     background-color: #fff;
-    box-shadow: 0 0 4px #e2e2e2;
+    box-shadow: 0 0 4px #D5D5D5;
 }
 
 .article-relative ul {
@@ -426,8 +426,8 @@ sup {
 }
 
 .comment-body-ref {
-    background-color: #FEFEFE;
-    box-shadow: 0 0 2px #E2E2E2;
+    background-color: #FDFDFD;
+    box-shadow: 0 0 2px #D5D5D5;
     display: block;
     left: 140px;
     padding: 10px;
@@ -463,9 +463,9 @@ sup {
 .form input[type="text"], 
 .form input[type="password"], 
 .form textarea {
-    background-color: #FEFEFE;
+    background-color: #FDFDFD;
     border-width: 0;
-    box-shadow: 0 0 2px #E2E2E2;
+    box-shadow: 0 0 2px #BCBCBC;
     font-family: Verdana,arial,\5fae\8f6f\96c5\9ed1;
     font-size: 12px;
     margin: 0 5px 10px 0;
@@ -478,19 +478,20 @@ sup {
 
 .form input:focus, 
 .form textarea:focus {
-    box-shadow: 0 0 4px #E2E2E2;
+    box-shadow: 0 0 4px #D5D5D5;
 }
 
 .form textarea {
     height: 120px;
     overflow: auto;
     width: 426px;
+    line-height: 16px;
 }
 
 .form button {
     background-color: #F6F6F6;
     border: 0 none;
-    box-shadow: 0 0 2px #E2E2E2;
+    box-shadow: 0 0 2px #D5D5D5;
     height: 28px;
     line-height: 28px;
     padding: 0 12px;
@@ -498,13 +499,13 @@ sup {
 }
 
 .form button:hover {
-    box-shadow: 0 0 4px #E2E2E2;
+    box-shadow: 0 0 4px #D5D5D5;
     text-shadow: 0 0 2px;
 }
 
 .form img {
-    background-color: #FEFEFE;
-    box-shadow: 0 0 2px #E2E2E2;
+    background-color: #FDFDFD;
+    box-shadow: 0 0 2px #D5D5D5;
     cursor: pointer;
     height: 24px;
     padding: 1px;
@@ -520,15 +521,15 @@ sup {
 #tags a {
     margin: 3px 6px;
     padding: 3px 12px;
-    background-color: #FEFEFE;
-    box-shadow: 0 0 2px #E2E2E2;
+    background-color: #FDFDFD;
+    box-shadow: 0 0 2px #D5D5D5;
     float: left;
 }
 
 #tags a:hover {
     text-shadow: 0 0 2px;
     text-decoration: none;
-    box-shadow: 0 0 4px #E2E2E2;
+    box-shadow: 0 0 4px #D5D5D5;
 }
 
 .tags1, .tags1:visited {
@@ -563,8 +564,8 @@ sup {
 }
 
 .archives > div {
-    background-color: #FEFEFE;
-    box-shadow: 0 0 2px #E2E2E2;
+    background-color: #FDFDFD;
+    box-shadow: 0 0 2px #D5D5D5;
     padding-bottom: 20px;
     line-height: 20px;
     margin: 20px;
@@ -578,7 +579,7 @@ sup {
 }
 
 .archives > div:hover {
-    box-shadow: 0 0 4px #E2E2E2;
+    box-shadow: 0 0 4px #D5D5D5;
 }
 
 .archives a {
@@ -597,8 +598,8 @@ sup {
 }
 
 .dynamic .module {
-    background-color: #FEFEFE;
-    box-shadow: 0 0 2px #E2E2E2;
+    background-color: #FDFDFD;
+    box-shadow: 0 0 2px #D5D5D5;
     float: left;
     line-height: 20px;
     margin: 20px;
@@ -607,7 +608,7 @@ sup {
 }
 
 .dynamic .module:hover {
-    box-shadow: 0 0 4px #E2E2E2;
+    box-shadow: 0 0 4px #D5D5D5;
 }
 
 .dynamic .side-comments {

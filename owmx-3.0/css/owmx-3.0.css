@@ -12,7 +12,7 @@ Update: 	Dongxu Wang 2011-02-24
 /*
  * skin owmx-3.0 style
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.6, May 11, 2012
+ * @version 1.0.0.7, Jun 2, 2012
 */
 /* Reset */
 header, footer, article, nav, section, aside, time, hgroup {
@@ -420,9 +420,6 @@ footer div{
 }
 footer span{
     margin:0px;
-}
-footer a span{
-    margin:0px -2px;
 }
 footer img{
     height : 28px;
