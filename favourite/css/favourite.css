@@ -3,7 +3,7 @@
  * skin favoutite style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.7, May 14, 2012
+ * @version 1.0.0.8, Jun 6, 2012
 */
 body {
     background: url("../images/bg.jpg") repeat scroll left top transparent;
@@ -634,5 +634,6 @@ h5 {
     top: 8px;
 }
 .substance {
+    overflow: hidden;
     width: 500px;
 }
