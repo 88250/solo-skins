@@ -16,15 +16,42 @@ var final_code = pro.gen_code(ast); // compressed code here
 var jsPaths = ["../neoease/js/neoease.js"]*/
 
 // css compress
+var fs = require("fs"),
+exec = require("child_process").exec;
+
+var skinsCsses = ["andrea", "classic", "community", "favourite", "i-nove", "neoease", "owmx-3.0", "tree-house"];
+
+for (var i = 0; i < skinsCsses.length; i++) {
+	var content = "";
+	exec("lessc -compress ../../" + skinsCsses[i] + "/css/" + skinsCsses[i] + ".css > ../../" + skinsCsses[i] + "/css/" + skinsCsses[i] + ".min.css", function (error, stdout, stderr) {
+		if (error !== null) {
+			console.log(error);
+		} 	
+	});
+}
+
+
+
+
+/*
+var fs = require("fs");
 var less = require('C:\\Users\\Vanessa\\AppData\\Roaming\\npm\\node_modules\\less');
-var parser = new(less.Parser)({
-    paths: ['../*/css'], // Specify search paths for @import directives
-    filename: '*.less' // Specify a filename, for better error messages
+var parser = new(less.Parser)();
+
+fs.readFile('../../andrea/css/andrea.css', 'UTF-8', function (err, data) {
+  if (err) throw err;
+
+	new(less.Parser)({
+		paths: ["../../andrea/css"],
+		filename: "andrea.css"
+	}).parse(data, function (e, root) {
+		var result = root.toCSS({ compress: true });
+		console.log(result);
+	});
+
 });
 
-parser.parse('.class { width: 1 + 1 }', function (e, tree) {
-    tree.toCSS({ compress: true }); // Minify CSS output
-});
+
 
 /*var cssPaths = ["../andrea/css/andrea.css", "../classic/css/classic.css", 
 				"../community/css/community.css", "../favourite/css/favourite.css",

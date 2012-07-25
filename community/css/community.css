@@ -94,7 +94,7 @@ a.header-title {
     color: #FFFFFF;
     text-decoration: none;
     line-height: 49px;
-    font: bold 35px/53px 微软雅黑,Arial,Helvetica;
+    font: bold 35px/53px '微软雅黑,Arial,Helvetica';
 }
 
 .sub-title {

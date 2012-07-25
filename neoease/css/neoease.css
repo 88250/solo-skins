@@ -11,7 +11,7 @@ html, body, div, ul, li, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    font-family: "Lucida Grande",Verdana,\5fae\8f6f\96c5\9ed1;
+    font-family: "Lucida Grande",'Verdana,\5fae\8f6f\96c5\9ed1';
     font-size: 12px;
     background-color: #F9F9F9;
     color: #333;

@@ -8,7 +8,7 @@ body {
     background-image: url("../images/bg-grey.jpg");
     background-color: #000000;
     color: #363636;
-    font-family: \5fae\8f6f\96c5\9ed1, Arial,Verdana,sans-serif;
+    font-family: '\5fae\8f6f\96c5\9ed1, Arial,Verdana,sans-serif';
     font-size: 12px;
     margin: 0;
     padding: 0;
@@ -69,7 +69,7 @@ a:hover {
 
 .header .left a, .sub-title {
     color: #FFFFFF;
-    font-family: 'Neucha',\5fae\8f6f\96c5\9ed1,Arial,Verdana,sans-serif;
+    font-family: 'Neucha','\5fae\8f6f\96c5\9ed1,Arial,Verdana,sans-serif';
     font-size: 46px;
     text-decoration: none;
 }
@@ -103,7 +103,7 @@ a:hover {
 
 .header .right li a {
     color: #FFFFFF;
-    font-family: 'Reenie Beanie',sans-serif;
+    font-family: 'Reenie Beanie','sans-serif';
     font-size: 45px;
     text-decoration: none;
     font-weight: bold;
@@ -111,7 +111,7 @@ a:hover {
 
 .header .right li a:hover {
     color: #DDDDDD;
-    font-family: 'Neucha',sans-serif;;
+    font-family: 'Neucha','sans-serif';
 }
 
 /* main */
@@ -125,7 +125,7 @@ a:hover {
     font-size: 20px;
     line-height: 145%;
     margin-bottom: 18px;
-    font-family: 'Neucha', \5fae\8f6f\96c5\9ed1;
+    font-family: 'Neucha', '\5fae\8f6f\96c5\9ed1';
 }
 
 .main-footer {
@@ -589,7 +589,7 @@ h2.comment-label {
 
 /* others */
 #tagsPanel {
-    min-height: 1px;;
+    min-height: 1px;
 }
 
 #tagsPanel a {
