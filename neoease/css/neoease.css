@@ -1,4 +1,4 @@
-/**
+﻿/**
  * skin neoease style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
@@ -14,7 +14,6 @@ html, body, div, ul, li, h1, h2, h3, h4, h5, h6 {
     background-color: #ccc;
     color: #fff;
 }
-
 
 ::-moz-selection{
     background-color: #ccc;
