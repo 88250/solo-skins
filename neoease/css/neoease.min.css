@@ -1,4 +1,6 @@
 html,body,div,ul,li,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+::selection{background-color:#ccc;color:#fff;}
+::-moz-selection{background-color:#ccc;color:#fff;}
 body{font-family:"Lucida Grande",'Verdana,\5fae\8f6f\96c5\9ed1';font-size:12px;background-color:#F9F9F9;color:#333;}
 a:link{outline:none;color:#21759B;text-decoration:none;}
 a:visited{color:#555777;}
