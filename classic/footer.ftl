@@ -77,7 +77,7 @@ Theme by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa
         });
         
         Util.init();
-        Util.replaceSideEm($("#recentComments li"));
+        Util.replaceSideEm($("#recentComments li .side-comment"));
     });
 </script>
 ${plugins}

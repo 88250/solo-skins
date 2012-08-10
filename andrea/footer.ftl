@@ -47,7 +47,7 @@
     // init
     $(document).ready(function () {
         Util.init();
-        Util.replaceSideEm($("#naviComments li"));
+        Util.replaceSideEm($("#naviComments li .side-comment"));
     
         // brush
         buildBrush();
