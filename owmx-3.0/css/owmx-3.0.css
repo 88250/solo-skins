@@ -20,7 +20,7 @@ header, footer, article, nav, section, aside, time, hgroup {
 }
 html, body, header, footer, article, nav, section, aside, time, h1, h2, h3, p, a, ul, li, dl, dd, dt, table, thead, tfoot, tbody, th, tr, td {
     border : 0;
-    font : 12px/22px Verdana, sans-serif;
+    font : 12px/22px 'Verdana', 'sans-serif';
     margin : 0;
     outline : 0;
     padding : 0;
@@ -169,7 +169,7 @@ pre {
     font-size : 10px;
     line-height : 15px; /*--Height of each line of code--*/
     overflow : hidden; /*--If the Code exceeds the width, put "auto" and scrolling is available--*/
-    overflow-Y : hidden;  /*--Hides vertical scroll created by IE--*/
+    overflow-y : hidden;  /*--Hides vertical scroll created by IE--*/
 }
 pre code {
     background : #EEE;

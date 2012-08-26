@@ -44,7 +44,7 @@
     
     $(document).ready(function () {
         Util.init();
-        Util.replaceSideEm($(".side-navi .navi-comments li div.left"));
+        Util.replaceSideEm($(".side-navi .navi-comments li .side-comment"));
     
         // set selected navi
         $("#header-navi li").each(function (i) {

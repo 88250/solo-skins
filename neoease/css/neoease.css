@@ -1,8 +1,8 @@
-/**
+﻿/**
  * skin neoease style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.1.6, May 14, 2012
+ * @version 1.0.1.7, Aug 6, 2012
 */
 /* start base */
 html, body, div, ul, li, h1, h2, h3, h4, h5, h6 {
@@ -10,8 +10,18 @@ html, body, div, ul, li, h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
+::selection {
+    background-color: #ccc;
+    color: #fff;
+}
+
+::-moz-selection{
+    background-color: #ccc;
+    color: #fff;
+}
+
 body {
-    font-family: "Lucida Grande",Verdana,\5fae\8f6f\96c5\9ed1;
+    font-family: "Lucida Grande",'Verdana,\5fae\8f6f\96c5\9ed1';
     font-size: 12px;
     background-color: #F9F9F9;
     color: #333;
