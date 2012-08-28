@@ -39,7 +39,7 @@ var skins = getAllFiles("../..");
 (function () {    
     mkdirsSync("static");
     for (var i = 0; i < skins.length; i++) {
-        mkdirsSync(path.dirname(skins[i].replace("../..", "static")));
-        fs.writeFileSync(skins[i].replace("../..", "static"), fs.readFileSync(skins[i]), "UTF-8");
+        mkdirsSync(path.dirname(skins[i].replace("../..", "static/skins")));
+        fs.writeFileSync(skins[i].replace("../..", "static/skins"), fs.readFileSync(skins[i]), "UTF-8");
     }
 })();
