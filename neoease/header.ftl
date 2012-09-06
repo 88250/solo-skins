@@ -23,7 +23,7 @@
     <div class="wrapper">
         <ul>
             <li>
-                <a rel="nofollow" href="${servePath}">${indexLabel}</a>
+                <a rel="nofollow" href="${servePath}/">${indexLabel}</a>
             </li>
             <#list pageNavigations as page>
             <li>
