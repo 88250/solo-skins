@@ -1,6 +1,10 @@
-If you want to contribute skins to B3log Solo, fork this repository and pull request after the new skins done!
+[B3log Solo Skins](http://vanessa.b3log.org/b3log-skin)
+=======================================================
 
-如果你要贡献皮肤给 B3log Solo，Fork 此库进行皮肤开发，完成后 Pull Request 吧！
+1. [开发步骤](https://github.com/b3log/b3log-solo/wiki/Develop_steps)
+2. [模板变量](https://github.com/b3log/b3log-solo/wiki/Template_variables)
+3. [皮肤定制](https://github.com/b3log/b3log-solo/wiki/skins_custom)
+4. [版本更新](https://github.com/b3log/b3log-solo/wiki/Skins_change_log)
 
 ====
 
