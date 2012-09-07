@@ -6,9 +6,10 @@
 3. [皮肤定制](https://github.com/b3log/b3log-solo/wiki/skins_custom)
 4. [版本更新](https://github.com/b3log/b3log-solo/wiki/Skins_change_log)
 
-====
+----------------------
 
 平等，自由，奔放
+
 Equality, Freedom, Passion
 
 ;-）
