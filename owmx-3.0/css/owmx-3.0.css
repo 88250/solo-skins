@@ -525,3 +525,17 @@ nav ul ul {
     margin-bottom : 25px;
     width : 531px;
 }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background-color: #bbb;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #eee;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
