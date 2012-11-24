@@ -18,7 +18,7 @@
  * @fileoverview neoease js.
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.7, May 11, 2012
+ * @version 1.0.0.8, Sep 6, 2012
  */
 var goTop = function (acceleration) {
     acceleration = acceleration || 0.1;
@@ -150,10 +150,10 @@ var goTranslate = function () {
     });
     
     // nav current
-    $(".nav ul a").each(function () {
-        var $this = $(this);
-        if ($this.attr("href") === location.pathname) {
-            $this.parent().addClass("current");
+    $(".nav ul li").each(function () {
+        var $a = $(this).find("a");
+        if ($a.attr("href") === latkeConfig.servePath + location.pathname) {
+            $(this).addClass("current");
         } else if (/\/[0-9]+$/.test(location.pathname)) {
             $(".nav ul li")[0].className = "current";
         }
