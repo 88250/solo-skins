@@ -42,7 +42,7 @@
             <th width="115px">
                 ${commentNameLabel}
             </th>
-            <td colspan="2">
+            <td>
                 <input type="text" id="commentName"/>
             </td>
         </tr>
@@ -50,7 +50,7 @@
             <th>
                 ${commentEmailLabel}
             </th>
-            <td colspan="2">
+            <td>
                 <input type="text" id="commentEmail"/>
             </td>
         </tr>
@@ -58,7 +58,7 @@
             <th>
                 ${commentURLLabel}
             </th>
-            <td colspan="2">
+            <td>
                 <input type="text" id="commentURL"/>
             </td>
         </tr>
@@ -66,7 +66,7 @@
             <th>
                 ${commentEmotionsLabel}
             </th>
-            <td id="emotions" colspan="2">
+            <td id="emotions">
                 <span class="em00" title="${em00Label}"></span>
                 <span class="em01" title="${em01Label}"></span>
                 <span class="em02" title="${em02Label}"></span>
@@ -88,7 +88,7 @@
             <th valign="top">
                 ${commentContentLabel}
             </th>
-            <td colspan="2">
+            <td>
                 <textarea rows="10" id="comment"></textarea>
             </td>
         </tr>
@@ -100,13 +100,11 @@
                 <input type="text" id="commentValidate"/>
                 <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
             </td>
-            <th width="262px">
-                <span class="right error-msg" id="commentErrorTip"></span>
-            </th>
         </tr>
         <tr>
-            <td colspan="3" align="right">
-                <button id="submitCommentButton" onclick="page.submitComment();">${submmitCommentLabel}</button>
+            <td colspan="2" align="right">
+                <button class="right" id="submitCommentButton" onclick="page.submitComment();">${submmitCommentLabel}</button>
+                <span  style="margin-top: 13px;" class="right error-msg" id="commentErrorTip"></span>
             </td>
         </tr>
     </tbody>

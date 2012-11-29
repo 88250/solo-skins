@@ -53,7 +53,7 @@
                 <th>
                     ${commentName1Label}
                 </th>
-                <td colspan="2">
+                <td>
                     <input type="text" class="normalInput" id="commentName"/>
                 </td>
             </tr>
@@ -61,7 +61,7 @@
                 <th>
                     ${commentEmail1Label}
                 </th>
-                <td colspan="2">
+                <td>
                     <input type="text" class="normalInput" id="commentEmail"/>
                 </td>
             </tr>
@@ -69,7 +69,7 @@
                 <th>
                     ${commentURL1Label}
                 </th>
-                <td colspan="2">
+                <td>
                     <input type="text" id="commentURL"/>
                 </td>
             </tr>
@@ -99,7 +99,7 @@
                 <th valign="top">
                     ${commentContent1Label}
                 </th>
-                <td colspan="2">
+                <td>
                     <textarea rows="10" cols="96" id="comment"></textarea>
                 </td>
             </tr>
@@ -111,12 +111,10 @@
                     <input type="text" class="normalInput" id="commentValidate"/>
                     <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
                 </td>
-                <th>
-                    <span class="error-msg" id="commentErrorTip"></span>
-                </th>
             </tr>
             <tr>
-                <td colspan="3" align="right">
+                <td colspan="2" align="right">
+                    <span style="line-height: 28px;" class="error-msg" id="commentErrorTip"></span>
                     <button id="submitCommentButton" onclick="page.submitComment();">${submmitCommentLabel}</button>
                 </td>
             </tr>

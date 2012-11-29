@@ -46,7 +46,7 @@
                 </span>
                 <span class="arrow-right"></span>
             </th>
-            <td colspan="2">
+            <td>
                 <input type="text" id="commentName"/>
             </td>
         </tr>
@@ -57,7 +57,7 @@
                 </span>
                 <span class="arrow-right"></span>
             </th>
-            <td colspan="2">
+            <td>
                 <input type="text" id="commentEmail"/>
             </td>
         </tr>
@@ -68,7 +68,7 @@
                 </span>
                 <span class="arrow-right"></span>
             </th>
-            <td colspan="2">
+            <td>
                 <input type="text" id="commentURL"/>
             </td>
         </tr>
@@ -79,7 +79,7 @@
                 </span>
                 <span class="arrow-right"></span>
             </th>
-            <td id="emotions" colspan="2">
+            <td id="emotions">
                 <span class="em00" title="${em00Label}"></span>
                 <span class="em01" title="${em01Label}"></span>
                 <span class="em02" title="${em02Label}"></span>
@@ -104,7 +104,7 @@
                 </span>
                 <span class="arrow-right"></span>
             </th>
-            <td colspan="2">
+            <td>
                 <textarea rows="10" id="comment"></textarea>
             </td>
         </tr>
@@ -119,12 +119,10 @@
                 <input type="text" id="commentValidate"/>
                 <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
             </td>
-            <th>
-                <span class="right error-msg" id="commentErrorTip"></span>
-            </th>
         </tr>
         <tr>
-            <td colspan="3">
+            <td colspan="2">
+                <span style="margin-top: 20px;" class="right error-msg" id="commentErrorTip"></span>
                 <input id="submitCommentButton" type="button" onclick="page.submitComment();" value="${submmitCommentLabel}"/>
             </td>
         </tr>
