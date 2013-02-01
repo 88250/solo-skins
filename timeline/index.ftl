@@ -4,20 +4,20 @@
     <head>
         <@head title="${blogTitle}">
         <meta name="keywords" content="${metaKeywords}"/>
-        <meta name="description" content="<#list articles as article>${article.articleTitle}<#if article_has_next>,</#if></#list>"/>
+        <meta name="description" content="<#list articles1 as article>${article.articleTitle}<#if article_has_next>,</#if></#list>"/>
         </@head>
     </head>
     <body>
         ${topBarReplacement}
         <#include "header.ftl">
-        <ul class="nav-abs"  style="padding: 0;position: fixed">
+        <ul class="nav-abs"  style="padding: 0;position: fixed;max-width: 160px">
             <#list archiveDates as archiveDate>
-            <li data-year="${archiveDate.archiveDateYear}"
+            <li data-year="${archiveDate.archiveDateYear}"  title="${archiveDate.archiveDatePublishedArticleCount}"
                 onclick="timeline.getArchive('${archiveDate.archiveDateYear}', '${archiveDate.archiveDateMonth}'<#if "en" == localeString?substring(0, 2)>, '${archiveDate.monthName}'</#if>)">
                 <#if "en" == localeString?substring(0, 2)>
-                ${archiveDate.monthName} (${archiveDate.archiveDatePublishedArticleCount})
+                ${archiveDate.monthName}
                 <#else>
-                ${archiveDate.archiveDateMonth}${monthLabel}(${archiveDate.archiveDatePublishedArticleCount})
+                ${archiveDate.archiveDateMonth}
                 </#if>
         </li>
         </#list>
@@ -36,7 +36,7 @@
                         </#if>
                     </span>
                 </h2>
-                <#list articles as article>
+                <#list articles1 as article>
                 <#if article.articleCreateDate?string("yyyy/MM") == "${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
                 <article>
                     <div class="module">
