@@ -237,19 +237,19 @@ img {
     position: relative;
 }
 
-.module > h3 {
+.module > h3.title {
     margin: 0 0 10px 0;
     color: #444;
 }
 
-.module > ul {
+.module > ul.list {
     list-style-type: none;
     padding-left: 0;
     margin: 0;
     overflow: hidden;
 }
 
-.module > ul > li {
+.module > ul.list > li {
     border-top: 1px solid #EEEEEE;
     padding: 6px 0;
 }
@@ -467,6 +467,7 @@ a:hover > .ico-pre {
 
 .articles article {
     width: 50%;
+    float: left;
 }
 
 .articles article.l > div.module {
@@ -620,8 +621,9 @@ article .article-title a {
     font-style: italic;
 }
 
-.comments > li > div > p {
+.comments > li > div > div.article-body {
     padding-left: 75px;
+    margin: 12px 0;
 }
 
 .module > ul > li.comment-body-ref {
