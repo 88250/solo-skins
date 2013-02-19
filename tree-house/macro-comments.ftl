@@ -54,7 +54,7 @@
                     <th>
                         ${commentName1Label}
                     </th>
-                    <td colspan="2">
+                    <td>
                         <input type="text" class="normalInput" id="commentName"/>
                     </td>
                 </tr>
@@ -62,7 +62,7 @@
                     <th>
                         ${commentEmail1Label}
                     </th>
-                    <td colspan="2">
+                    <td>
                         <input type="text" class="normalInput" id="commentEmail"/>
                     </td>
                 </tr>
@@ -70,12 +70,12 @@
                     <th>
                         ${commentURL1Label}
                     </th>
-                    <td colspan="2">
+                    <td>
                         <input type="text" id="commentURL"/>
                     </td>
                 </tr>
                 <tr>
-                    <td id="emotions" colspan="3">
+                    <td id="emotions" colspan="2">
                         <span class="em00" title="${em00Label}"></span>
                         <span class="em01" title="${em01Label}"></span>
                         <span class="em02" title="${em02Label}"></span>
@@ -97,7 +97,7 @@
                     <th valign="top">
                         ${commentContent1Label}
                     </th>
-                    <td colspan="2">
+                    <td>
                         <textarea rows="10" cols="96" id="comment"></textarea>
                     </td>
                 </tr>
@@ -109,12 +109,10 @@
                         <input type="text" class="normalInput" id="commentValidate"/>
                         <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
                     </td>
-                    <td>
-                        <span class="error-msg" id="commentErrorTip"></span>
-                    </td>
                 </tr>
                 <tr>
-                    <td colspan="3" align="right">
+                    <td colspan="2" align="right">
+                        <span class="error-msg" id="commentErrorTip"></span>
                         <button id="submitCommentButton" onclick="page.submitComment();">${submmitCommentLabel}</button>
                     </td>
                 </tr>

@@ -43,25 +43,25 @@
     <table id="commentForm">
         <tbody>
             <tr>
-                <td colspan="2">
+                <td>
                     <input type="text" class="normalInput" id="commentName"/>
                     <label for="commentName">${commentNameLabel}</label>
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td>
                     <input type="text" class="normalInput" id="commentEmail"/>
                     <label for="commentEmail">${commentEmailLabel}</label>
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td>
                     <input type="text" id="commentURL"/>
                     <label for="commentURL">${commentURLLabel}</label>
                 </td>
             </tr>
             <tr>
-                <td id="emotions" colspan="2">
+                <td id="emotions">
                     <span class="em00" title="${em00Label}"></span>
                     <span class="em01" title="${em01Label}"></span>
                     <span class="em02" title="${em02Label}"></span>
@@ -80,7 +80,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
+                <td>
                     <textarea rows="10" cols="96" id="comment"></textarea>
                 </td>
             </tr>
@@ -89,12 +89,10 @@
                     <input type="text" class="normalInput" id="commentValidate"/>
                     <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
                 </td>
-                <th>
-                    <span class="tip" id="commentErrorTip"></span>
-                </th>
             </tr>
             <tr>
-                <td colspan="2" align="right">
+                <td align="right">
+                    <span class="tip" id="commentErrorTip"></span>
                     <button id="submitCommentButton" onclick="page.submitComment();">${submmitCommentLabel}</button>
                 </td>
             </tr>
