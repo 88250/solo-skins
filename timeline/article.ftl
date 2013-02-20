@@ -81,7 +81,7 @@
                         <#if previousArticlePermalink??>
                         <div class="right">
                             <a href="${servePath}${previousArticlePermalink}">
-                                ${previousArticleTitle}
+                                <span class="left">${previousArticleTitle}</span>
                                 <span class="ico-next">»</span>
                             </a> 
                         </div>

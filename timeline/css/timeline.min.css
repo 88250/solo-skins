@@ -79,6 +79,7 @@ a:hover>.ico-next,a:hover>.ico-pre{background-color:#000;}
 .articles .r .dot{left:-37px;right:inherit;}
 .articles .arrow{height:15px;position:absolute;right:-9px;top:21px;width:9px;}
 .articles .r .arrow{background-position:0 -22px;left:-9px;right:inherit;}
+.articles pre{background-color:#F5F5F5;border:1px solid #ddd;border-radius:4px 4px 4px 4px;padding:9.5px;white-space:pre-wrap;word-wrap:break-word;}
 time.article-time{top:-8px;left:50%;position:absolute;}
 time.article-time>span{background-color:#FFFFFF;border:1px solid #A8A9A9;border-radius:20em 20em 20em 20em;font-size:80%;margin-left:-56px;padding:5px 10px;}
 article .article-title{margin:10px 0 0 0;}
