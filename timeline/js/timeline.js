@@ -419,7 +419,7 @@ var timeline = {
 
 (function () {
     Util.init();
-    Util.replaceSideEm($(".recent-comments-content"));
+    Util.replaceSideEm($(".comments .article-body"));
     Util.buildTags("tagsSide");
     
     timeline.init();
