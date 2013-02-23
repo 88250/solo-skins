@@ -84,7 +84,6 @@ var timeline = {
         }
         
         $(window).resize(function () {
-            console.log("resize");
             $archives.each(function () {
                 var colH = [timeline._COLHA + 60, timeline._COLHB * 4];
                 
@@ -99,7 +98,6 @@ var timeline = {
                         top = isLeft ? colH[0] : colH[1];
                         
                         if (parseInt($it.css("top")) !== top) {
-                            console.log(top);
                             $it.css({
                                 "top": top + "px",
                                 "position": "absolute"
