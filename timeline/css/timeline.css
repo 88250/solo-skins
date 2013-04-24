@@ -414,6 +414,13 @@ a:hover > .ico-pre {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
+.header .sub-title {
+    float: left;
+    max-width: 574px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
 .header li a {
     color: #444;
     padding: 17px;

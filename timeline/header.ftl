@@ -16,7 +16,7 @@
                     ${blogTitle}
                 </a>
             </h1>
-            <span>${blogSubtitle}</span>
+            <span class="sub-title">${blogSubtitle}</span>
         </div>
         <ul class="left">
             <#list pageNavigations as page>

@@ -56,13 +56,14 @@ img{max-width:100%;border:0;vertical-align:middle;}
 .ico-next{float:right;margin:-8px 0 0 10px;}
 a:hover>.ico-next,a:hover>.ico-pre{background-color:#000;}
 .wrapper{min-width:500px;padding:50px 0;background:url("../../timeline/images/bg.png") repeat scroll 0 0 #dee4ea;}
-.header{background-color:#BFBFBF;background-image:url("../../timeline/images/nav-bg.png"),linear-gradient(#cccccc, #a9a9a9);background-image:url("../../timeline/images/nav-bg.png"),-ms-linear-gradient(#cccccc, #a9a9a9);background-image:url("../../timeline/images/nav-bg.png"),-o-linear-gradient(#cccccc, #a9a9a9);background-image:url("../../timeline/images/nav-bg.png"),-webkit-linear-gradient(#cccccc, #a9a9a9);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#CCCCCC', endColorstr='#A9A9A9');border-bottom:1px solid #898989;box-shadow:0 -1px 0 rgba(255, 255, 255, 0.3) inset,0 1px 1px rgba(0, 0, 0, 0.2);height:50px;overflow:hidden;}
+.header{background-color:#BFBFBF;background-image:url("../../timeline/images/nav-bg.png"),linear-gradient(#cccccc, #a9a9a9);background-image:url("../../timeline/images/nav-bg.png"),-ms-linear-gradient(#cccccc, #a9a9a9);background-image:url("../../timeline/images/nav-bg.png"),-o-linear-gradient(#cccccc, #a9a9a9);background-image:url("../../timeline/images/nav-bg.png"),-webkit-linear-gradient(#cccccc, #a9a9a9);filter:progid:dximagetransform.microsoft.gradient(GradientType=0, startColorstr='#CCCCCC', endColorstr='#A9A9A9');border-bottom:1px solid #898989;box-shadow:0 -1px 0 rgba(255, 255, 255, 0.3) inset,0 1px 1px rgba(0, 0, 0, 0.2);height:50px;overflow:hidden;}
 .container{width:80%;margin:0 auto;}
 .footer{border-top:1px solid #232323;padding:20px 0;color:#ddd;font-size:80%;}
 .footer a{color:#9CC0DE;}
 .footer a:hover{text-decoration:underline;}
 .header .title{font-size:150%;margin:3px 0 0;}
 .header .title a{color:#414141;text-shadow:0 1px 0 rgba(255, 255, 255, 0.7);}
+.header .sub-title{float:left;max-width:574px;white-space:normal;word-wrap:break-word;}
 .header li a{color:#444;padding:17px;line-height:20px;text-shadow:0 1px 0 rgba(255, 255, 255, 0.7);white-space:nowrap;}
 .header li a.current{border-bottom:2px solid #D26911;}
 .header a:hover{color:#000;}
