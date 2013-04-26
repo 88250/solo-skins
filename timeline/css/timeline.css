@@ -17,7 +17,7 @@
 * timeline skin style.
 *
 * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
-* @version 1.0.1.0, Jan 30, 2013
+* @version 1.0.1.1, Feb 20, 2013
 */
 /* start reset */
 html, body {
@@ -414,6 +414,13 @@ a:hover > .ico-pre {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
+.header .sub-title {
+    float: left;
+    max-width: 574px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
 .header li a {
     color: #444;
     padding: 17px;
@@ -512,6 +519,15 @@ a:hover > .ico-pre {
     background-position: 0 -22px;
     left: -9px;
     right: inherit
+}
+
+.articles pre {
+    background-color: #F5F5F5;
+    border: 1px solid #ddd;
+    border-radius: 4px 4px 4px 4px;
+    padding: 9.5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 time.article-time {
