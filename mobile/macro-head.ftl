@@ -4,10 +4,9 @@
 <#nested>
 <meta name="author" content="${blogTitle?html}" />
 <meta name="generator" content="B3log Solo" />
+<meta name="copyright" content="B3log" />
 <meta name="owner" content="B3log Team" />
 <meta name="revised" content="${blogTitle?html}, ${year}" />
-<meta name="copyright" content="B3log" />
-<meta http-equiv="Window-target" content="_top" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
 <meta http-equiv="Window-target" content="_top" />
 <link type="text/css" rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/themes/default/style.css?${staticResourceVersion}" charset="utf-8" />
