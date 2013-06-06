@@ -74,14 +74,14 @@
                         <div class="left">
                             <a href="${servePath}${nextArticlePermalink}">
                                 <span class="ico-pre">«</span>
-                                ${nextArticleTitle}
+                                <span class="ft-pre">${nextArticleTitle}</span>
                             </a>
                         </div>
                         </#if>                            
                         <#if previousArticlePermalink??>
                         <div class="right">
                             <a href="${servePath}${previousArticlePermalink}">
-                                <span class="left">${previousArticleTitle}</span>
+                                <span class="left ft-next">${previousArticleTitle}</span>
                                 <span class="ico-next">»</span>
                             </a> 
                         </div>
