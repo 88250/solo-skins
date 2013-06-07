@@ -17,6 +17,7 @@
                 </a>
             </h1>
             <span class="sub-title">${blogSubtitle}</span>
+            <span class="ico-list"></span>
         </div>
         <ul class="left">
             <#list pageNavigations as page>

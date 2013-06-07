@@ -165,6 +165,19 @@ var timeline = {
         timeline._initIndexList();
         timeline._initArticleList();
         timeline._setNavCurrent();
+
+        // init header list 
+        $(".ico-list").click(function() {              
+            if ($(".header > .container > form").css("height") === "0px") {
+                $(".header > .container > ul, .header > .container > form").css({
+                  "height": "auto"
+                });
+            } else {
+                $(".header > .container > ul, .header > .container > form").animate({
+                  "height": "0px"  
+                });
+            } 
+        });
     },
     translate: function() {
         window.open("http://translate.google.com/translate?sl=auto&tl=auto&u=" + location.href);

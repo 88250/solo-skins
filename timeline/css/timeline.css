@@ -313,6 +313,7 @@ img {
     color: #A5A099;
     height: 22px;
     margin-top: 13px;
+    margin-bottom: 10px;
     padding-left: 25px;
     transition: width 0.7s ease 0s;
     width: 60px;
@@ -379,8 +380,6 @@ a:hover > .ico-pre {
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#CCCCCC', endColorstr='#A9A9A9');
     border-bottom: 1px solid #898989;
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px rgba(0, 0, 0, 0.2);
-    height: 50px;
-    overflow: hidden;
 }
 
 .container {
@@ -441,6 +440,12 @@ a:hover > .ico-pre {
 .header li {
     float: left;
     list-style-type: none;
+}
+
+.header > .container > ul,
+.header > .container > form {
+    height: auto;
+    overflow: visible;
 }
 /* end header */
 
@@ -763,7 +768,7 @@ article .article-title a {
     .wrapper {
         min-width: 200px;
     }
-    
+
     #top > .left {
         display: block;
         float: none;
@@ -798,13 +803,15 @@ article .article-title a {
         width: 100%;
     }
 
-    .header {
-        height: auto;
+    .header .title {
+        height: 26px;
+        max-width: 72%;
+        overflow: hidden;
     }
 
-    .header > .container > div {
-        height: 50px;
+    .header > .container > div.left {
         float: none;
+        height: 50px;
         margin-left: 10px;
     }
 
@@ -839,15 +846,29 @@ article .article-title a {
     }
 
     #search {
-        margin-top: 0;
+        margin: 5px 0 10px 10px;
     }
 
     #search:focus {
         width: 92%;
     }
 
-    .footer > .container > .left {
-        display: none;
+    .ico-list {
+        background-color: #FCFCFC;
+        background-image: url("../../timeline/images/icons.png");
+        background-position: 4px -206px;
+        background-repeat: no-repeat;
+        border-radius: 1px 0 3px 3px;
+        cursor: pointer;
+        float: right;
+        height: 25px;
+        margin-right: 35px;
+        margin-top: -29px;
+        width: 25px;
+    }
+
+    .ico-list:hover {
+        background-color: #FFF;
     }
 
     .footer > .container > .right {
@@ -902,8 +923,16 @@ article .article-title a {
     .articles .dot,
     #admin > span,
     .ft-next,
-    .ft-pre {
+    .ft-pre,
+    .footer > .container > .left {
         display: none;
+    }
+
+    .header > .container > ul,
+    .header > .container > form {
+        height: 0;
+        overflow: hidden;
+        margin: 0;
     }
 
     .articles {
