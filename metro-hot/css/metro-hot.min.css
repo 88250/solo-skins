@@ -1,3 +1,5 @@
+@charset "utf-8";
+@font-face{font-family:'IcoMoon';src:url('font/IcoMoon.eot');src:url('font/IcoMoon.eot?#iefix') format('embedded-opentype'),url('font/IcoMoon.svg#IcoMoon') format('svg'),url('font/IcoMoon.woff') format('woff'),url('font/IcoMoon.ttf') format('truetype');font-weight:normal;font-style:normal}[data-ico]:before{font-family:'IcoMoon';content:attr(data-ico);speak:none;cursor:pointer}
 html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
 body{font-family:Verdana,arial,'\5fae\8f6f\96c5\9ed1';font-size:12px;background-color:#292929;min-height:1990px;margin:0;color:#d1d2d1}
 a{outline:0;text-decoration:none;color:#bdbebd}
