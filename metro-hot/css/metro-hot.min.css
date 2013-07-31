@@ -65,7 +65,7 @@ textarea{overflow:auto;vertical-align:top}
 .navigation a.lats{border-bottom-width:0}
 .main .pagination{float:none;padding:20px 0 25px;text-align:right;margin-right:10px;line-height:34px}
 .article-list>div{background-color:#323232;float:left;height:220px;margin:5px 10px 5px 0;overflow:hidden;position:relative;width:450px}
-.article-list>div>img{min-width:100%;max-width:100%;transition:all 1.2s}
+.article-list>div>img{max-width:100%;transition:all 1.2s;display:block;margin:0 auto}
 .article-list>div:hover>img{transform:scale(1.2)}
 .article-list>div:hover .article-image{top:0}
 .article-list>div:hover .fn-right{display:block}
@@ -82,6 +82,7 @@ textarea{overflow:auto;vertical-align:top}
 .article-info>a:hover{background-color:#ea4040;color:#fff}
 .article-abstract>.article-tags{margin:10px 0 0 10px}
 .article-abstract>.article-body{height:115px;margin:10px 10px 0;overflow:hidden;white-space:inherit;word-wrap:break-word;padding:0}
+.article-image .article-body{padding:10px;height:95px}
 .side{float:right;width:240px}
 #search{background-color:#fff;border:0 none;color:#3a3a3a;height:50px;margin-top:5px;padding:0 10px;width:177px;transition:all .3s ease-out 0}
 .side form>span{background-color:#fff;color:#3a3a3a;float:right;font-size:25px;height:32px;margin-top:5px;padding:9px}
@@ -143,7 +144,7 @@ textarea{overflow:auto;vertical-align:top}
 .links-tile{margin-left:20px;background-color:#7b4f9d}
 .tags-tile span,.links-tile span,.archives-tile span,.most-comment span,.most-view span{font-size:60px}
 .tags-tile .text,.links-tile .text,.archives-tile .text,.most-comment .text,.most-view .text{position:static;width:253px}
-.tags-tile a,.links-tile a,.archives-tile a{background-color:#ea4040;color:#d1d2d1;float:left;font-size:12px;line-height:20px;margin:6px 10px;padding:5px 10px;transition:all .8s ease 0;white-space:nowrap}
+.tags-tile a,.links-tile a,.archives-tile a{background-color:#ea4040;color:#d1d2d1;float:left;font-size:12px;line-height:20px;margin:6px;padding:5px 10px;transition:all .8s ease 0;white-space:nowrap}
 .tags-tile a:hover,.links-tile a:hover,.archives-tile a:hover{background-color:#fff;color:#ea4040}
 .most-comment,.most-view{background-color:#f09609;width:535px;margin:100px 0}
 .most-comment .text,.most-view .text{margin-right:20px;line-height:24px;width:430px}

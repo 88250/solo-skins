@@ -18,7 +18,7 @@
 * skin metro-hot style
 *
 * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
-* @version 1.0.0.9, Jul 24, 2013
+* @version 1.0.1.0, Jul 31, 2013
 */
 /* start base */
 @font-face {
@@ -407,9 +407,10 @@ textarea {
 }
 
 .article-list > div > img {
-    min-width: 100%;
     max-width: 100%;
     transition: all 1.2s;
+    display: block;
+    margin: 0 auto;
 }
 
 .article-list > div:hover > img {
@@ -499,6 +500,11 @@ textarea {
     white-space: inherit;
     word-wrap: break-word;
     padding: 0;
+}
+
+.article-image .article-body {
+    padding: 10px;
+    height: 95px;
 }
 /* end article list*/
 
@@ -920,7 +926,7 @@ textarea {
     float: left;
     font-size: 12px;
     line-height: 20px;
-    margin: 6px 10px;
+    margin: 6px;
     padding: 5px 10px;
     transition: all 0.8s ease 0s;
     white-space: nowrap;

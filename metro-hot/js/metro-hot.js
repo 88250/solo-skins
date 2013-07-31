@@ -17,7 +17,7 @@
  * @fileoverview metro-hot js.
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.8, Jul 24, 2013
+ * @version 1.0.0.9, Jul 31, 2013
  */
 
 var MetroHot = {
@@ -153,9 +153,16 @@ var MetroHot = {
                 $it.addClass("article-image");
                 $images.hide();
 
-                $it.before("<img src='" + $($images[0]).attr("src") + "'/>");
+                $it.before("<img onload='MetroHot.loadImg(this);' src='" + $($images[0]).attr("src") + "'/>");
             }
         });
+    },
+    /**
+     * @description 计算图片 margin-top
+     * @param {BOM} it 图片元素
+     */
+    loadImg: function(it) {
+        it.style.marginTop = ("margin-top", (220 - it.height) / 2 + "px");
     },
     /**
      * @description 分享按钮
