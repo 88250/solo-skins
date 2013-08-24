@@ -10,7 +10,7 @@
     <body>
         ${topBarReplacement}
         <#include "header.ftl">
-        <ul class="nav-abs"  style="padding: 0;position: fixed;max-width: 160px">
+        <ul class="nav-abs index-nav-abs">
             <#list archiveDates as archiveDate>
             <li data-year="${archiveDate.archiveDateYear}"  title="${archiveDate.archiveDatePublishedArticleCount}"
                 onclick="timeline.getArchive('${archiveDate.archiveDateYear}', '${archiveDate.archiveDateMonth}'<#if "en" == localeString?substring(0, 2)>, '${archiveDate.monthName}'</#if>)">

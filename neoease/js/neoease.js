@@ -1,24 +1,24 @@
 /*
- * Copyright (c) 2009, 2010, 2011, 2012, 2013, B3log Team
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+* Copyright (c) 2009, 2010, 2011, 2012, 2013, B3log Team
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
 /**
- * @fileoverview neoease js.
- *
- * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.8, Sep 6, 2012
- */
+* @fileoverview neoease js.
+*
+* @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
+* @version 1.0.0.8, Sep 6, 2012
+*/
 var goTop = function (acceleration) {
     acceleration = acceleration || 0.1;
 
@@ -90,7 +90,7 @@ var getArticle = function (it, id) {
 };
 
 var goTranslate = function () {
-    window.open("http://translate.google.com/translate?sl=auto&tl=auto&u=" + location.href);  
+    window.open("http://translate.google.com/translate?sl=auto&tl=auto&u=" + location.href);
 };
     
 (function () {
@@ -100,9 +100,9 @@ var goTranslate = function () {
 
         if (y > 182) {
             var bodyH = $(window).height();
-            var top =  y + bodyH - 21;
+            var top = y + bodyH - 21;
             if ($("body").height() - 58 <= y + bodyH) {
-                top = $(".footer").offset().top - 21; 
+                top = $(".footer").offset().top - 21;
             }
             $("#goTop").fadeIn("slow").css("top", top);
         } else {
@@ -125,7 +125,7 @@ var goTranslate = function () {
         // append year archive
         if (year !== $this.data("year")) {
             year = $this.data("year");
-            $this.before("<li class='archive-year'><div onclick='collapseArchive(this, " + 
+            $this.before("<li class='archive-year'><div onclick='collapseArchive(this, " +
                 year + ")' class='expand-ico'>" + year + "&nbsp;\u5e74</div></li>");
         }
     });
