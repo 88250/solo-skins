@@ -12,11 +12,11 @@ var getCompressFiles = function (root) {
         
         if (!stat.isDirectory()) {
             if (pathname.indexOf("mobile") < 0 && path.basename(pathname).indexOf(".min") < 0) {
-                if (path.dirname(pathname).indexOf("css") > -1) {
+                if (path.dirname(pathname).indexOf("css") > -1 && path.extname(pathname) === ".css") {
                     res.push("css-" + pathname);
                 } 
                 
-                if (path.dirname(pathname).indexOf("js") > -1) {
+                if (path.dirname(pathname).indexOf("js") > -1 && path.extname(pathname) === ".js") {
                     res.push("js-" + pathname);
                 }
             }
