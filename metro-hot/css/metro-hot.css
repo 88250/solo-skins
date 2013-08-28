@@ -771,6 +771,10 @@ textarea {
     margin-right: 10px;
     margin-top: 20px;
 }
+
+pre.prettyprint {
+    background-color: #F7F7F7;
+}
 /* end article */
 
 /* start comment */

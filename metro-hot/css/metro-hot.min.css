@@ -121,6 +121,7 @@ textarea{overflow:auto;vertical-align:top;}
 .article-header .article-date{float:none;margin:0;}
 .article-body{background-color:#323232;margin-bottom:30px;overflow:hidden;padding:10px;white-space:normal;word-break:break-all;font-size:14px;word-wrap:break-word;}
 .main>.article-body{margin-right:10px;margin-top:20px;}
+pre.prettyprint{background-color: #F7F7F7;}
 #comments{position:relative;}
 #comments>div{margin-bottom:20px;margin-right:10px;}
 #comments .article-body{margin:10px 0;width:810px;}
