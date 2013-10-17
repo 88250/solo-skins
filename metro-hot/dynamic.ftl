@@ -27,18 +27,14 @@
                             <img title="${comment.commentName}"
                                  alt="${comment.commentName}" src="${comment.commentThumbnailURL}"/>
                             <div class="comment-main">
-                                <div class="fn-clear comment-info">
+                                <div class="fn-clear">
                                     <#if "http://" == comment.commentURL>
                                     <span>${comment.commentName}</span>
                                     <#else>
                                     <a href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
                                     </#if>
-                                   
-                                    <a class="fn-right" rel="bookmark" data-ico="&#xe185;" href="${servePath}${comment.commentSharpURL}">
-                                         ${viewLabel}
-                                    </a>
                                     <div class="fn-right" data-ico="&#xe200;">
-                                        ${comment.commentDate?string("yy-MM-dd HH:mm")}&nbsp; &nbsp;
+                                        ${comment.commentDate?string("yy-MM-dd HH:mm")}
                                     </div>
                                 </div>
                                 <div class="article-body">${comment.commentContent}</div>
@@ -150,6 +146,30 @@
             </div>
 
             <div class="fn-clear">
+                <#if 0 != archiveDates?size>
+                <div class="side-tile archives-tile fn-clear">
+                    <div class="fn-left">
+                        <span data-ico="&#xe110;"></span>
+                        <div class="title">
+                            ${dateArticlesLabel}
+                        </div>
+                    </div>
+                    <div class="text fn-right">
+                        <#list archiveDates as archiveDate>
+                        <#if "en" == localeString?substring(0, 2)>
+                        <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
+                           title="${archiveDate.monthName} ${archiveDate.archiveDateYear}(${archiveDate.archiveDatePublishedArticleCount})">
+                            ${archiveDate.monthName} ${archiveDate.archiveDateYear}(${archiveDate.archiveDatePublishedArticleCount})</a>
+                        <#else>
+                        <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
+                           title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}(${archiveDate.archiveDatePublishedArticleCount})">
+                            ${archiveDate.archiveDateYear?substring(2,4)}${yearLabel}${archiveDate.archiveDateMonth}${monthLabel}(${archiveDate.archiveDatePublishedArticleCount})</a>
+                        </#if>
+                        </#list>
+                    </div>
+                </div>
+                </#if>
+
                 <#if 0 != links?size>
                 <div class="side-tile links-tile fn-clear">
                     <div class="fn-left">

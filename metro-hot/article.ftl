@@ -23,18 +23,18 @@
                         </#if>
                     </span>
 
-                    <h2>  
+                    <h2>
+                        ${article.articleTitle}
                         <#if article.hasUpdated>
-                        <span>
-                            [${updatedLabel}]
-                        </span>
+                        <sup>
+                            ${updatedLabel}
+                        </sup>
                         </#if>
                         <#if article.articlePutTop>
-                        <span>
-                            [${topArticleLabel}]
-                        </span>
+                        <sup>
+                            ${topArticleLabel}
+                        </sup>
                         </#if>
-                        ${article.articleTitle}
                     </h2>
                     <div data-ico="&#x003b;" title="${tagLabel}">
                         <#list article.articleTags?split(",") as articleTag>

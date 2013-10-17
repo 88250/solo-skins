@@ -24,19 +24,19 @@
             </div>
 
             <h2 class="article-title">
-                <#if article.hasUpdated>
-                <span>
-                    [${updatedLabel}]
-                </span>
-                </#if>
-                <#if article.articlePutTop>
-                <span>
-                    [${topArticleLabel}]
-                </span>
-                </#if>
-                <a rel="bookmark" title="${article.articleTitle}" href="${servePath}${article.articlePermalink}">
+                <a rel="bookmark" href="${servePath}${article.articlePermalink}">
                     ${article.articleTitle}
                 </a>
+                <#if article.hasUpdated>
+                <sup>
+                    ${updatedLabel}
+                </sup>
+                </#if>
+                <#if article.articlePutTop>
+                <sup>
+                    ${topArticleLabel}
+                </sup>
+                </#if>
             </h2>
             <div class="article-body">
                 ${article.articleAbstract}

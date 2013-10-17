@@ -18,16 +18,16 @@
 * skin metro-hot style
 *
 * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
-* @version 1.0.1.1, Sep 30, 2013
+* @version 1.0.1.0, Jul 31, 2013
 */
 /* start base */
 @font-face {
     font-family: 'IcoMoon';
     src: url('font/IcoMoon.eot');
     src: url('font/IcoMoon.eot?#iefix') format('embedded-opentype'),
-        url('font/IcoMoon.svg#IcoMoon') format('svg'),
-        url('font/IcoMoon.woff') format('woff'),
-        url('font/IcoMoon.ttf') format('truetype');
+    url('font/IcoMoon.svg#IcoMoon') format('svg'),
+    url('font/IcoMoon.woff') format('woff'),
+    url('font/IcoMoon.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -282,7 +282,6 @@ textarea {
 
 .header .title {
     color: #E61E1E;
-    padding: 30px 0;
 }
 
 .header .title:hover {
@@ -388,6 +387,7 @@ textarea {
 /* end header */
 
 /* start article list */
+
 .main .pagination {
     float: none;
     padding: 20px 0 25px;
@@ -406,25 +406,6 @@ textarea {
     width: 450px;
 }
 
-.article-abstract {
-    background-color: #3E3E3E;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
-    position: absolute;
-    top: 0;
-    width: 100%;
-    transition: all 1.2s;
-    height: 100%;
-}
-
-.article-image {
-    top: 151px;
-}
-
-.article-list > div:hover .article-image {
-    top: 0;
-}
-
 .article-list > div > img {
     max-width: 100%;
     transition: all 1.2s;
@@ -436,24 +417,32 @@ textarea {
     transform: scale(1.2);
 }
 
+.article-list > div:hover .article-image {
+    top: 0;
+}
+
+.article-list > div:hover .fn-right {
+    display: block;
+}
+
+.article-image {
+    background-color: #3E3E3E;
+    opacity: 0.8;
+    position: absolute;
+    top: 163px;
+    width: 100%;
+    transition: all 1.2s;
+}
+
 .article-date {
     float: left;
-    margin: 10px;
+    margin: 10px 0 0 10px;
 }
 
 .article-title {
-    height: 24px;
-    line-height: 24px;
-    margin: 0 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 430px;
-    font-weight: normal;
-}
-
-.article-title span {
-    color: #E61E1E;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 0 10px;
 }
 
 .article-title a {
@@ -464,27 +453,40 @@ textarea {
     color: #9E0B0E;
 }
 
+.article-abstract {
+    height: 100%;
+}
+
 .article-abstract .fn-right {
-    display: none;
     position: absolute;
     right: 0;
+    display: none;
+    top: 0;
 }
 
-.article-abstract:hover .fn-right {
-    display: block;
+.article-abstract .fn-right > a,
+.article-info > a {
+    padding: 15px;
+    float: left;
+    background-color: #E61E1E;
+    color: #FFF;
+    font-size: 14px;
 }
 
-.article-abstract .fn-right > a {
+.article-info > a {
     background-color: #FFF;
     color: #E61E1E;
-    float: left;
-    padding: 10px;
     transition: all 0.8s;
 }
 
 .article-abstract .fn-right > a:hover {
+    background-color: #FFF;
+    color: #E61E1E;
+}
+
+.article-info > a:hover {
+    background-color: #EA4040;
     color: #FFF;
-    background-color: #E61E1E;
 }
 
 .article-abstract > .article-tags {
@@ -492,14 +494,19 @@ textarea {
 }
 
 .article-abstract > .article-body {
-    margin: 10px;
+    height: 115px;
+    margin: 10px 10px 0;
     overflow: hidden;
     white-space: inherit;
     word-wrap: break-word;
+    padding: 0;
+}
+
+.article-image .article-body {
     padding: 10px;
     height: 95px;
 }
-/* end article list */
+/* end article list*/
 
 /* start side */
 .side {
@@ -677,6 +684,8 @@ textarea {
 .notice-board .text {
     top: 36px;
 }
+
+
 /* end side */
 
 /* start others */
@@ -725,6 +734,12 @@ textarea {
 /* end others */
 
 /* start article */
+.article-info {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .article-header {
     background-color: #E61E1E;
     margin: 30px 0;
@@ -732,35 +747,8 @@ textarea {
     position: relative;
 }
 
-.article-info {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-.article-info > a {
-    background-color: #FFF;
-    color: #E61E1E;
-    transition: all 0.8s;
-    font-size: 14px;
-    float: left;
-    padding: 14px;
-    border-bottom: 1px solid #FFF;
-    border-left: 1px solid #FFF;
-}
-
-.article-info > a:hover {
-    background-color: #E61E1E;
-    color: #FFF;
-}
-
 .article-header h2 {
     color: #FFF;
-}
-
-.article-header h2 > span {
-    font-weight: normal;    
-    color: #D1D2D1;
 }
 
 .article-header .article-date {
@@ -801,7 +789,7 @@ pre.prettyprint {
 
 #comments .article-body {
     margin: 10px 0;
-    width: 800px;
+    width: 810px;
 }
 
 #comments .user-name {
@@ -811,10 +799,6 @@ pre.prettyprint {
 
 #comments .user-name:hover {
     color: #CA1B1E;
-}
-
-.comment-info a {
-    color: #F8F7F7;
 }
 
 .at {
@@ -886,7 +870,7 @@ pre.prettyprint {
 }
 
 #dynamic #comments .article-body {
-    width: 743px;
+    width: 770px;
 }
 
 #dynamic .article-relative .text {
@@ -894,24 +878,21 @@ pre.prettyprint {
 }
 
 #dynamic .footer {
-    margin: 20px 0 10px;
+    margin: 20px 0 0;
     float: left;
     transition: all 0.3s ease-out 0s;
 }
 
-.most-comment,
-.most-view,
+.archives-tile,
 .links-tile,
-.tags-tile {
-    position: static;
-    background-color: #F09609;
-    width: 535px;
-    margin-top: 20px;
-}
-
+.tags-tile,
+.most-comment,
 .most-view {
-    margin-left: 20px;
-    background-color: #2E8BCC;
+    margin-left: 0;
+    width: 333px;
+    background-color: #008641;
+    margin-bottom: 20px;
+    position: static;
 }
 
 .tags-tile {
@@ -920,11 +901,13 @@ pre.prettyprint {
 }
 
 .links-tile {
+    margin-left: 20px;
     background-color: #7B4F9D;
 }
 
 .tags-tile span,
 .links-tile span,
+.archives-tile span,
 .most-comment span,
 .most-view span {
     font-size: 60px;
@@ -932,14 +915,16 @@ pre.prettyprint {
 
 .tags-tile .text,
 .links-tile .text,
+.archives-tile .text,
 .most-comment .text,
 .most-view .text {
     position: static;
-    width: 430px;
+    width: 253px;
 }
 
 .tags-tile a,
-.links-tile a {
+.links-tile a,
+.archives-tile a {
     background-color: #EA4040;
     color: #D1D2D1;
     float: left;
@@ -952,15 +937,24 @@ pre.prettyprint {
 }
 
 .tags-tile a:hover,
-.links-tile a:hover {
+.links-tile a:hover,
+.archives-tile a:hover {
     background-color: #FFF;
     color: #EA4040;
+}
+
+.most-comment,
+.most-view {
+    background-color: #F09609;
+    width: 535px;
+    margin: 100px 0;
 }
 
 .most-comment .text,
 .most-view .text {
     margin-right: 20px;
     line-height: 24px;
+    width: 430px;
 }
 
 .most-comment .text a:hover,
@@ -973,5 +967,10 @@ pre.prettyprint {
     color: #D1D2D1;
     font-size: 13px;
     font-weight: normal;
+}
+
+.most-view {
+    margin-left: 20px;
+    background-color: #2E8BCC;
 }
 /* end dynamic */
