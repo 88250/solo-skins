@@ -6,6 +6,7 @@
 
 <table id="commentForm" class="form">
     <tbody>
+        <#if !isLoggedIn>
         <tr>
             <td colspan="2">
                 <input type="text" id="commentName"/>
@@ -24,6 +25,7 @@
                 <label for="commentURL">${commentURLLabel}</label>
             </td>
         </tr>
+        </#if>
         <tr>
             <td id="emotions" colspan="2">
                 <span class="em00" title="${em00Label}"></span>
@@ -49,12 +51,14 @@
                 <textarea rows="10" cols="96" id="comment"></textarea>
             </td>
         </tr>
+        <#if !isLoggedIn>
         <tr>
             <td colspan="2">
                 <input type="text" id="commentValidate"/>
                 <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
             </td>
         </tr>
+        </#if>
         <tr>
             <td>
                 <span id="commentErrorTip" class="tip"></span>

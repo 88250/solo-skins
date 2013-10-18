@@ -155,18 +155,6 @@
             <div class="text"></div>
         </div>
 
-        <div class="clear side-tile">
-            <span data-ico="&#xe003;"></span>
-            <div class="title">
-                ${clearCachePageLabel}
-            </div>
-            <div class="text">
-                <a href="javascript:Util.clearCache();">${clearCacheLabel}</a>
-                <br />
-                <a href="javascript:Util.clearCache('all');">${clearAllCacheLabel}</a>
-            </div>
-        </div>
-
         <a href="${servePath}/admin-index.do#main" class="settings side-tile">
             <span data-ico="&#x0070;"></span>
             <div class="title">

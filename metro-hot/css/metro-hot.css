@@ -241,7 +241,6 @@ textarea {
 }
 
 .footer a:hover,
-.clear a:hover,
 .article-relative a:hover,
 .article-abstract .article-title a:hover,
 .article-abstract .article-tags a:hover,
@@ -574,7 +573,6 @@ textarea {
 
 .online-count,
 .user,
-.clear,
 .notice-board,
 .share,
 .article-relative {
@@ -603,7 +601,6 @@ textarea {
     background-color: #7B4F9D;
 }
 
-.clear,
 .next,
 .prev {
     background-color: #E61E1E;
