@@ -39,6 +39,7 @@
 </div>
 <table id="commentForm" class="comment" cellpadding="0" cellspacing="0" width="100%">
     <tbody>
+        <#if !isLoggedIn>
         <tr>
             <th width="200px">
                 <span class="comment-label">
@@ -72,6 +73,7 @@
                 <input type="text" id="commentURL"/>
             </td>
         </tr>
+        </#if>
         <tr>
             <th>
                 <span class="comment-label">
@@ -108,6 +110,7 @@
                 <textarea rows="10" id="comment"></textarea>
             </td>
         </tr>
+        <#if !isLoggedIn>
         <tr>
             <th>
                 <span class="comment-label">
@@ -120,6 +123,7 @@
                 <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
             </td>
         </tr>
+        </#if>
         <tr>
             <td colspan="2">
                 <span style="margin-top: 20px;" class="right error-msg" id="commentErrorTip"></span>

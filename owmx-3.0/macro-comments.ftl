@@ -44,6 +44,7 @@
 <#if article.commentable>
 <table id="commentForm" class="comment-form">
     <tbody>
+        <#if !isLoggedIn>
         <tr>
             <td width="208px">
                 <input type="text" class="normalInput" id="commentName"/>
@@ -68,6 +69,7 @@
                 ${commentURLLabel}
             </td>
         </tr>
+        </#if>
         <tr>
             <td id="emotions" colspan="2">
                 <span class="em00" title="${em00Label}"></span>
@@ -92,6 +94,7 @@
                 <textarea rows="10" cols="96" id="comment"></textarea>
             </td>
         </tr>
+        <#if !isLoggedIn>
         <tr>
             <td>
                 <input type="text" class="normalInput" id="commentValidate"/>
@@ -100,6 +103,7 @@
                 <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
             </td>
         </tr>
+        </#if>
         <tr>
             <td colspan="2" align="right">
                 <span class="error-msg" id="commentErrorTip"></span>

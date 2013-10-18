@@ -26,8 +26,6 @@
     };
     
     var Label = {
-        "clearAllCacheLabel": "${clearAllCacheLabel}",
-        "clearCacheLabel": "${clearCacheLabel}",
         "adminLabel": "${adminLabel}",
         "logoutLabel": "${logoutLabel}",
         "skinDirName": "${skinDirName}",
