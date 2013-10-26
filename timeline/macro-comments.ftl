@@ -118,7 +118,7 @@
 
                        var addComment = function(result, state) {
                            var commentHTML = '<li id="' + result.oId + '"><img \
-            title="' + $("#commentName" + state).val() + '" alt="' + $("#commentName" + state).val() +
+                                    alt="' + result.userName +
                                    '" src="' + result.commentThumbnailURL + '"/><div><span class="author">' + result.replyNameHTML;
 
                            if (state !== "") {

@@ -159,7 +159,7 @@
 
         commentHTML += '<div class="right">' + result.commentDate
             + '&nbsp;<a rel="nofollow" class="no-underline" href="javascript:replyTo(\'' + result.oId + '\');">${replyLabel}</a>'
-            + '</div><div class="clear"></div></div><div><img alt="' + $("#commentName" + state).val()
+            + '</div><div class="clear"></div></div><div><img alt="' + result.userName
             + '" src="' + result.commentThumbnailURL + '" class="comment-picture left"/>'
             + '<div class="comment-content">'
             + Util.replaceEmString($("#comment" + state).val().replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g,"<br/>"))

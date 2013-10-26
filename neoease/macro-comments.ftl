@@ -132,7 +132,7 @@
             oddEven = "comment-even";
         }
         var commentHTML = '<div id="' + result.oId + '" class="oddEven"><img class="comment-header" \
-            title="' + $("#commentName" + state).val() + '" alt="' + $("#commentName" + state).val() + 
+            alt="' + result.userName + 
             '" src="' + result.commentThumbnailURL + '"/><div class="comment-panel"><div class="left">' + result.replyNameHTML;
 
         if (state !== "") {

@@ -133,7 +133,7 @@
     var addComment = function (result, state) {
         var commentHTML = '<div id="' + result.oId
             + '" class="comment-body"><div class="comment-panel"><div class="left comment-author">'
-            + '<div><img alt="' + $("#commentName" + state).val() + '" src="' +
+            + '<div><img alt="' + result.userName + '" src="' +
             result.commentThumbnailURL + '"/></div>' + result.replyNameHTML;
 
         commentHTML += '</div><div class="left comment-info"><div class="left">' + result.commentDate;

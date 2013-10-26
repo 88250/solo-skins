@@ -155,7 +155,7 @@
 
     var addComment = function (result, state) {
         var commentHTML = '<div id="' + result.oId + '">'
-            + '<img class="left" alt="' + $("#commentName" + state).val() + '" src="' + result.commentThumbnailURL
+            + '<img class="left" alt="' + result.userName + '" src="' + result.commentThumbnailURL
             + '"/><div class="comment-panel left"><div class="comment-top">' + result.replyNameHTML;
 
         if (state !== "") {

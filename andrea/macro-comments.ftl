@@ -144,7 +144,7 @@
 
         var commentHTML = '<div id="' + result.oId
             + '" class="comment-body ' + oddEven + '"><div class="comment-panel"><div class="left comment-author">'
-            + '<img alt="' + $("#commentName" + state).val() + '" src="' + result.commentThumbnailURL
+            + '<img alt="' + result.userName + '" src="' + result.commentThumbnailURL
             + '"/></div><div class="left comment-info">' + result.replyNameHTML;
 
         if (state !== "") {

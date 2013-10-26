@@ -143,7 +143,7 @@
                     var addComment = function(result, state) {
                         $("#comments").prev().html("<h3>${commentLabel}</h3>");
                         var commentHTML = '<div id="' + result.oId + '" class="fn-clear"><img ' +
-                                'title="' + $("#commentName" + state).val() + '" alt="' + $("#commentName" + state).val() +
+                                'alt="' + result.userName +
                                 '" src="' + result.commentThumbnailURL + '"/>' +
                                 '<div class="comment-main"><div class="fn-clear">' + result.replyNameHTML;
 
