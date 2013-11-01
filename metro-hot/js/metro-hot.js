@@ -17,7 +17,7 @@
  * @fileoverview metro-hot js.
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.9, Jul 31, 2013
+ * @version 1.0.1.0, Sep 30, 2013
  */
 
 var MetroHot = {
@@ -37,9 +37,12 @@ var MetroHot = {
         $("#logout, .logout").attr("href", logoutHref);
 
         // 头部标题点击事件
+        $(".header .title, .navigation").mouseover(function() {
+            $(".navigation").show();
+        }).mouseout(function() {
+            $(".navigation").hide();
+        });
         $(".header .title").click(function() {
-            $(".navigation").slideToggle();
-        }).dblclick(function() {
             window.location.href = latkeConfig.servePath;
         });
 

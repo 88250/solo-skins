@@ -38,6 +38,7 @@
 <#if article.commentable>
 <table id="commentForm" class="comment-form" cellpadding="0" cellspacing="0">
     <tbody>
+        <#if !isLoggedIn>
         <tr>
             <th width="115px">
                 ${commentNameLabel}
@@ -62,6 +63,7 @@
                 <input type="text" id="commentURL"/>
             </td>
         </tr>
+        </#if>
         <tr>
             <th>
                 ${commentEmotionsLabel}
@@ -92,6 +94,7 @@
                 <textarea rows="10" id="comment"></textarea>
             </td>
         </tr>
+        <#if !isLoggedIn>
         <tr>
             <th>
                 ${captchaLabel}
@@ -101,6 +104,7 @@
                 <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
             </td>
         </tr>
+        </#if>
         <tr>
             <td colspan="2" align="right">
                 <button class="right" id="submitCommentButton" onclick="page.submitComment();">${submmitCommentLabel}</button>
@@ -140,7 +144,7 @@
 
         var commentHTML = '<div id="' + result.oId
             + '" class="comment-body ' + oddEven + '"><div class="comment-panel"><div class="left comment-author">'
-            + '<img alt="' + $("#commentName" + state).val() + '" src="' + result.commentThumbnailURL
+            + '<img alt="' + result.userName + '" src="' + result.commentThumbnailURL
             + '"/></div><div class="left comment-info">' + result.replyNameHTML;
 
         if (state !== "") {

@@ -16,8 +16,6 @@ Theme by <a rel="friend" href="http://www.thepixel.com/blog" target="_blank">Pix
     };
         
     var Label = {
-        "clearAllCacheLabel": "${clearAllCacheLabel}",
-        "clearCacheLabel": "${clearCacheLabel}",
         "adminLabel": "${adminLabel}",
         "logoutLabel": "${logoutLabel}",
         "skinDirName": "${skinDirName}",

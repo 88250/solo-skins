@@ -32,6 +32,7 @@
 <h3>${commentLabel}</h3>
 <table class="comment-form" id="commentForm">
     <tbody>
+        <#if !isLoggedIn>
         <tr>
             <td>
                 <label for="commentName"> * ${commentNameLabel}</label>
@@ -50,6 +51,7 @@
                 <input type="text" id="commentURL"/>
             </td>
         </tr>
+        </#if>
         <tr>
             <td id="emotions">
                 <span class="em00" title="${em00Label}"></span>
@@ -74,12 +76,14 @@
                 <textarea style="width:96%" rows="10"  id="comment"></textarea>
             </td>
         </tr>
+        <#if !isLoggedIn>
         <tr>
             <td>
                 <input type="text" id="commentValidate"/>
                 <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
             </td>
         </tr>
+        </#if>
         <tr>
             <td>
                 <button id="submitCommentButton" onclick="page.submitComment();">${submmitCommentLabel}</button>
@@ -114,7 +118,7 @@
 
                        var addComment = function(result, state) {
                            var commentHTML = '<li id="' + result.oId + '"><img \
-            title="' + $("#commentName" + state).val() + '" alt="' + $("#commentName" + state).val() +
+                                    alt="' + result.userName +
                                    '" src="' + result.commentThumbnailURL + '"/><div><span class="author">' + result.replyNameHTML;
 
                            if (state !== "") {

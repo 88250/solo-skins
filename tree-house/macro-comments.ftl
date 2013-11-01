@@ -50,6 +50,7 @@
         </div>
         <table id="commentForm" class="form">
             <tbody>
+                <#if !isLoggedIn>
                 <tr>
                     <th>
                         ${commentName1Label}
@@ -74,6 +75,7 @@
                         <input type="text" id="commentURL"/>
                     </td>
                 </tr>
+                </#if>
                 <tr>
                     <td id="emotions" colspan="2">
                         <span class="em00" title="${em00Label}"></span>
@@ -101,6 +103,7 @@
                         <textarea rows="10" cols="96" id="comment"></textarea>
                     </td>
                 </tr>
+                <#if !isLoggedIn>
                 <tr>
                     <th valign="top">
                         ${captcha1Label}
@@ -110,6 +113,7 @@
                         <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
                     </td>
                 </tr>
+                </#if>
                 <tr>
                     <td colspan="2" align="right">
                         <span class="error-msg" id="commentErrorTip"></span>
@@ -155,7 +159,7 @@
 
         commentHTML += '<div class="right">' + result.commentDate
             + '&nbsp;<a rel="nofollow" class="no-underline" href="javascript:replyTo(\'' + result.oId + '\');">${replyLabel}</a>'
-            + '</div><div class="clear"></div></div><div><img alt="' + $("#commentName" + state).val()
+            + '</div><div class="clear"></div></div><div><img alt="' + result.userName
             + '" src="' + result.commentThumbnailURL + '" class="comment-picture left"/>'
             + '<div class="comment-content">'
             + Util.replaceEmString($("#comment" + state).val().replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g,"<br/>"))

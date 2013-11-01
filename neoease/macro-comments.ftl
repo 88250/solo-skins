@@ -42,6 +42,7 @@
     <h4>${postCommentsLabel}</h4>
     <table id="commentForm">
         <tbody>
+            <#if !isLoggedIn>
             <tr>
                 <td>
                     <input type="text" class="normalInput" id="commentName"/>
@@ -60,6 +61,7 @@
                     <label for="commentURL">${commentURLLabel}</label>
                 </td>
             </tr>
+            </#if>
             <tr>
                 <td id="emotions">
                     <span class="em00" title="${em00Label}"></span>
@@ -84,12 +86,14 @@
                     <textarea rows="10" cols="96" id="comment"></textarea>
                 </td>
             </tr>
+            <#if !isLoggedIn>
             <tr>
                 <td>
                     <input type="text" class="normalInput" id="commentValidate"/>
                     <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
                 </td>
             </tr>
+            </#if>
             <tr>
                 <td align="right">
                     <span class="tip" id="commentErrorTip"></span>
@@ -128,7 +132,7 @@
             oddEven = "comment-even";
         }
         var commentHTML = '<div id="' + result.oId + '" class="oddEven"><img class="comment-header" \
-            title="' + $("#commentName" + state).val() + '" alt="' + $("#commentName" + state).val() + 
+            alt="' + result.userName + 
             '" src="' + result.commentThumbnailURL + '"/><div class="comment-panel"><div class="left">' + result.replyNameHTML;
 
         if (state !== "") {
