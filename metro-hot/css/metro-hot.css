@@ -708,6 +708,7 @@ textarea {
 .archives a {
     background-color: #E61E1E;
     color: #FFF;
+	line-height: 15px;
     float: left;
     margin: 10px;
     padding: 10px 15px;
