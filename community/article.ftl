@@ -30,7 +30,7 @@
                             <span class="left">
                                 by&nbsp;
                             </span>
-                            <a rel="nofollow" class="left" title="${article.authorName}" href="${servePath}/authors/${article.authorId}}">
+                            <a rel="nofollow" class="left" title="${article.authorName}" href="${servePath}/authors/${article.authorId}">
                                 ${article.authorName}
                             </a>
                             <span class="clear"></span>
