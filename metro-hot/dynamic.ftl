@@ -161,7 +161,6 @@
                     <div class="text fn-right">
                         <#list links as link>
                         <a rel="friend" href="${link.linkAddress}" title="${link.linkDescription}" target="_blank">
-                            <!--img src="http://www.google.com/s2/u/0/favicons?domain=<#list link.linkAddress?split('/') as x><#if x_index=2>${x}<#break></#if></#list>" /-->
                             ${link.linkTitle}
                         </a>
                         </#list>
