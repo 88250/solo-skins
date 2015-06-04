@@ -1,5 +1,4 @@
-B3log Solo 官方皮肤
--------------------------------------------------------
+# Solo 官方皮肤
 
 1. [开发步骤](https://github.com/b3log/solo/wiki/Develop_steps)
 2. [模板变量](https://github.com/b3log/solo/wiki/Template_variables)
