@@ -1,5 +1,5 @@
-var version = "0.6.7",
-newVersion = "0.6.8";
+var version = "0.6.8",
+newVersion = "0.6.9";
 
 process.argv.forEach(function (val, index) {  
     if (index === 2) {
