@@ -8,13 +8,10 @@
             </h1>
             <span class="sub-title">${blogSubtitle}</span>
         </div>
-        <form target="_blank" method="get" action="http://www.google.com/search">
+        <form class="right" target="_blank" action="http://zhannei.baidu.com/cse/site">
             <input id="search" type="text" name="q" />
-            <input type="submit" name="btnG" value="" class="none" />
-            <input type="hidden" name="oe" value="UTF-8" />
-            <input type="hidden" name="ie" value="UTF-8" />
-            <input type="hidden" name="newwindow" value="0" />
-            <input type="hidden" name="sitesearch" value="${serverHost}" />
+            <input type="submit" value="" class="none" />
+            <input type="hidden" name="cc" value="${serverHost}">
         </form>
         <div class="clear"></div>
     </div>

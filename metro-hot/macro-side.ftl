@@ -2,13 +2,10 @@
 <div class="side">
     <div class="fn-clear">
         <#if !isArticle>
-        <form target="_blank" method="get" action="http://www.google.com/search">
-            <input placeholder="Search" id="search" type="text" name="q" /><span data-ico="&#x0067;"></span>
-            <input type="submit" name="btnG" value="" class="fn-none" />
-            <input type="hidden" name="oe" value="UTF-8" />
-            <input type="hidden" name="ie" value="UTF-8" />
-            <input type="hidden" name="newwindow" value="0" />
-            <input type="hidden" name="sitesearch" value="${serverHost}" />
+        <form target="_blank" action="http://zhannei.baidu.com/cse/site">
+            <input placeholder="Search" id="search" type="text" name="q" /><span onclick="$(this).parent().submit()" data-ico="&#x0067;"></span>
+            <input type="submit" value="" class="fn-none" />
+            <input type="hidden" name="cc" value="${serverHost}">
         </form>
 
         <#if "" != noticeBoard>
@@ -63,7 +60,7 @@
                 <span data-ico="&#xe08e;" title="Google"></span>
             </div>
         </div>
-        
+
         <#if relevantArticlesDisplayCount??>
         <#if nextArticlePermalink??>
         <a class="next side-tile" title="${nextArticleTitle}"
@@ -98,7 +95,7 @@
             </div>
         </div>
         </#if>
-        
+
         <#if 0 != relevantArticlesDisplayCount>
         <div id="relevantArticles" class="side-tile article-relative">
             <span data-ico="&#xe020;"></span>

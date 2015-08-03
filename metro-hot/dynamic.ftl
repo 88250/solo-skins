@@ -33,9 +33,9 @@
                                     <#else>
                                     <a href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
                                     </#if>
-                                   
+
                                     <a class="fn-right" rel="bookmark" data-ico="&#xe185;" href="${servePath}${comment.commentSharpURL}">
-                                         ${viewLabel}
+                                        ${viewLabel}
                                     </a>
                                     <div class="fn-right" data-ico="&#xe200;">
                                         ${comment.commentDate?string("yy-MM-dd HH:mm")}&nbsp; &nbsp;
@@ -51,13 +51,10 @@
                 </div>
                 <div class="side">
                     <div>
-                        <form target="_blank" method="get" action="http://www.google.com/search">
-                            <input placeholder="Search" id="search" type="text" name="q" /><span data-ico="&#x0067;"></span>
-                            <input type="submit" name="btnG" value="" class="fn-none" />
-                            <input type="hidden" name="oe" value="UTF-8" />
-                            <input type="hidden" name="ie" value="UTF-8" />
-                            <input type="hidden" name="newwindow" value="0" />
-                            <input type="hidden" name="sitesearch" value="${serverHost}" />
+                        <form target="_blank" action="http://zhannei.baidu.com/cse/site">
+                            <input placeholder="Search" id="search" type="text" name="q" /><span onclick="$(this).parent().submit()" data-ico="&#x0067;"></span>
+                            <input type="submit" value="" class="fn-none" />
+                            <input type="hidden" name="cc" value="${serverHost}">
                         </form>
 
                         <#if "" != noticeBoard>
@@ -191,7 +188,7 @@
         <span id="goTop" onclick="Util.goTop()" data-ico="&#xe042;" class="side-tile"></span>
         <#include "footer.ftl"/>
         <script>
-            $("#comments .article-body").each(function() {
+            $("#comments .article-body").each(function () {
                 this.innerHTML = Util.replaceEmString($(this).html());
             });
 
