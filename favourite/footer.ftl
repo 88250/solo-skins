@@ -1,11 +1,7 @@
 <div class="info">
     <div class="copyright">
         <span style="color:white;">&copy; ${year}</span> - <a style="color:white;" href="${servePath}">${blogTitle}</a><br/>
-        Powered by
-        <a href="http://b3log.org" target="_blank" class="logo">
-            ${b3logLabel}&nbsp;
-            <span style="color: orangered; font-weight: bold;">Solo</span></a>,
-        ver ${version}&nbsp;&nbsp;
+        Powered by <a href="http://b3log.org" target="_blank">B3log</a>, ver ${version}&nbsp;&nbsp;
         Theme by <a style="color:white;" rel="friend" href="http://www.iprimidieci.com/" target="_blank">Primi</a> & <a rel="friend" style="color:white;" href="http://lamb.b3log.org" target="_blank">Lamb</a>.
     </div>
     <div class="right goTop">

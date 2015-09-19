@@ -1,10 +1,6 @@
 <div class="left copyright">
     <span style="color: gray;">&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a><br/>
-    Powered by
-    <a href="http://b3log.org" target="_blank" class="logo">
-        ${b3logLabel}&nbsp;
-        <span style="color: orangered; font-weight: bold;">Solo</span></a>,
-    ver ${version}&nbsp;&nbsp;
+    Powered by <a href="http://b3log.org" target="_blank">B3log</a>, ver ${version}&nbsp;&nbsp;
     Theme by <a rel="friend" href="http://www.neoease.com" target="_blank">NeoEase</a> & <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
 </div>
 <div class="right goTop">
