@@ -1,5 +1,5 @@
 <div class="footer">
-    &copy; ${year} - <a href="${servePath}">${blogTitle}</a> Powered by <a href="http://b3log.org" target="_blank">B3log</a>, ver ${version}
+    &copy; ${year} - <a href="${servePath}">${blogTitle}</a> Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a>, ver ${version}
     <div><em>All rights reserved.</em></div>
 </div>
 
