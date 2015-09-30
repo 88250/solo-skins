@@ -90,7 +90,9 @@ h4, h5, h6 {
 
 .form-control,
 #captcha,
-#captchaReply {
+#captchaReply,
+#emotions span,
+#emotionsReply span {
     margin-top: 15px;
 }
 
