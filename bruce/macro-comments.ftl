@@ -1,58 +1,66 @@
 <#macro comments commentList article>
 <div class="row" id="comments">
-    <div class="col-sm-12">
-        <#list commentList as comment>
-        <div class="row comment" id="${comment.oId}">
-            <img class="col-sm-1" title="${comment.commentName}"
-                 alt="${comment.commentName}" src="${comment.commentThumbnailURL}"/>
-            <div class="col-sm-11">
-                <div class="row">
-                    <#if "http://" == comment.commentURL>
-                    <a>${comment.commentName}</a>
-                    <#else>
-                    <a href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
-                    </#if>
-                    <#if comment.isReply>@
-                    <a href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
-                       onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 20);"
-                       onmouseout="page.hideComment('${comment.commentOriginalCommentId}')">${comment.commentOriginalCommentName}</a>
-                    </#if>
+    <#list commentList as comment>
+    <div class="row comment" id="${comment.oId}">
+        <img class="col-sm-1" title="${comment.commentName}"
+             alt="${comment.commentName}" src="${comment.commentThumbnailURL}"/>
+        <div class="col-sm-11">
+            <div class="row">
+                <#if "http://" == comment.commentURL>
+                <a>${comment.commentName}</a>
+                <#else>
+                <a href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
+                </#if>
+                <#if comment.isReply>@
+                <a href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
+                   onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 20);"
+                   onmouseout="page.hideComment('${comment.commentOriginalCommentId}')">${comment.commentOriginalCommentName}</a>
+                </#if>
 
-                    <span class="gray">• ${comment.commentDate?string("yy-MM-dd HH:mm")} • <#if article.commentable>
-                        <a rel="nofollow" href="javascript:replyTo('${comment.oId}');">Reply</a>
-                        </#if></span>
+                <span class="gray">• ${comment.commentDate?string("yy-MM-dd HH:mm")} • <#if article.commentable>
+                    <a rel="nofollow" href="javascript:replyTo('${comment.oId}');">Reply</a>
+                    </#if></span>
 
-                </div>
-                <div class="row code-highlight">${comment.commentContent}</div>
             </div>
+            <div class="row code-highlight">${comment.commentContent}</div>
         </div>
-        </#list>
     </div>
+    </#list>
 </div>
 
 <#if article.commentable>
 <div class="row cmtForm">
-    <table id="commentForm" class="col-sm-12">
+    <table id="commentForm" class="col-sm-12 form-horizontal">
         <tbody>
             <#if !isLoggedIn>
             <tr>
-                <td colspan="2">
-                    <input type="text" class="normalInput" id="commentName" placeholder="Name"/>
+                <td>
+                    <label for="commentName" class="col-sm-2 control-label">Name</label>
+                </td>
+                <td>
+                    <input type="text" class="form-control" id="commentName" placeholder="Name"/>
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <input type="text" class="normalInput" id="commentEmail" placeholder="Email"/>
+                <td>
+                    <label for="commentName" class="col-sm-2 control-label">Email</label>
+                </td>
+                <td>
+                    <input type="text" class="form-control" id="commentEmail" placeholder="Email"/>
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <input type="text" id="commentURL" placeholder="URL"/>
+                <td>
+                    <label for="commentName" class="col-sm-2 control-label">URL</label>
+                </td>
+                <td>
+                    <input type="text" id="commentURL" placeholder="URL" class="form-control"/>
                 </td>
             </tr>
             </#if>
             <tr>
-                <td id="emotions" colspan="2">
+                <td>&nbsp;</td>
+                <td id="emotions">
                     <span class="em00" title="${em00Label}"></span>
                     <span class="em01" title="${em01Label}"></span>
                     <span class="em02" title="${em02Label}"></span>
@@ -71,15 +79,20 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <textarea rows="10" style="width: 100%;" id="comment"></textarea>
+                <td>&nbsp;</td>
+                <td>
+                    <textarea rows="3" id="comment" class="form-control"></textarea>
                 </td>
             </tr>
             <#if !isLoggedIn>
             <tr>
-                <td colspan="2">
-                    <input type="text" id="commentValidate"/>
+                <td>&nbsp;</td>
+                <td>
+                    <form class="form-inline">
+                        
+                    <input type="text" id="commentValidate" class="form-control"/>
                     <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
+                    </form>
                 </td>
             </tr>
             </#if>
@@ -147,7 +160,7 @@
                         };
 
                         var replyTo = function (id) {
-                            var commentFormHTML = "<table class='cmtReplyForm' id='replyForm'>";
+                            var commentFormHTML = "<table class='cmtReplyForm col-sm-12 form-horizontal' id='replyForm'>";
                             page.addReplyForm(id, commentFormHTML);
                             $("#replyForm label").each(function () {
                                 $this = $(this);
