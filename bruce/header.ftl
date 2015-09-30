@@ -1,4 +1,4 @@
-<div style="display: none">${topBarReplacement}</div>
+${topBarReplacement}
 <div class="header">
 
     <div class="container">
