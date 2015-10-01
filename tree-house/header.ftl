@@ -11,7 +11,7 @@
             <a href="${servePath}/tags.html">${allTagsLabel}</a>&nbsp;&nbsp;
         </li>
         <li>
-            <a rel="alternate" href="${servePath}/blog-articles-feed.do">${atomLabel}</a><a href="${servePath}/blog-articles-feed.do"><img src="${staticServePath}/images/feed.png" alt="Atom"/></a>
+            <a rel="alternate" href="${servePath}/blog-articles-rss.do">RSS</a><a href="${servePath}/blog-articles-rss.do"><img src="${staticServePath}/images/feed.png" alt="RSS"/></a>
         </li>
     </ul>
 </div>

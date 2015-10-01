@@ -37,8 +37,8 @@
                 <a href="${servePath}/tags.html">Tags</a>
             </li>
             <li>
-                <a rel="alternate" href="${servePath}/blog-articles-feed.do">
-                    Atom
+                <a rel="alternate" href="${servePath}/blog-articles-rss.do">
+                    RSS
                 </a>
             </li>
         </ul>

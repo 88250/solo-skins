@@ -11,10 +11,10 @@
         ${topBarReplacement}
         <#include "header.ftl">
         <h3 id="tag" style="cursor: pointer" class="nav-abs" 
-            onclick="window.location.href='${servePath}/tag-articles-feed.do?oId=${tag.oId}'"> 
+            onclick="window.location.href='${servePath}/tag-articles-rss.do?oId=${tag.oId}'"> 
             ${tag.tagTitle}
             (${tag.tagPublishedRefCount})
-            <img src="${staticServePath}/images/feed.png" alt="Atom"/>
+            <img src="${staticServePath}/images/feed.png" alt="RSS"/>
         </h3>
         <#include "article-list.ftl">
         <#include "footer.ftl">

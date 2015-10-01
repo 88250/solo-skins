@@ -39,7 +39,7 @@
                     <a href="${servePath}/links.html">${linkLabel}</a>
                 </li>
                 <li>
-                    <a rel="alternate" href="${servePath}/blog-articles-feed.do">Atom<img src="${staticServePath}/images/feed.png" alt="Atom"/></a>
+                    <a rel="alternate" href="${servePath}/blog-articles-rss.do">RSS<img src="${staticServePath}/images/feed.png" alt="RSS"/></a>
                 </li>
             </ul>
             <form target="_blank" action="http://zhannei.baidu.com/cse/site">

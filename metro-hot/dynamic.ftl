@@ -69,10 +69,10 @@
                         </div>
                         </#if>
 
-                        <a rel="alternate" href="${servePath}/blog-articles-feed.do" class="user side-tile">
+                        <a rel="alternate" href="${servePath}/blog-articles-rss.do" class="user side-tile">
                             <span data-ico="&#xe135;"></span>
                             <div class="text">
-                                ${atomLabel}
+                                RSS
                             </div>
                         </a>
 
