@@ -95,12 +95,14 @@
                     </form>
                 </td>
             </tr>
+            <#else>
+             <tr colspan="2">
+                <td>&nbsp;</td>
+             </tr>
             </#if>
             <tr>
-                <td>
+                <td align="right" colspan="2">
                     <span class="text-danger" id="commentErrorTip"></span>
-                </td>
-                <td align="right">
                     <button class="btn btn-success" id="submitCommentButton" onclick="page.submitComment();">${submmitCommentLabel}</button>
                 </td>
             </tr>
@@ -152,7 +154,7 @@
 
                             commentHTML += '<span class="gray">•' + result.commentDate.substring(2, 16)
                                     + '• <a rel="nofollow" href="javascript:replyTo('
-                                    + result.oId + ');">Reply</a></span></div><div class="row">'
+                                    + result.oId + ');">Reply</a></span></div><div class="row">' +
                             Util.replaceEmString($("#comment" + state).val().replace(/</g, "&lt;").
                                     replace(/>/g, "&gt;").replace(/\n/g, "<br/>")) + '</div>';
 
