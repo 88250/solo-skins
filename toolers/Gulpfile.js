@@ -13,7 +13,7 @@ gulp.task ('clean', function () {
 gulp.task ('build', function () {
     gulp.src ('../*/css/*.css')
     .pipe(rename({ suffix: '.min' }))
-	.pipe(minifycss())
+	.pipe(minifycss({keepSpecialComments: '1'}))
 	.pipe(gulp.dest ('../'));
 
     gulp.src ('../*/js/*.js')
