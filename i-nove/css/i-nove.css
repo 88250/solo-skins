@@ -165,6 +165,7 @@ h5 {
 }
 .article {
     padding-bottom: 15px;
+    overflow: hidden;
 }
 .article-title {
     border-bottom: 1px solid #CCCCCC;
