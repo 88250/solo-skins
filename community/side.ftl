@@ -15,11 +15,15 @@
         <h4>${mostViewCountArticlesLabel}</h4>
         <div class="arrow-right"></div>
         <div class="most-view-count-articles">
-            <#list mostViewCountArticles as article>
-            <a rel="nofollow" title="${article.articleTitle}" href="${servePath}${article.articlePermalink}">
-                <sup>[${article.articleViewCount}]</sup>${article.articleTitle}
-            </a>
-            </#list>
+            <ul>
+                <#list mostViewCountArticles as article>
+                <li>
+                    <a rel="nofollow" title="${article.articleTitle}" href="${servePath}${article.articlePermalink}">
+                        <sup>[${article.articleViewCount}]</sup>${article.articleTitle}
+                    </a>
+                </li>
+                </#list>
+            </ul>
         </div>
         <div class="clear"></div>
         <#if 0 != recentComments?size>
