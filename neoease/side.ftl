@@ -45,7 +45,7 @@
             <#list mostCommentArticles as article>
             <li>
                 <sup>[${article.articleCommentCount}]</sup>
-                <a title="${article.articleTitle}" href="${article.articlePermalink}">
+                <a title="${article.articleTitle}" href="${servePath}${article.articlePermalink}">
                     ${article.articleTitle}
                 </a>
             </li>
@@ -60,7 +60,7 @@
             <#list mostViewCountArticles as article>
             <li>
                 <sup>[${article.articleViewCount}]</sup>
-                <a title="${article.articleTitle}" href="${article.articlePermalink}">
+                <a title="${article.articleTitle}" href="${servePath}${article.articlePermalink}">
                     ${article.articleTitle}
                 </a>
             </li>
