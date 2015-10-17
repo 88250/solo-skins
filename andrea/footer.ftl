@@ -1,6 +1,6 @@
 <div class="copyright">
     &copy; ${year} - <a href="${servePath}">${blogTitle}</a><br/>
-    Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a>, ver ${version}<br/>
+    Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="http://b3log.org/services/#solo" target="_blank">Solo</a> ${version}<br/>
     Theme by <a rel="friend" href="http://www.madeincima.eu/" target="_blank">Andrea</a> & <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
 </div>
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>

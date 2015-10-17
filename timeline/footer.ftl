@@ -2,7 +2,7 @@
     <div class="container fn-clear">
         <div class="left">
             <span>&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>
-            Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a>, ver ${version}&nbsp;&nbsp;
+            Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="http://b3log.org/services/#solo" target="_blank">Solo</a> ${version}&nbsp;&nbsp;
             Theme by <a rel="friend" target="_blank" href="http://themify.me/demo/themes/postline/">Postline</a> & <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
         </div>
         <div class="right fn-clear">

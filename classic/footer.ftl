@@ -1,5 +1,5 @@
 <span style="color: gray;">&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a><br/>
-Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a>, ver ${version}&nbsp;&nbsp;
+Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="http://b3log.org/services/#solo" target="_blank">Solo</a> ${version}&nbsp;&nbsp;
 Theme by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
 <div class='goTopIcon' onclick='Util.goTop();'></div>
 <div class='goBottomIcon' onclick='Util.goBottom();'></div>
