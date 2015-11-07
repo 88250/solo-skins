@@ -1,7 +1,7 @@
 <div class="content paddingTop12 paddingBottom12">
     <div class="left">
         <div>
-            <span style="color: gray;">&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>
+            <span style="color: gray;">&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>${footerContent}
         </div>
         Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="http://b3log.org/services/#solo" target="_blank">Solo</a> ${version}&nbsp;&nbsp;
         Theme by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a> & <a rel="friend" href="http://demo.woothemes.com/skeptical/" target="_blank">Skeptical</a>.

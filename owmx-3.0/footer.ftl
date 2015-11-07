@@ -1,5 +1,5 @@
 <footer>
-    <span>&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>
+    <span>&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>${footerContent}
     Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="http://b3log.org/services/#solo" target="_blank">Solo</a> ${version}&nbsp;&nbsp;
     Theme by <a rel="friend" href="http://dx.b3log.org/" target="_blank">DX</a> & <a rel="friend" href="http://www.jabz.info/contact/jonas-jared-jacek/" title="Profile of Jonas Jacek">Jonas Jacek</a>.
     <div onclick="Util.goTop();">${goTopLabel}</div>
