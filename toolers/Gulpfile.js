@@ -18,6 +18,6 @@ gulp.task ('build', function () {
 
     gulp.src ('../*/js/*.js')
     .pipe(rename({ suffix: '.min' }))
-	.pipe(uglify({preserveComments : 'license'}))
+	.pipe(uglify())
 	.pipe(gulp.dest ('../'));
 });
