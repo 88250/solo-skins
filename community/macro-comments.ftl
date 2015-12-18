@@ -166,7 +166,7 @@
         }
 
         commentHTML += '&nbsp;' + result.commentDate
-            + '</div><div class="comment-content">' + Util.replaceEmString($("#comment" + state).val().replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g,"<br/>"))
+            + '</div><div class="comment-content">' + Util.replaceEmString($("#comment" + state).val())
             + '</div><div class="clear"></div><div class="reply"><a rel="nofollow" href="javascript:replyTo(\'' + result.oId + '\');">${replyLabel}</a>'
             + '</div></div><div class="clear"></div></div>';
 

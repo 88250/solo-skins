@@ -131,7 +131,7 @@
                            commentHTML += '</span>&nbsp;<small><b>' + result.commentDate.substring(2, 16)
                                    + '</b></small><span class="ico-reply ico right"><a rel="nofollow" href="javascript:replyTo(\'' + result.oId
                                    + '\');">${replyLabel}</a></span><div class="article-body">'
-                                   + Util.replaceEmString($("#comment" + state).val().replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br/>"))
+                                   + Util.replaceEmString($("#comment" + state).val())
                                    + '</div></div></li>';
 
                            return commentHTML;

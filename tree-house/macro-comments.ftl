@@ -162,7 +162,7 @@
             + '</div><div class="clear"></div></div><div><img alt="' + result.userName
             + '" src="' + result.commentThumbnailURL + '" class="comment-picture left"/>'
             + '<div class="comment-content">'
-            + Util.replaceEmString($("#comment" + state).val().replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g,"<br/>"))
+            + Util.replaceEmString($("#comment" + state).val())
             + '</div>'
             + ' <div class="clear"></div></div></div><div class="comment-bottom"></div></div></div>';
 

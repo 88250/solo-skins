@@ -149,7 +149,7 @@
         commentHTML += '</div><div class="right"> <a rel="nofollow" class="no-underline" href="javascript:replyTo(\''
             + result.oId + '\');">${replyLabel}</a>'
             +'</div><div class="clear"></div><div class="comment-content">'
-            + Util.replaceEmString($("#comment" + state).val().replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g,"<br/>"))
+            + Util.replaceEmString($("#comment" + state).val())
             + '</div></div><div class="clear"></div></div></div>';
         
         $("#comments").addClass("comments");

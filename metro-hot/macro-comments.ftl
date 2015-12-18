@@ -157,7 +157,7 @@
                                 + '\');" title="${replyLabel}"></a>'
                                 + '<div class="fn-right" data-ico="&#xe200;"> ' + result.commentDate.substring(2, 16)
                                 + '</div></div><div class="article-body">' +
-                                Util.replaceEmString($("#comment" + state).val().replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\n/g, "<br/>"))
+                                Util.replaceEmString($("#comment" + state).val())
                                 + '</div></div></div>';
 
                         return commentHTML;
