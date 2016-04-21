@@ -1,7 +1,7 @@
 {
     "name": "solo-skins",
     "version": "1.0.0",
-    "homepage": "http://hacpai.com",
+    "homepage": "https://hacpai.com",
     "author": "Vanesse <lly219@gmail.com> (https://vanesse.b3log.org)",
     "devDependencies": {
         "gulp": "3.9.0",
