@@ -785,6 +785,10 @@ textarea {
 pre.prettyprint {
     background-color: #F7F7F7;
 }
+
+#externalRelevantArticles {
+    margin-left: 10px;
+}
 /* end article */
 
 /* start comment */
@@ -795,6 +799,10 @@ pre.prettyprint {
 #comments > div {
     margin-bottom: 20px;
     margin-right: 10px;
+}
+
+#comments > div.fn-clear img {
+    width: 80px;
 }
 
 #comments .article-body {

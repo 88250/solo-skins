@@ -62,6 +62,7 @@
                         ${article.articleSign.signHTML}
                         </#if>
                     </div>
+                    <div id="externalRelevantArticles"></div>
                     <@comments commentList=articleComments article=article></@comments>
                     <#include "copyright.ftl"/>
                 </div>
@@ -71,15 +72,9 @@
         <#include "footer.ftl">
         <@comment_script oId=article.oId>
         page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
-        <#if 0 != randomArticlesDisplayCount>
-        MetroHot.loadRandomArticles();
-        </#if>
-        <#if 0 != relevantArticlesDisplayCount>
-        MetroHot.loadRelevantArticles('${article.oId}');
-        </#if>
         <#if 0 != externalRelevantArticlesDisplayCount>
-        MetroHot.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>");
+        page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>");
         </#if>
-        </@comment_script>    
+        </@comment_script>   
     </body>
 </html>

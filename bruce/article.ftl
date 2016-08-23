@@ -47,9 +47,10 @@
                                 </div>
                             </div>
                         </div>
-
                         <@comments commentList=articleComments article=article></@comments>
                     </div>
+                    
+                        <div id="externalRelevantArticles"></div>
                     <div class="col-sm-2"></div>
                 </div>
             </div>  
