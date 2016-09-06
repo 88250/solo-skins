@@ -32,7 +32,7 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Microsoft Yahei", 'Helvetica';
+    font-family: "Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
     letter-spacing: 0.01rem;
     font-size: 100%;
     line-height: 1.75em;
@@ -68,7 +68,7 @@ h4, h5, h6 {
     -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
     color: #666;
     line-height: 1.15em;
-    font-family: "Open Sans", "Microsoft Yahei", 'Helvetica';
+    font-family: "Open Sans", "Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
     text-rendering: geometricPrecision;
 }
 
@@ -170,7 +170,7 @@ mark {
 
 code, tt {
     padding: 1px 3px;
-    font-family: Inconsolata, monospace, "Microsoft Yahei", 'Helvetica';
+    font-family: Inconsolata, monospace, "Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
     font-size: 0.85em;
     white-space: pre-wrap;
     border: #E3EDF3 1px solid;
@@ -306,7 +306,7 @@ pre code, pre tt {
     width: 100%;
     box-sizing: border-box;
     outline: none;
-    font-family: "Microsoft Yahei", 'Helvetica';
+    font-family: "Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
 }
 
 .form button {
@@ -762,7 +762,7 @@ article.post {
     display: inline-block;
     transition: background 0.3s;
     vertical-align: middle;
-    line-height: 18px;
+    line-height: 14px;
     text-align: center;
 }
 
