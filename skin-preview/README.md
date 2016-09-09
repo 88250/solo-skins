@@ -12,50 +12,49 @@ Equality, Freedom, Passion
 
 ----------------------------
 * [next](https://github.com/b3log/solo-skins/tree/master/next)
-![next](http://img.blog.csdn.net/20160908232930827)
+![next](https://github.com/b3log/solo-skins/blob/master/skin-preview/next.jpg?raw=true)
 
 * [yilia](https://github.com/b3log/solo-skins/tree/master/yilia)
-![yilia](http://img.blog.csdn.net/20160908232913225)
+![yilia](https://github.com/b3log/solo-skins/blob/master/skin-preview/yilia.jpg?raw=true)
 
 * [finding](https://github.com/b3log/solo-skins/tree/master/finding)
-![finding](http://img.blog.csdn.net/20160908232943335)
+![finding](https://github.com/b3log/solo-skins/blob/master/skin-preview/finding.jpg?raw=true)
 
 * [metro-hot](https://github.com/b3log/solo-skins/tree/master/metro-hot)
-![metro-hot](http://img.blog.csdn.net/20160908233003148)
+![metro-hot](https://github.com/b3log/solo-skins/blob/master/skin-preview/metro-hot.jpg?raw=true)
 
 * [timeline](https://github.com/b3log/solo-skins/tree/master/timeline)
-![timeline](http://img.blog.csdn.net/20160908233015843)
+![timeline](https://github.com/b3log/solo-skins/blob/master/skin-preview/timeline.jpg?raw=true)
 
 * [ease](https://github.com/b3log/solo-skins/tree/master/ease)
-![ease](http://img.blog.csdn.net/20160908233024047)
+![ease](https://github.com/b3log/solo-skins/blob/master/skin-preview/ease.jpg?raw=true)
 
-* [mobile](https://github.com/b3log/solo-skins/tree/master/mobile)
-
-![mobile](http://img.blog.csdn.net/20160908233032196)
+* [mobile](https://github.com/b3log/solo-skins/tree/master/mobile) <br>
+![mobile](https://github.com/b3log/solo-skins/blob/master/skin-preview/mobile.jpg?raw=true)
 
 * [andrea](https://github.com/b3log/solo-skins/tree/master/andrea)
-![andrea](http://img.blog.csdn.net/20160909004722157)
+![andrea](https://github.com/b3log/solo-skins/blob/master/skin-preview/andrea.jpg?raw=true)
 
 * [classic](https://github.com/b3log/solo-skins/tree/master/classic)
-![classic](http://img.blog.csdn.net/20160908233049265)
+![classic](https://github.com/b3log/solo-skins/blob/master/skin-preview/classic.jpg?raw=true)
 
 * [community](https://github.com/b3log/solo-skins/tree/master/community)
-![community](http://img.blog.csdn.net/20160908233057493)
+![community](https://github.com/b3log/solo-skins/blob/master/skin-preview/community.jpg?raw=true)
 
 * [favourite](https://github.com/b3log/solo-skins/tree/master/favourite)
-![favourite](http://img.blog.csdn.net/20160908233110391)
+![favourite](https://github.com/b3log/solo-skins/blob/master/skin-preview/favourite.jpg?raw=true)
 
 * [tree-house](https://github.com/b3log/solo-skins/tree/master/tree-house)
-![tree-house](http://img.blog.csdn.net/20160908233120891)
+![tree-house](https://github.com/b3log/solo-skins/blob/master/skin-preview/tree-house.jpg?raw=true)
 
 * [i-nove](https://github.com/b3log/solo-skins/tree/master/i-nove)
-![i-nove](http://img.blog.csdn.net/20160908233131516)
+![i-nove](https://github.com/b3log/solo-skins/blob/master/skin-preview/i-nove.jpg?raw=true)
 
 * [neoease](https://github.com/b3log/solo-skins/tree/master/neoease)
-![neoease](http://img.blog.csdn.net/20160908233139713)
+![neoease](https://github.com/b3log/solo-skins/blob/master/skin-preview/neoease.jpg?raw=true)
 
 * [owmx-3.0](https://github.com/b3log/solo-skins/tree/master/owmx-3.0)
-![owmx-3.0](http://img.blog.csdn.net/20160908233148135)
+![owmx-3.0](https://github.com/b3log/solo-skins/blob/master/skin-preview/owmx-3.0.jpg?raw=true)
 
 * [bruce](https://github.com/b3log/solo-skins/tree/master/bruce)
-![bruce](http://img.blog.csdn.net/20160908233157432)
+![bruce](https://github.com/b3log/solo-skins/blob/master/skin-preview/bruce.jpg?raw=true)
