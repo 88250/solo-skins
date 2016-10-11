@@ -420,7 +420,8 @@ pre code, pre tt {
     font-size: 30px;
 }
 
-.side a:hover {
+.side a:hover,
+.side .toc a:hover {
     color: #b0a0aa;
 }
 
@@ -486,6 +487,50 @@ pre code, pre tt {
 
 .side footer > div {
     margin-bottom: 10px;
+}
+
+.side .toc-btn {
+    float: right;
+    margin: 0 10px;
+    font-size: 14px;
+    display: none;
+}
+
+.side .toc {
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAgMAAAAog1vUAAAACVBMVEUAAAABAQETExM20mnVAAAAA3RSTlMOECJvSrphAAABBElEQVR4AWyRwQ3CQAwEJ5/rIVQTyuAfHunmXlRAoaxkMfJJkQ4Dznl3x+G4xlzOxvZ5vZdzMJ7fx3Im+7a2jpNzrINzZ+6r/DnIp7dyg9zsg9Ehel0+bsS1t5KJZOuDSU4Iunz4qC8BU6nLAqZSkgKmUsYCplLxBEylIARMxV8+w/sqoKo+6G0aTGhm5JAM//gARxxHYU3Q3igY0sCIIhYCC49rcUW4PBeJK3bd+CIKsDle8H91N62bwTv5Xxv1QQAAAAQQsH9rAU6DH3CIG9WFbm2Pcyf00PcOn3avFYDDRJgOOcE8fIX8VFCY00r5TlFFPt2NwqXDwFyGjNUlzfBdHo1oSKi9zm79GKMAAAAASUVORK5CYII=) repeat #5d5d5d;
+}
+
+.side .toc li {
+    border-bottom: 1px solid #717171;
+    border-top: 1px solid #5d5d5d;
+}
+
+.side .toc a {
+    font-size: 14px;
+    color: #e5e5e5;
+    display: block;
+}
+
+.side .b3-solo-list {
+    padding: 0;
+    margin-top: 50px;
+}
+
+.abstract .b3-solo-list {
+    display: none;
+}
+
+.side .toc .close {
+    color: #fff;
+    float: right;
+    padding: 0 10px;
 }
 /* end side */
 

@@ -30,6 +30,8 @@ var Yilia = {
      */
     init: function () {
         Util.killIE();
+        
+        this._initToc();
         this.resetTags();
         
         $(window).scroll(function () {
@@ -53,6 +55,17 @@ var Yilia = {
         });
 
         $(window).scroll();
+    },
+    _initToc: function () {
+        if ($('.b3-solo-list li').length === 0) {
+            return false;
+        }
+        
+        $('.side footer').after('<div class="toc"><a href="javascript:$(\'.side .toc\').hide()" class="close">X</a></div>');
+
+         $('.side .toc a').after($('.b3-solo-list'));
+
+        $('.side .toc-btn').show();
     },
     resetTags: function () {
         $("a.tag").each(function (i) {

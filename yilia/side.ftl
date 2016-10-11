@@ -1,5 +1,7 @@
 <div class="side">
-    <div class="overlay"></div>
+    <div class="overlay">
+        <a href="javascript:$('.side .toc').show()" class="toc-btn">${tocLabel}</a>
+    </div>
     <header class="content">
         <a href="${servePath}">
             <img class="avatar" src="${adminUser.userAvatar}" title="${userName}"/>
