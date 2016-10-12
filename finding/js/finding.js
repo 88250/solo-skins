@@ -17,7 +17,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 1.0.0.0, Jun 13, 2015
+ * @version 1.1.0.0, Oct 13, 2016
  */
 
 /**
@@ -30,6 +30,7 @@ var Finding = {
      */
     init: function () {
         Util.killIE();
+        this._initToc();
         $(".scroll-down").click(function (event) {
             event.preventDefault();
 
@@ -63,6 +64,38 @@ var Finding = {
             }
         });
     },
+    /**
+     * 文章目录
+     * @returns {undefined}
+     */
+    _initToc: function () {
+        if ($('.b3-solo-list').length === 0) {
+            $('.nav .icon-sitemap, .nav .icon-list').show();
+            return false;
+        }
+
+        $('.nav .icon-sitemap, .nav .icon-list').show();
+        $('.nav ul:first').hide();
+        $('.nav ul:first').after($('.b3-solo-list'));
+        
+        $("body").toggleClass("nav-opened nav-closed");
+    },
+    tabNav: function (type) {
+        $('.nav .current').removeClass('current');
+        if (type === 'toc') {
+            $('.nav ul:first').hide();
+            $('.nav ul:last').show();
+            $('.icon-list').addClass('current');
+        } else {
+            $('.nav ul:first').show();
+            $('.nav ul:last').hide();
+            $('.icon-sitemap').addClass('current');
+        }
+    },
+    /**
+     * 分享
+     * @returns {undefined}
+     */
     share: function () {
         $(".share span").click(function () {
             var key = $(this).data("type");

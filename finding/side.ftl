@@ -1,5 +1,9 @@
 <div class="fn-clear">
     <span class="fn-right">
+        <a href="javascript:Finding.tabNav('link')" title="${permalinkLabel}" class="icon-sitemap"></a>
+        &nbsp;
+        <a href="javascript:Finding.tabNav('toc')" title="${tocLabel}" class="icon-list current"></a>
+        &nbsp;
         <#if isLoggedIn>
         <a href="${servePath}/admin-index.do#main" title="${adminLabel}" class="icon-setting"></a>
         &nbsp; 
@@ -33,7 +37,6 @@
         <a rel="alternate" href="${servePath}/blog-articles-rss.do">${subscribeLabel}</a>
     </li>
 </ul>
-
 <div class="count">
     <span>
         ${viewCount1Label}
