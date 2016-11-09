@@ -6,7 +6,6 @@ clean = require('gulp-clean');
 
 gulp.task ('clean', function () {
 	gulp.src('../*/css/*.min.css').pipe(clean({force: true}));
-
 	gulp.src('../*/js/*.min.js').pipe(clean({force: true}));
 });
 
@@ -18,6 +17,6 @@ gulp.task ('build', function () {
 
     gulp.src ('../*/js/*.js')
     .pipe(rename({ suffix: '.min' }))
-	.pipe(uglify())
+	.pipe(uglify({preserveComments: 'license'}))
 	.pipe(gulp.dest ('../'));
 });
