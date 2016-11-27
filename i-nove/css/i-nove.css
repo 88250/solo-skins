@@ -18,8 +18,13 @@
  * skin i-nove style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.1.3, May 28, 2012
+ * @version 1.0.2.3, Nov 27, 2016
 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .bg {
     background: url("../images/bg.jpg") repeat-x scroll 0 0 #BEC3C6;
     color: #555555;
