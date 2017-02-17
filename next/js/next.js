@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010-2016, b3log.org & hacpai.com
+ * Copyright (c) 2010-2017, b3log.org & hacpai.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.2.1.0, Sep 6, 2016
+ * @version 0.3.1.0, Feb 17, 2017
  */
 
 /**
@@ -87,6 +87,10 @@ var NexT = {
                     'right': '0'
                 });
             }, 500);
+
+            $('body').on('click', '.article-body img', function () {
+                window.open(this.src);
+            });
         });
     },
     initArticle: function () {
