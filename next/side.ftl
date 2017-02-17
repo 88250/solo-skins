@@ -55,7 +55,7 @@
             <#else>
             <span class="links-of-author-item">
                 <a href="${loginURL}">
-                    <i class="fa fa-github"></i> ${loginLabel}
+                    <i class="icon-login"></i> ${loginLabel}
                 </a>
             </span>
 
