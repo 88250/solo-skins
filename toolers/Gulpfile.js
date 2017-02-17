@@ -28,7 +28,7 @@ gulp.task ('build', ['clean'], function (cb) {
 });
 
 gulp.task ('license', ['clean', 'build'], function () {
-	gulp.src('../*/css/*.min.css')
+	gulp.src('../*/css/*.css')
             .pipe(license(fs.readFileSync('header.txt', 'utf8'), {year: (new Date()).getFullYear()}, 1))
             .pipe(gulp.dest('../'));
 });
