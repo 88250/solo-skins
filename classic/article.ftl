@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="clear"></div>
                             </div>
-                            <div class="article-body">
+                            <div class="article-body content-reset">
                                 ${article.articleContent}
                                 <#if "" != article.articleSign.signHTML?trim>
                                 <div class="marginTop12">
@@ -99,7 +99,9 @@
                     </div>
                 </div>
                 <div class="right side">
+                    <section>
                     <#include "side.ftl">
+                    </section>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -118,6 +120,67 @@
         <#if 0 != externalRelevantArticlesDisplayCount>
         page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>");
         </#if>
-        </@comment_script>    
+        </@comment_script>
+        <script>
+        (function () {
+            if ($('.b3-solo-list li').length > 0 && $(window).width() > 1000) {
+                // add color to sidebar menu
+                $('.side').addClass('has-toc');
+
+                // append toc to sidebar menu
+                var articleTocHTML = '<ul><li class="current" data-tab="toc">${tocLabel}'
+                + '</li><li data-tab="site">${siteViewLabel}</li></ul><div class="clear"></div><section></section>';
+                $('.side').prepend(articleTocHTML);
+                var $sectionF = $('.side section:first').html($('.b3-solo-list')),
+                        $sectionL = $('.side section:last');
+                $sectionL.hide();
+                $sectionF.height($(window).height()).css({ 'overflow': 'auto', 'width':  $('.side').width() + 'px'});;
+                // 切换 tab
+                $('.side > ul > li').click(function () {
+                    if ($(this).data('tab') === 'toc') {
+                        $sectionL.animate({
+                            "opacity": '0',
+                            "top": '-50px'
+                        }, 300, function () {
+                            $sectionF.show().css('top', '-50px');
+                            $sectionF.animate({
+                                "opacity": '1',
+                                "top": '0'
+                            }, 300);
+                        }).hide();
+                    } else {
+                        $sectionF.animate({
+                            "opacity": '0',
+                            "top": '-50px'
+                        }, 300, function () {
+                            $sectionF.hide().css('top', '-50px');
+                            $sectionL.animate({
+                                "opacity": '1',
+                                "top": '0'
+                            }, 300).show();
+                        });
+                    }
+                    $('.side > ul > li').removeClass('current');
+                    $(this).addClass('current');
+                });
+            }
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 155) {
+                    $('.side section:eq(0)').css({
+                        position: "fixed",
+                        top: 0,
+                        backgroundColor: "#fff",
+                        borderLeft: "2px solid #E5ECF9"
+                    })
+                } else {
+                    $('.side section:eq(0)').css({
+                        position: "inherit",
+                        borderLeft: 0
+                    })
+                }
+            });
+        })();
+        </script>
     </body>
 </html>

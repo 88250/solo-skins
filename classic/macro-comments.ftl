@@ -33,7 +33,7 @@
                 <div class="left comment-picture">
                     <img alt="${comment.commentName}" src="${comment.commentThumbnailURL}"/>
                 </div>
-                <div class="comment-content">
+                <div class="comment-content content-reset">
                     ${comment.commentContent}
                 </div>
                 <div class="clear"></div>
@@ -161,7 +161,7 @@
             + '</div><div class="clear"></div></div><div class="comment-body">'
             + '<div class="left comment-picture"><img alt="' + result.userName
             + '" src="' + result.commentThumbnailURL + '"/>'
-            + '</div><div class="comment-content">' + 
+            + '</div><div class="comment-content content-reset">' +
             Util.replaceEmString($("#comment" + state).val())
             + '</div><div class="clear"></div>'
             + '</div></div></div>';
