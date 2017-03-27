@@ -17,7 +17,7 @@
  * skin neoease style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.1.8, Sep 6, 2012
+ * @version 1.0.2.8, Mar 27, 2017
 */
 /* start base */
 html, body, div, ul, li, h1, h2, h3, h4, h5, h6 {
@@ -61,8 +61,11 @@ a:active {
 }
 
 img {
+    max-width: 100%;
     vertical-align: middle;
     border: 0;
+    height: auto;
+    -ms-interpolation-mode: bicubic
 }
 
 textarea, input {
