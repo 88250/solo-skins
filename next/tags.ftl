@@ -10,6 +10,29 @@
     <body>
         <#include "header.ftl">
         <main class="main wrapper">
+            <#if mostUsedCategories?size != 0>
+            <div class="content page-archive">
+                <section class="posts-collapse">
+                    <div class="tag-cloud">
+                        ${sumLabel} ${mostUsedCategories?size} ${categoryLabel}
+                    </div>
+                    <#list mostUsedCategories as category>
+                        <article>
+                            <header class="post-header">
+                                <h1>
+                                    <a class="post-title" href="${servePath}/category/${category.categoryURI}">
+                                        ${category.categoryTitle} (${category.categoryTagCnt})</a>
+                                    <small>${category.categoryDescription}</small>
+                                </h1>
+                            </header>
+                        </article>
+                    </#list>
+                </section>
+            </div>
+            <br>
+            <br>
+            <br>
+            </#if>
             <div class="content">
                 <div class="tag-cloud">
                         ${sumLabel} ${tags?size} ${tagLabel}

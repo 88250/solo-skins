@@ -47,7 +47,7 @@
                     </#if>
                     <#if 0 != mostUsedTags?size>
                     <div class="module side-tags">
-                        <h3 class="ft-gray">${popTagsLabel}</h3>
+                        <h3 class="ft-gray">${tagsLabel}</h3>
                         <ul>
                             <#list mostUsedTags as tag>
                             <li>
@@ -61,6 +61,23 @@
                         <div class="clear"></div>
                     </div>
                     </#if>
+
+                    <#if 0 != mostUsedCategories?size>
+                        <div class="module side-tags">
+                            <h3 class="ft-gray">${categoryLabel}</h3>
+                            <ul>
+                                <#list mostUsedCategories as category>
+                                    <li>
+                                        <a href="${servePath}/category/${category.categoryURI}"
+                                        title="${category.categoryTitle} (${category.categoryTagCnt})">
+                                            ${category.categoryTitle}</a>
+                                    </li>
+                                </#list>
+                            </ul>
+                            <div class="clear"></div>
+                        </div>
+                    </#if>
+
                     <div class="clear"></div>
                     <#if 0 != mostCommentArticles?size>
                     <div class="module side-most-comment">

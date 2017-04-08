@@ -15,6 +15,19 @@
                 <div class="col-sm-2"></div>
 
                 <div class="col-sm-8 site">
+                    <h2>${categoryLabel}</h2>
+                    <ul>
+                        <#list mostUsedCategories as category>
+                            <li>
+                                <a href="${servePath}/category/${category.categoryURI}">
+                                    <span>${category.categoryTitle}</span>
+                                    (<b>${category.categoryTagCnt}</b>)</a>
+                                </a>
+                            </li>
+                        </#list>
+                    </ul>
+
+                    <h2>${tagsLabel}</h2>
                     <ul>
                         <#list tags as tag>
                         <li>

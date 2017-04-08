@@ -18,7 +18,7 @@
  * skin favoutite style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.8, Jun 6, 2012
+ * @version 1.1.0.8, Apr 9, 2017
 */
 body {
     background: url("../images/bg.jpg") repeat scroll left top transparent;
@@ -580,6 +580,11 @@ h5 {
 .categorie {
     background: url("../images/categorie.png") no-repeat scroll left top transparent;
     height: 64px;
+}
+#sideNavi .tags {
+    background: url(../images/tagsIcon.png) no-repeat scroll left top transparent;
+    height: 52px;
+    background-size: contain;
 }
 .archivio {
     background: url("../images/archivio.png") no-repeat scroll left top transparent;

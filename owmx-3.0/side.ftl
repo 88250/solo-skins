@@ -1,16 +1,4 @@
 <aside>
-    <!--
-        <h4>Search</h4>
-        <form action="http://www.google.com/cse" id="cse-search-box" class="s" target="_blank">
-          <div>
-            <input type="hidden" name="cx" value="014052262704486520429:eeg5ule8tro" />
-            <input type="hidden" name="ie" value="UTF-8" />
-                <input type="hidden" name="oe" value="UTF-8">
-                <input type="hidden" name="hl" value="zh-CN">
-            <input type="text" name="q" size="15" value="&#x7AD9;&#x5185;&#x641C;&#x7D22;" onclick="this.value=''"/>
-            <input type="hidden" name="sa" value="site-search"/>
-          </div>
-        </form>-->
     <nav>
         <h4>Navigation</h4>
         <ul>
@@ -99,8 +87,22 @@
         </#list>
     </ul>
     </#if>
+
+    <#if 0 != mostUsedCategories?size>
+        <h4>${categoryLabel}</h4>
+        <ul>
+            <#list mostUsedCategories as category>
+                <li>
+                    <a href="${servePath}/category/${category.categoryURI}"
+                       title="${category.categoryTitle} (${category.categoryTagCnt})">
+                        ${category.categoryTitle}</a>(${category.categoryTagCnt})
+                </li>
+            </#list>
+        </ul>
+    </#if>
+
     <#if 0 != mostUsedTags?size>
-    <h4>${popTagsLabel}</h4>
+    <h4>${tagsLabel}</h4>
     <ul class="navi-tags">
         <#list mostUsedTags as tag>
         <li>

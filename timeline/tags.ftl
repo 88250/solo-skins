@@ -12,7 +12,22 @@
         <#include "header.ftl">
         <div class="wrapper">
             <div class="container">
-                <ul id="tags" class="module fn-clear">
+                <#if 0 != mostUsedCategories?size>
+                    <h2>${categoryLabel}</h2>
+                    <ul class="module fn-clear tags">
+                        <#list mostUsedCategories as category>
+                            <li>
+                                <a href="${servePath}/category/${category.categoryURI}">
+                                    <span>${category.categoryTitle}</span>
+                                    (<b>${category.categoryTagCnt}</b>)
+                                </a>
+                            </li>
+                        </#list>
+                    </ul>
+                </#if>
+
+                <h2>${tagsLabel}</h2>
+                <ul id="tags" class="tags module fn-clear">
                     <#list tags as tag>
                     <li>
                         <a rel="tag" data-count="${tag.tagPublishedRefCount}"

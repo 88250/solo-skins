@@ -76,10 +76,29 @@
     </div>
     <div class="line"></div>
     </#if>
+
+    <#if 0 != mostUsedCategories?size>
+        <div class="item">
+            <div class="categorie">
+                <h4>${categoryLabel}</h4>
+            </div>
+            <ul id="mostViewCountArticles">
+                <#list mostUsedCategories as category>
+                    <li>
+                        <a href="${servePath}/category/${category.categoryURI}"
+                           title="${category.categoryTitle} (${category.categoryTagCnt})">
+                            ${category.categoryTitle}</a>(${category.categoryTitle})
+                    </li>
+                </#list>
+            </ul>
+        </div>
+        <div class="line"></div>
+    </#if>
+
     <#if 0 != mostUsedTags?size>
     <div class="item">
-        <div class="categorie">
-            <h4>${popTagsLabel}</h4>
+        <div class="tags">
+            <h4>${tagsLabel}</h4>
         </div>
         <ul class="navi-tags">
             <#list mostUsedTags as tag>
@@ -96,6 +115,8 @@
     </div>
     <div class="line"></div>
     </#if>
+
+
     <#if 0 != links?size>
     <div class="item">
         <div class="blog">

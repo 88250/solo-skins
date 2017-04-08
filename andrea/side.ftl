@@ -60,25 +60,42 @@
     </dl>
 </div>
 </#if>
-<#if 0 != mostUsedTags?size>
-<div class="item">
-    <dl>
-        <dd>
-            <h4>${popTagsLabel}</h4>
-            <ul class="navi-tags">
-                <#list mostUsedTags as tag>
-                <li>
-                    <a rel="tag" title="${tag.tagTitle}(${tag.tagPublishedRefCount})" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
-                        ${tag.tagTitle}(${tag.tagPublishedRefCount})</a>
-                    <img onclick="window.location='${servePath}/tag-articles-feed.do?oId=${tag.oId}'"
-                         alt="${tag.tagTitle}" src="${staticServePath}/images/feed.png"/>
-                </li>
-                </#list>
-            </ul>
-        </dd>
-    </dl>
-</div>
+
+<#if 0 != mostUsedCategories?size || 0 != mostUsedTags?size>
+    <div class="item">
+        <dl>
+            <#if 0 != mostUsedCategories?size>
+            <dd>
+                <h4>${categoryLabel}</h4>
+                <ul>
+                    <#list mostUsedCategories as category>
+                        <li>
+                            <a href="${servePath}/category/${category.categoryURI}">
+                                ${category.categoryTitle} (${category.categoryTagCnt})</a>
+                        </li>
+                    </#list>
+                </ul>
+            </dd>
+            </#if>
+            <#if 0 != mostUsedTags?size>
+                <dd>
+                    <h4>${tagsLabel}</h4>
+                    <ul class="navi-tags">
+                        <#list mostUsedTags as tag>
+                            <li>
+                                <a rel="tag" title="${tag.tagTitle}(${tag.tagPublishedRefCount})" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
+                                    ${tag.tagTitle} (${tag.tagPublishedRefCount})</a>
+                                <img onclick="window.location='${servePath}/tag-articles-feed.do?oId=${tag.oId}'"
+                                     alt="${tag.tagTitle}" src="${staticServePath}/images/feed.png"/>
+                            </li>
+                        </#list>
+                    </ul>
+                </dd>
+            </#if>
+        </dl>
+    </div>
 </#if>
+
 <#if 0 != links?size>
 <div class="item">
     <dl>
@@ -110,11 +127,11 @@
                     <#if "en" == localeString?substring(0, 2)>
                     <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
                        title="${archiveDate.monthName} ${archiveDate.archiveDateYear}(${archiveDate.archiveDatePublishedArticleCount})">
-                        ${archiveDate.monthName} ${archiveDate.archiveDateYear}(${archiveDate.archiveDatePublishedArticleCount})</a>
+                        ${archiveDate.monthName} ${archiveDate.archiveDateYear} (${archiveDate.archiveDatePublishedArticleCount})</a>
                     <#else>
                     <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
                        title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}(${archiveDate.archiveDatePublishedArticleCount})">
-                        ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}(${archiveDate.archiveDatePublishedArticleCount})</a>
+                        ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel} (${archiveDate.archiveDatePublishedArticleCount})</a>
                     </#if>
                 </li>
                 </#list>

@@ -10,6 +10,26 @@
     <body>
         <#include "side.ftl">
         <main class="classify">
+            <#if 0 != mostUsedCategories?size>
+                <article>
+                    <header>
+                        <h2>
+                            <a rel="archive" href="${servePath}/tags.html">
+                                ${categoryLabel}
+                            </a>
+                        </h2>
+                    </header>
+                    <ul class="tags fn-clear">
+                        <#list mostUsedCategories as category>
+                            <li>
+                                <a class="tag" href="${servePath}/category/${category.categoryURI}">
+                                    ${category.categoryTitle} (${category.categoryTagCnt})</a>
+                            </li>
+                        </#list>
+                    </ul>
+                </article>
+            </#if>
+
             <article>
                 <header>
                     <h2>

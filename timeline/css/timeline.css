@@ -172,17 +172,17 @@ img {
     background-position: -96px -48px;
 }
 
-#tags {
+.tags {
     margin: 0;
 }
 
-#tags li {
+.tags li {
     float: left;
     list-style-type: none;
     height: 45px;
 }
 
-#tags a {
+.tags a {
     background-color: #FCFCFC;
     box-shadow: 0 0 2px #D5D5D5;
     display: block;
@@ -190,13 +190,13 @@ img {
     padding: 5px 10px;
 }
 
-#tags a:hover {
+.tags a:hover {
     text-shadow: 0 0 2px;
     text-decoration: none;
     box-shadow: 0 0 4px #D5D5D5;
 }
 
-#tags b {
+.tags b {
     font-size: 70%;
     opacity: 0.6;
     filter: alpha(opacity=60);

@@ -18,6 +18,9 @@
             <a href="${servePath}/dynamic.html">${dynamicLabel}</a>
         </li>
         <li>
+            <a href="${servePath}/category.html">${categoryLabel}</a>
+        </li>
+        <li>
             <a href="${servePath}/tags.html">${allTagsLabel}</a>
         </li>
         <li>

@@ -74,9 +74,26 @@
     </div>
     <div class="line"></div>
     </#if>
+
+    <#if 0 != mostUsedCategories?size>
+        <div class="block">
+            <h3>${categoryLabel}</h3>
+            <ul>
+                <#list mostUsedCategories as category>
+                    <li>
+                        <a href="${servePath}/category/${category.categoryURI}">
+                            ${category.categoryTitle} (${category.categoryTagCnt})</a>
+                    </li>
+                </#list>
+            </ul>
+            <div class='clear'></div>
+        </div>
+        <div class="line"></div>
+    </#if>
+
     <#if 0 != mostUsedTags?size>
     <div class="block popTags">
-        <h3>${popTagsLabel}</h3>
+        <h3>${tagsLabel}</h3>
         <ul>
             <#list mostUsedTags as tag>
             <li>
