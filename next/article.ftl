@@ -7,6 +7,12 @@
         <meta name="keywords" content="${article.articleTags}" />
         <meta name="description" content="${article.articleAbstract?html}" />
         </@head>
+        <#if previousArticlePermalink??>
+            <link rel="prev" title="${previousArticleTitle}" href="${servePath}${previousArticlePermalink}">
+        </#if>
+        <#if nextArticlePermalink??>
+            <link rel="next" title="${nextArticleTitle}" href="${servePath}${nextArticlePermalink}">
+        </#if>
     </head>
     <body>
         <#include "header.ftl">
@@ -62,14 +68,14 @@
                         <div class="post-nav fn-clear">
                             <#if previousArticlePermalink??>
                             <div class="post-nav-prev post-nav-item fn-right">
-                                <a href="${servePath}${previousArticlePermalink}" rel="next" title="${previousArticleTitle}">
+                                <a href="${servePath}${previousArticlePermalink}" rel="prev" title="${previousArticleTitle}">
                                     ${previousArticleTitle} >
                                 </a>
                             </div>
                             </#if>
                             <#if nextArticlePermalink??>
                             <div class="post-nav-next post-nav-item fn-left">
-                                <a href="${servePath}${nextArticlePermalink}" rel="prev" title="${nextArticleTitle}">
+                                <a href="${servePath}${nextArticlePermalink}" rel="next" title="${nextArticleTitle}">
                                    < ${nextArticleTitle} 
                                 </a>
                             </div>
