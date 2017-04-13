@@ -89,7 +89,7 @@
                 <td>&nbsp;</td>
                 <td>
                     <form class="form-inline">
-                        
+
                     <input type="text" id="commentValidate" class="form-control"/>
                     <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
                     </form>
@@ -152,8 +152,8 @@
 //                                        + commentOriginalCommentName + '</a>';
 //                            }
 
-                            commentHTML += '<span class="gray">•' + result.commentDate.substring(2, 16)
-                                    + '• <a rel="nofollow" href="javascript:replyTo('
+                            commentHTML += '<span class="gray"> • ' + result.commentDate.substring(2, 16)
+                                    + ' • <a rel="nofollow" href="javascript:replyTo('
                                     + result.oId + ');">Reply</a></span></div><div class="row">' +
                             Util.replaceEmString($("#comment" + state).val()) + '</div>';
 
