@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "homepage": "https://hacpai.com",
   "author": "Vanesse <lly219@gmail.com> (https://vanesse.b3log.org)",
+  "scripts": {
+    "build": "gulp"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
