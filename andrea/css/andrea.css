@@ -502,7 +502,8 @@ a:hover {
 }
 
 .em00, .em01, .em02, .em03, .em04, .em05, .em06, .em07, .em08, .em09, .em10, .em11, .em12, .em13, .em14 {
-    background-image: url("../../andrea/images/emotions/emotions-black.png");
+    background-image: url("../../../images/emotions/emotions.png");
+    background-size: 120px;
     margin-right: 4px;
 }
 
@@ -524,6 +525,10 @@ h2.comment-label {
     padding: 20px 0;
 }
 
+.comment-body:nth-child(2n) {
+    background-color: #F1EEE9;
+}
+
 .comment-author {
     width: 100px;
 }
@@ -542,10 +547,6 @@ h2.comment-label {
 
 .comment-content {
     margin: 10px 0;
-}
-
-.comment-odd {
-    background-color: #F1EEE9;
 }
 
 .comment-author img {

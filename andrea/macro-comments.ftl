@@ -2,37 +2,7 @@
 <h2 class="comment-label">${commentLabel}</h2>
 <div id="comments">
     <#list commentList as comment>
-    <div id="${comment.oId}"
-         class="comment-body <#if comment_index % 2 == 0>comment-even<#else>comment-odd</#if>">
-        <div class="comment-panel">
-            <div class="left comment-author">
-                <img alt="${comment.commentName}" src="${comment.commentThumbnailURL}"/>
-            </div>
-            <div class="left comment-info">
-                <#if "http://" == comment.commentURL>
-                <a>${comment.commentName}</a>
-                <#else>
-                <a href="${comment.commentURL}"
-                   target="_blank">${comment.commentName}</a>
-                </#if><#if comment.isReply>
-                @
-                <a href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
-                   onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 20);"
-                   onmouseout="page.hideComment('${comment.commentOriginalCommentId}')">${comment.commentOriginalCommentName}</a>
-                </#if>
-                &nbsp;${comment.commentDate?string("yyyy-MM-dd HH:mm:ss")}
-                <div class="comment-content">
-                    ${comment.commentContent}
-                </div>
-                <#if article.commentable>
-                <div>
-                    <a rel="nofollow" href="javascript:replyTo('${comment.oId}');">${replyLabel}</a>
-                </div>
-                </#if>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
+    <#include "common-comment.ftl"/>
     </#list>
 </div>
 <#if article.commentable>
@@ -133,36 +103,6 @@
         "randomArticles1Label": "${randomArticles1Label}",
         "externalRelevantArticles1Label": "${externalRelevantArticles1Label}"
     });
-
-    var addComment = function (result, state) {
-        var oddEven = "";
-        if ($("#comments div").first().hasClass("comment-even")) {
-            oddEven = "comment-odd";
-        } else {
-            oddEven = "comment-even";
-        }
-
-        var commentHTML = '<div id="' + result.oId
-            + '" class="comment-body ' + oddEven + '"><div class="comment-panel"><div class="left comment-author">'
-            + '<img alt="' + result.userName + '" src="' + result.commentThumbnailURL
-            + '"/></div><div class="left comment-info">' + result.replyNameHTML;
-
-        if (state !== "") {
-            var commentOriginalCommentName = $("#" + page.currentCommentId).find(".comment-info a").first().text();
-            commentHTML += '&nbsp;@&nbsp;<a href="${servePath}' + result.commentSharpURL.split("#")[0]
-                + '#' + page.currentCommentId + '"'
-                + 'onmouseover="page.showComment(this, \'' + page.currentCommentId + '\', 20);"'
-                + 'onmouseout="page.hideComment(\'' + page.currentCommentId + '\')">'
-                + commentOriginalCommentName + '</a>';
-        }
-        
-        commentHTML += '&nbsp;' + result.commentDate + '<div class="comment-content">'
-            + Util.replaceEmString($("#comment" + state).val())
-            + '</div><div><a rel="nofollow" href="javascript:replyTo(\''
-            + result.oId + '\');">${replyLabel}</a>'
-            +'</div></div><div class="clear"></div></div>';
-        return commentHTML;
-    }
 
     var replyTo = function (id) {
         var commentFormHTML = "<table class='comment-form' id='replyForm' cellpadding='0' cellspacing='0'>";

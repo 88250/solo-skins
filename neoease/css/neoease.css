@@ -107,7 +107,8 @@ textarea, input {
 
 .em00, .em01, .em02, .em03, .em04, .em05, .em06, .em07, .em08, .em09, 
 .em10, .em11, .em12, .em13, .em14 {
-    background-image: url("../../neoease/images/emotions/emotions-black.png");
+    background-image: url("../../../images/emotions/emotions.png");
+    background-size: 120px;
     float: left;
     height: 24px;
     margin-right: 5px;
@@ -677,6 +678,11 @@ textarea, input {
     border-bottom: 1px solid #DEDEDE;
     padding: 10px;
     width: 647px;
+    background-color: #F5F5F5;
+}
+
+#comments>div:nth-child(2n) {
+    background-color: #F8F8F8;
 }
 
 #comments .comment-panel>.right {
@@ -690,14 +696,6 @@ textarea, input {
 #comments>div:hover .comment-panel>.right {
     opacity: 1;
     filter: alpha(opacity=100);
-}
-
-.comment-even {
-    background-color: #F8F8F8;
-}
-
-.comment-odd {
-    background-color: #F5F5F5;
 }
 
 .comment-header {

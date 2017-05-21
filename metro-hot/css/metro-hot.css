@@ -181,7 +181,8 @@ textarea {
 .em00, .em01, .em02, .em03, .em04, .em05, .em06, .em07, .em08, .em09, 
 .em10, .em11, .em12, .em13, .em14 {
     cursor: pointer;
-    background-image: url("../../metro-hot/images/emotions/emotions-black.png");
+    background-image: url("../../../images/emotions/emotions.png");
+    background-size: 120px;
     float: left;
     height: 24px;
     margin-right: 8px;
@@ -785,10 +786,6 @@ textarea {
 pre.prettyprint {
     background-color: #F7F7F7;
 }
-
-#externalRelevantArticles {
-    margin-left: 10px;
-}
 /* end article */
 
 /* start comment */
@@ -801,7 +798,7 @@ pre.prettyprint {
     margin-right: 10px;
 }
 
-#comments > div.fn-clear img {
+#comments > div.fn-clear > img {
     width: 80px;
 }
 

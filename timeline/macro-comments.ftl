@@ -1,31 +1,7 @@
 <#macro comments commentList article>
 <ul id="comments" class="comments list">
     <#list commentList as comment>
-    <li id="${comment.oId}">
-        <img title="${comment.commentName}"
-             alt="${comment.commentName}" src="${comment.commentThumbnailURL}"/>
-        <div>
-            <span class="author">
-                <#if "http://" == comment.commentURL>
-                <a>${comment.commentName}</a>
-                <#else>
-                <a href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
-                </#if>
-                <#if comment.isReply>@
-                <a href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
-                   onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 20);"
-                   onmouseout="page.hideComment('${comment.commentOriginalCommentId}')">${comment.commentOriginalCommentName}</a>
-                </#if>
-            </span>
-            <small><b> ${comment.commentDate?string("yy-MM-dd HH:mm")}</b></small>
-            <#if article.commentable>
-            <span class="ico-reply ico right">
-                <a rel="nofollow" href="javascript:replyTo('${comment.oId}');">${replyLabel}</a>
-            </span>
-            </#if>
-            <div class="article-body">${comment.commentContent}</div>
-        </div>
-    </li>
+    <#include "common-comment.ftl"/>
     </#list>
 </ul>
 <#if article.commentable>
@@ -115,27 +91,6 @@
                            "randomArticles1Label": "${randomArticlesLabel}",
                            "externalRelevantArticles1Label": "${externalRelevantArticlesLabel}"
                        });
-
-                       var addComment = function(result, state) {
-                           var commentHTML = '<li id="' + result.oId + '"><img \
-                                    alt="' + result.userName +
-                                   '" src="' + result.commentThumbnailURL + '"/><div><span class="author">' + result.replyNameHTML;
-
-                           if (state !== "") {
-                               var commentOriginalCommentName = $("#" + page.currentCommentId + " .author > a").first().text();
-                               commentHTML += '&nbsp;@&nbsp;<a href="${servePath}' + result.commentSharpURL.split("#")[0] + '#' + page.currentCommentId + '"'
-                                       + 'onmouseover="page.showComment(this, \'' + page.currentCommentId + '\', 20);"'
-                                       + 'onmouseout="page.hideComment(\'' + page.currentCommentId + '\')">' + commentOriginalCommentName + '</a>';
-                           }
-
-                           commentHTML += '</span>&nbsp;<small><b>' + result.commentDate.substring(2, 16)
-                                   + '</b></small><span class="ico-reply ico right"><a rel="nofollow" href="javascript:replyTo(\'' + result.oId
-                                   + '\');">${replyLabel}</a></span><div class="article-body">'
-                                   + Util.replaceEmString($("#comment" + state).val())
-                                   + '</div></div></li>';
-
-                           return commentHTML;
-                       }
 
                        var replyTo = function(id) {
                            var commentFormHTML = "<table class='comment-form' id='replyForm'>";
