@@ -48,7 +48,7 @@
                         </a>
                     </section>
                 </header>
-                <section class="abstract">
+                <section class="abstract content-reset">
                     ${article.articleContent}
                     <#if "" != article.articleSign.signHTML?trim>
                     <div>
