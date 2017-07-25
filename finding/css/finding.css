@@ -363,10 +363,6 @@ pre code, pre tt {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.nav .current[class^="icon-"]:before {
-        color: #9EABB3;
-}
-
 .icon-sitemap:before {
   content: "\e900";
 }
@@ -635,29 +631,28 @@ pre code, pre tt {
 }
 
 .menu-button {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    position: fixed;
     box-sizing: border-box;
     display: inline-block;
     float: right;
     height: 38px;
     padding: 0 15px;
-    border-style: solid;
-    border-width: 1px;
     opacity: 1;
-    text-align: center;
     font-size: 12px;
     text-transform: uppercase;
-    line-height: 35px;
-    white-space: nowrap;
+    line-height: 46px;
     border-radius: 3px;
     transition: all 0.5s ease;
-    position: absolute;
     right: 20px;
     top: 40px;
     text-decoration: none;
     font-family: 'Open Sans', "Microsoft Yahei", 'Helvetica';
     z-index: 30;
+    overflow: hidden;
+    background-color: #111;
+    border: 1px solid #111;
+    color: #fff;
+    cursor: pointer;
 }
 
 .menu-button:hover {
@@ -668,10 +663,6 @@ pre code, pre tt {
     outline: 0;
 }
 
-.nav-closed .menu-button {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.6);
-}
 .nav-closed .menu-button:hover {
     color: #222;
 }
@@ -685,11 +676,15 @@ pre code, pre tt {
     -ms-transform: translate3D(50px, 0, 0);
     transform: translate3D(50px, 0, 0);
     transition: all 0.3s ease;
+    right: 287px;
+    z-index: 10;
+    width: 46px;
+    border-radius: 3px 0 0 3px;
 }
 
-.nav-opened .menu-button .word {
-    opacity: 0;
-    transition: all 0.3s ease;
+.menu-button .word {
+    float: right;
+    margin: -4px 0 0 10px;
 }
 
 .nav {
@@ -740,13 +735,14 @@ pre code, pre tt {
 }
 
 .nav a {
-    color: #B8B8B8;
+    color: #989898;
     text-decoration: none;
     line-height: 1.4;
     font-size: 1.4rem;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a.current {
     color: #FFF;
 }
 
@@ -775,12 +771,8 @@ pre code, pre tt {
     white-space: nowrap;
 }
 
-.nav [class^="icon-"] {
-    color: #FFF;
-}
-
-.nav [class^="icon-"]:hover {
-    color: #B8B8B8;
+.nav .b3-solo-list li.current a {
+    color: #fff;
 }
 
 body.nav-closed .nav {

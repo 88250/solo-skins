@@ -18,7 +18,7 @@
  * skin next style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.4.3.1, Feb 16, 2017
+ * @version 0.5.0.0, Jul 25, 2017
 */
 /* start reset */
 html {
@@ -575,6 +575,10 @@ img {
     padding: 0;
     font-size: 14px;
     line-height: 2;
+}
+
+.sidebar .b3-solo-list li.current a {
+    color: #87daff;
 }
 
 .sidebar section {
