@@ -8,11 +8,13 @@
             </h1>
             <span class="sub-title">${blogSubtitle}</span>
         </div>
+        <#--
         <form class="right" target="_blank" action="http://zhannei.baidu.com/cse/site">
             <input id="search" type="text" name="q" />
             <input type="submit" value="" class="none" />
             <input type="hidden" name="cc" value="${serverHost}">
         </form>
+        -->
         <div class="clear"></div>
     </div>
 </div>

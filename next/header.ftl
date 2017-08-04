@@ -46,6 +46,7 @@
                 </li>
             </ul>
 
+            <#--
             <div class="site-search">
                 <form target="_blank" action="http://zhannei.baidu.com/cse/site">
                     <input placeholder="${searchLabel}" id="search" type="text" name="q"/>
@@ -53,6 +54,7 @@
                     <input type="hidden" name="cc" value="${serverHost}">
                 </form>
             </div>
+            -->
         </nav>
     </div>
 </header>

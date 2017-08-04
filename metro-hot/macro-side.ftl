@@ -2,11 +2,13 @@
 <div class="side">
     <div class="fn-clear">
         <#if !isArticle>
+        <#--
         <form target="_blank" action="http://zhannei.baidu.com/cse/site">
             <input placeholder="Search" id="search" type="text" name="q" /><span onclick="$(this).parent().submit()" data-ico="&#x0067;"></span>
             <input type="submit" value="" class="fn-none" />
             <input type="hidden" name="cc" value="${serverHost}">
         </form>
+        -->
 
         <#if "" != noticeBoard>
         <div class="notice-board side-tile">
