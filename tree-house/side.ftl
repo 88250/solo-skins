@@ -32,7 +32,7 @@
         <ul id="recentComments">
             <#list recentComments as comment>
             <li>
-                <a rel="nofollow" href="${servePath}${comment.commentSharpURL}" title="${comment.commentContent}">
+                <a rel="nofollow" href="${servePath}${comment.commentSharpURL}">
                     ${comment.commentName}: ${comment.commentContent}
                 </a>
             </li>

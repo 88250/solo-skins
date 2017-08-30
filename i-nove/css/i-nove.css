@@ -18,7 +18,7 @@
  * skin i-nove style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.2.3, Nov 27, 2016
+ * @version 1.0.3.0, Aug 30, 2017
 */
 img {
     max-width: 100%;
@@ -346,7 +346,7 @@ h5 {
     color: #555;
 }
 
-.side-navi .navi-comments img {
+.side-navi .navi-comments li > img {
     border: 1px solid #999999;
     height: 32px;
     margin-right: 7px;

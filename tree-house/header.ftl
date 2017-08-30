@@ -22,9 +22,4 @@
         </a>
     </h1>
     <div>${blogSubtitle}</div>
-    <embed width="228" height="239" type="application/x-shockwave-flash"
-           menu="false" name="http://blog.thepixel.com/wp-content/themes/PixelBlog2/flash/fan"
-           wmode="transparent" loop="true" pluginspage="http://www.adobe.com/go/getflashplayer"
-           quality="high" src="${staticServePath}/skins/${skinDirName}/images/fan.swf"
-           style="position: absolute;top:112px;left:265px;">
 </div>

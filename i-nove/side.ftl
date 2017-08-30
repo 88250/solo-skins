@@ -24,7 +24,7 @@
                         </a>
                     </div>
                     <div>
-                        <a rel="nofollow" title="${comment.commentContent}" class='side-comment' href="${servePath}${comment.commentSharpURL}">
+                        <a rel="nofollow" class='side-comment' href="${servePath}${comment.commentSharpURL}">
                             ${comment.commentContent}
                         </a>
                     </div>

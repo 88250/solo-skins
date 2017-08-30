@@ -17,7 +17,7 @@
  * skin neoease style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.2.8, Mar 27, 2017
+ * @version 1.0.2.9, Aug 30, 2017
 */
 /* start base */
 html, body, div, ul, li, h1, h2, h3, h4, h5, h6 {
@@ -497,6 +497,10 @@ textarea, input {
 
 .recent-comments-content a:hover {
     text-decoration: none;
+}
+
+.recent-comments-content p {
+    margin: 0;
 }
 /* end side */
 
