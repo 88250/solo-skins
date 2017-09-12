@@ -35,6 +35,11 @@
                 <li>
                     <a href="${servePath}/links.html">${linkLabel}</a>
                 </li>
+                <li>
+                    <a href="${servePath}/search?keyword=">
+                        Search
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>

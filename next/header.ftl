@@ -46,15 +46,12 @@
                 </li>
             </ul>
 
-            <#--
             <div class="site-search">
-                <form target="_blank" action="http://zhannei.baidu.com/cse/site">
-                    <input placeholder="${searchLabel}" id="search" type="text" name="q"/>
+                <form action="${servePath}/search">
+                    <input placeholder="${searchLabel}" id="search" type="text" name="keyword"/>
                     <input type="submit" value="" class="fn-none" />
-                    <input type="hidden" name="cc" value="${serverHost}">
                 </form>
             </div>
-            -->
         </nav>
     </div>
 </header>

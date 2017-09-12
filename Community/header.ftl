@@ -52,6 +52,9 @@
                         <span class="clear"></span>
                     </a>
                 </li>
+                <li class="tab">
+                    <a href="${servePath}/search?keyword=">Search</a>
+                </li>
             </ul>
         </div>
         <div class="clear"></div>

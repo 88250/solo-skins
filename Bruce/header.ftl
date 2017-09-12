@@ -13,6 +13,7 @@ ${topBarReplacement}
             <a class="nav-item" href="${servePath}/links.html">${friendLinkLabel}</a>
             <a class="nav-item" href="${servePath}/tags.html">${tagLabel}</a>
             <a class="nav-item" href="${servePath}/archives.html">${archiveLabel}</a>
+            <a href="${servePath}/search?keyword=">Search</a>
         </nav>
         <div class="col-sm-2"></div>
     </div>

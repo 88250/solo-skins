@@ -35,12 +35,9 @@
                 <a rel="alternate" href="${servePath}/blog-articles-rss.do">RSS <img src="${staticServePath}/images/feed.png" alt="RSS"/></a>
             </li>
         </ul>
-        <#--
-        <form class="right" target="_blank" action="http://zhannei.baidu.com/cse/site">
-            <input placeholder="${searchLabel}" id="search" type="text" name="q" />
+        <form class="right"  action="${servePath}/search">
+            <input placeholder="${searchLabel}" id="search" type="text" name="keyword" />
             <input type="submit" value="" class="none" />
-            <input type="hidden" name="cc" value="${serverHost}">
         </form>
-        -->
     </div>
 </div>

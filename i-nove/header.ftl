@@ -29,6 +29,11 @@
                 </a>
             </li>
             <li>
+                <a href="${servePath}/search?keyword=">
+                    Search
+                </a>
+            </li>
+            <li>
                 <a class="lastNavi" href="javascript:void(0);"></a>
             </li>
         </ul>

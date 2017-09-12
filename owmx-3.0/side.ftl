@@ -1,5 +1,12 @@
 <aside>
     <nav>
+        <h4>Search</h4>
+        <form action="${servePath}/search">
+            <input style="width: 194px" id="search" type="text" name="keyword" />
+            <input type="submit" value="" class="none" />
+        </form>
+    </nav>
+    <nav>
         <h4>Navigation</h4>
         <ul>
             <li>

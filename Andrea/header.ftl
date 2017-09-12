@@ -31,7 +31,7 @@
     <div class="right">
         <ul>
             <li>
-                <a rel="nofollow" class="home" href="${servePath}">Blog</a>
+                <a rel="nofollow" class="home" href="${servePath}/search?keyword=">Search</a>
             </li>
             <li>
                 <a href="${servePath}/tags.html">Tags</a>

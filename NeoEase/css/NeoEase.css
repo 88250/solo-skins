@@ -170,7 +170,7 @@ textarea, input {
 /* start ico */
 .date-ico, .tag-ico, .user-ico, .expand-ico, .collapse-ico, #search,
 .translate-ico, .feed-ico {
-    background-image: url("../../neoease/images/icons.png");
+    background-image: url("../../NeoEase/images/icons.png");
 }
 
 .feed-ico {
@@ -253,7 +253,7 @@ textarea, input {
 
 /* start header */
 .header {
-    background: url("../../neoease/images/icons.png") repeat-x scroll 0 -220px #F2F2F2;
+    background: url("../../NeoEase/images/icons.png") repeat-x scroll 0 -220px #F2F2F2;
     padding: 20px 0;
 }
 
@@ -369,7 +369,7 @@ textarea, input {
 }
 
 #goTop {
-    background: url("../../neoease/images/icons.png") no-repeat scroll 5px -51px #DDD;
+    background: url("../../NeoEase/images/icons.png") no-repeat scroll 5px -51px #DDD;
     border-radius: 2px 2px 0 0;
     cursor: pointer;
     font-size: 11px;
@@ -881,7 +881,7 @@ textarea, input {
 }
 
 .error {
-    background-image: url("../../neoease/images/404.png");
+    background-image: url("../../NeoEase/images/404.png");
     float: left;
     height: 536px;
     margin: 50px 80px;

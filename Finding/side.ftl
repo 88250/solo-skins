@@ -38,6 +38,9 @@
     <li>
         <a rel="alternate" href="${servePath}/blog-articles-rss.do">${subscribeLabel}</a>
     </li>
+    <Li>
+        <a href="${servePath}/search?keyword=">Search</a>
+    </Li>
 </ul>
 <div class="count">
     <span>

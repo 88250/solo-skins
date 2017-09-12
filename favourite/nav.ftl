@@ -6,6 +6,7 @@
         <a href="${page.pagePermalink}" target="${page.pageOpenTarget}" class="${page.pageTitle}">${page.pageTitle}</a>
         </#list>
         <a rel="alternate" href="${servePath}/blog-articles-rss.do" class="classifiche">RSS</a>
+        <a href="${servePath}/search?keyword=">Search</a>
     </div>
     <div class="thinks"></div>
 </div>

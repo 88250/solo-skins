@@ -14,6 +14,7 @@
     </#list>
     <a href="${servePath}/tags.html">${allTagsLabel}</a>&nbsp;&nbsp;
     <a rel="alternate" href="${servePath}/blog-articles-rss.do">RSS</a><a href="${servePath}/blog-articles-rss.do"><img src="${staticServePath}/images/feed.png" alt="RSS"/></a>
+    &nbsp;&nbsp;<a href="${servePath}/search?keyword=">Search</a>
 </div>
 <div class="right" id="statistic">
     <span>${viewCount1Label}
