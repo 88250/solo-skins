@@ -23,7 +23,7 @@
                 </li>  
                 <#list pageNavigations as page>
                 <li>
-                    <a href="${page.pagePermalink}" target="${page.pageOpenTarget}">${page.pageTitle}</a>
+                    <a href="${page.pagePermalink}" target="${page.pageOpenTarget}"><#if page.pageIcon != ''><img class="page-icon" src="${page.pageIcon}"></#if>${page.pageTitle}</a>
                 </li>
                 </#list>  
                 <li>

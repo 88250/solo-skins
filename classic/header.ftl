@@ -9,7 +9,7 @@
 <div class="left">
     <#list pageNavigations as page>
     <span>
-        <a href="${page.pagePermalink}" target="${page.pageOpenTarget}">${page.pageTitle}</a>&nbsp;&nbsp;
+        <a href="${page.pagePermalink}" target="${page.pageOpenTarget}"><#if page.pageIcon != ''><img class="page-icon" src="${page.pageIcon}"></#if>${page.pageTitle}</a>&nbsp;&nbsp;
     </span>
     </#list>
     <a href="${servePath}/tags.html">${allTagsLabel}</a>&nbsp;&nbsp;

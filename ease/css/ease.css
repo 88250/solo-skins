@@ -17,7 +17,7 @@
 * Skin ease style.
 *
 * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
-* @version 1.0.2.9, Aug 23, 2014
+* @version 1.1.0.0, Sep 21, 2017
 */
 /* start base */
 html, body, div, ul, li {
@@ -316,6 +316,13 @@ sup {
 
 .nav img {
     margin-left: 3px;
+}
+
+.nav .page-icon {
+    float: left;
+    height: 14px;
+    width: 14px;
+    margin: 8px 5px 0 0;
 }
 /* end header */
 

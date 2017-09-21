@@ -17,7 +17,7 @@
 * timeline skin style.
 *
 * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
-* @version 1.0.1.2, Jun 6, 2013
+* @version 1.1.0.0, Sep 21, 2017
 */
 /* start reset */
 html, body {
@@ -447,6 +447,12 @@ a:hover > .ico-pre {
 .header > .container > form {
     height: auto;
     overflow: visible;
+}
+
+.header .page-icon {
+    height: 14px;
+    width: 14px;
+    margin: -1px 5px 0 0;
 }
 /* end header */
 

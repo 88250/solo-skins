@@ -5,7 +5,7 @@
                 <#list pageNavigations as page>
                 <li>
                     <a href="${page.pagePermalink}" target="${page.pageOpenTarget}" title="${page.pageTitle}">
-                        ${page.pageTitle}
+                        <#if page.pageIcon != ''><img class="page-icon" src="${page.pageIcon}"></#if>${page.pageTitle}
                     </a>
                 </li>
                 </#list>

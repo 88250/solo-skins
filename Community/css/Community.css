@@ -18,7 +18,7 @@
  * skin community style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.7, May 15, 2012
+ * @version 1.1.0.0, Sep 21, 2017
 */
 body {
     background-color: #EFEFEF;
@@ -154,6 +154,13 @@ a.header-title {
     display: block;
 }
 
+.sub-tabs .page-icon {
+    float: left;
+    height: 14px;
+    width: 14px;
+    margin: 15px 5px 0 0;
+}
+
 .header-navi-main .sub-tab {
     background-color: #9BC4CE;
     border-bottom: 1px solid #76A0AA;
@@ -163,8 +170,7 @@ a.header-title {
 
 .header-navi-main .sub-tab a {
     min-width: 98px;
-    padding: 0 16px;
-    line-height: 42px;
+    padding: 10px 16px;
     font-size: 14px;
 }
 

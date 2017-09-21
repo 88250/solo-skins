@@ -19,7 +19,7 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 1.1.1.1, Oct 13, 2016
+ * @version 1.2.0.0, Sep 21, 2017
 */
 /* start reset */
 html {
@@ -775,6 +775,13 @@ pre code, pre tt {
     color: #fff;
 }
 
+.nav .page-icon {
+    float: left;
+    height: 14px;
+    width: 14px;
+    margin: 3px 4px 0 0;
+}
+
 body.nav-closed .nav {
     -webkit-transform: translate3D(97px, 0, 0);
     -ms-transform: translate3D(97px, 0, 0);
@@ -1365,10 +1372,6 @@ ul.comments {
     .nav-closed .menu-button:hover {
         color: #FFF;
         background-color: transparent;
-    }
-
-    .nav-opened .menu-button {
-        display: none;
     }
 
     .post-author {

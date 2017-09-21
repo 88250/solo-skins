@@ -17,7 +17,7 @@
  * skin andrea style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.9, May 15, 2012
+ * @version 1.1.0.0, Sep 21, 2017
 */
 body {
     background-image: url("../images/bg-grey.jpg");
@@ -398,6 +398,11 @@ a:hover {
 
 .side-tool ul {
     list-style-type: none;
+}
+
+.side-tool .page-icon {
+    height: 14px;
+    width: 14px;
 }
 
 #greyBG, #brownBG, #blueBG {

@@ -18,7 +18,7 @@
 * skin metro-hot style
 *
 * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
-* @version 1.0.1.1, Sep 30, 2013
+* @version 1.1.0.0, Sep 21, 2017
 */
 /* start base */
 @font-face {
@@ -385,6 +385,12 @@ textarea {
     border-bottom-width: 0;
 }
 
+.navigation .page-icon {
+    float: left;
+    height: 14px;
+    width: 14px;
+    margin: 2px 5px 0 0;
+}
 /* end header */
 
 /* start article list */

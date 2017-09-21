@@ -18,7 +18,7 @@
  * skin tree-house style
  *
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.8, May 14, 2012
+ * @version 1.1.0.0, Sep 21, 2017
 */
 html {
     min-width: 948px;
@@ -63,6 +63,14 @@ h5 {
 .header-navi li {
     float: left;
 }
+
+.header-navi .page-icon {
+    float: left;
+    height: 14px;
+    width: 14px;
+    margin: 2px 3px 0 0;
+}
+
 .header-title {
     color: #FFFFFF;
     margin-left: 146px;

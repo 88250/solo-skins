@@ -18,7 +18,7 @@
  * skin next style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.5.0.0, Jul 25, 2017
+ * @version 0.6.0.0, Sep 21, 2017
 */
 /* start reset */
 html {
@@ -342,6 +342,13 @@ img {
 
 .menu .menu-item a:hover {
     background: #e1e1e1;
+}
+
+.menu .page-icon {
+    float: left;
+    height: 14px;
+    width: 14px;
+    margin: 4px -4px 0 0;
 }
 
 .site-search {
@@ -1200,6 +1207,10 @@ ul.comments .comment-meta time {
 
     .menu .menu-item {
         display: block;
+    }
+
+    .menu .page-icon {
+        margin: 6px -4px 0px 10px;
     }
 
     .footer {

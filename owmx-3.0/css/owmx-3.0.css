@@ -27,7 +27,7 @@ Update: 	Dongxu Wang 2011-02-24
 /*
  * skin owmx-3.0 style
  * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
- * @version 1.0.0.7, Jun 2, 2012
+ * @version 1.1.0.0, Sep 21 2017
 */
 /* Reset */
 header, footer, article, nav, section, aside, time, hgroup {
@@ -354,6 +354,12 @@ nav li.active, aside li.active li {
     background : url(../images/ai2.png) no-repeat 0 8px;
 }
 
+nav .page-icon {
+    float: left;
+    height: 14px;
+    width: 14px;
+    margin: 4px 4px 0 0;
+}
 /* Gallery */
 .gallery {  
     list-style : none;

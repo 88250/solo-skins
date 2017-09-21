@@ -19,6 +19,7 @@
             <ul class="menu">
                 <#list pageNavigations as page>
                 <li class="menu-item">
+                    <#if page.pageIcon != ''><img class="page-icon" src="${page.pageIcon}"></#if>
                     <a href="${page.pagePermalink}" target="${page.pageOpenTarget}" rel="section">
                         ${page.pageTitle}
                     </a>
