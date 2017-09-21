@@ -19,7 +19,7 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 1.2.0.0, Sep 21, 2017
+ * @version 1.2.0.1, Sep 21, 2017
 */
 /* start reset */
 html {
@@ -119,6 +119,7 @@ ol, ul {
 ol ol, ul ul,
 ul ol, ol ul {
     padding-left: 2em;
+    margin-bottom: 0;
 }
 
 dl dt {
