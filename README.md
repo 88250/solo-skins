@@ -1,7 +1,7 @@
 # Solo 官方皮肤
 
 1. [开发步骤](https://hacpai.com/article/1493814851007)
-2. [模板变量](https://github.com/b3log/solo/wiki/Template_variables)
+2. [模板变量](https://hacpai.com/article/1493814851007#toc_h2_4)
 3. [皮肤定制](https://github.com/b3log/solo/wiki/skins_custom)
 4. [版本更新](https://github.com/b3log/solo/wiki/Skins_change_log)
 
