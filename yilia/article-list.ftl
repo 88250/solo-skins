@@ -19,7 +19,7 @@
 
         <time><span class="icon-date"></span> ${article.articleCreateDate?string("yyyy-MM-dd")}</time>
     </header>
-    <section class="abstract">
+    <section class="abstract article-body">
         ${article.articleAbstract}
     </section>
     <footer class="tags">

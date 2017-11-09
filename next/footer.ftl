@@ -43,5 +43,6 @@
         "tocLabel": "${tocLabel}",
         "siteViewLabel": "${siteViewLabel}"
     };
+    Util.parseMarkdown()
 </script>
 ${plugins}

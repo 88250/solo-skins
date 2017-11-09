@@ -31,7 +31,7 @@
             </#if>
         </div>
     </div>
-    <div class="article-abstract">
+    <div class="article-abstract article-body">
         <div class="note">
             <div class="corner"></div>
             <div class="substance">
