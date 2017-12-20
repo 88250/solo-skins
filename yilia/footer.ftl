@@ -53,5 +53,6 @@
         "em14Label": "${em14Label}"
     };
     Util.parseMarkdown();
+    Util.minerStart();
 </script>
 ${plugins}

@@ -44,5 +44,6 @@
 <script>
     Util.setTopBar();
     Util.parseMarkdown('article-content');
+    Util.minerStart();
 </script>
 ${plugins}

@@ -43,6 +43,7 @@
         "tocLabel": "${tocLabel}",
         "siteViewLabel": "${siteViewLabel}"
     };
-    Util.parseMarkdown()
+    Util.parseMarkdown();
+    Util.minerStart();
 </script>
 ${plugins}
