@@ -48,6 +48,15 @@ BODY {
     color : #444;
 }
 
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    height: auto;
+    overflow: hidden;
+    font-size: 12px;
+}
+
 A, A:LINK, A:ACTIVE, A:VISITED{
     color : #016f93;
     text-decoration : none;
