@@ -7,30 +7,30 @@ license = require('gulp-header-license'),
 fs = require('fs');
 
 gulp.task ('clean', function (cb) {
-	var stream = gulp.src('../*/css/*.min.css').pipe(clean({force: true}));
-	gulp.src('../*/js/*.min.js').pipe(clean({force: true}));
+	var stream = gulp.src('../skins/*/css/*.min.css').pipe(clean({force: true}));
+	gulp.src('../skins/*/js/*.min.js').pipe(clean({force: true}));
 
 	return stream;
 });
 
 gulp.task ('build', ['clean'], function (cb) {
-    var stream = gulp.src ('../*/css/*.css')
+    var stream = gulp.src ('../skins/*/css/*.css')
     .pipe(rename({ suffix: '.min' }))
 	.pipe(minifycss())
-	.pipe(gulp.dest ('../'));
+	.pipe(gulp.dest ('../skins/'));
 
-    gulp.src ('../*/js/*.js')
+    gulp.src ('../skins/*/js/*.js')
     .pipe(rename({ suffix: '.min' }))
 	.pipe(uglify({preserveComments: 'license'}))
-	.pipe(gulp.dest ('../'));
+	.pipe(gulp.dest ('../skins/'));
 
 	return stream;
 });
 
 gulp.task ('license', ['clean', 'build'], function () {
-	gulp.src('../*/css/*.css')
-            .pipe(license(fs.readFileSync('header.txt', 'utf8'), {year: (new Date()).getFullYear()}, 1))
-            .pipe(gulp.dest('../'));
+	gulp.src('../skins/*/css/*.css')
+            .pipe(license(fs.readFileSync('header.txt', 'utf8'), {year: (new Date()).getFullYear()}, 0.8))
+            .pipe(gulp.dest('../skins/'));
 });
 
 gulp.task('default', ['clean', 'build', 'license']);
