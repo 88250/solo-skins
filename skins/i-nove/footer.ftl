@@ -1,7 +1,8 @@
 <div class="left copyright">
     <span style="color: gray;">&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>${footerContent}<br/>
     Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="https://hacpai.com/tag/Solo" target="_blank">Solo</a> ${version}&nbsp;&nbsp;
-    Theme by <a rel="friend" href="http://www.neoease.com" target="_blank">NeoEase</a> & <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
+    Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">i-nove</a>
+    by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
 </div>
 <div class="right goTop">
     <span onclick="Util.goTop();">${goTopLabel}</span>

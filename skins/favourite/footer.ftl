@@ -2,7 +2,8 @@
     <div class="copyright">
         <span style="color:white;">&copy; ${year}</span> - <a style="color:white;" href="${servePath}">${blogTitle}</a>${footerContent}<br/>
         Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="https://hacpai.com/tag/Solo" target="_blank">Solo</a> ${version}&nbsp;&nbsp;
-        Theme by <a style="color:white;" rel="friend" href="http://www.iprimidieci.com/" target="_blank">Primi</a> & <a rel="friend" style="color:white;" href="http://lamb.b3log.org" target="_blank">Lamb</a>.
+        Theme <a rel="friend" style="color:white;" href="https://github.com/b3log/solo-skins" target="_blank">favourite</a>
+        by <a rel="friend" style="color:white;" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
     </div>
     <div class="right goTop">
         <span onclick="Util.goTop();">${goTopLabel}</span>

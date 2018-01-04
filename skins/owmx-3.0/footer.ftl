@@ -1,7 +1,8 @@
 <footer>
     <span>&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>${footerContent}
     Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="https://hacpai.com/tag/Solo" target="_blank">Solo</a> ${version}&nbsp;&nbsp;
-    Theme by <a rel="friend" href="http://dx.b3log.org/" target="_blank">DX</a> & <a rel="friend" href="http://www.jabz.info/contact/jonas-jared-jacek/" title="Profile of Jonas Jacek">Jonas Jacek</a>.
+    Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">owmx-3.0</a>
+    by <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
     <div onclick="Util.goTop();">${goTopLabel}</div>
 </footer>
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>

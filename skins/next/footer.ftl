@@ -7,7 +7,8 @@
         Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> •
         <a href="https://hacpai.com/tag/Solo" target="_blank">Solo</a> ${version}
         
-        <div class="fn-right">Theme by <a href="http://iissnan.com/" target="_blank">IIssNan</a> & <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.</div>
+        <div class="fn-right">Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">next</a>
+            by <a href="http://iissnan.com/" target="_blank">IIssNan</a> & <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.</div>
     </div>
 </footer>
 <div class="back-to-top" onclick="Util.goTop()"></div>

@@ -1,5 +1,11 @@
 <footer class="footer">
     <div class="fn-clear">
+        <div class="fn-left">
+            Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">yilia</a>
+            by
+            <a rel="friend" href="http://litten.me/" target="_blank">Litten</a> &
+            <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
+        </div>
         <span class="fn-right">
             ${viewCount1Label}${statistic.statisticBlogViewCount}
             &nbsp;

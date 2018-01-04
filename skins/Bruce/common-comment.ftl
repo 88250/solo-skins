@@ -19,6 +19,6 @@
             </#if></span>
 
         </div>
-        <div class="row code-highlight">${comment.commentContent}</div>
+        <div class="row code-highlight article-content">${comment.commentContent}</div>
     </div>
 </div>
