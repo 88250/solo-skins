@@ -11,7 +11,8 @@
 <script type="text/javascript">
     var latkeConfig = {
         "servePath": "${servePath}",
-        "staticServePath": "${staticServePath}"
+        "staticServePath": "${staticServePath}",
+        "isLoggedIn": "${isLoggedIn?string}"
     };
 
     var Label = {

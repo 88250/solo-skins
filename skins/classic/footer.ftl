@@ -10,6 +10,7 @@ by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
 <script type="text/javascript">
     var latkeConfig = {
         "servePath": "${servePath}",
+        "isLoggedIn": "${isLoggedIn?string}",
         "staticServePath": "${staticServePath}"
     };
 
