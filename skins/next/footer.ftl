@@ -45,6 +45,5 @@
         "siteViewLabel": "${siteViewLabel}"
     };
     Util.parseMarkdown();
-    Util.minerStart();
 </script>
 ${plugins}

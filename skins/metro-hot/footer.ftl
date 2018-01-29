@@ -39,6 +39,5 @@
 <script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/${skinDirName}${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
 <script>
     Util.parseMarkdown();
-    Util.minerStart();
 </script>
 ${plugins}
