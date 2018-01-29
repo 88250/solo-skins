@@ -1,6 +1,6 @@
 <div class="side">
     <div class="overlay">
-        <a href="javascript:$('.side .toc').show()" class="toc-btn">${tocLabel}</a>
+        <a onclick="$('.side .toc').show()" href="javascript:void(0)" class="toc-btn">${tocLabel}</a>
     </div>
     <header class="content">
         <a href="${servePath}">

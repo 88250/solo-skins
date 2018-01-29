@@ -61,7 +61,7 @@ var Yilia = {
             return false;
         }
         
-        $('.side footer').after('<div class="toc"><a href="javascript:$(\'.side .toc\').hide()" class="close">X</a></div>');
+        $('.side footer').after('<div class="toc"><a onclick="$(\'.side .toc\').hide();" href="javascript:void(0)" class="close">X</a></div>');
 
          $('.side .toc a').after($('.b3-solo-list'));
 
