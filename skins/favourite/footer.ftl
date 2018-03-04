@@ -1,7 +1,7 @@
 <div class="info">
     <div class="copyright">
         <span style="color:white;">&copy; ${year}</span> - <a style="color:white;" href="${servePath}">${blogTitle}</a>${footerContent}<br/>
-        Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="https://hacpai.com/tag/Solo" target="_blank">Solo</a> ${version}&nbsp;&nbsp;
+        Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> • <a href="http://solo.b3log.org" target="_blank">Solo</a> ${version}&nbsp;&nbsp;
         Theme <a rel="friend" style="color:white;" href="https://github.com/b3log/solo-skins" target="_blank">favourite</a>
         by <a rel="friend" style="color:white;" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
     </div>
