@@ -33,7 +33,7 @@
                     <a class="author" title="${comment.commentName}" target="_blank" href="${comment.commentURL}">
                         ${comment.commentName}
                     </a>:
-                    <a rel="nofollow" class='side-comment' href="${servePath}/${comment.commentSharpURL}">
+                    <a rel="nofollow" class='side-comment' href="${servePath}${comment.commentSharpURL}">
                         ${comment.commentContent}
                     </a>
                 </li>
