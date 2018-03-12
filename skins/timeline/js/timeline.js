@@ -16,7 +16,7 @@
 /**
  * @fileoverview timeline js.
  *
- * @author <a href="mailto:LLY219@gmail.com">Liyuan Li</a>
+ * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @version 1.0.1.2, Jun 6, 2013
  */
 var timeline = {

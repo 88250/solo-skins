@@ -21,8 +21,8 @@
         &copy; ${year}
         ${footerContent}
         <span class="fn-right">
-            Powered by <a href="http://b3log.org" target="_blank">B3log 开源</a> •
-            <a href="http://solo.b3log.org" target="_blank">Solo</a> ${version}
+            Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> •
+            <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}
         </span>
     </div>
     <span onclick="Util.goTop()" class="icon-goup"></span>

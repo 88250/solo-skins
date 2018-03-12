@@ -2,9 +2,9 @@
     &copy; ${year}
     ${footerContent}
     <a href="${servePath}">${blogTitle}</a>  &nbsp;   • &nbsp;
-    <a href="http://solo.b3log.org" target="_blank">Solo</a> ${version}  <br/>
+    <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}  <br/>
 
-    Powered by <a href="http://b3log.org" target="_blank">B3log</a> 开源 &nbsp;
+    Powered by <a href="https://b3log.org" target="_blank">B3log</a> 开源 &nbsp;
     <span class="ft-warn">&heartsuit;</span>
     Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">9IPHP</a> by <a href="https://github.com/9IPHP/9IPHP" target="_blank">9IPHP</a> & <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
 </footer>
