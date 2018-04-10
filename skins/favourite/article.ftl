@@ -93,7 +93,7 @@
                                     <span class="tagsIcon" title="${tagLabel}"></span>
                                     <#list article.articleTags?split(",") as articleTag>
                                     <span class="count">
-                                        <a rel="tag" href="/tags/${articleTag?url('UTF-8')}">
+                                        <a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
                                             ${articleTag}</a><#if articleTag_has_next>,</#if>
                                     </span>
                                     </#list>
