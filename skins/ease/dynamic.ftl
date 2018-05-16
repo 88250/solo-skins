@@ -63,7 +63,7 @@
                     </#if>
 
                     <#if 0 != mostUsedCategories?size>
-                        <div class="module side-tags">
+                        <div class="module side-categories">
                             <h3 class="ft-gray">${categoryLabel}</h3>
                             <ul>
                                 <#list mostUsedCategories as category>

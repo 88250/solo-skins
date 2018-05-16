@@ -13,11 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 /**
  * @fileoverview ease js.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 1.0.1.6, Nov 28, 2013
+ * @version 1.2.0.0, Jun 4, 2018
  */
 var goTranslate = function () {
     window.open("http://translate.google.com/translate?sl=auto&tl=auto&u=" + location.href);  
@@ -259,15 +260,15 @@ var ease = {
             return;
         }
         
-        var $comments = $dynamic.find(".side-comments"),
+        var $categories = $dynamic.find(".side-categories"),
         $tags = $dynamic.find(".side-tags"),
         $mostComment = $dynamic.find(".side-most-comment"),
         $mostView = $dynamic.find(".side-most-view");
         
-        if ($comments.height() > $tags.height()) {
-            $tags.height($comments.height());
+        if ($categories.height() > $tags.height()) {
+            $tags.height($categories.height());
         } else {
-            $comments.height($tags.height());
+            $categories.height($tags.height());
         }
         
         if ($mostComment.height() > $mostView.height()) {

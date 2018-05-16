@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 /*
 * Skin ease style.
 *
@@ -687,7 +687,7 @@ sup {
     line-height: 20px;
     margin: 20px;
     padding: 10px 20px 20px;
-    width: 385px;
+    width: 380px;
 }
 
 .dynamic .module:hover {
@@ -695,15 +695,11 @@ sup {
 }
 
 .dynamic .side-comments {
-    width: 600px;
+    width: 840px;
 }
 
 .dynamic .side-comments .comment-panel {
-    width: 510px;
-}
-
-.dynamic .side-tags {
-    width: 170px;
+    width: 760px;
 }
 
 .dynamic .side-tags li {
