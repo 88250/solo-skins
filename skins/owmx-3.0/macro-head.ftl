@@ -32,6 +32,7 @@
 <link href="${servePath}/blog-articles-rss.do" title="RSS" type="application/rss+xml" rel="alternate" />
 <link rel="icon" type="image/png" href="${servePath}/favicon.png" />
 <link rel="manifest" href="${servePath}/manifest.json">
+<link rel="search" type="application/opensearchdescription+xml" title="${title}" href="/opensearch.xml">
 <script type="text/javascript">
     (function() {
         if (! 
