@@ -35,7 +35,7 @@
         </#if>
         ${comment.commentDate2?string("yyyy-MM-dd HH:mm:ss")}
         </div>
-        <div class="comment-content">
+        <div class="comment-content article-body">
         ${comment.commentContent}
         </div>
         <div class="clear"></div>

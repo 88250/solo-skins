@@ -40,7 +40,7 @@
             <a class="fn-right" href="javascript:replyTo('${comment.oId}')">${replyLabel}</a>
         </#if>
         </div>
-        <div class="comment-content">
+        <div class="article-body content-reset comment-content">
         ${comment.commentContent}
         </div>
     </div>

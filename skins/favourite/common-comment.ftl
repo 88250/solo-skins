@@ -47,7 +47,7 @@
         </#if>
             <div class="clear">
             </div>
-            <div class="comment-content">
+            <div class="comment-content article-body">
             ${comment.commentContent}
             </div>
         </div>
