@@ -20,7 +20,7 @@
  * skin next style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.6.0.0, Sep 21, 2017
+ * @version 0.6.0.1, Aug 27, 2018
 */
 /* start reset */
 html {
@@ -771,7 +771,7 @@ img {
     padding: 0 1em;
     color: #777;
     border-left: 0.25em solid #ddd;
-    margin-bottom: 16px
+    margin: 1em 0;
 }
 
 .article-body blockquote p {
