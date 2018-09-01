@@ -17,34 +17,32 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<li id="${comment.oId}">
-    <div>
-        <div class="avatar tooltipped tooltipped-n" aria-label="${comment.commentName}"
-             style="background-image: url(${comment.commentThumbnailURL})"></div>
-        <main>
-            <div class="fn-clear">
-                <#if "http://" == comment.commentURL>
+<li id="${comment.oId}" class="comments__item">
+    <div class="comments__avatar" style="background-image: url(${comment.commentThumbnailURL})"></div>
+    <div class="comments__meta fn__flex">
+        <div class="fn__flex-1">
+            <#if "http://" == comment.commentURL>
                 ${comment.commentName}
-                <#else>
-                <a class="user-name" href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
-                </#if>
-
-                <#if comment.isReply>
-                @<a class="user-name" href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
-                   onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 23);"
-                   onmouseout="page.hideComment('${comment.commentOriginalCommentId}')"
-                >${comment.commentOriginalCommentName}</a>
-                </#if>
-
-                <time class="ft-gray">${comment.commentDate?string("yyyy-MM-dd HH:mm")}</time>
-
-                <#if article?? && article.commentable>
-                    <a class="reply-btn" href="javascript:replyTo('${comment.oId}')">${replyLabel}</a>
-                </#if>
-            </div>
-            <div class="content-reset">
-                ${comment.commentContent}
-            </div>
-        </main>
+            <#else>
+            <a href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
+            </#if>
+            <#if comment.isReply>
+            @<a href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
+                onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 28);"
+                onmouseout="page.hideComment('${comment.commentOriginalCommentId}')"
+            >${comment.commentOriginalCommentName}</a>
+            </#if>
+        </div>
+        <time>${comment.commentDate?string("yyyy-MM-dd HH:mm")}</time>
     </div>
+    <main class="comments__content fn__clear">
+        <div class="content-reset">
+        ${comment.commentContent}
+        </div>
+        <#if article?? && article.commentable>
+            <a class="fn__right breadcrumb" href="javascript:replyTo('${comment.oId}')">${replyLabel}</a>
+        <#else>
+         <a class="fn__right breadcrumb" href="${servePath}${comment.commentSharpURL}">${viewLabel}»</a>
+        </#if>
+    </main>
 </li>

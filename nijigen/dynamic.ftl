@@ -30,32 +30,18 @@
 <#include "header.ftl">
 <div class="main">
     <main class="content">
+        <div class="module">
+            <div class="module__content ft__center">
+                <i class="icon__home"></i>
+                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
+                &nbsp; > &nbsp;
+                <i class="icon__refresh"></i> ${dynamicLabel}
+            </div>
+        </div>
     <#if 0 != recentComments?size>
-        <ul class="comments" id="comments">
+        <ul class="comments">
             <#list recentComments as comment>
                 <#include "common-comment.ftl"/>
-                <li id="${comment.oId}">
-                    <div>
-                        <div class="avatar tooltipped tooltipped-n" aria-label="${comment.commentName}"
-                             style="background-image: url(${comment.commentThumbnailURL})"></div>
-                        <main>
-                            <div class="fn-clear">
-                                <#if "http://" == comment.commentURL>
-                                    ${comment.commentName}
-                                <#else>
-                                        <a class="user-name" href="${comment.commentURL}"
-                                           target="_blank">${comment.commentName}</a>
-                                </#if>
-                                <time class="ft-gray">${comment.commentDate?string("yyyy-MM-dd HH:mm")}</time>
-                                <a class="reply-btn"
-                                   href="${servePath}${comment.commentSharpURL}">${viewLabel}»</a>
-                            </div>
-                            <div class="content-reset">
-                                ${comment.commentContent}
-                            </div>
-                        </main>
-                    </div>
-                </li>
             </#list>
         </ul>
     </#if>

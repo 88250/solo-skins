@@ -20,36 +20,44 @@
 <#include "macro-head.ftl">
 <!DOCTYPE html>
 <html>
-    <head>
-        <@head title="${blogTitle}">
-        <meta name="keywords" content="${metaKeywords},${archiveLabel}"/>
-        <meta name="description" content="${metaDescription},${archiveLabel}"/>
-        </@head>
-    </head>
-    <body>
-        <#include "header.ftl">
-        <div class="wrapper">
-            <div class="main-wrap">
-                <main class="other">
-                    <div class="title">
-                         <h2><i class="icon-link"></i>
-                             &nbsp;${linkLabel}</h2>
-                    </div>
-                    <#if 0 != links?size>
-                        <ul class="list">
-                            <#list links as link>
-                                <li>
-                                    <a rel="friend" href="${link.linkAddress}" title="${link.linkDescription}" target="_blank">
-                                        ${link.linkTitle}
-                                    </a>
-                                </li>
-                            </#list>
-                        </ul>
-                    </#if>
-                </main>
-                <#include "side.ftl">
+<head>
+<@head title="${blogTitle}">
+    <meta name="keywords" content="${metaKeywords},${archiveLabel}"/>
+    <meta name="description" content="${metaDescription},${archiveLabel}"/>
+</@head>
+</head>
+<body>
+<#include "header.ftl">
+<div class="main">
+    <main class="content">
+        <div class="module">
+            <div class="module__content ft__center">
+                <i class="icon__home"></i>
+                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
+                &nbsp; > &nbsp;
+                <i class="icon__link"></i>
+            ${linkLabel}
             </div>
         </div>
-        <#include "footer.ftl">
-    </body>
+        <div class="module">
+            <div class="module__list">
+                <#if 0 != links?size>
+                    <ul class="list">
+                    <#list links as link>
+                        <li>
+                            <a rel="friend" href="${link.linkAddress}" title="${link.linkDescription}"
+                               target="_blank">
+                                ${link.linkTitle}
+                            </a>
+                        </li>
+                    </#list>
+                    </ul>
+                </#if>
+            </div>
+        </div>
+    </main>
+    <#include "side.ftl">
+</div>
+<#include "footer.ftl">
+</body>
 </html>
