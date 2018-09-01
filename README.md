@@ -5,7 +5,7 @@
 3. [皮肤定制](https://github.com/b3log/solo/wiki/skins_custom)
 4. [版本更新](https://github.com/b3log/solo/wiki/Skins_change_log)
 
---------------------------------------------------------------
+----
 
 皮肤按照名称命名后存放于 skins 文件夹中。
 
