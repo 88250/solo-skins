@@ -23,7 +23,6 @@
 
 ## 皮肤
 
-----------------------------
 * [Medium](https://github.com/b3log/solo-skins/tree/master/Medium)
 ![Medium](https://solo.b3log.org/images/themes/medium.png)
 
