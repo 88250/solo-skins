@@ -11,6 +11,7 @@
 
 其中 skin-preview 存放皮肤的预览图片，toolers 存放更新版本和压缩 js、css 的 NodeJS 脚本，部署时请**注意不要拷贝这两个目录**。
 
-如果还有问题，欢迎到社区提问：https://hacpai.com/tag/solo
+## 社区
 
+* [讨论区](https://hacpai.com/tag/solo)
 
