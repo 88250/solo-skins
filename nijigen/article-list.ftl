@@ -19,7 +19,7 @@
 -->
 <div class="article-list">
     <#list articles as article>
-    <article class="item">
+    <article class="item <#if article_index &lt; 3>item--active</#if>">
         <time class="tooltipped tooltipped__n item__date"
               aria-label="${article.articleCreateDate?string("yyyy")}年">
             ${article.articleCreateDate?string("m")}月
@@ -41,17 +41,18 @@
             </sup>
             </#if>
         </h2>
-        <div class="item__date--m">
+
+        <div class="item__date--m fn__none">
             <i class="icon__date"></i>
             ${article.articleCreateDate?string("yyy-MM-DD")}
         </div>
 
 
         <div class="ft__center">
-            <#list article.articleTags?split(",") as articleTag>
-            <a rel="tag" class="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-                #${articleTag}</a>
-            </#list>
+            <span class="tag">
+                <i class="icon__tags"></i>
+                ${article.articleTags}
+            </span>
             <a class="tag" href="${servePath}${article.articlePermalink}#comments">
                 <i class="icon__comments"></i> ${article.articleCommentCount} ${commentLabel}
             </a>
