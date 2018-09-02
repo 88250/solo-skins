@@ -96,7 +96,7 @@
             </div>
 
             <div class="content-reset">
-            ${article.articleAbstract}
+            ${article.articleContent}
                 <#if "" != article.articleSign.signHTML?trim>
                 <div>
                     ${article.articleSign.signHTML}

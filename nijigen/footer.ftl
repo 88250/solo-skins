@@ -17,6 +17,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
+<div class="icon__up" onclick="Util.goTop()"></div>
 <footer class="footer">
     &copy; ${year}
     ${footerContent}

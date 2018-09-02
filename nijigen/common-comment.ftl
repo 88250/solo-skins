@@ -18,7 +18,6 @@
 
 -->
 <li id="${comment.oId}" class="comments__item">
-    <div class="comments__avatar" style="background-image: url(${comment.commentThumbnailURL})"></div>
     <div class="comments__meta fn__flex">
         <div class="fn__flex-1">
             <#if "http://" == comment.commentURL>
@@ -36,6 +35,7 @@
         <time>${comment.commentDate2?string("yyyy-MM-dd HH:mm")}</time>
     </div>
     <main class="comments__content fn__clear">
+        <div class="comments__avatar" style="background-image: url(${comment.commentThumbnailURL})"></div>
         <div class="content-reset">
         ${comment.commentContent}
         </div>

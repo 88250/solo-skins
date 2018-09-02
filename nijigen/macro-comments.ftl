@@ -122,7 +122,7 @@
     };
     (function () {
         page.load()
-        Skin.initArticle("${tocLabel}", "${siteViewLabel}")
+        Skin.initArticle()
         // emotions
         page.replaceCommentsEm('#comments .content-reset')
         <#nested>
