@@ -23,63 +23,7 @@
 
 ## 皮肤
 
-* [nijigen](https://github.com/b3log/solo-skins/tree/master/nijigen)
-![nijigen](https://solo.b3log.org/images/themes/nijigen.jpg)
-
-* [Medium](https://github.com/b3log/solo-skins/tree/master/Medium)
-![Medium](https://solo.b3log.org/images/themes/medium.png)
-
-* [9IPHP](https://github.com/b3log/solo-skins/tree/master/9IPHP)
-![9IPHP](https://solo.b3log.org/images/themes/9IPHP.jpg)
-
-
-* [next](https://github.com/b3log/solo-skins/tree/master/next)
-![next](https://solo.b3log.org/images/themes/next.jpg)
-
-* [yilia](https://github.com/b3log/solo-skins/tree/master/yilia)
-![yilia](https://solo.b3log.org/images/themes/yilia.jpg)
-
-* [Finding](https://github.com/b3log/solo-skins/tree/master/Finding)
-![Finding](https://solo.b3log.org/images/themes/finding.jpg)
-
-* [metro-hot](https://github.com/b3log/solo-skins/tree/master/metro-hot)
-![metro-hot](https://solo.b3log.org/images/themes/metro-hot.jpg)
-
-* [timeline](https://github.com/b3log/solo-skins/tree/master/timeline)
-![timeline](https://solo.b3log.org/images/themes/timeline.jpg)
-
-* [ease](https://github.com/b3log/solo-skins/tree/master/ease)
-![ease](https://solo.b3log.org/images/themes/ease.jpg)
-
-* [mobile](https://github.com/b3log/solo-skins/tree/master/mobile) <br>
-![mobile](https://solo.b3log.org/images/themes/mobile.jpg)
-
-* [Andrea](https://github.com/b3log/solo-skins/tree/master/Andrea)
-![Andrea](https://solo.b3log.org/images/themes/andrea.jpg)
-
-* [classic](https://github.com/b3log/solo-skins/tree/master/classic)
-![classic](https://solo.b3log.org/images/themes/classic.jpg)
-
-* [Community](https://github.com/b3log/solo-skins/tree/master/Community)
-![Community](https://solo.b3log.org/images/themes/community.jpg)
-
-* [favourite](https://github.com/b3log/solo-skins/tree/master/favourite)
-![favourite](https://solo.b3log.org/images/themes/favourite.jpg)
-
-* [tree-house](https://github.com/b3log/solo-skins/tree/master/tree-house)
-![tree-house](https://solo.b3log.org/images/themes/tree-house.jpg)
-
-* [i-nove](https://github.com/b3log/solo-skins/tree/master/i-nove)
-![i-nove](https://solo.b3log.org/images/themes/i-nove.jpg)
-
-* [NeoEase](https://github.com/b3log/solo-skins/tree/master/NeoEase)
-![NeoEase](https://solo.b3log.org/images/themes/neoease.jpg)
-
-* [owmx-3.0](https://github.com/b3log/solo-skins/tree/master/owmx-3.0)
-![owmx-3.0](https://solo.b3log.org/images/themes/owmx-3.0.jpg)
-
-* [bruce](https://github.com/b3log/solo-skins/tree/master/bruce)
-![bruce](https://solo.b3log.org/images/themes/bruce.jpg)
+预览及下载可参见 [Solo 主题](https://solo.b3log.org/#themes)
 
 ----
 
