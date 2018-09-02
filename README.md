@@ -23,6 +23,9 @@
 
 ## 皮肤
 
+* [nijigen](https://github.com/b3log/solo-skins/tree/master/nijigen)
+![nijigen](https://solo.b3log.org/images/themes/nijigen.jpg)
+
 * [Medium](https://github.com/b3log/solo-skins/tree/master/Medium)
 ![Medium](https://solo.b3log.org/images/themes/medium.png)
 

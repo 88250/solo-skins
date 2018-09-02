@@ -60,20 +60,21 @@ var Skin = {
         window.imageIntersectionObserver.observe(this)
       })
     } else {
-      window.imageIntersectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entrie) => {
-          if (typeof entrie.isIntersecting === 'undefined'
-            ? entrie.intersectionRatio !== 0 : entrie.isIntersecting) {
-            $(entrie.target).addClass('item--active')
-          } else {
-            if ($(entrie.target).closest('.side').length === 1 ||
-              $(entrie.target).closest('.article-list').hasClass('content')) {
-              return
+      window.imageIntersectionObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entrie) {
+            if (typeof entrie.isIntersecting === 'undefined'
+              ? entrie.intersectionRatio !== 0 : entrie.isIntersecting) {
+              $(entrie.target).addClass('item--active')
+            } else {
+              if ($(entrie.target).closest('.side').length === 1 ||
+                $(entrie.target).closest('.article-list').hasClass('content')) {
+                return
+              }
+              $(entrie.target).removeClass('item--active')
             }
-            $(entrie.target).removeClass('item--active')
-          }
+          })
         })
-      })
       $('.item').each(function () {
         window.imageIntersectionObserver.observe(this)
       })
