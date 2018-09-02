@@ -35,7 +35,7 @@
         </header>
     </section>
 
-    <div class="module meta">
+    <div class="module item">
         <header class="module__header ft__center">
         ${adminUser.userName}
         </header>
@@ -46,7 +46,7 @@
     </div>
 
     <#if 0 != mostUsedCategories?size>
-        <div class="module">
+        <div class="module item">
             <header class="module__header">
                 ${categoryLabel}
             </header>
@@ -62,7 +62,7 @@
     </#if>
 
     <#if 0 != mostUsedTags?size>
-        <div class="module">
+        <div class="module item">
             <header class="module__header">${tagsLabel}</header>
             <main class="module__content--three module__content fn__clear">
                 <#list mostUsedTags as tag>
@@ -77,7 +77,7 @@
     </#if>
 
     <#if 0 != mostCommentArticles?size>
-        <div class="module">
+        <div class="module item">
             <header class="module__header">${mostCommentArticlesLabel}</header>
             <main class="module__list">
                 <ul>
@@ -95,7 +95,7 @@
     </#if>
 
     <#if 0 != mostViewCountArticles?size>
-        <div class="module">
+        <div class="module item">
             <header class="module__header">${mostViewCountArticlesLabel}</header>
             <main class="module__list">
                 <ul>
@@ -112,7 +112,7 @@
         </div>
     </#if>
 
-    <div class="module">
+    <div class="module item">
         <div class="module__header">
             <div class="fn__flex">
                 <a href="${servePath}/archives.html" class="fn__flex-1 ft__center">

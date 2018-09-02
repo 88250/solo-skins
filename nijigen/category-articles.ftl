@@ -20,29 +20,33 @@
 <#include "macro-head.ftl">
 <!DOCTYPE html>
 <html>
-    <head>
-        <@head title="${category.categoryTitle} - ${blogTitle}">
-        <meta name="keywords" content="${metaKeywords},${category.categoryTitle}"/>
-        <meta name="description" content="<#list articles as article>${article.articleTitle}<#if article_has_next>,</#if></#list>"/>
-        </@head>
-    </head>
-    <body>
-        <#include "header.ftl">
-        <div class="wrapper">
-            <div class="main-wrap">
-                <main>
-                    <div class="title">
-                        <h2 class="tip"><i class="icon-category"></i>
-                            &nbsp;${category.categoryTitle}
-                            <small>${category.categoryDescription}</small>
-                        </h2>
-
-                    </div>
-                    <#include "article-list.ftl">
-                </main>
-                <#include "side.ftl">
+<head>
+<@head title="${category.categoryTitle} - ${blogTitle}">
+    <meta name="keywords" content="${metaKeywords},${category.categoryTitle}"/>
+    <meta name="description"
+          content="<#list articles as article>${article.articleTitle}<#if article_has_next>,</#if></#list>"/>
+</@head>
+</head>
+<body>
+<#include "header.ftl">
+<div class="main">
+    <main class="content">
+        <div class="module">
+            <div class="module__content ft__center">
+                <i class="icon__home"></i>
+                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
+                &nbsp; > &nbsp;
+                <i class="icon__category"></i>
+                ${categoryLabel}
+                &nbsp; > &nbsp;
+                <span class="tooltipped tooltipped__w"
+                      aria-label="${category.categoryDescription}">${category.categoryTitle}</span>
             </div>
         </div>
-        <#include "footer.ftl">
-    </body>
+        <#include "article-list.ftl">
+    </main>
+    <#include "side.ftl">
+</div>
+<#include "footer.ftl">
+</body>
 </html>
