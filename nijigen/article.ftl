@@ -105,6 +105,7 @@
             </div>
         </div>
 
+        <#if previousArticlePermalink?? || nextArticlePermalink??>
         <div class="module">
             <div class="module__content fn__clear">
                 <#if previousArticlePermalink??>
@@ -120,6 +121,7 @@
                 </#if>
             </div>
         </div>
+        </#if>
 
         <@comments commentList=articleComments article=article></@comments>
 
