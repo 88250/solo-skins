@@ -33,7 +33,7 @@
             >${comment.commentOriginalCommentName}</a>
             </#if>
         </div>
-        <time>${comment.commentDate?string("yyyy-MM-dd HH:mm")}</time>
+        <time>${comment.commentDate2?string("yyyy-MM-dd HH:mm")}</time>
     </div>
     <main class="comments__content fn__clear">
         <div class="content-reset">
