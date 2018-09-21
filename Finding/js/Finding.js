@@ -19,7 +19,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 1.1.0.0, Oct 13, 2016
+ * @version 1.1.1.0, Sep 21, 2018
  */
 
 /**
@@ -116,11 +116,11 @@ var Finding = {
   tabNav: function (type) {
     $('.nav .current').removeClass('current');
     if (type === 'toc') {
-      $('.nav ul:first').hide();
+      $('.nav ul:first, .nav .count').hide();
       $('.nav ul:last').show();
       $('.icon-list').addClass('current');
     } else {
-      $('.nav ul:first').show();
+      $('.nav ul:first, .nav .count').show();
       $('.nav ul:last').hide();
       $('.icon-sitemap').addClass('current');
     }
