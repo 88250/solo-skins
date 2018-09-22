@@ -478,6 +478,7 @@ img {
 
 /* start side */
 .sidebar {
+    overflow: auto;
     width: 320px;
     position: fixed;
     right: -320px;
@@ -491,6 +492,9 @@ img {
     color: #999;
     text-align: center;
     box-sizing: border-box;
+}
+.sidebar::-webkit-scrollbar {
+    display: none;
 }
 .sidebar a {
     color: #999;
