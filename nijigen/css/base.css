@@ -691,7 +691,8 @@ a {
   .module__content {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 15px;
-    color: #3d4450; }
+    color: #3d4450;
+    display: block; }
     .module__content:hover {
       background-color: #fff; }
     .module__content--three {
