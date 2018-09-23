@@ -64,5 +64,6 @@
         "siteViewLabel": "${siteViewLabel}"
     };
     Util.parseMarkdown();
+    Util.killIE(8);
 </script>
 ${plugins}
