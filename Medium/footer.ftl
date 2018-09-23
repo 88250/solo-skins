@@ -71,7 +71,7 @@
         "em13Label": "${em13Label}",
         "em14Label": "${em14Label}"
     };
-
+    Util.killIE(8)
     Util.parseMarkdown('content-reset');
 </script>
 ${plugins}

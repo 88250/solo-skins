@@ -254,6 +254,7 @@
         "em14Label": "${em14Label}"
     };
 
+    Util.killIE()
     Util.parseMarkdown('content-reset');
     Skin.initArticle();
 </script>

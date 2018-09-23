@@ -78,5 +78,6 @@
         "em14Label": "${em14Label}"
     };
     Util.parseMarkdown();
+    Util.killIE(8)
 </script>
 ${plugins}

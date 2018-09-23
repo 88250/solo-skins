@@ -760,6 +760,10 @@ a {
     -webkit-box-sizing: border-box
 }
 
+.form input {
+    height: 30px;
+}
+
 .form input:focus,
 .form textarea:focus {
     background-color: #FFF;

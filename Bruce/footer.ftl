@@ -69,5 +69,6 @@
 <script>
     Util.setTopBar();
     Util.parseMarkdown('article-content');
+    Util.killIE(8)
 </script>
 ${plugins}
