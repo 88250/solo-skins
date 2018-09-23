@@ -51,7 +51,8 @@
     </head>
     <body>
         <#include "header.ftl">
-        <main class="main wrapper">
+        <main class="main">
+            <div class="wrapper">
             <div class="content">
                 <article class="posts-expand">
                     <header class="post-header">
@@ -122,6 +123,7 @@
             <@comments commentList=articleComments article=article></@comments>
             <div id="externalRelevantArticles"></div>
             <#include "side.ftl">
+            </div>
         </main>
         <#include "footer.ftl">
         <@comment_script oId=article.oId>

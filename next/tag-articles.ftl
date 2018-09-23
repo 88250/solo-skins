@@ -28,7 +28,8 @@
     </head>
     <body>
         <#include "header.ftl">
-        <main class="main wrapper">
+        <main class="main">
+            <div class="wrapper">
             <div class="content posts-collapse">
                 <div class="collection-title">
                     <h2>
@@ -39,6 +40,7 @@
                 <#include "article-list.ftl">
             </div>
             <#include "side.ftl">
+            </div>
         </main>
         <#include "footer.ftl">
     </body>

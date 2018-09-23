@@ -28,7 +28,8 @@
     </head>
     <body>
         <#include "header.ftl">
-        <main class="main wrapper">
+        <main class="main">
+            <div class="wrapper">
             <div class="content">
                 <#if 0 != recentComments?size>
                 <ul class="comments" id="comments">
@@ -57,6 +58,7 @@
                 </#if>
             </div>
             <#include "side.ftl">
+            </div>
         </main>
         <#include "footer.ftl">
 

@@ -28,7 +28,8 @@
     </head>
     <body>
         <#include "header.ftl">
-        <main class="main wrapper">
+        <main class="main">
+            <div class="wrapper">
             <div class="content page-archive">
                 <section class="posts-collapse">
                     <span class="archive-move-on"></span>
@@ -57,6 +58,7 @@
                 </section>
             </div>
             <#include "side.ftl">
+            </div>
         </main>
         <#include "footer.ftl">
     </body>

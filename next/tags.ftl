@@ -28,7 +28,8 @@
     </head>
     <body>
         <#include "header.ftl">
-        <main class="main wrapper">
+        <main class="main">
+            <div class="wrapper">
             <#if mostUsedCategories?size != 0>
             <div class="content page-archive">
                 <section class="posts-collapse">
@@ -69,6 +70,7 @@
                 </div>
             </div>
             <#include "side.ftl">
+            </div>
         </main>
         <#include "footer.ftl">
         <script>

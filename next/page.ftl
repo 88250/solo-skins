@@ -29,7 +29,8 @@
     </head>
     <body>
         <#include "header.ftl">
-        <main class="main wrapper">
+        <main class="main">
+            <div class="wrapper">
             <div class="content">
                 <article class="post-body">
                     ${page.pageContent}
@@ -37,6 +38,7 @@
                 <@comments commentList=pageComments article=page></@comments>
             </div>
             <#include "side.ftl">
+            </div>
         </main>
         <#include "footer.ftl">
         <@comment_script oId=page.oId></@comment_script>
