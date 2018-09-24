@@ -55,8 +55,8 @@
     <main class="content article-list">
         <div class="item item--active">
             <time class="tooltipped tooltipped__n item__date"
-                  aria-label="${article.articleCreateDate?string("yyyy")}年">
-            ${article.articleCreateDate?string("MM")}月
+                  aria-label="${article.articleCreateDate?string("yyyy")}${yearLabel}">
+            ${article.articleCreateDate?string("MM")}${monthLabel}
                 <span class="item__day">${article.articleCreateDate?string("dd")}</span>
             </time>
 
