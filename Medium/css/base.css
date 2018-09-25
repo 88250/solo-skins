@@ -611,8 +611,12 @@ blockquote {
     display: inline-block;
     line-height: 61px;
     width: 50%;
-    overflow: hidden;
+    overflow: auto;
     white-space: nowrap;
+}
+
+.header h1::-webkit-scrollbar {
+    display: none;
 }
 
 .header--fixed {
