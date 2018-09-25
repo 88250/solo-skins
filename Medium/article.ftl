@@ -216,49 +216,15 @@
             </div>
         </div>
     </div>
+    <#include "bottom.ftl">
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
-<script type="text/javascript" src="${staticServePath}/js/lib/compress/pjax.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}"
-        charset="utf-8"></script>
+<#include "footer.ftl">
 <script type="text/javascript"
         src="${staticServePath}/skins/${skinDirName}/js/jquery.qrcode${miniPostfix}.js"></script>
-<script type="text/javascript"
-        src="${staticServePath}/skins/${skinDirName}/js/common${miniPostfix}.js?${staticResourceVersion}"
-        charset="utf-8"></script>
-<script type="text/javascript">
-    var latkeConfig = {
-        'servePath': "${servePath}",
-        'staticServePath': "${staticServePath}",
-        'isLoggedIn': "${isLoggedIn?string}",
-        'userName': "${userName}",
-    }
-
-    var Label = {
-        'skinDirName': "${skinDirName}",
-        'em00Label': "${em00Label}",
-        'em01Label': "${em01Label}",
-        'em02Label': "${em02Label}",
-        'em03Label': "${em03Label}",
-        'em04Label': "${em04Label}",
-        'em05Label': "${em05Label}",
-        'em06Label': "${em06Label}",
-        'em07Label': "${em07Label}",
-        'em08Label': "${em08Label}",
-        'em09Label': "${em09Label}",
-        'em10Label': "${em10Label}",
-        'em11Label': "${em11Label}",
-        'em12Label': "${em12Label}",
-        'em13Label': "${em13Label}",
-        'em14Label': "${em14Label}",
-    }
-
-    Util.killIE()
-    Util.parseMarkdown('content-reset')
-    Skin.initArticle()
-</script>
-<!---- pjax {#pjax} start ----></#if>
+<#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId>
+    Skin.initArticle()
     Skin.initComment = function (articleOId, articleTags) {
         page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
     <#if 0 != randomArticlesDisplayCount>
@@ -273,7 +239,7 @@
     }
     Skin.initComment('${article.oId}', "<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>")
 </@comment_script>
-<!---- pjax {#pjax} end ----></#if>
+<#if pjax><!---- pjax {#pjax} end ----></#if>
 ${plugins}
 </body>
 </html>

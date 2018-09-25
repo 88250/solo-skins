@@ -1033,6 +1033,10 @@ blockquote {
     margin-left: 5px;
 }
 
+.article__comment .comment__body .content-reset {
+    min-height: 40px;
+}
+
 .article__comment .comment__user,
 .article__comment .comment__user a {
     color: rgb(3, 168, 124);

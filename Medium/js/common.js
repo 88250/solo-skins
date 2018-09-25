@@ -55,12 +55,11 @@ var Skin = {
         if (!$('#articleSideShare .article__code').qrcode) {
           $.ajax({
             method: "GET",
-            url: latkeConfig.staticServePath + '/js/jquery.qrcode.min.js',
+            url: latkeConfig.staticServePath + '/skins/Medium/js/jquery.qrcode.min.js',
             dataType: "script",
             cache: true
           });
         }
-        Skin.initArticle();
       }
     })
   },

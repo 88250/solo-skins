@@ -29,6 +29,8 @@
 </head>
 <body>
 <#include "header.ftl">
+<div id="pjax">
+    <#if pjax><!---- pjax {#pjax} start ----></#if>
 <#include "nav.ftl">
 <div class="main">
 <#if noticeBoard??>
@@ -47,10 +49,12 @@
 <div class="article__bottom">
 <@comments commentList=pageComments article=page></@comments>
 </div>
-<div style="margin: 0 20px">
 <#include "bottom.ftl">
-<#include "footer.ftl">
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
+<#include "footer.ftl">
+<#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=page.oId></@comment_script>
+ <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>
