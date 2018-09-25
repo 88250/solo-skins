@@ -51,10 +51,17 @@ var Skin = {
       if (location.href === latkeConfig.servePath + '/tags.html') {
         Skin.initTags()
       }
-    }, function () {
-      Util.parseMarkdown('content-reset');
-      Skin.initArticle();
-      Skin.initComment($('.post__tags').data('oid'), $('.post__tags').data('tag'))
+      if (Util.isArticlePage(location.href)) {
+        if (!$('#articleSideShare .article__code').qrcode) {
+          $.ajax({
+            method: "GET",
+            url: latkeConfig.staticServePath + '/js/jquery.qrcode.min.js',
+            dataType: "script",
+            cache: true
+          });
+        }
+        Skin.initArticle();
+      }
     })
   },
   initTags: function () {
@@ -83,6 +90,9 @@ var Skin = {
     }));
   },
   initArticle: function () {
+    if ($('#articleShare').length === 0) {
+      return
+    }
     Skin._share('#articleShare')
     Skin._share('#articleSideShare')
     Skin._share('#articleBottomShare')
@@ -96,6 +106,9 @@ var Skin = {
     var sideAbsoluteTop = ($(window).height() - 249) / 2 + 125
     var beforScrollTop = $(window).scrollTop()
     $(window).scroll(function () {
+      if ($('#articleShare').length === 0) {
+        return
+      }
       var scrollTop = $(window).scrollTop()
       var bottomTop = $('.article__bottom').offset().top
       if (scrollTop > 65) {
