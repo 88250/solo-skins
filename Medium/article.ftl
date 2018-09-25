@@ -215,8 +215,10 @@
                       data-avatar="${article.authorThumbnailURL}"></span>
             </div>
         </div>
+        <div class="main">
+        <#include "bottom.ftl">
+        </div>
     </div>
-    <#include "bottom.ftl">
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">

@@ -49,7 +49,9 @@
 <div class="article__bottom">
 <@comments commentList=pageComments article=page></@comments>
 </div>
-<#include "bottom.ftl">
+    <div style="margin-left: 20px;margin-right: 20px">
+    <#include "bottom.ftl">
+    </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">

@@ -610,6 +610,9 @@ blockquote {
 .header h1 {
     display: inline-block;
     line-height: 61px;
+    width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .header--fixed {
@@ -631,6 +634,7 @@ blockquote {
 }
 
 .header__title {
+    overflow: hidden;
     font-size: 26px;
     color: rgba(0, 0, 0, 0.84)
 }
@@ -742,7 +746,7 @@ blockquote {
 }
 
 .footer__tag {
-    margin-top: 50px
+    margin-top: 50px;
 }
 
 .footer__tag > div {
