@@ -29,7 +29,9 @@
 <body>
 <#include "header.ftl">
 <div class="main">
-    <main class="content">
+    <div id="pjax" class="content">
+    <#if pjax><!---- pjax {#pjax} start ----></#if>
+    <main>
         <div class="module">
             <div class="module__content ft__center">
                 <i class="icon__home"></i>
@@ -63,6 +65,8 @@
             </div>
         </div>
     </main>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
+    </div>
     <#include "side.ftl">
 </div>
 <#include "footer.ftl">

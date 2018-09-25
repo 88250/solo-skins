@@ -30,7 +30,9 @@
 <body>
 <#include "header.ftl">
 <div class="main">
-    <main class="content">
+    <div id="pjax" class="content">
+    <#if pjax><!---- pjax {#pjax} start ----></#if>
+    <main>
         <article class="module">
             <div class="module__content">
                 <div class="content-reset">
@@ -40,6 +42,8 @@
         </article>
         <@comments commentList=pageComments article=page></@comments>
     </main>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
+    </div>
     <#include "side.ftl">
 </div>
 <#include "footer.ftl">

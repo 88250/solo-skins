@@ -29,7 +29,9 @@
 <body>
 <#include "header.ftl">
 <div class="main">
-    <main class="content">
+    <div id="pjax" class="content">
+    <#if pjax><!---- pjax {#pjax} start ----></#if>
+    <main>
         <div class="module">
             <div class="module__content ft__center">
                 <i class="icon__home"></i>
@@ -51,9 +53,12 @@
             </div>
         </div>
     </main>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
+    </div>
     <#include "side.ftl">
 </div>
 <#include "footer.ftl">
+<#if pjax><!---- pjax {#pjax} start ----></#if>
 <script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/isotope.pkgd.min.js"
         charset="utf-8"></script>
 <script>
@@ -66,5 +71,6 @@
         sortBy: 'random',
     })
 </script>
+<#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>

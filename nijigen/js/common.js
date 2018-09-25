@@ -19,7 +19,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.1.0.0, Sep 2, 2018
+ * @version 0.2.0.0, Sep 25, 2018
  */
 
 /**
@@ -37,6 +37,8 @@ var Skin = {
     })
   },
   init: function () {
+    Util.initPjax()
+
     $('body').on('click', '.content-reset img', function () {
       window.open(this.src)
     })

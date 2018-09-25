@@ -48,9 +48,6 @@ var Skin = {
 
     Util.initPjax(function () {
       Util.parseMarkdown('content-reset');
-      if (location.href === latkeConfig.servePath + '/tags.html') {
-        Skin.initTags()
-      }
       if (Util.isArticlePage(location.href)) {
         if (!$('#articleSideShare .article__code').qrcode) {
           $.ajax({

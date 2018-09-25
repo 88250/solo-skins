@@ -59,8 +59,10 @@
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
+ <#if pjax><!---- pjax {#pjax} start ----></#if>
 <script>
     Skin.initTags()
 </script>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>

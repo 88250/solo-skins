@@ -52,7 +52,9 @@
 <body>
 <#include "header.ftl">
 <div class="main">
-    <main class="content article-list">
+    <div id="pjax" class="content">
+    <#if pjax><!---- pjax {#pjax} start ----></#if>
+    <main class="article-list">
         <div class="item item--active">
             <time class="tooltipped tooltipped__n item__date"
                   aria-label="${article.articleCreateDate?string("yyyy")}${yearLabel}">
@@ -145,9 +147,12 @@
             </div>
         </div>
     </main>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
+    </div>
     <#include "side.ftl">
 </div>
 <#include "footer.ftl">
+<#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId>
 page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
     <#if 0 != randomArticlesDisplayCount>
@@ -162,5 +167,6 @@ page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as arti
     '<header class="module__header">${relevantArticlesLabel}</header>');
     </#if>
 </@comment_script>
+<#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>
