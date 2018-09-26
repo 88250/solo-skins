@@ -103,7 +103,6 @@
             </div>
         </#if>
 
-
         <#if 0 != mostUsedTags?size>
         <div class="left footer-block">
             <h4><span class="left">${tagsLabel}</span></h4>
@@ -114,8 +113,6 @@
                     <a rel="tag" title="${tag.tagTitle}(${tag.tagPublishedRefCount})" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
                         ${tag.tagTitle}(${tag.tagPublishedRefCount})
                     </a>
-                    <img onclick="window.location='${servePath}/tag-articles-feed.do?oId=${tag.oId}'"
-                         alt="${tag.tagTitle}" src="${staticServePath}/images/feed.png"/>
                 </li>
                 </#list>
             </ul>

@@ -119,11 +119,10 @@
         <div class="tags">
             <h4>${tagsLabel}</h4>
         </div>
-        <ul class="navi-tags">
+        <ul class="mostViewCountArticles">
             <#list mostUsedTags as tag>
             <li>
-                <a rel="alternate" href="${servePath}/tag-articles-feed.do?oId=${tag.oId}" class="no-underline">
-                    <img alt="${tag.tagTitle}" src="${staticServePath}/images/feed.png"/>
+                <a rel="alternate" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}" class="no-underline">
                 </a>
                 <a rel="tag" title="${tag.tagTitle}" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
                     ${tag.tagTitle}(${tag.tagPublishedRefCount})

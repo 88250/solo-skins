@@ -31,7 +31,7 @@
         <main>
             <h2 class="classify-name">
                 ${tag1Label}
-                <a rel="alternate" href="${servePath}/tag-articles-feed.do?oId=${tag.oId}">
+                <a rel="alternate" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
                     ${tag.tagTitle}
                     (${tag.tagPublishedRefCount})
                 </a>

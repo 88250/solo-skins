@@ -35,7 +35,7 @@
             <main id="content">
                 <h2 class="fn-wrap">
                     ${tag1Label}
-                    <a rel="alternate" href="${servePath}/tag-articles-feed.do?oId=${tag.oId}">
+                    <a rel="alternate" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
                         ${tag.tagTitle}
                         (${tag.tagPublishedRefCount})
                     </a>

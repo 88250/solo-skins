@@ -33,7 +33,7 @@
         </div>
         <div class="content">
             <h2>${tag1Label}
-                <a rel="alternate" href="${servePath}/tag-articles-feed.do?oId=${tag.oId}">
+                <a rel="alternate" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
                     <span id="tagArticlesTag">
                         ${tag.tagTitle}
                     </span>(${tag.tagPublishedRefCount})

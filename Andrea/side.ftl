@@ -99,13 +99,11 @@
             <#if 0 != mostUsedTags?size>
                 <dd>
                     <h4>${tagsLabel}</h4>
-                    <ul class="navi-tags">
+                    <ul>
                         <#list mostUsedTags as tag>
                             <li>
                                 <a rel="tag" title="${tag.tagTitle}(${tag.tagPublishedRefCount})" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
                                     ${tag.tagTitle} (${tag.tagPublishedRefCount})</a>
-                                <img onclick="window.location='${servePath}/tag-articles-feed.do?oId=${tag.oId}'"
-                                     alt="${tag.tagTitle}" src="${staticServePath}/images/feed.png"/>
                             </li>
                         </#list>
                     </ul>
