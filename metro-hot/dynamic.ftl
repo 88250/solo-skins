@@ -87,7 +87,7 @@
                         </div>
                         </#if>
 
-                        <a rel="alternate" href="${servePath}/blog-articles-rss.do" class="user side-tile">
+                        <a rel="alternate" href="${servePath}/rss.xml" class="user side-tile">
                             <span data-ico="&#xe135;"></span>
                             <div class="text">
                                 RSS

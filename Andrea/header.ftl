@@ -56,7 +56,7 @@
                 <a href="${servePath}/tags.html">Tags</a>
             </li>
             <li>
-                <a rel="alternate" href="${servePath}/blog-articles-rss.do">
+                <a rel="alternate" href="${servePath}/rss.xml">
                     RSS
                 </a>
             </li>

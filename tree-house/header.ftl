@@ -30,7 +30,7 @@
             <a href="${servePath}/tags.html">${allTagsLabel}</a>&nbsp;&nbsp;
         </li>
         <li>
-            <a rel="alternate" href="${servePath}/blog-articles-rss.do">RSS</a><a href="${servePath}/blog-articles-rss.do"><img src="${staticServePath}/images/feed.png" alt="RSS"/></a> &nbsp;
+            <a rel="alternate" href="${servePath}/rss.xml">RSS</a><a href="${servePath}/rss.xml"><img src="${staticServePath}/images/feed.png" alt="RSS"/></a> &nbsp;
         </li>
         <li>
             <a href="${servePath}/search?keyword=">Search</a>

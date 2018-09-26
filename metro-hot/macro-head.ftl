@@ -31,7 +31,7 @@
 <meta http-equiv="Window-target" content="_top" />
 <link type="text/css" rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/${skinDirName}${miniPostfix}.css?${staticResourceVersion}" charset="utf-8" />
 <link type="text/css" rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/${skinDirName}-responsive${miniPostfix}.css?${staticResourceVersion}" charset="utf-8" />
-<link href="${servePath}/blog-articles-rss.do" title="RSS" type="application/rss+xml" rel="alternate" />
+<link href="${servePath}/rss.xml" title="RSS" type="application/rss+xml" rel="alternate" />
 <link rel="icon" type="image/png" href="${servePath}/favicon.png" />
 <link rel="manifest" href="${servePath}/manifest.json">
 <link rel="search" type="application/opensearchdescription+xml" title="${title}" href="/opensearch.xml">

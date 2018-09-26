@@ -51,7 +51,7 @@
         </div>
         </#if>
 
-        <a rel="alternate" href="${servePath}/blog-articles-rss.do" class="atom side-tile">
+        <a rel="alternate" href="${servePath}/rss.xml" class="atom side-tile">
             <span data-ico="&#xe135;"></span>
             <div class="title">
                 RSS

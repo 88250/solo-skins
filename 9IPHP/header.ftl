@@ -70,7 +70,7 @@
                 <a rel="archive" href="${servePath}/links.html">
                     <i class="icon-link"></i> ${linkLabel}
                 </a>
-                <a rel="alternate" href="${servePath}/blog-articles-rss.do" rel="section">
+                <a rel="alternate" href="${servePath}/rss.xml" rel="section">
                     <i class="icon-rss"></i> RSS
                 </a>
             </nav>
@@ -143,7 +143,7 @@
             </a>
         </li>
         <li>
-            <a rel="alternate" href="${servePath}/blog-articles-rss.do" rel="section">
+            <a rel="alternate" href="${servePath}/rss.xml" rel="section">
                 <i class="icon-rss"></i> RSS
             </a>
         </li>

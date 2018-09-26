@@ -42,7 +42,7 @@
                 <a href="${servePath}/tags.html">${allTagsLabel}</a>
             </li>
             <li>
-                <a rel="alternate" href="${servePath}/blog-articles-rss.do">
+                <a rel="alternate" href="${servePath}/rss.xml">
                     RSS
                     <img src="${staticServePath}/images/feed.png" alt="RSS"/>
                 </a>

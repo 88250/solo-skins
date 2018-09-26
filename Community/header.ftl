@@ -65,7 +65,7 @@
                 </li>
                 </#if>
                 <li class="tab">
-                    <a rel="alternate" href="${servePath}/blog-articles-rss.do">
+                    <a rel="alternate" href="${servePath}/rss.xml">
                         <span class="left">RSS</span>
                         <span class="atom-icon"></span>
                         <span class="clear"></span>

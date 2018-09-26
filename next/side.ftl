@@ -52,7 +52,7 @@
         </nav>
 
         <div class="feed-link">
-            <a href="${servePath}/blog-articles-rss.do" rel="alternate">
+            <a href="${servePath}/rss.xml" rel="alternate">
                 <i class="icon-rss"></i>
                 RSS
             </a>
