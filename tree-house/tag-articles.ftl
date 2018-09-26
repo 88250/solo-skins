@@ -38,7 +38,7 @@
                         <div class="left main">
                             <h2 class="title">
                                 ${tag1Label}
-                                <a rel="alternate" href="${servePath}/tag-articles-feed.do?oId=${tag.oId}">${tag.tagTitle}(${tag.tagPublishedRefCount})</a>
+                                <a rel="alternate" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">${tag.tagTitle}(${tag.tagPublishedRefCount})</a>
                             </h2>
                             <#include "article-list.ftl">
                         </div>

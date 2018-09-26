@@ -132,11 +132,9 @@
     <ul class="navi-tags">
         <#list mostUsedTags as tag>
         <li>
-            <a rel="alternate" href="${servePath}/tag-articles-feed.do?oId=${tag.oId}">
-                <img alt="${tag.tagTitle}" src="${staticServePath}/images/feed.png"/>
-            </a>
             <a rel="tag" title="${tag.tagTitle}(${tag.tagPublishedRefCount})" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
-                ${tag.tagTitle}</a>(${tag.tagPublishedRefCount})
+                <sup>[${tag.tagPublishedRefCount}]</sup>
+                ${tag.tagTitle}</a>
         </li>
         </#list>
     </ul>

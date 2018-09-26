@@ -111,9 +111,6 @@
         <ul class="navi-tags">
             <#list mostUsedTags as tag>
             <li>
-                <a rel="alternate" href="${servePath}/tag-articles-feed.do?oId=${tag.oId}">
-                    <img alt="${tag.tagTitle}" src="${staticServePath}/images/feed.png"/>
-                </a>
                 <a rel="tag" title="${tag.tagTitle}(${tag.tagPublishedRefCount})" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
                     ${tag.tagTitle}</a> (${tag.tagPublishedRefCount})
             </li>
@@ -129,7 +126,7 @@
             <#list links as link>
             <li>
                 <a rel="friend" href="${link.linkAddress}" title="${link.linkTitle}" target="_blank">
-                    <img alt="${link.linkTitle}" 
+                    <img alt="${link.linkTitle}"
                          src="${faviconAPI}<#list link.linkAddress?split('/') as x><#if x_index=2>${x}<#break></#if></#list>" width="16" height="16" />
                     ${link.linkTitle}
                 </a>
