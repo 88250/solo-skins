@@ -36,21 +36,7 @@ var Skin = {
       }
     })
   },
-  init: function () {
-    Util.initPjax()
-
-    $('body').on('click', '.content-reset img', function () {
-      window.open(this.src)
-    })
-
-    this._initCommon($('.icon__up'))
-
-    $('.header__nav a, .header__m a').each(function () {
-      if (this.href === location.href) {
-        this.className = 'current'
-      }
-    })
-
+  _initAnimation: function () {
     if (!('IntersectionObserver' in window)) {
       $('.item').addClass('item--active')
       return false
@@ -81,6 +67,36 @@ var Skin = {
         window.imageIntersectionObserver.observe(this)
       })
     }
+  },
+  init: function () {
+    Util.initPjax(function () {
+      Skin._initAnimation()
+      if (!Util.isArticlePage(location.href)) {
+        $('.b3-solo-list').closest('.module').remove()
+      }
+    })
+
+    Skin._initAnimation()
+
+    $('body').on('click', '.content-reset img', function () {
+      window.open(this.src)
+    })
+
+    this._initCommon($('.icon__up'))
+
+    $('.header__nav a, .header__m a').each(function () {
+      if (this.href === location.href) {
+        this.className = 'current'
+      }
+    }).click(function () {
+      $('.header__nav a, .header__m a').removeClass('current')
+      this.className = 'current'
+      $('.header__m .module__list').hide()
+    })
+
+    $('.header__logo').click(function () {
+      $('.header__nav a, .header__m a').removeClass('current')
+    })
   },
   _initArticleCommon: function () {
     if ($('.b3-solo-list li').length > 0 && $(window).width() > 1000) {

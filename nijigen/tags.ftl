@@ -46,7 +46,7 @@
                  <#list tags as tag>
                  <a rel="tag" data-count="${tag.tagPublishedRefCount}" class="tag"
                     href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
-                     <span>${tag.tagTitle}</span>
+                     <span class="name">${tag.tagTitle}</span>
                      (<b>${tag.tagPublishedRefCount}</b>)
                  </a>
                  </#list>
@@ -64,11 +64,14 @@
 <script>
     $('.tags').isotope({
         transitionDuration: '1.5s',
-        filter: 'a',
+        itemSelector: '.tag',
         layoutMode: 'fitRows',
+        getSortData: {
+            name: '.name'
+        }
     })
     $('.tags').isotope({
-        sortBy: 'random',
+        sortBy: 'name',
     })
 </script>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
