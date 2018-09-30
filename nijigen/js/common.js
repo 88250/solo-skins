@@ -56,7 +56,8 @@ var Skin = {
               $(entrie.target).addClass('item--active')
             } else {
               if ($(entrie.target).closest('.side').length === 1 ||
-                $(entrie.target).closest('.article-list').hasClass('content')) {
+                $(entrie.target).closest('.article-list').hasClass('content') ||
+                $(entrie.target).outerHeight() > 768) {
                 return
               }
               $(entrie.target).removeClass('item--active')
