@@ -71,7 +71,7 @@ var Skin = {
   init: function () {
     Util.initPjax(function () {
       Skin._initAnimation()
-      if (!Util.isArticlePage(location.href)) {
+      if ($('#articlePage').length === 0) {
         $('.b3-solo-list').closest('.module').remove()
       }
     })

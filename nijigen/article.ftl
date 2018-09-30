@@ -54,7 +54,7 @@
 <div class="main">
     <div id="pjax" class="content">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main class="article-list">
+    <main class="article-list" id="articlePage">
         <div class="item item--active">
             <time class="tooltipped tooltipped__n item__date"
                   aria-label="${article.articleCreateDate?string("yyyy")}${yearLabel}">
