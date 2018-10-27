@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.3.9.10, Oct 14, 2018
+ * @version 0.4.0.0, Oct 27, 2018
 */
 /* start common */
 html {
@@ -719,6 +719,10 @@ a {
 
 .ft-gray {
     color: #aaa;
+}
+
+.ft-center {
+    text-align: center;
 }
 
 .list,

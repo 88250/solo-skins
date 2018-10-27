@@ -31,7 +31,7 @@
         <div class="wrapper">
             <div class="main-wrap">
                 <main class="post">
-                    <#if 0 != recentComments?size>
+                    <#if 0 == recentComments?size>
                         <ul class="comments" id="comments">
                             <#list recentComments as comment>
                                 <li id="${comment.oId}">
@@ -56,6 +56,10 @@
                                 </li>
                             </#list>
                         </ul>
+                    <#else>
+                    <div class="content-reset ft-center">
+                        ${noDynamicLabel}
+                    </div>
                     </#if>
                 </main>
                 <#include "side.ftl">
