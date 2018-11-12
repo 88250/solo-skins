@@ -89,6 +89,7 @@
             <tr>
                 <td colspan="2" align="right">
                     <span class="ft__red" id="commentErrorTip"></span>
+                    <span class="breadcrumb fn__pointer fn__none" id="cancelCommentButton" onclick="$('#replyForm').remove();page.currentCommentId = ''">${cancelLabel}</span>
                     <button class="btn tag" id="submitCommentButton" onclick="page.submitComment();">${submmitCommentLabel}</button>
                 </td>
             </tr>

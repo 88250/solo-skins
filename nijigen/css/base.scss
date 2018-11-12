@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.2.0.0, Sep 25, 2018
+ * @version 0.3.0.0, Nov 12, 2018
 */
 @import "../../../scss/reset";
 @import "../../../scss/reset-content";
@@ -457,6 +457,11 @@ a {
       .comments__meta {
         background-color: rgba(217, 237, 247, 1);
       }
+
+      .comments__reply:after {
+        background-color: #d9edf7;
+      }
+
     }
   }
 
@@ -485,8 +490,12 @@ a {
   &__content {
     border-radius: 0 0 5px 5px;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 15px 15px 15px 45px;
+    padding: 15px 45px;
     position: relative;
+
+    textarea {
+      margin: 15px 0;
+    }
   }
 
   &__avatar {
@@ -508,7 +517,21 @@ a {
 
   &__reply {
     border-radius: 5px;
-    margin: 15px auto 0
+    margin: 15px auto 0;
+
+    #cancelCommentButton {
+      line-height: 34px;
+    }
+
+    &:after {
+      content: " ";
+      position: absolute;
+      height: 15px;
+      width: 5px;
+      right: 60px;
+      top: -15px;
+      background-color: rgba(217, 237, 247, 0.6);
+    }
   }
 }
 
@@ -523,6 +546,7 @@ a {
 }
 
 .form {
+  width: 100%;
   input,
   textarea {
     border: 1px solid #d1d5da;
@@ -634,7 +658,8 @@ a {
   }
 
   .article-list .item,
-  .module {
+  .module,
+  .comments__item {
     margin-bottom: 15px;
   }
 
@@ -717,8 +742,12 @@ a {
   }
 
   .comments__avatar {
-    height: 48px;
-    width: 48px;
-    left: -14px;
+    height: 34px;
+    width: 34px;
+    left: -7px;
+  }
+
+  .comments__content {
+    padding: 15px;
   }
 }
