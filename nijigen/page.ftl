@@ -47,6 +47,8 @@
     <#include "side.ftl">
 </div>
 <#include "footer.ftl">
+<#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=page.oId></@comment_script>
+<#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>
