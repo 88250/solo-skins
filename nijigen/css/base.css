@@ -20,7 +20,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.3.0.0, Nov 12, 2018
+ * @version 0.3.1.1, Nov 15, 2018
 */
 /*
  * Symphony - A modern community (forum/BBS/SNS/blog) platform written in Java.
@@ -1162,8 +1162,17 @@ a {
   .side {
     margin: 0;
     width: auto; }
-  .article-list .item__date {
-    display: none; }
+  .article-list {
+    overflow: hidden; }
+    .article-list .item__title {
+      font-size: 20px; }
+    .article-list .item__date--m {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #3d4450;
+      display: block; }
+    .article-list .item__date {
+      display: none; }
   .article-list .item,
   .module,
   .comments__item {
@@ -1180,11 +1189,6 @@ a {
       display: none; }
     .footer .fn__none {
       display: block; }
-  .article-list .item__date--m {
-    text-align: center;
-    margin-bottom: 10px;
-    color: #3d4450;
-    display: block; }
   .tag {
     margin: 0 5px 10px 0;
     font-size: 12px; }
@@ -1221,4 +1225,6 @@ a {
     width: 34px;
     left: -7px; }
   .comments__content {
-    padding: 15px; } }
+    padding: 15px; }
+  .content-reset {
+    font-size: 14px; } }

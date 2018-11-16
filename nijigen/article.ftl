@@ -86,7 +86,10 @@
             <div class="ft__center">
                 <span class="tag">
                     <i class="icon__tags"></i>
-                ${article.articleTags}
+                    <#list article.articleTags?split(",") as articleTag>
+                    <a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
+                        ${articleTag}</a><#if articleTag_has_next>,</#if>
+                    </#list>
                 </span>
                 <a class="tag" href="${servePath}${article.articlePermalink}#comments">
                     <i class="icon__comments"></i> ${article.articleCommentCount} ${commentLabel}
