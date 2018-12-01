@@ -82,7 +82,7 @@
                 <input type="text" class="normalInput" id="commentValidate"/>
             </td>
             <td>
-                <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
+                <img id="captcha" alt="validate" src="${servePath}/captcha" />
             </td>
         </tr>
         </#if>

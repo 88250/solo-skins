@@ -74,7 +74,7 @@
         <tr>
             <td colspan="2">
                 <input type="text" id="commentValidate"/>
-                <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
+                <img id="captcha" alt="validate" src="${servePath}/captcha" />
             </td>
         </tr>
         </#if>

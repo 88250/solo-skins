@@ -87,7 +87,7 @@
                     <form class="form-inline">
 
                     <input type="text" id="commentValidate" class="form-control"/>
-                    <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
+                    <img id="captcha" alt="validate" src="${servePath}/captcha" />
                     </form>
                 </td>
             </tr>

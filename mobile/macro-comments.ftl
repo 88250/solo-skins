@@ -64,7 +64,7 @@
             <p>
                 <input type="text" id="commentValidate" tabindex="5" />
                 <label for="url">${captchaLabel}</label>
-                <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
+                <img id="captcha" alt="validate" src="${servePath}/captcha" />
             </p>
             </#if>
             <p>
@@ -129,7 +129,7 @@
                         if (!result.sc) {
                             $("#commentValidate" + state).val("").focus();
                             $("#commentErrorTip" + state).html(result.msg);
-                            $("#captcha" + state).attr("src", "/captcha.do?code=" + Math.random());
+                            $("#captcha" + state).attr("src", "/captcha?code=" + Math.random());
                             $wpt('#commentErrorTip' + state).show();
                             $wpt("#loading").fadeOut(400);
                             return;

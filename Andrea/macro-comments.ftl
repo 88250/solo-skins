@@ -90,7 +90,7 @@
             </th>
             <td>
                 <input type="text" id="commentValidate"/>
-                <img id="captcha" alt="validate" src="${servePath}/captcha.do" />
+                <img id="captcha" alt="validate" src="${servePath}/captcha" />
             </td>
         </tr>
         </#if>
