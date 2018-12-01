@@ -194,7 +194,7 @@ var MetroHot = {
     loadRandomArticles: function() {
         // getRandomArticles
         $.ajax({
-            url: latkeConfig.servePath + "/get-random-articles.do",
+            url: latkeConfig.servePath + "/articles/random",
             type: "POST",
             success: function(result, textStatus) {
                 var randomArticles = result.randomArticles;
