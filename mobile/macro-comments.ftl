@@ -119,7 +119,7 @@
                 }
                 $.ajax({
                     type: "POST",
-                    url: latkeConfig.servePath + "/add-" + type + "-comment.do",
+                    url: latkeConfig.servePath + "/" + type + "/comments",
                     cache: false,
                     contentType: "application/json",
                     data: JSON.stringify(requestJSONObject),
