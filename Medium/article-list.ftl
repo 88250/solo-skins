@@ -70,21 +70,21 @@
 <#if 0 != paginationPageCount>
 <nav class="pagination">
     <#if 1 != paginationPageNums?first>
-        <a href="${servePath}${path}/${paginationPreviousPageNum}" class="pagination__item">&laquo;</a>
-        <a class="pagination__item" href="${servePath}${path}/1">1</a>
+        <a href="${servePath}${path}?p=${paginationPreviousPageNum}" class="pagination__item">&laquo;</a>
+        <a class="pagination__item" href="${servePath}${path}">1</a>
         <span class="pagination__item pagination__omit">...</span>
     </#if>
     <#list paginationPageNums as paginationPageNum>
         <#if paginationPageNum == paginationCurrentPageNum>
             <span class="pagination__item pagination__item--active">${paginationPageNum}</span>
         <#else>
-            <a class="pagination__item" href="${servePath}${path}/${paginationPageNum}">${paginationPageNum}</a>
+            <a class="pagination__item" href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a>
         </#if>
     </#list>
     <#if paginationPageNums?last != paginationPageCount>
         <span class="pagination__item pagination__omit">...</span>
-        <a href="${servePath}${path}/${paginationPageCount}" class="pagination__item">${paginationPageCount}</a>
-        <a href="${servePath}${path}/${paginationNextPageNum}" class="pagination__item">&raquo;</a>
+        <a href="${servePath}${path}?p=${paginationPageCount}" class="pagination__item">${paginationPageCount}</a>
+        <a href="${servePath}${path}?p=${paginationNextPageNum}" class="pagination__item">&raquo;</a>
     </#if>
 </nav>
 </#if>

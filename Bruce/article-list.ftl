@@ -52,14 +52,14 @@
     <div class="col-sm-4">
     <#if 1 < paginationCurrentPageNum>
     <#assign prePage = paginationCurrentPageNum - 1>
-    <a class="btn btn-success" href="${servePath}${path}/${prePage}">Newer</a>
+    <a class="btn btn-success" href="${servePath}${path}?p=${prePage}">Newer</a>
     </#if>
     </div>
     
     <div class="col-sm-4 text-right">
     <#if paginationCurrentPageNum < paginationPageCount>
     <#assign nextPage = paginationCurrentPageNum + 1>
-    <a class="btn btn-success" href="${servePath}${path}/${nextPage}">Older</a>
+    <a class="btn btn-success" href="${servePath}${path}?p=${nextPage}">Older</a>
     </#if>
     </div>
     

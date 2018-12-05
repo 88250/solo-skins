@@ -58,19 +58,19 @@
 <#if 0 != paginationPageCount>
     <nav class="pagination">
         <#if 1 != paginationPageNums?first>
-        <a href="${servePath}${path}/${paginationPreviousPageNum}" class="extend">${previousPageLabel}</a>
-        <a class="page-num" href="${servePath}${path}/1">1</a> ...
+        <a href="${servePath}${path}?p=${paginationPreviousPageNum}" class="extend">${previousPageLabel}</a>
+        <a class="page-num" href="${servePath}${path}">1</a> ...
         </#if>
         <#list paginationPageNums as paginationPageNum>
         <#if paginationPageNum == paginationCurrentPageNum>
         <span class="current page-num">${paginationPageNum}</span>
         <#else>
-        <a class="page-num" href="${servePath}${path}/${paginationPageNum}">${paginationPageNum}</a>
+        <a class="page-num" href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a>
         </#if>
         </#list>
         <#if paginationPageNums?last != paginationPageCount> ...
-        <a href="${servePath}${path}/${paginationPageCount}" class="page-num">${paginationPageCount}</a>
-        <a href="${servePath}${path}/${paginationNextPageNum}" class="extend">${nextPagePabel}</a>
+        <a href="${servePath}${path}?p=${paginationPageCount}" class="page-num">${paginationPageCount}</a>
+        <a href="${servePath}${path}?p=${paginationNextPageNum}" class="extend">${nextPagePabel}</a>
         </#if>
     </nav>
     </#if>

@@ -44,18 +44,18 @@
                     <#if 0 != paginationPageCount>
                     <div class="pagination">
                         <#if 1 != paginationPageNums?first>
-                        <a id="previousPage" href="${servePath}${path}/${paginationPreviousPageNum}"
+                        <a id="previousPage" href="${servePath}${path}?p=${paginationPreviousPageNum}"
                            title="${previousPageLabel}"><</a>
                         </#if>
                         <#list paginationPageNums as paginationPageNum>
                         <#if paginationPageNum == paginationCurrentPageNum>
                         <span>${paginationPageNum}</span>
                         <#else>
-                        <a href="${servePath}${path}/${paginationPageNum}">${paginationPageNum}</a>
+                        <a href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a>
                         </#if>
                         </#list>
                         <#if paginationPageNums?last != paginationPageCount>
-                        <a id="nextPage" href="${servePath}${path}/${paginationNextPageNum}" title="${nextPagePabel}">></a>
+                        <a id="nextPage" href="${servePath}${path}?p=${paginationNextPageNum}" title="${nextPagePabel}">></a>
                         </#if>
                     </div>
                     </#if>

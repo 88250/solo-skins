@@ -77,7 +77,7 @@
             <nav class="pagination fn__right">
                 <#if 1 != paginationPageNums?first>
                     <a href="${servePath}${path}?p=${paginationPreviousPageNum}" class="pagination__item">&laquo;</a>
-                    <a class="pagination__item" href="${servePath}${path}?p=1">1</a>
+                    <a class="pagination__item" href="${servePath}${path}">1</a>
                     <span class="pagination__item pagination__item--text">...</span>
                 </#if>
                 <#list paginationPageNums as paginationPageNum>
