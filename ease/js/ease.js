@@ -41,7 +41,7 @@ var getNextPage = function () {
     }
     
     $.ajax({
-        url: latkeConfig.servePath + path + currentPage,
+        url: latkeConfig.servePath + path + '?p=' + currentPage,
         type: "GET",
         beforeSend: function () {
             $more.css("background",

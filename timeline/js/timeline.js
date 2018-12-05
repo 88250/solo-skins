@@ -214,7 +214,7 @@ var timeline = {
             path = "/articles/archives/" + archive + "/";
         }
         $.ajax({
-            url: latkeConfig.servePath + path + currentPage,
+            url: latkeConfig.servePath + path + '?p=' + currentPage,
             type: "GET",
             beforeSend: function() {
                 $more.css("background",
