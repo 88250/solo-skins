@@ -24,32 +24,32 @@
 <@head title="${categoryLabel} - ${blogTitle}">
     <meta name="keywords" content="${metaKeywords},${categoryLabel}"/>
     <meta name="description"
-          content="<#list mostUsedCategories as category>${category.categoryTitle}<#if category_has_next>,</#if></#list>"/>
+          content="<#list categories as category>${category.categoryTitle}<#if category_has_next>,</#if></#list>"/>
 </@head>
 </head>
 <body>
 <#include "header.ftl">
 <div id="pjax" class="wrapper">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <div class="module">
-            <div class="module__content ft__center">
-                <i class="icon__home"></i>
-                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
-                &nbsp; > &nbsp;
-                <i class="icon__category"></i>
-                ${categoryLabel}
-            </div>
+    <div class="article__item">
+        <h2 class="article__title">
+            <i class="icon__category"></i> ${categoryLabel}${articleLabel}
+        </h2>
+        <div class="ft__gray">
+        ${categories?size} ${cntLabel}${categoryLabel}
         </div>
-        <#list mostUsedCategories as category>
-            <a href="${servePath}/category/${category.categoryURI}"
-               aria-label="${category.categoryTagCnt} ${cntLabel}${tagsLabel}"
-               class="tag tooltipped tooltipped__n">
-                ${category.categoryTitle}</a>
-        </#list>
-    </main>
+        <div class="tags fn__clear">
+            <#list categories as category>
+                <a href="${servePath}/category/${category.categoryURI}"
+                   class="ft__red">
+                    ${category.categoryTitle}
+                    <span class="ft__gray">(${category.categoryTagCnt} ${tagsLabel})</span>
+                </a>
+            </#list>
+        </div>
+    </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
-    <#include "footer.ftl">
 </div>
+    <#include "footer.ftl">
 </body>
 </html>

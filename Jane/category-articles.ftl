@@ -29,26 +29,21 @@
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
-    <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <div class="module">
-            <div class="module__content ft__center">
-                <i class="icon__home"></i>
-                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
-                &nbsp; > &nbsp;
+<div id="pjax" class="wrapper">
+<#if pjax><!---- pjax {#pjax} start ----></#if>
+    <div class="article__item">
+        <h2 class="article__title">
+            <a href="${servePath}/categories.html">
                 <i class="icon__category"></i>
                 ${categoryLabel}
-                &nbsp; > &nbsp;
-                <span class="tooltipped tooltipped__w"
-                      aria-label="${category.categoryDescription}">${category.categoryTitle}</span>
-            </div>
+            </a>
+        </h2>
+        <div class="article__more">
+            ${category.categoryTitle}
         </div>
-        <#include "article-list.ftl">
-    </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
+    <#include "article-list.ftl">
+<#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
 </body>

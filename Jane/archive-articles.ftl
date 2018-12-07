@@ -32,27 +32,25 @@
 <#include "header.ftl">
 <div id="pjax" class="wrapper">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <div class="article__item">
-            <h2 class="article__title">
-                <a href="${servePath}/archives.html">
-                    <i class="icon__inbox"></i>
-                    ${archiveLabel}
-                </a>
-            </h2>
-            <div class="article__more">
-            <#if "en" == localeString?substring(0, 2)>
-                ${archiveDate.archiveDateMonth} ${archiveDate.archiveDateYear}
-            <#else>
-                ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
-            </#if>
-                - ${archiveDate.archiveDatePublishedArticleCount} ${articleLabel}
-            </div>
+    <div class="article__item">
+        <h2 class="article__title">
+            <a href="${servePath}/archives.html">
+                <i class="icon__inbox"></i>
+                ${archiveLabel}
+            </a>
+        </h2>
+        <div class="article__more">
+        <#if "en" == localeString?substring(0, 2)>
+            ${archiveDate.archiveDateMonth} ${archiveDate.archiveDateYear}
+        <#else>
+            ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
+        </#if>
+            - ${archiveDate.archiveDatePublishedArticleCount} ${articleLabel}
         </div>
-        <#include "article-list.ftl">
-    </main>
+    </div>
+    <#include "article-list.ftl">
     <#if pjax><!---- pjax {#pjax} end ----></#if>
-    <#include "footer.ftl">
 </div>
+    <#include "footer.ftl">
 </body>
 </html>

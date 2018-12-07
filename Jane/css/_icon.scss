@@ -42,6 +42,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon__page:before {
+  content: "\e902";
+}
+
 .icon__list:before {
   content: "\f0ca";
 }

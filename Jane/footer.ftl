@@ -17,7 +17,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<footer class="footer fn__clear">
+<footer class="footer wrapper fn__clear">
     &copy; ${year}
     ${footerContent}
     <a href="${servePath}">${blogTitle}</a>  <span class="fn__none--m">&nbsp; • &nbsp;</span>

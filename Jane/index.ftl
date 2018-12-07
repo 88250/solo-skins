@@ -34,9 +34,7 @@
 <#include "header.ftl">
 <div id="pjax" class="wrapper">
 <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
     <#include "article-list.ftl">
-    </main>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">

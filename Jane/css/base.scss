@@ -54,6 +54,10 @@ a {
 .content-reset {
   color: #555;
   font-size: 14px;
+
+  a {
+    color: $red;
+  }
 }
 
 // header
@@ -65,6 +69,8 @@ a {
   right: 0;
   height: 100%;
   width: 50px;
+  display: flex;
+  flex-direction: column;
 
   a, span {
     color: #fff;
@@ -84,12 +90,6 @@ a {
       text-decoration: none;
       color: $gray;
     }
-  }
-
-  &__bottom {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
   }
 }
 
@@ -174,8 +174,14 @@ a {
 .tags {
   line-height: 32px;
   margin: 20px 0 70px;
-  a {
+
+  &--align a {
     width: 180px;
+    margin-right: 0 !important;
+  }
+
+  a {
+    margin-right: 20px;
     float: left;
   }
 }

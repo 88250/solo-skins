@@ -677,6 +677,9 @@ blockquote {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon__page:before {
+  content: "\e902"; }
+
 .icon__list:before {
   content: "\f0ca"; }
 
@@ -743,6 +746,8 @@ a {
 .content-reset {
   color: #555;
   font-size: 14px; }
+  .content-reset a {
+    color: #991a1a; }
 
 .header {
   top: 0;
@@ -751,7 +756,9 @@ a {
   position: fixed;
   right: 0;
   height: 100%;
-  width: 50px; }
+  width: 50px;
+  display: flex;
+  flex-direction: column; }
   .header a, .header span {
     color: #fff;
     padding: 10px 0;
@@ -765,10 +772,6 @@ a {
     .header a.current, .header a:hover, .header span.current, .header span:hover {
       text-decoration: none;
       color: #999; }
-  .header__bottom {
-    width: 100%;
-    position: absolute;
-    bottom: 0; }
 
 .wrapper {
   max-width: 920px;
@@ -827,6 +830,9 @@ a {
 .tags {
   line-height: 32px;
   margin: 20px 0 70px; }
-  .tags a {
+  .tags--align a {
     width: 180px;
+    margin-right: 0 !important; }
+  .tags a {
+    margin-right: 20px;
     float: left; }

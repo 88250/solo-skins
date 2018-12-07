@@ -36,11 +36,11 @@ var Skin = {
 
     $('.header a').each(function () {
       if (this.href === location.href) {
-        this.className = 'current'
+        this.className = 'current tooltipped tooltipped__w'
       }
     }).click(function () {
       $('.header a').removeClass('current')
-      this.className = 'current'
+      this.className = 'current tooltipped tooltipped__w'
     })
   },
   _initArticleCommon: function () {

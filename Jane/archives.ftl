@@ -37,7 +37,7 @@
         <div class="ft__gray">
         ${statistic.statisticPublishedBlogArticleCount} ${countLabel}
         </div>
-        <div class="tags fn__clear">
+        <div class="tags tags--align fn__clear">
             <#list archiveDates as archiveDate>
             <#if "en" == localeString?substring(0, 2)>
                 <a class="ft__red" href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
@@ -55,7 +55,7 @@
         </div>
     </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
-    <#include "footer.ftl">
 </div>
+    <#include "footer.ftl">
 </body>
 </html>

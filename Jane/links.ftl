@@ -21,9 +21,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<@head title="${blogTitle}">
-    <meta name="keywords" content="${metaKeywords},${archiveLabel}"/>
-    <meta name="description" content="${metaDescription},${archiveLabel}"/>
+<@head title="${linkLabel} - ${blogTitle}">
+    <meta name="keywords" content="${metaKeywords},${linkLabel}"/>
+    <meta name="description" content="${metaDescription},${linkLabel}"/>
 </@head>
 </head>
 <body>
