@@ -19,7 +19,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.2.1.0, Sep 30, 2018
+ * @version 0.1.0.0, Dec 7, 2018
  */
 
 /**
@@ -27,76 +27,20 @@
  * @static
  */
 var Skin = {
-  _initCommon: function ($goTop) {
-    $(window).scroll(function () {
-      if ($(window).scrollTop() > 125) {
-        $goTop.show()
-      } else {
-        $goTop.hide()
-      }
-    })
-  },
-  _initAnimation: function () {
-    if (!('IntersectionObserver' in window)) {
-      $('.item').addClass('item--active')
-      return false
-    }
-
-    if (window.imageIntersectionObserver) {
-      window.imageIntersectionObserver.disconnect()
-      $('.item').each(function () {
-        window.imageIntersectionObserver.observe(this)
-      })
-    } else {
-      window.imageIntersectionObserver = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entrie) {
-            if (typeof entrie.isIntersecting === 'undefined'
-              ? entrie.intersectionRatio !== 0 : entrie.isIntersecting) {
-              $(entrie.target).addClass('item--active')
-            } else {
-              if ($(entrie.target).closest('.side').length === 1 ||
-                $(entrie.target).closest('.article-list').hasClass('content') ||
-                $(entrie.target).outerHeight() > 768) {
-                return
-              }
-              $(entrie.target).removeClass('item--active')
-            }
-          })
-        })
-      $('.item').each(function () {
-        window.imageIntersectionObserver.observe(this)
-      })
-    }
-  },
   init: function () {
-    Util.initPjax(function () {
-      Skin._initAnimation()
-      if ($('#articlePage').length === 0) {
-        $('.b3-solo-list').closest('.module').remove()
-      }
-    })
-
-    Skin._initAnimation()
+    Util.initPjax()
 
     $('body').on('click', '.content-reset img', function () {
       window.open(this.src)
     })
 
-    this._initCommon($('.icon__up'))
-
-    $('.header__nav a, .header__m a').each(function () {
+    $('.header a').each(function () {
       if (this.href === location.href) {
         this.className = 'current'
       }
     }).click(function () {
-      $('.header__nav a, .header__m a').removeClass('current')
+      $('.header a').removeClass('current')
       this.className = 'current'
-      $('.header__m .module__list').hide()
-    })
-
-    $('.header__logo').click(function () {
-      $('.header__nav a, .header__m a').removeClass('current')
     })
   },
   _initArticleCommon: function () {

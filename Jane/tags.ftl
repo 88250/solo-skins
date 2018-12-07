@@ -55,7 +55,6 @@
     </main>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-    <#include "side.ftl">
 </div>
 <#include "footer.ftl">
 <#if pjax><!---- pjax {#pjax} start ----></#if>

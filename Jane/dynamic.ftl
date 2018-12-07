@@ -50,7 +50,6 @@
     </main>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-<#include "side.ftl">
 </div>
 <#include "footer.ftl">
 <script>

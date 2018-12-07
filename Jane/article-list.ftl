@@ -17,16 +17,9 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<div class="article-list">
-    <#list articles as article>
-    <article class="item <#if article_index &lt; 3>item--active</#if>">
-        <time class="tooltipped tooltipped__n item__date"
-              aria-label="${article.articleCreateDate?string("yyyy")}${yearLabel}">
-            ${article.articleCreateDate?string("MM")}${monthLabel}
-            <span class="item__day">${article.articleCreateDate?string("dd")}</span>
-        </time>
-
-        <h2 class="item__title">
+<#list articles as article>
+    <article class="article__item">
+        <h2 class="article__title">
             <a rel="bookmark" href="${servePath}${article.articlePermalink}">
                 ${article.articleTitle}
             </a>
@@ -41,58 +34,45 @@
             </sup>
             </#if>
         </h2>
-
-        <div class="item__date--m fn__none">
-            <i class="icon__date"></i>
-            ${article.articleCreateDate?string("yyyy-MM-dd")}
-        </div>
-
-
-        <div class="ft__center">
-            <span class="tag">
-                <i class="icon__tags"></i>
-                <#list article.articleTags?split(",") as articleTag>
-                <a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-                ${articleTag}</a><#if articleTag_has_next>,</#if>
-                </#list>
-            </span>
-            <a class="tag" href="${servePath}${article.articlePermalink}#comments">
-                <i class="icon__comments"></i> ${article.articleCommentCount} ${commentLabel}
-            </a>
-            <span class="tag">
-                <i class="icon__views"></i>
-                ${article.articleViewCount} ${viewLabel}
-            </span>
-        </div>
-
-        <div class="content-reset">
+        <time class="ft__gray">
+            ${article.articleCreateDate?string("yyyy-MM-dd")}${monthLabel}
+        </time>
+        <div class="content-reset article__content">
             ${article.articleAbstract}
         </div>
+        <a class="article__more" href="">More...</a>
     </article>
-    </#list>
+</#list>
 
 
-    <#if 0 != paginationPageCount>
-        <div class="fn__clear">
-            <nav class="pagination fn__right">
-                <#if 1 != paginationPageNums?first>
-                    <a href="${servePath}${path}?p=${paginationPreviousPageNum}" class="pagination__item">&laquo;</a>
-                    <a class="pagination__item" href="${servePath}${path}">1</a>
-                    <span class="pagination__item pagination__item--text">...</span>
-                </#if>
-                <#list paginationPageNums as paginationPageNum>
-                    <#if paginationPageNum == paginationCurrentPageNum>
-                    <span class="pagination__item pagination__item--current">${paginationPageNum}</span>
-                    <#else>
-                    <a class="pagination__item" href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a>
-                    </#if>
-                </#list>
-                <#if paginationPageNums?last != paginationPageCount>
-                    <span class="pagination__item pagination__item--text">...</span>
-                    <a href="${servePath}${path}?p=${paginationPageCount}" class="pagination__item">${paginationPageCount}</a>
-                    <a href="${servePath}${path}?p=${paginationNextPageNum}" class="pagination__item">&raquo;</a>
-                </#if>
-            </nav>
+<#if 0 != paginationPageCount>
+    <nav class="fn__flex pagination">
+        <#if 1 != paginationPageNums?first>
+            <a href="${servePath}${path}?p=${paginationPreviousPageNum}" class="pagination__item fn__flex-center">&laquo; Prev</a>
+        </#if>
+
+        <div class="fn__flex-1 ft__center">
+        <#if 1 != paginationPageNums?first>
+            <a class="pagination__item" href="${servePath}${path}">1</a>
+            <span class="pagination__item">...</span>
+        </#if>
+        <#list paginationPageNums as paginationPageNum>
+            <#if paginationPageNum == paginationCurrentPageNum>
+            <span class="pagination__item pagination__item--current">${paginationPageNum}</span>
+            <#else>
+            <a class="pagination__item"
+               href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a>
+            </#if>
+        </#list>
+        <#if paginationPageNums?last != paginationPageCount>
+            <span class="pagination__item">...</span>
+            <a href="${servePath}${path}?p=${paginationPageCount}"
+               class="pagination__item">${paginationPageCount}</a>
+        </#if>
         </div>
-    </#if>
-</div>
+
+        <#if paginationPageNums?last != paginationPageCount>
+            <a href="${servePath}${path}?p=${paginationNextPageNum}" class="pagination__item fn__flex-center">Next &raquo;</a>
+        </#if>
+    </nav>
+</#if>

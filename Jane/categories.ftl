@@ -21,15 +21,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<@head title="${blogTitle}">
-    <meta name="keywords" content="${metaKeywords},${archiveLabel}"/>
-    <meta name="description" content="${metaDescription},${archiveLabel}"/>
+<@head title="${categoryLabel} - ${blogTitle}">
+    <meta name="keywords" content="${metaKeywords},${categoryLabel}"/>
+    <meta name="description"
+          content="<#list mostUsedCategories as category>${category.categoryTitle}<#if category_has_next>,</#if></#list>"/>
 </@head>
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<div id="pjax" class="wrapper">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <main>
         <div class="module">
@@ -37,30 +37,19 @@
                 <i class="icon__home"></i>
                 <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
                 &nbsp; > &nbsp;
-                <i class="icon__link"></i>
-            ${linkLabel}
+                <i class="icon__category"></i>
+                ${categoryLabel}
             </div>
         </div>
-        <div class="module">
-            <div class="module__list">
-                <#if 0 != links?size>
-                    <ul class="list">
-                    <#list links as link>
-                        <li>
-                            <a rel="friend" href="${link.linkAddress}" title="${link.linkDescription}"
-                               target="_blank">
-                                ${link.linkTitle}
-                            </a>
-                        </li>
-                    </#list>
-                    </ul>
-                </#if>
-            </div>
-        </div>
+        <#list mostUsedCategories as category>
+            <a href="${servePath}/category/${category.categoryURI}"
+               aria-label="${category.categoryTagCnt} ${cntLabel}${tagsLabel}"
+               class="tag tooltipped tooltipped__n">
+                ${category.categoryTitle}</a>
+        </#list>
     </main>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
-    </div>
+    <#include "footer.ftl">
 </div>
-<#include "footer.ftl">
 </body>
 </html>

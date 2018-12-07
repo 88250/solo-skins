@@ -32,14 +32,12 @@
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
-    <#if pjax><!---- pjax {#pjax} start ----></#if>
+<div id="pjax" class="wrapper">
+<#if pjax><!---- pjax {#pjax} start ----></#if>
     <main>
     <#include "article-list.ftl">
     </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
-    </div>
+<#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
 </body>

@@ -21,54 +21,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<@head title="${blogTitle}">
+<@head title="${archiveLabel} - ${blogTitle}">
     <meta name="keywords" content="${metaKeywords},${archiveLabel}"/>
     <meta name="description" content="${metaDescription},${archiveLabel}"/>
 </@head>
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<div id="pjax" class="wrapper">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <div class="module">
-            <div class="module__content ft__center">
-                <i class="icon__home"></i>
-                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
-                &nbsp; > &nbsp;
-                <i class="icon__inbox"></i>
-            ${statistic.statisticPublishedBlogArticleCount} ${archiveLabel}${articleLabel}
-            </div>
+    <div class="article__item">
+        <h2 class="article__title">
+            <i class="icon__inbox"></i> ${archiveLabel}${articleLabel}
+        </h2>
+        <div class="ft__gray">
+        ${statistic.statisticPublishedBlogArticleCount} ${countLabel}
         </div>
-        <div class="module">
-            <div class="module__list">
-                <#if 0 != archiveDates?size>
-                    <ul>
-                    <#list archiveDates as archiveDate>
-                        <li>
-                            <#if "en" == localeString?substring(0, 2)>
-                            <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
-                                ${archiveDate.monthName} ${archiveDate.archiveDateYear}
-                                (${archiveDate.archiveDatePublishedArticleCount})
-                            </a>
-                            <#else>
-                            <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
-                                ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
-                                (${archiveDate.archiveDatePublishedArticleCount})
-                            </a>
-                            </#if>
-                        </li>
-                    </#list>
-                    </ul>
-                </#if>
-            </div>
+        <div class="tags fn__clear">
+            <#list archiveDates as archiveDate>
+            <#if "en" == localeString?substring(0, 2)>
+                <a class="ft__red" href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
+                    ${archiveDate.monthName} ${archiveDate.archiveDateYear}
+                    <span class="ft__gray">(${archiveDate.archiveDatePublishedArticleCount})</span>
+                </a>
+            <#else>
+                <a  class="ft__red"
+                    href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
+                    ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
+                    <span class="ft__gray">(${archiveDate.archiveDatePublishedArticleCount})</span>
+                </a>
+            </#if>
+            </#list>
         </div>
-    </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-    <#include "side.ftl">
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
+    <#include "footer.ftl">
 </div>
-<#include "footer.ftl">
 </body>
 </html>

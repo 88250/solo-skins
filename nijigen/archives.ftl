@@ -21,7 +21,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<@head title="${blogTitle}">
+<@head title="${archiveLabel} - ${blogTitle}">
     <meta name="keywords" content="${metaKeywords},${archiveLabel}"/>
     <meta name="description" content="${metaDescription},${archiveLabel}"/>
 </@head>

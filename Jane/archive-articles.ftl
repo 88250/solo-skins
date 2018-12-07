@@ -30,18 +30,17 @@
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<div id="pjax" class="wrapper">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <main>
-        <div class="module">
-            <div class="module__content ft__center">
-                <i class="icon__home"></i>
-                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
-               &nbsp; > &nbsp;
-                <i class="icon__inbox"></i>
-                <a href="${servePath}/archives.html" class="breadcrumb">${archiveLabel}</a>
-                &nbsp; > &nbsp;
+        <div class="article__item">
+            <h2 class="article__title">
+                <a href="${servePath}/archives.html">
+                    <i class="icon__inbox"></i>
+                    ${archiveLabel}
+                </a>
+            </h2>
+            <div class="article__more">
             <#if "en" == localeString?substring(0, 2)>
                 ${archiveDate.archiveDateMonth} ${archiveDate.archiveDateYear}
             <#else>
@@ -53,9 +52,7 @@
         <#include "article-list.ftl">
     </main>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
-    </div>
-    <#include "side.ftl">
+    <#include "footer.ftl">
 </div>
-<#include "footer.ftl">
 </body>
 </html>
