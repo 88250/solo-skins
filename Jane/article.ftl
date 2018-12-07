@@ -51,21 +51,13 @@
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<div id="pjax" class="wrapper">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main class="article-list" id="articlePage">
-        <div class="item item--active">
-            <time class="tooltipped tooltipped__n item__date"
-                  aria-label="${article.articleCreateDate?string("yyyy")}${yearLabel}">
-            ${article.articleCreateDate?string("MM")}${monthLabel}
-                <span class="item__day">${article.articleCreateDate?string("dd")}</span>
-            </time>
-
-            <h2 class="item__title">
-                <a rel="bookmark" href="${servePath}${article.articlePermalink}">
-                ${article.articleTitle}
-                </a>
+    <div class="article__item">
+        <h2 class="article__title">
+            <a rel="bookmark" href="${servePath}${article.articlePermalink}">
+            ${article.articleTitle}
+            </a>
             <#if article.articlePutTop>
             <sup>
                 ${topArticleLabel}
@@ -76,98 +68,62 @@
                 ${updatedLabel}
             </sup>
             </#if>
-            </h2>
+        </h2>
 
-            <div class="item__date--m fn__none">
-                <i class="icon__date"></i>
+        <div class="ft__gray fn__clear">
+            <time>
             ${article.articleCreateDate?string("yyyy-MM-dd")}
-            </div>
-
-            <div class="ft__center">
-                <span class="tag">
-                    <i class="icon__tags"></i>
-                    <#list article.articleTags?split(",") as articleTag>
-                    <a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-                        ${articleTag}</a><#if articleTag_has_next>,</#if>
-                    </#list>
-                </span>
-                <a class="tag" href="${servePath}${article.articlePermalink}#comments">
-                    <i class="icon__comments"></i> ${article.articleCommentCount} ${commentLabel}
-                </a>
-                <span class="tag">
-                    <i class="icon__views"></i>
+            </time>
+            &nbsp;
+            <#list article.articleTags?split(",") as articleTag>
+                <a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}" class="ft__red">
+                    ${articleTag}</a><#if articleTag_has_next>,</#if>
+            </#list>
+            <div class="fn__right">
+                <a class="ft__red" href="${servePath}${article.articlePermalink}#comments"><#if article.articleCommentCount gt 0>${article.articleCommentCount} </#if>${commentLabel}</a>
+                •
                 ${article.articleViewCount} ${viewLabel}
-                </span>
             </div>
+        </div>
 
-            <div class="content-reset">
+        <div class="content-reset article__content">
             ${article.articleContent}
-                <#if "" != article.articleSign.signHTML?trim>
-                <div>
-                    ${article.articleSign.signHTML}
-                </div>
-                </#if>
+            <#if "" != article.articleSign.signHTML?trim>
+            <div>
+                ${article.articleSign.signHTML}
             </div>
+            </#if>
         </div>
 
         <#if previousArticlePermalink?? || nextArticlePermalink??>
-        <div class="module">
-            <div class="module__content fn__clear">
-                <#if previousArticlePermalink??>
-                    <a href="${servePath}${previousArticlePermalink}" rel="prev" class="fn__left breadcrumb">
-                        ${previousArticleLabel}: ${previousArticleTitle}
-                    </a>
-                </#if>
-                <#if nextArticlePermalink??>
-                    <a href="${servePath}${nextArticlePermalink}" rel="next"
-                       class="fn__right breadcrumb">
-                        ${nextArticleTitle}: ${nextArticleLabel}
-                    </a>
-                </#if>
-            </div>
+        <div class="article__near fn__flex">
+            <#if nextArticlePermalink??>
+                <a href="${servePath}${nextArticlePermalink}" rel="next"
+                   class="fn__flex-1 first">
+                    <strong>NEWER</strong>
+                    ${nextArticleLabel}
+                </a>
+            <#else>
+                <a class="fn__flex-1 first">&nbsp;</a>
+            </#if>
+            <#if previousArticlePermalink??>
+                <a href="${servePath}${previousArticlePermalink}" rel="prev" class="fn__flex-1">
+                    <strong>OLDER</strong>
+                    ${previousArticleTitle}
+                </a>
+            <#else>
+                <a class="fn__flex-1">&nbsp;</a>
+            </#if>
         </div>
         </#if>
-
-        <@comments commentList=articleComments article=article></@comments>
-
-        <div class="fn__flex">
-            <div class="fn__flex-1" id="externalRelevantArticlesWrap">
-                <div class="module">
-                    <div id="externalRelevantArticles" class="module__list"></div>
-                </div>
-            </div>
-            <div>&nbsp; &nbsp; &nbsp; &nbsp; </div>
-            <div class="fn__flex-1" id="randomArticlesWrap">
-                <div class="module">
-                    <div id="randomArticles" class="module__list"></div>
-                </div>
-            </div>
-            <div>&nbsp; &nbsp; &nbsp; &nbsp; </div>
-            <div class="fn__flex-1" id="relevantArticlesWrap">
-                <div class="module">
-                    <div id="relevantArticles" class="module__list"></div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
+
+    <@comments commentList=articleComments article=article></@comments>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
 <#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId>
-page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
-    <#if 0 != randomArticlesDisplayCount>
-page.loadRandomArticles('<header class="module__header">${randomArticles1Label}</header>');
-    </#if>
-    <#if 0 != externalRelevantArticlesDisplayCount>
-page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>"
-    , "<header class='module__header'>${externalRelevantArticlesLabel}</header>");
-    </#if>
-    <#if 0 != relevantArticlesDisplayCount>
-    page.loadRelevantArticles('${article.oId}',
-    '<header class="module__header">${relevantArticlesLabel}</header>');
-    </#if>
 </@comment_script>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>

@@ -34,13 +34,25 @@
             </sup>
             </#if>
         </h2>
-        <time class="ft__gray">
-            ${article.articleCreateDate?string("yyyy-MM-dd")}${monthLabel}
-        </time>
+        <div class="ft__gray fn__clear">
+            <time>
+                ${article.articleCreateDate?string("yyyy-MM-dd")}
+            </time>
+            &nbsp;
+            <#list article.articleTags?split(",") as articleTag>
+                <a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}" class="ft__red">
+                    ${articleTag}</a><#if articleTag_has_next>,</#if>
+            </#list>
+            <div class="fn__right">
+                <a class="ft__red" href="${servePath}${article.articlePermalink}#comments"><#if article.articleCommentCount gt 0>${article.articleCommentCount} </#if>${commentLabel}</a>
+                •
+                <a class="ft__red" href="${servePath}${article.articlePermalink}">${article.articleViewCount} ${viewLabel}</a>
+            </div>
+        </div>
         <div class="content-reset article__content">
             ${article.articleAbstract}
         </div>
-        <a class="article__more" href="">More...</a>
+        <a class="article__more" href="${servePath}${article.articlePermalink}">More...</a>
     </article>
 </#list>
 

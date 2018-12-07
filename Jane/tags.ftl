@@ -28,31 +28,25 @@
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<div id="pjax" class="wrapper">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <div class="module">
-            <div class="module__content ft__center">
-                <i class="icon__home"></i>
-                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
-                &nbsp; > &nbsp;
-                <i class="icon__tags"></i> ${sumLabel} ${tags?size} ${tagLabel}
-            </div>
+    <div class="article__item">
+        <h2 class="article__title">
+            <i class="icon__tags"></i> ${allTagsLabel}
+        </h2>
+        <div class="ft__gray">
+        ${sumLabel} ${tags?size} ${tagLabel}
         </div>
-
-        <div class="module">
-            <div class="module__content fn__clear tags">
-                 <#list tags as tag>
-                 <a rel="tag" data-count="${tag.tagPublishedRefCount}" class="tag"
-                    href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
-                     <span class="name">${tag.tagTitle}</span>
-                     (<b>${tag.tagPublishedRefCount}</b>)
-                 </a>
-                 </#list>
-            </div>
+        <div class="tags fn__clear">
+            <#list tags as tag>
+                <a rel="tag" data-count="${tag.tagPublishedRefCount}" class="ft__red"
+                   href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
+                    <span class="name">${tag.tagTitle}</span>
+                    <span class="ft__gray">(${tag.tagPublishedRefCount})</span>
+                </a>
+            </#list>
         </div>
-    </main>
+    </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
 </div>
@@ -63,7 +57,7 @@
 <script>
     $('.tags').isotope({
         transitionDuration: '1.5s',
-        itemSelector: '.tag',
+        itemSelector: '.ft__red',
         layoutMode: 'fitRows',
         getSortData: {
             name: '.name'

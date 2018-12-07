@@ -28,38 +28,26 @@
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<div id="pjax" class="wrapper">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <div class="module">
-            <div class="module__content ft__center">
-                <i class="icon__home"></i>
-                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
-                &nbsp; > &nbsp;
-                <i class="icon__link"></i>
-            ${linkLabel}
-            </div>
+    <div class="article__item">
+        <h2 class="article__title">
+            <i class="icon__link"></i> ${linkLabel}
+        </h2>
+        <div class="ft__gray">
+        ${links?size} ${cntLabel}${linkLabel}
         </div>
-        <div class="module">
-            <div class="module__list">
-                <#if 0 != links?size>
-                    <ul class="list">
-                    <#list links as link>
-                        <li>
-                            <a rel="friend" href="${link.linkAddress}" title="${link.linkDescription}"
-                               target="_blank">
-                                ${link.linkTitle}
-                            </a>
-                        </li>
-                    </#list>
-                    </ul>
-                </#if>
-            </div>
+        <div class="tags fn__clear">
+            <#list links as link>
+            <a rel="friend" class="ft__red" href="${link.linkAddress}"
+               target="_blank">
+                ${link.linkTitle}
+                <span class="ft__gray">(${link.linkDescription})</span>
+            </a>
+            </#list>
         </div>
-    </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
 </body>

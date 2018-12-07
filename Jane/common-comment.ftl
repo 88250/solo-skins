@@ -17,32 +17,38 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<li id="${comment.oId}" class="comments__item">
-    <div class="comments__meta fn__flex">
-        <div class="fn__flex-1">
+<li id="${comment.oId}" class="comment__item">
+    <div class="fn__flex">
+
+
+        <div class="comment__avatar" style="background-image: url(${comment.commentThumbnailURL})"></div>
+        <main class="comment__main fn__flex-1">
+            <div class="fn__clear ft__gray">
             <#if "http://" == comment.commentURL>
                 ${comment.commentName}
             <#else>
-            <a href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
+            <a href="${comment.commentURL}" target="_blank" class="ft__red">${comment.commentName}</a>
             </#if>
             <#if comment.isReply>
             @<a href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
                 onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 28);"
                 onmouseout="page.hideComment('${comment.commentOriginalCommentId}')"
+                class="ft__red"
             >${comment.commentOriginalCommentName}</a>
             </#if>
-        </div>
-        <time>${comment.commentDate2?string("yyyy-MM-dd HH:mm")}</time>
+                •
+                <time>${comment.commentDate2?string("yyyy-MM-dd HH:mm")}</time>
+
+            <#if article.commentable>
+            <span class="fn__right comment__btn" onclick="replyTo('${comment.oId}')">
+                <i class="icon__comments"></i>
+            </span>
+            </#if>
+            </div>
+
+            <div class="content-reset comment__content">
+            ${comment.commentContent}
+            </div>
+        </main>
     </div>
-    <main class="comments__content fn__clear">
-        <div class="comments__avatar" style="background-image: url(${comment.commentThumbnailURL})"></div>
-        <div class="content-reset">
-        ${comment.commentContent}
-        </div>
-        <#if article?? && article.commentable>
-            <a class="fn__right breadcrumb" href="javascript:replyTo('${comment.oId}')">${replyLabel}</a>
-        <#else>
-         <a class="fn__right breadcrumb" href="${servePath}${comment.commentSharpURL}">${viewLabel}»</a>
-        </#if>
-    </main>
 </li>

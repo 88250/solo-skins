@@ -29,21 +29,19 @@
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<div id="pjax" class="wrapper">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <article class="module">
-            <div class="module__content">
-                <div class="content-reset">
-                ${page.pageContent}
-                </div>
-            </div>
-        </article>
-        <@comments commentList=pageComments article=page></@comments>
-    </main>
+    <article class="article__item">
+        <h2 class="article__title">
+            <a href="${servePath}${page.pagePermalink}">${page.pageTitle}</a>
+        </h2>
+            <a class="ft__red" href="#comments"><#if page.pageCommentCount gt 0>${page.pageCommentCount} </#if>${commentLabel}</a>
+        <div class="content-reset article__content">
+        ${page.pageContent}
+        </div>
+    </article>
+    <@comments commentList=pageComments article=page></@comments>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
-    </div>
 </div>
 <#include "footer.ftl">
 <#if pjax><!---- pjax {#pjax} start ----></#if>
