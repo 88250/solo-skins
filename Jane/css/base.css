@@ -891,6 +891,14 @@ a {
     margin-right: 20px;
     float: left; }
 
+#comments {
+  position: relative; }
+
+.comment-body-ref {
+  position: absolute;
+  width: 664px;
+  left: 84px; }
+
 .comments__title {
   padding-top: 20px; }
 
@@ -899,6 +907,7 @@ a {
   margin: 20px 0; }
 
 .comment__avatar {
+  position: relative;
   width: 44px;
   height: 44px;
   border-radius: 3px;
@@ -906,16 +915,10 @@ a {
   background-repeat: no-repeat;
   background-position: 50%;
   margin-right: 20px; }
-
-.comment__main {
-  position: relative;
-  border: 1px solid #CFD8DC;
-  border-radius: 0;
-  padding: 20px; }
-  .comment__main:before, .comment__main:after {
+  .comment__avatar:before, .comment__avatar:after {
     position: absolute;
     top: 11px;
-    left: -16px;
+    left: 49px;
     display: block;
     width: 0;
     height: 0;
@@ -925,11 +928,17 @@ a {
     border-style: solid solid outset;
     border-width: 8px;
     border-right-color: #CFD8DC; }
-  .comment__main:after {
+  .comment__avatar:after {
     margin-top: 1px;
     margin-left: 2px;
     border-width: 7px;
     border-right-color: #fff; }
+
+.comment__main {
+  border: 1px solid #CFD8DC;
+  border-radius: 0;
+  padding: 20px;
+  background-color: #fff; }
 
 .comment__btn {
   cursor: pointer;

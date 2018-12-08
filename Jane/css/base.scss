@@ -252,6 +252,19 @@ a {
   }
 }
 
+
+// comments
+
+#comments {
+  position: relative;
+}
+
+.comment-body-ref {
+  position: absolute;
+  width: 664px;
+  left: 84px;
+}
+
 .comments {
   &__title {
     padding-top: 20px;
@@ -265,6 +278,7 @@ a {
   }
 
   &__avatar {
+    position: relative;
     width: 44px;
     height: 44px;
     border-radius: 3px;
@@ -272,18 +286,12 @@ a {
     background-repeat: no-repeat;
     background-position: 50%;
     margin-right: 20px;
-  }
 
-  &__main {
-    position: relative;
-    border: 1px solid #CFD8DC;
-    border-radius: 0;
-    padding: 20px;
     &:before,
     &:after {
       position: absolute;
       top: 11px;
-      left: -16px;
+      left: 49px;
       display: block;
       width: 0;
       height: 0;
@@ -300,6 +308,13 @@ a {
       border-width: 7px;
       border-right-color: #fff;
     }
+  }
+
+  &__main {
+    border: 1px solid #CFD8DC;
+    border-radius: 0;
+    padding: 20px;
+    background-color: #fff;
   }
 
   &__btn {

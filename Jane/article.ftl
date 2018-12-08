@@ -124,6 +124,7 @@
 <#include "footer.ftl">
 <#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId>
+page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
 </@comment_script>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>

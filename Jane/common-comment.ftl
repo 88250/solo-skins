@@ -19,8 +19,6 @@
 -->
 <li id="${comment.oId}" class="comment__item">
     <div class="fn__flex">
-
-
         <div class="comment__avatar" style="background-image: url(${comment.commentThumbnailURL})"></div>
         <main class="comment__main fn__flex-1">
             <div class="fn__clear ft__gray">
@@ -31,7 +29,7 @@
             </#if>
             <#if comment.isReply>
             @<a href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
-                onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 28);"
+                onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 2);"
                 onmouseout="page.hideComment('${comment.commentOriginalCommentId}')"
                 class="ft__red"
             >${comment.commentOriginalCommentName}</a>
