@@ -39,10 +39,12 @@
                 ${article.articleCreateDate?string("yyyy-MM-dd")}
             </time>
             &nbsp;
+            <span class="mobile__none">
             <#list article.articleTags?split(",") as articleTag>
-                <a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}" class="ft__red">
-                    ${articleTag}</a><#if articleTag_has_next>,</#if>
+                <a rel="tag" class="ft__red" href="${servePath}/tags/${articleTag?url('UTF-8')}">
+                    ${articleTag}</a><#if articleTag_has_next>, </#if>
             </#list>
+            </span>
             <div class="fn__right">
                 <a class="ft__red" href="${servePath}${article.articlePermalink}#comments"><#if article.articleCommentCount gt 0>${article.articleCommentCount} </#if>${commentLabel}</a>
                 •
