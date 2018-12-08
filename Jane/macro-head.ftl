@@ -32,7 +32,7 @@
 <link href="${servePath}/rss.xml" title="RSS" type="application/rss+xml" rel="alternate" />
 <link rel="icon" type="image/png" href="${servePath}/favicon.png" />
 <link rel="apple-touch-icon" href="${servePath}/images/logo.png">
-<link rel="shortcut icon" type="image/x-icon" href=${servePath}/favicon.png">
+<link rel="shortcut icon" type="image/x-icon" href="${servePath}/favicon.png">
 <link rel="manifest" href="${servePath}/manifest.json">
 <link rel="search" type="application/opensearchdescription+xml" title="${title}" href="/opensearch.xml">
 ${htmlHead}
