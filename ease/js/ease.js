@@ -19,7 +19,7 @@
  * @fileoverview ease js.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 1.2.0.0, Jun 4, 2018
+ * @version 1.2.0.1, Dec 20, 2018
  */
 var goTranslate = function () {
     window.open("http://translate.google.com/translate?sl=auto&tl=auto&u=" + location.href);  
@@ -28,7 +28,7 @@ var goTranslate = function () {
 var getNextPage = function () {
     var $more = $(".article-next");
     currentPage += 1;
-    var path = "/articles/";
+    var path = "/articles";
     if($("#tag").length === 1) {
         var pathnames = location.pathname.split("/");
         path = "/articles/tags/" + pathnames[pathnames.length - 1] + "/";
