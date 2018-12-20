@@ -19,7 +19,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.2.1.0, Sep 30, 2018
+ * @version 0.3.0.0, Dev 17, 2018
  */
 
 /**
@@ -33,6 +33,14 @@ var Skin = {
         $goTop.show()
       } else {
         $goTop.hide()
+      }
+
+      if ($('.side .b3-solo-list').length > 0) {
+        if ($(window).scrollTop() > 50) {
+          $('.side').css('position', 'fixed')
+        } else {
+          $('.side').css('position', 'initial')
+        }
       }
     })
   },
@@ -56,7 +64,7 @@ var Skin = {
               $(entrie.target).addClass('item--active')
             } else {
               if ($(entrie.target).closest('.side').length === 1 ||
-                $(entrie.target).closest('.article-list').hasClass('content') ||
+                $(entrie.target).closest('#articlePage').length === 1 ||
                 $(entrie.target).outerHeight() > 768) {
                 return
               }
@@ -100,10 +108,40 @@ var Skin = {
     })
   },
   _initArticleCommon: function () {
-    if ($('.b3-solo-list li').length > 0 && $(window).width() > 1000) {
-      $('.side').
-        prepend('<div class="module"><div class="module__list"></div></div>')
+    if ($(window).width() > 768) {
+      if ($('#articlePage .b3-solo-list li').length === 0) {
+        $('.side .b3-solo-list').closest('.module').remove()
+        $('.side').css({
+          height: 'auto',
+          position: 'initial',
+        })
+        return
+      }
+
+      $('#articlePage').width($('.main').width() - 310)
+      if ($('.side .b3-solo-list').length === 0) {
+        $('.side').
+          prepend('<div class="module"><div class="module__list"></div></div>').
+          css({
+            right: ($(window).width() - $('.main').width()) / 2,
+            position: 'fixed',
+            overflow: 'auto',
+            height: $(window).height() - 30,
+            top: 30,
+          })
+      }
       $('.side .module:eq(0) .module__list').html($('.b3-solo-list'))
+      $(window).scroll()
+      $('.side').scrollTop(0)
+    } else {
+      if ($('#articlePage .b3-solo-list li').length === 0) {
+        $('.header__m .icon__list').hide().next().hide()
+        return
+      }
+      $('.header__m .icon__list').show().next().html($('.b3-solo-list'))
+      $('.b3-solo-list a').click(function () {
+        $(this).closest('.module__list').hide()
+      })
     }
   },
   initArticle: function () {

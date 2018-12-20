@@ -20,7 +20,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.3.1.1, Nov 15, 2018
+ * @version 0.4.0.0, Dec 17, 2018
 */
 /*
  * Symphony - A modern community (forum/BBS/SNS/blog) platform written in Java.
@@ -657,6 +657,12 @@ blockquote {
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
+/*
+ * icon font
+ *
+ * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
+ * @version 0.2.0.0, Dec 17, 2018
+*/
 @font-face {
   font-family: 'icomoon';
   src: url("fonts/icomoon.eot?oyqnlj");
@@ -727,6 +733,9 @@ blockquote {
 
 .icon__rss:before {
   content: "\e901"; }
+
+.icon__more:before {
+  content: "\e902"; }
 
 body {
   cursor: url(../images/cursor.cur), url(../images/cursor.cur), auto; }
@@ -884,7 +893,10 @@ a {
 .side {
   width: 280px;
   min-width: 280px;
-  margin-left: 30px; }
+  margin-left: 30px;
+  border-radius: 5px; }
+  .side::-webkit-scrollbar {
+    display: none; }
   .side__btn {
     background-color: transparent;
     border: 0;
@@ -1152,9 +1164,18 @@ a {
   .b3-solo-list-h5 a {
     padding-left: 75px !important; }
 
+.article__relevant {
+  margin-bottom: 30px; }
+  .article__relevant .module {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0; }
+
 @media (max-width: 768px) {
-  .header__nav {
+  .mobile__hidden {
     display: none; }
+    .mobile__hidden.fn__none {
+      display: block; }
   .main {
     display: block;
     margin: 15px;
@@ -1208,12 +1229,15 @@ a {
       margin: 0 5px 0 0; }
     .header__m a.current {
       color: #b94a48; }
+    .header__m .icon__more,
     .header__m .icon__list {
       position: absolute;
       top: -35px;
       right: 15px;
       font-size: 20px;
       color: #fff; }
+    .header__m .icon__list {
+      right: 50px; }
     .header__m .module__list {
       display: none; }
       .header__m .module__list li {
@@ -1227,4 +1251,12 @@ a {
   .comments__content {
     padding: 15px; }
   .content-reset {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .article__relevant {
+    display: block;
+    margin-bottom: 0; }
+    .article__relevant .module {
+      margin-bottom: 15px; }
+  .article__near a {
+    display: block;
+    float: none; } }

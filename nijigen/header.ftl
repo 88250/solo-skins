@@ -29,7 +29,7 @@
             <i class="icon__home"></i>   ${blogTitle}
         </a>
 
-        <nav class="header__nav">
+        <nav class="mobile__hidden header__nav">
             <#list pageNavigations as page>
                 <a href="${page.pagePermalink}" target="${page.pageOpenTarget}" rel="section">
                     <#if page.pageIcon != ''><img class="page-icon" src="${page.pageIcon}"></#if>${page.pageTitle}
@@ -72,7 +72,9 @@
     </div>
 </header>
 <div class="header__m fn__none">
-    <i class="icon__list" onclick="$(this).next().slideToggle()"></i>
+    <i class="icon__list fn__none" onclick="$(this).next().slideToggle()"></i>
+    <main class="module__list fn__none"></main>
+    <i class="icon__more" onclick="$(this).next().slideToggle()"></i>
     <main class="module__list">
         <ul>
         <#if isLoggedIn>
