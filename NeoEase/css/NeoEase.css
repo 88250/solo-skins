@@ -15,7 +15,8 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-﻿/**
+
+/**
  * skin neoease style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
@@ -562,7 +563,6 @@ textarea, input {
 
 /* start article-body */
 .article-body {
-    font-size: 16px;
     word-break: break-word;
     line-height: 145%;
     overflow: hidden;
