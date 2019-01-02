@@ -21,7 +21,7 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 1.3.0.0, Sep 21 2017
+ * @version 1.3.0.1, Jan 2, 2019
 */
 /* start reset */
 html {
@@ -332,6 +332,7 @@ pre code, pre tt {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075) inset, 0 0 5px rgba(176, 160, 170, 0.5);
     border: 1px solid #b0a0aa;
 }
+
 .content-reset {
     font-family: "Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
     word-wrap: break-word;
@@ -353,6 +354,11 @@ pre code, pre tt {
 
 .content-reset img {
     cursor: zoom-in
+}
+
+.content-reset img.emoji {
+    cursor: auto;
+    max-width: 18px;
 }
 
 .editor-panel .content-reset img,img.emoji {
@@ -422,6 +428,10 @@ pre code, pre tt {
     border: 1px solid rgba(0,0,0,0.38)
 }
 
+.content-reset ins > iframe {
+    border: 0;
+}
+
 .content-reset table {
     width: 100%;
     border: 1px solid #dedede;
@@ -467,7 +477,6 @@ pre code, pre tt {
 
 .content-reset pre>code {
     padding: 0.5em;
-    border-radius: 0;
     color: rgba(0,0,0,0.87);
     background-color: rgba(0,0,0,0.04);
     background-image: url(../images/code-bg.png);
@@ -491,11 +500,6 @@ pre code, pre tt {
 
 .content-reset li.task-list-item {
     list-style: none
-}
-
-.content-reset li.task-list-item>input {
-    margin-left: -2em;
-    vertical-align: middle
 }
 /* end common */
 

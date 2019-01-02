@@ -179,7 +179,7 @@ blockquote {
  * Article reset style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</ta>
- * @version 0.2.0.2, Jul 6, 2018
+ * @version 0.2.0.3, Jan 2, 2019
  */
 .content-reset {
   word-wrap: break-word;
@@ -226,7 +226,7 @@ blockquote {
   .content-reset h6 {
     font-size: 0.85em; }
   .content-reset hr {
-    height: 0.25em;
+    height: 0.15em;
     padding: 0;
     margin: 24px 0;
     background-color: #e7e7e7;
@@ -241,6 +241,8 @@ blockquote {
     margin-bottom: 16px; }
   .content-reset blockquote p {
     margin: 0; }
+  .content-reset ins > iframe {
+    border: 0; }
   .content-reset iframe {
     border: 1px solid rgba(0, 0, 0, 0.38); }
   .content-reset table {
@@ -293,11 +295,10 @@ blockquote {
     border-bottom-color: #bbb;
     border-radius: 3px;
     box-shadow: inset 0 -1px 0 #bbb; }
-  .content-reset li.task-list-item {
-    list-style: none; }
-    .content-reset li.task-list-item > input {
-      margin-left: -2em;
-      vertical-align: middle; }
+  .content-reset__task,
+  .content-reset .task-list-item {
+    list-style: none;
+    margin-left: -1em; }
 
 .img-preview {
   width: 100%;

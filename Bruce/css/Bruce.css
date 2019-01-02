@@ -21,7 +21,7 @@
  *
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 1.1.0.0, Sep 21, 2017
+ * @version 1.1.0.1, Jan 2, 2019
  */
 
 body, button, input, select, textarea { 
@@ -63,8 +63,9 @@ h4, h5, h6 {
     font-size: 1.1em;
 }
 
-.code-highlight {
-    
+.article-content .task-list-item {
+    list-style: none;
+    margin-left: -1em;
 }
 
 .article-content img {
