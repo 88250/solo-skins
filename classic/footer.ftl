@@ -34,6 +34,7 @@ by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
     };
 
     var Label = {
+        "markedAvailable": ${markedAvailable?c},
         "skinDirName": "${skinDirName}",
         "em00Label": "${em00Label}",
         "em01Label": "${em01Label}",

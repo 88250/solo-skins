@@ -25,6 +25,7 @@
     };
     
     var Label = {
+        "markedAvailable": ${markedAvailable?c},
         "tag1Label": "${tag1Label}",
         "viewLabel": "${viewLabel}",
         "commentLabel": "${commentLabel}",

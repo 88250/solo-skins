@@ -33,6 +33,7 @@ by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
     };
         
     var Label = {
+        "markedAvailable": ${markedAvailable?c},
         "adminLabel": "${adminLabel}",
         "logoutLabel": "${logoutLabel}",
         "skinDirName": "${skinDirName}",

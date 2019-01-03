@@ -60,6 +60,7 @@
     };
 
     var Label = {
+        "markedAvailable": ${markedAvailable?c},
         "skinDirName": "${skinDirName}",
         "em00Label": "${em00Label}",
         "em01Label": "${em01Label}",

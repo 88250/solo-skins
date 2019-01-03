@@ -31,6 +31,7 @@
     };
     
     var Label = {
+        "markedAvailable": ${markedAvailable?c},
         "adminLabel": "${adminLabel}",
         "logoutLabel": "${logoutLabel}",
         "skinDirName": "${skinDirName}",
