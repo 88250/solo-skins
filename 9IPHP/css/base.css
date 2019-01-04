@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.4.0.0, Oct 27, 2018
+ * @version 0.5.0.0, Jan 4, 2019
 */
 /* start common */
 html {
@@ -266,12 +266,12 @@ blockquote {
 }
 .content-reset pre>code {
     padding: 0.5em;
-    border-radius: 0;
     color: #333;
     background-color: rgba(0, 0, 0, 0.04);
     background-image: url(../images/code-bg.png);
     background-size: 20px 20px;
-    border-radius: 5px
+    border-radius: 5px;
+    display: block;
 }
 .content-reset kbd {
     display: inline-block;

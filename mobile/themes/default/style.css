@@ -231,6 +231,7 @@ blockquote {
     background-color: rgba(0, 0, 0, 0.04);
     background-size: 20px 20px;
     border-radius: 5px;
+    display: block;
 }
 
 .article-body kbd {

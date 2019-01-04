@@ -21,7 +21,7 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 1.3.0.1, Jan 2, 2019
+ * @version 1.3.1.0, Jan 4, 2019
 */
 /* start reset */
 html {
@@ -481,7 +481,8 @@ pre code, pre tt {
     background-color: rgba(0,0,0,0.04);
     background-image: url(../images/code-bg.png);
     background-size: 20px 20px;
-    border-radius: 5px
+    border-radius: 5px;
+    display: block;
 }
 
 .content-reset kbd {
