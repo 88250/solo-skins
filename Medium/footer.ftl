@@ -72,6 +72,7 @@
         "em13Label": "${em13Label}",
         "em14Label": "${em14Label}"
     };
+    Util.initSW();
     Util.killIE(8)
     Util.parseMarkdown('content-reset');
 </script>

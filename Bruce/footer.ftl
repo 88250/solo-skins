@@ -68,6 +68,7 @@
 <script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/bootstrap${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
 <script>
+    Util.initSW();
     Util.setTopBar();
     Util.parseMarkdown('article-content');
     Util.killIE(8)

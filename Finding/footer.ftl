@@ -57,6 +57,7 @@
         "em13Label": "${em13Label}",
         "em14Label": "${em14Label}"
     };
+    Util.initSW();
     Util.parseMarkdown('post-content');
     Util.killIE(8)
 </script>
