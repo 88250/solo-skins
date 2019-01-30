@@ -19,7 +19,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.1.0.0, Dec 7, 2018
+ * @version 0.2.0.0, Jan 30, 2019
  */
 
 /**
@@ -27,6 +27,19 @@
  * @static
  */
 var Skin = {
+  initToc: function () {
+    if ($('.b3-solo-list li').length > 0 && $(window).width() > 768) {
+      $('.b3-solo-list').css({
+        right: '50px',
+        'border-right': '1px solid #fff',
+        opacity: 1,
+      })
+      $('#pjax.wrapper').css({
+        'max-width': '968px',
+        'padding-right': '270px',
+      })
+    }
+  },
   init: function () {
     Util.initPjax(function () {
       $('.header a').each(function () {
@@ -36,6 +49,15 @@ var Skin = {
           this.className = 'tooltipped tooltipped__w'
         }
       })
+
+      if ($('.b3-solo-list li').length > 0 && $(window).width() > 768) {
+        $('#pjax.wrapper').css({
+          'max-width': '968px',
+          'padding-right': '270px',
+        })
+      } else {
+        $('#pjax.wrapper').removeAttr('style')
+      }
     })
 
     $('.header a').each(function () {

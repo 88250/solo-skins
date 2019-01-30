@@ -114,7 +114,7 @@
         var commentFormHTML = '<table class=\'form comments__reply comments__content\' id=\'replyForm\'>'
         page.addReplyForm(id, commentFormHTML)
     };
-    (function () {
+    $(document).ready(function () {
         page.load({
             language: {
                 theme: 'tomorrow-night-eighties'
@@ -123,6 +123,7 @@
         // emotions
         page.replaceCommentsEm('#comments .content-reset')
         <#nested>
-    })()
+        Skin.initToc()
+    })
 </script>
 </#macro>

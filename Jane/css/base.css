@@ -37,7 +37,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.1.0.1, Jan 2, 2019
+ * @version 0.2.0.0, Jan 30, 2019
 */
 /*
  * Symphony - A modern community (forum/BBS/SNS/blog) platform written in Java.
@@ -780,7 +780,24 @@ a {
     padding: 10px; }
 
 .b3-solo-list {
-  display: none; }
+  position: fixed;
+  right: -200px;
+  background-color: #2a2a2a;
+  top: 0;
+  margin: 0 !important;
+  height: 100vh;
+  overflow: auto;
+  width: 200px;
+  padding: 10px !important;
+  box-sizing: border-box;
+  transition: all 1s ease;
+  opacity: 0;
+  color: #fff;
+  font-size: 14px !important; }
+  .b3-solo-list a {
+    color: #fff; }
+  .b3-solo-list::-webkit-scrollbar {
+    display: none; }
 
 .header {
   padding: 10px 0;
@@ -812,7 +829,8 @@ a {
   max-width: 768px;
   margin: 0 auto;
   padding: 0 70px 0 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  transition: all 1s ease; }
 
 .footer {
   color: #999;
