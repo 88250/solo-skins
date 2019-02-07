@@ -37,7 +37,6 @@ by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
         "adminLabel": "${adminLabel}",
         "logoutLabel": "${logoutLabel}",
         "skinDirName": "${skinDirName}",
-        "loginLabel": "${loginLabel}",
         "em00Label": "${em00Label}",
         "em01Label": "${em01Label}",
         "em02Label": "${em02Label}",
