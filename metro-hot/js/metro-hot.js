@@ -32,7 +32,7 @@ var MetroHot = {
         // logout
         var logoutHref = "";
         $("#admin a").each(function() {
-            if ($(this).attr("href").indexOf("/logout?goto=") > -1) {
+            if ($(this).attr("href").indexOf("/logout") > -1) {
                 logoutHref = $(this).attr("href");
             }
         });
