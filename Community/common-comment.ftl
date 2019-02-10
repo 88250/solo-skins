@@ -41,7 +41,7 @@
         <div class="clear"></div>
     <#if article.commentable>
         <div class="reply">
-            <a rel="nofollow" href="javascript:replyTo('${comment.oId}');">${replyLabel}</a>
+            <a rel="nofollow" href="javascript:page.toggleEditor('${comment.oId}', '${comment.commentName}');">${replyLabel}</a>
         </div>
     </#if>
     </div>

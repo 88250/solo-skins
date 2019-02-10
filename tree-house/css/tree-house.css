@@ -298,11 +298,6 @@ img.comment-picture {
 #comment, #commentReply {
     resize: vertical;
 }
-.em00, .em01, .em02, .em03, .em04, .em05, .em06, .em07, .em08, .em09, .em10, .em11, .em12, .em13, .em14 {
-    background-image: url("../../../images/emotions/emotions.png");
-    background-size: 120px;
-    margin-right: 2px;
-}
 .error-msg {
     color: #EC0A8B;
     font-weight: bold;

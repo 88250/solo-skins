@@ -38,7 +38,7 @@
                 <div class="right">
                 ${comment.commentDate2?string("yyyy-MM-dd HH:mm:ss")}
                     <a rel="nofollow" class="no-underline"
-                       href="javascript:replyTo('${comment.oId}');">${replyLabel}</a>
+                       href="javascript:page.toggleEditor('${comment.oId}', '${comment.commentName}');">${replyLabel}</a>
                 </div>
             </#if>
                 <div class="clear"></div>

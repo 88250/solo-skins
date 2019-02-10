@@ -19,6 +19,7 @@
 -->
 <#include "macro-head.ftl">
 <#include "macro-comments.ftl">
+<#include "../../common-template/macro-comment_script.ftl">
 <!DOCTYPE html>
 <html>
     <head>
@@ -52,7 +53,7 @@
 
             <#include "footer.ftl">
 
-            <@comment_script oId=page.oId></@comment_script>
+            <@comment_script oId=page.oId commentable=page.commentable></@comment_script>
         </div>
     </body>
 </html>

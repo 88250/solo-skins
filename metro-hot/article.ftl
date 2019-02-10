@@ -19,6 +19,7 @@
 -->
 <#include "macro-head.ftl">
 <#include "macro-comments.ftl">
+<#include "../../common-template/macro-comment_script.ftl">
 <#include "macro-side.ftl">
 <!DOCTYPE html>
 <html>
@@ -110,7 +111,7 @@
             </div>
         </div>
         <#include "footer.ftl">
-        <@comment_script oId=article.oId>
+        <@comment_script oId=article.oId commentable=article.commentable>
         MetroHot.tips = {
             externalRelevantArticlesDisplayCount: "${externalRelevantArticlesDisplayCount}",
         blogHost: "${blogHost}"
