@@ -1085,91 +1085,6 @@ blockquote {
     display: none;
 }
 
-.em00, .em01, .em02, .em03, .em04, .em05, .em06, .em07, .em08, .em09, .em10, .em11, .em12, .em13, .em14 {
-    cursor: pointer;
-    background-image: url(../../../images/emotions/emotions.png);
-    background-size: 120px;
-    float: left;
-    height: 24px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    width: 24px;
-    transition: all .2s ease-out;
-    -webkit-transition: all .2s ease-out;
-    -moz-transition: all .2s ease-out
-}
-
-#emotions span:hover {
-    transform: scale(1.2) rotate(360deg);
-    -webkit-transform: scale(1.2) rotate(360deg);
-    -moz-transform: scale(1.2) rotate(360deg)
-}
-
-.em01 {
-    background-position: -24px 0
-}
-
-.em02 {
-    background-position: -48px 0
-}
-
-.em03 {
-    background-position: -72px 0
-}
-
-.em04 {
-    background-position: -96px 0
-}
-
-.em05 {
-    background-position: 0 -24px
-}
-
-.em06 {
-    background-position: -24px -24px
-}
-
-.em07 {
-    background-position: -48px -24px
-}
-
-.em08 {
-    background-position: -72px -24px
-}
-
-.em09 {
-    background-position: -96px -24px
-}
-
-.em10 {
-    background-position: 0 -48px
-}
-
-.em11 {
-    background-position: -24px -48px
-}
-
-.em12 {
-    background-position: -48px -48px
-}
-
-.em13 {
-    background-position: -72px -48px
-}
-
-.em14 {
-    background-position: -96px -48px
-}
-
-#commentForm,
-#replyForm {
-    width: 100%;
-}
-
-#replyForm {
-    margin-top: 20px;
-}
-
 .comment__textarea {
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 4px;
@@ -1179,30 +1094,8 @@ blockquote {
     margin: 0 0 5px;
     width: 100%;
     box-sizing: border-box;
-}
-
-.captcha {
-    height: 35px;
-    margin: -5px 0 0 7px;
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    border-radius: 3px;
-}
-
-#submitCommentButton,
-#submitCommentButtonReply {
-    background-color: #fff;
-    border: 1px solid #03a87c;
-    color: #03a87c;
-    border-radius: 3px;
-    padding: 5px 10px;
-    transition: all 0.1s;
-}
-
-#submitCommentButton:hover,
-#submitCommentButtonReply:hover {
-    background-color: #fff;
-    border-color: #018f69;
-    color: #018f69;
+    cursor: pointer;
+    resize: none;
 }
 
 .article__toolbar {
