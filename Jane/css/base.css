@@ -858,7 +858,7 @@ a {
 .article__near {
   margin: 50px 0 70px;
   position: relative; }
-  .article__near:before {
+  .article__near--point:before {
     width: 8px;
     height: 8px;
     position: absolute;
@@ -870,6 +870,8 @@ a {
     border-radius: 50%;
     background: #ddd;
     box-shadow: 0 1px 2px #fff; }
+  .article__near ul {
+    list-style: none; }
   .article__near a {
     font-size: 12px;
     line-height: 1.6em;
@@ -880,7 +882,8 @@ a {
       color: #555; }
     .article__near a.first {
       text-align: right; }
-  .article__near strong {
+  .article__near strong,
+  .article__near h4 {
     margin-bottom: 6px;
     font-size: 14px;
     letter-spacing: 2px;
