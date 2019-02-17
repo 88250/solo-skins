@@ -91,15 +91,15 @@
                         </div>
                         <@comments commentList=articleComments article=article></@comments>
                     </div>
-                        <#if 0 != relevantArticlesDisplayCount>
-                        <div id="relevantArticles"></div>
-                        </#if>
-                        <#if 0 != randomArticlesDisplayCount>
-                        <div id="randomArticles"></div>
-                        </#if>
-                        <#if externalRelevantArticlesDisplayCount?? && 0 != externalRelevantArticlesDisplayCount>
-                        <div id="externalRelevantArticles"></div>
-                        </#if>
+                    <#if 0 != relevantArticlesDisplayCount>
+                    <div id="relevantArticles"></div>
+                    </#if>
+                    <#if 0 != randomArticlesDisplayCount>
+                    <div id="randomArticles"></div>
+                    </#if>
+                    <#if externalRelevantArticlesDisplayCount?? && 0 != externalRelevantArticlesDisplayCount>
+                    <div id="externalRelevantArticles"></div>
+                    </#if>
                     <div class="col-sm-2"></div>
                 </div>
             </div>  
