@@ -28,9 +28,5 @@
 <div class="row cmtForm">
     <textarea rows="3" placeholder="${postCommentsLabel}" id="comment" class="form-control"></textarea>
 </div>
-
-<#if externalRelevantArticlesDisplayCount?? && 0 != externalRelevantArticlesDisplayCount>
-<div id="externalRelevantArticles" class="row article-relative"></div>
-</#if>
 </#if>
 </#macro>
