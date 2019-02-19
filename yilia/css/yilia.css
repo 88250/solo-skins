@@ -358,7 +358,7 @@ pre code, pre tt {
 
 .content-reset img.emoji {
     cursor: auto;
-    max-width: 18px;
+    max-width: 20px;
 }
 
 .editor-panel .content-reset img,img.emoji {

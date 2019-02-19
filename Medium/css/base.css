@@ -346,7 +346,7 @@ blockquote {
 
 .content-reset img.emoji {
     cursor: auto;
-    max-width: 18px;
+    max-width: 20px;
 }
 
 .content-reset ins > iframe {
