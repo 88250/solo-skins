@@ -40,7 +40,7 @@
         </div>
     </#if>
         <span class="clear"></span>
-        <div class="article-body">${comment.commentContent}</div>
+        <div class="content-reset">${comment.commentContent}</div>
     </div>
     <span class="clear"></span>
 </div>

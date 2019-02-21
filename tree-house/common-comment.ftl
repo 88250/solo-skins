@@ -45,7 +45,7 @@
             </div>
             <div>
                 <img class="comment-picture left" alt="${comment.commentName}" src="${comment.commentThumbnailURL}"/>
-                <div class="comment-content article-body">
+                <div class="comment-content content-reset">
                 ${comment.commentContent}
                 </div>
                 <div class="clear"></div>

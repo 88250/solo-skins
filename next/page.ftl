@@ -33,7 +33,7 @@
         <main class="main">
             <div class="wrapper">
             <div class="content">
-                <article class="post-body">
+                <article class="post-body content-reset">
                     ${page.pageContent}
                 </article>
                 <@comments commentList=pageComments article=page></@comments>

@@ -87,7 +87,7 @@
                         </div>
                     </header>
 
-                    <div class="post-body article-body">
+                    <div class="post-body content-reset">
                         ${article.articleContent}
                         <#if "" != article.articleSign.signHTML?trim>
                         <div>
@@ -146,6 +146,6 @@
         <#if 0 != relevantArticlesDisplayCount>
         page.loadRelevantArticles('${article.oId}', '<h4>${relevantArticles1Label}</h4>');
         </#if>
-        </@comment_script>    
+        </@comment_script>
     </body>
 </html>

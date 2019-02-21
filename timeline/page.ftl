@@ -34,7 +34,7 @@
         <div class="wrapper">
             <div class="container">
                 <div class="module">
-                    <div class="article-body">
+                    <div class="content-reset">
                         ${page.pageContent}
                     </div>
                     <@comments commentList=pageComments article=page></@comments>

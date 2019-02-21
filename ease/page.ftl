@@ -33,7 +33,7 @@
         <#include "header.ftl">
         <div class="main">
             <div class="wrapper">
-                <div class="article-body article">
+                <div class="content-reset article">
                     ${page.pageContent}
                 </div>
                 <@comments commentList=pageComments article=page></@comments>

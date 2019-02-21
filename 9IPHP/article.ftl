@@ -136,6 +136,7 @@
                             </div>
                         </footer>
                         <@comments commentList=articleComments article=article></@comments>
+                        <br>
                         <div id="externalRelevantArticles" class="list"></div>
                         <div id="relevantArticles" class="list"></div>
                         <div id="randomArticles" class="list"></div>

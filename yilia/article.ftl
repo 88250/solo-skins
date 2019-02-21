@@ -53,7 +53,7 @@
     <body>
         <#include "side.ftl">
         <main>
-            <article class="post article-body">
+            <article class="post content-reset">
                 <header>
                     <h2>
                         <a rel="bookmark" href="${servePath}${article.articlePermalink}">

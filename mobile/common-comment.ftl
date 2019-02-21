@@ -40,7 +40,7 @@
             </div>
         </#if>
         </div><!--end comtop-->
-        <div class="combody article-body">
+        <div class="combody content-reset">
             <p>${comment.commentContent}</p>
         </div>
     </div>

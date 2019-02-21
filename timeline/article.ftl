@@ -81,7 +81,7 @@
                             </sup>
                             </#if>
                         </h2>
-                        <div class="article-body">
+                        <div class="content-reset">
                             ${article.articleContent}
                         </div>
                         <#if "" != article.articleSign.signHTML?trim>

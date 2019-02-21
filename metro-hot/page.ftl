@@ -47,7 +47,7 @@
             </div>
             <div class="fn-clear">
                 <div class="main">
-                    <div class="article-body">
+                    <div class="content-reset">
                         ${page.pageContent}
                     </div>
                     <@comments commentList=pageComments article=page></@comments>

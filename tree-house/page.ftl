@@ -39,7 +39,7 @@
                     <div class="body">
                         <div class="left main">
                             <div class="article">
-                                <div class="article-body">
+                                <div class="content-reset">
                                     ${page.pageContent}
                                 </div>
                             </div>

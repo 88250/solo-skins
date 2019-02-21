@@ -38,7 +38,7 @@
                 <div class="left main">
                     <div>
                         <div class="article">
-                            <div class="article-body content-reset">
+                            <div class="content-reset">
                                 ${page.pageContent}
                             </div>
                         </div>

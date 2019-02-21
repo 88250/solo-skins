@@ -40,7 +40,7 @@
             <a class="fn-right" href="javascript:page.toggleEditor('${comment.oId}', '${comment.commentName}')">${replyLabel}</a>
         </#if>
         </div>
-        <div class="comment-content post-body article-body">
+        <div class="comment-content post-body content-reset">
         ${comment.commentContent}
         </div>
     </div>

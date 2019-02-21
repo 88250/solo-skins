@@ -82,7 +82,7 @@
                         </div>
                         <div class="clear"></div>
                     </div>
-                    <div class="article-body">
+                    <div class="content-reset">
                         ${article.articleContent}
                         <#if "" != article.articleSign.signHTML?trim>
                         <p>

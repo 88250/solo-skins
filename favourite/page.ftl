@@ -41,7 +41,7 @@
                             <div class="article-abstract">
                                 <div class="note">
                                     <div class="corner"></div>
-                                    <div class="substance article-body">
+                                    <div class="substance content-reset">
                                         ${page.pageContent}
                                     </div>
                                 </div>

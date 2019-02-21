@@ -36,7 +36,7 @@
             <#include "header.ftl">
             <main>
                 <article class="post">
-                    <section class="post-content article-body">
+                    <section class="post-content content-reset">
                         ${page.pageContent}
                     </section>
                     <footer>

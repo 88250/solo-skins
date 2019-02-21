@@ -31,8 +31,8 @@
     <body>
         <#include "side.ftl">
         <main>
-            <article class="post article-body">
-                <section class="abstract">
+            <article class="post">
+                <section class="abstract content-reset">
                     ${page.pageContent}
                 </section>
                 <footer class="fn-clear share">

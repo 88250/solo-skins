@@ -34,7 +34,7 @@
             <#include "header.ftl">
         </div>
         <div class="content">
-            <div class="article-body marginBottom40">
+            <div class="content-reset marginBottom40">
                 ${page.pageContent}
             </div>
             <@comments commentList=pageComments article=page></@comments>

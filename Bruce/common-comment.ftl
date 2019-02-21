@@ -38,6 +38,6 @@
             </#if></span>
 
         </div>
-        <div class="row code-highlight article-content">${comment.commentContent}</div>
+        <div class="row code-highlight article-content content-reset">${comment.commentContent}</div>
     </div>
 </div>

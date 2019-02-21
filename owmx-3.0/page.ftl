@@ -34,7 +34,7 @@
             <#include "header.ftl">
             <div id="b">
                 <article>
-                    <div class="single_page article-body">
+                    <div class="single_page content-reset">
 			${page.pageContent}
                     </div>
                     <@comments commentList=pageComments article=page></@comments>
