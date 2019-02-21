@@ -25,6 +25,8 @@
  */
 
 @import "../../../scss/reset-content";
+@import "vditor/src/assets/scss/classic";
+
 body, button, input, select, textarea { 
     font: 400 1em/1.8 Avenir,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif;
     letter-spacing: 0.01rem;
