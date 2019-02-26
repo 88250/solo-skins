@@ -36,7 +36,9 @@
         <h2 class="article__title">
             <a href="${servePath}${page.pagePermalink}">${page.pageTitle}</a>
         </h2>
-            <a class="ft__red" href="#comments"><#if page.pageCommentCount gt 0>${page.pageCommentCount} </#if>${commentLabel}</a>
+        <div class="fn__clear">
+            <a class="ft__red fn__right" href="#comments"><#if page.pageCommentCount gt 0>${page.pageCommentCount} </#if>${commentLabel}</a>
+        </div>
         <div class="content-reset article__content">
         ${page.pageContent}
         </div>
