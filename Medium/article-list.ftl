@@ -46,9 +46,7 @@
                         </sup>
                     </#if>
                 </h2>
-                <div class="content-reset article__content">
-                ${article.articleAbstract}
-                </div>
+                <div class="article__thumbnail" style="background-image: url(${article.articleImg1URL})"/>
             </div>
 
             <div class="article__meta ft-gray fn-flex">
