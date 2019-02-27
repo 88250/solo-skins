@@ -30,11 +30,13 @@
     </#if>
     </@head>
 </head>
-<body>
+<body class="body--gray">
 <#include "header.ftl">
 <main id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <#include "article-list.ftl">
+    <div class="wrapper wrapper--min">
+        <#include "article-list.ftl">
+    </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </main>
 <#include "footer.ftl">

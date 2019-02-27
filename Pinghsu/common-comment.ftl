@@ -17,32 +17,35 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<li id="${comment.oId}" class="comments__item">
-    <div class="comments__meta fn__flex">
-        <div class="fn__flex-1">
+<#setting locale="en_US">
+<li id="${comment.oId}" class="item">
+    <div class="fn__clear">
+        <div class="item__avatar" style="background-image: url(${comment.commentThumbnailURL})"></div>
+        <div class="item__name">
             <#if "http://" == comment.commentURL>
                 ${comment.commentName}
             <#else>
             <a href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
             </#if>
+
             <#if comment.isReply>
-            @<a href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
-                onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 28);"
-                onmouseout="page.hideComment('${comment.commentOriginalCommentId}')"
+            @ <a href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
+                 onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 6);"
+                 onmouseout="page.hideComment('${comment.commentOriginalCommentId}')"
             >${comment.commentOriginalCommentName}</a>
             </#if>
         </div>
-        <time>${comment.commentDate2?string("yyyy-MM-dd HH:mm")}</time>
     </div>
-    <main class="comments__content fn__clear">
-        <div class="comments__avatar" style="background-image: url(${comment.commentThumbnailURL})"></div>
-        <div class="content-reset">
-        ${comment.commentContent}
-        </div>
+    <div class="content-reset">
+    ${comment.commentContent}
+    </div>
+    <div class="item__meta fn__clear">
+        <time>
+        ${comment.commentDate2?string["MMM d, yyyy"]}
+        </time>
         <#if article?? && article.commentable>
-            <a class="fn__right breadcrumb" href="javascript:page.toggleEditor('${comment.oId}', '${comment.commentName}')">${replyLabel}</a>
-        <#else>
-         <a class="fn__right breadcrumb" href="${servePath}${comment.commentSharpURL}">${viewLabel}»</a>
+            <a class="fn__right fn__none item__reply"
+               href="javascript:page.toggleEditor('${comment.oId}', '${comment.commentName}')">Reply</a>
         </#if>
-    </main>
+    </div>
 </li>

@@ -30,25 +30,42 @@
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<main id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <article class="module">
-            <div class="module__content">
-                <div class="content-reset">
-                ${page.pageContent}
-                </div>
+    <div class="post wrapper wrapper--miner">
+            <div class="content-reset">
+            ${page.pageContent}
             </div>
-        </article>
-        <@comments commentList=pageComments article=page></@comments>
-    </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-</div>
+    <div class="body--gray post__gray">
+        <div class="wrapper comment">
+            <@comments commentList=pageComments article=page></@comments>
+        </div>
+        <div class="page__bottom"></div>
+    </div>
+    <div class="post__fix">
+        <div class="wrapper">
+            <span class="post__share">
+                Share
+                <span class="tag tag--4" data-type="weibo">WeiBo</span>
+                <span class="tag tag--5" data-type="twitter">Twitter</span>
+                <span class="tag tag--6" data-type="qqz">QZone</span>
+                <span class="post__code tag tag--7"
+                      data-type="wechat"
+                      data-title="${page.pageTitle}"
+                      data-blogtitle="${blogTitle}"
+                      data-url="${servePath}${page.pagePermalink}"
+                      data-avatar="${adminUser.userAvatar}">WeChat</span>
+            </span>
+        </div>
+    </div>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
+</main>
 <#include "footer.ftl">
 <#if pjax><!---- pjax {#pjax} start ----></#if>
-<@comment_script oId=page.oId commentable=page.commentable></@comment_script>
+<@comment_script oId=page.oId commentable=page.commentable>
+    Skin.initArticle()
+</@comment_script>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>

@@ -28,33 +28,19 @@
           content="<#list articles as article>${article.articleTitle}<#if article_has_next>,</#if></#list>"/>
 </@head>
 </head>
-<body>
+<body class="body--gray">
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<main id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <div class="module">
-            <div class="module__content ft__center">
-                <i class="icon__home"></i>
-                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
-               &nbsp; > &nbsp;
-                <i class="icon__inbox"></i>
-                <a href="${servePath}/archives.html" class="breadcrumb">${archiveLabel}</a>
-                &nbsp; > &nbsp;
-            <#if "en" == localeString?substring(0, 2)>
-                ${archiveDate.archiveDateMonth} ${archiveDate.archiveDateYear}
-            <#else>
-                ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
-            </#if>
-                - ${archiveDate.archiveDatePublishedArticleCount} ${articleLabel}
-            </div>
+    <div class="wrapper wrapper--min">
+        <div class="page__title">
+            <span class="ft__red">#</span>
+            ${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}
         </div>
         <#include "article-list.ftl">
-    </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-</div>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
+</main>
 <#include "footer.ftl">
 </body>
 </html>

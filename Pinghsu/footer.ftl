@@ -21,7 +21,7 @@
     <nav class="footer__nav">
         <#list pageNavigations as page>
             <a href="${page.pagePermalink}" target="${page.pageOpenTarget}" rel="section">
-            <#if page.pageIcon != ''><img src="${page.pageIcon}"></#if>${page.pageTitle}
+                ${page.pageTitle}
             </a>
         </#list>
         <a rel="alternate" href="${servePath}/rss.xml" rel="section">RSS</a>

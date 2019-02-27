@@ -158,6 +158,7 @@
         <#if 0 != relevantArticlesDisplayCount>
         page.loadRelevantArticles('${article.oId}', '<h4>${relevantArticlesLabel}</h4>');
         </#if>
+        Skin.initArticle()
         </@comment_script>    
     </body>
 </html>

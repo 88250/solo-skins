@@ -26,48 +26,28 @@
     <meta name="description" content="${metaDescription},${archiveLabel}"/>
 </@head>
 </head>
-<body>
+<body class="body--gray">
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<main id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <div class="module">
-            <div class="module__content ft__center">
-                <i class="icon__home"></i>
-                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
-                &nbsp; > &nbsp;
-                <i class="icon__inbox"></i>
-            ${statistic.statisticPublishedBlogArticleCount} ${archiveLabel}${articleLabel}
-            </div>
+    <div class="wrapper wrapper--min">
+        <div class="page__title">
+            <span class="ft__red">#</span>
+        ${statistic.statisticPublishedBlogArticleCount} ${archiveLabel}${articleLabel}
         </div>
-        <div class="module">
-            <div class="module__list">
-                <#if 0 != archiveDates?size>
-                    <ul>
-                    <#list archiveDates as archiveDate>
-                        <li>
-                            <#if "en" == localeString?substring(0, 2)>
-                            <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
-                                ${archiveDate.monthName} ${archiveDate.archiveDateYear}
-                                (${archiveDate.archiveDatePublishedArticleCount})
-                            </a>
-                            <#else>
-                            <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
-                                ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
-                                (${archiveDate.archiveDatePublishedArticleCount})
-                            </a>
-                            </#if>
-                        </li>
-                    </#list>
-                    </ul>
-                </#if>
-            </div>
+        <div class="page__content fn__clear">
+        <#if 0 != archiveDates?size>
+            <#list archiveDates as archiveDate>
+                <a class="page__item" href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
+                    ${archiveDate.archiveDateYear} / ${archiveDate.archiveDateMonth}
+                    (${archiveDate.archiveDatePublishedArticleCount})
+                </a>
+            </#list>
+        </#if>
         </div>
-    </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-</div>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
+</main>
 <#include "footer.ftl">
 </body>
 </html>

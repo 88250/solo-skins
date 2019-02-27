@@ -47,151 +47,129 @@
     <meta name="twitter:title" content="${article.articleTitle}"/>
     <meta name="twitter:image" content="${article.authorThumbnailURL}"/>
     <meta name="twitter:url" content="${servePath}${article.articlePermalink}"/>
-    <meta name="twitter:site" content="@DL88250"/>
-    <meta name="twitter:creator" content="@DL88250"/>
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<main id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main id="articlePage">
-        <div class="article-list">
-            <div class="item item--active">
-                <time class="tooltipped tooltipped__n item__date"
-                      aria-label="${article.articleCreateDate?string("yyyy")}${yearLabel}">
-                ${article.articleCreateDate?string("MM")}${monthLabel}
-                    <span class="item__day">${article.articleCreateDate?string("dd")}</span>
-                </time>
-
-                <h2 class="item__title">
-                    <a rel="bookmark" href="${servePath}${article.articlePermalink}">
-                    ${article.articleTitle}
-                    </a>
-                <#if article.articlePutTop>
-                <sup>
-                    ${topArticleLabel}
-                </sup>
-                </#if>
-                <#if article.hasUpdated>
-                <sup>
-                    ${updatedLabel}
-                </sup>
-                </#if>
-                </h2>
-
-                <div class="item__date--m fn__none">
-                    <i class="icon__date"></i>
-                ${article.articleCreateDate?string("yyyy-MM-dd")}
-                </div>
-
-                <div class="ft__center">
-                    <span class="tag">
-                        <i class="icon__tags"></i>
-                        <#list article.articleTags?split(",") as articleTag>
-                        <a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-                            ${articleTag}</a><#if articleTag_has_next>,</#if>
-                        </#list>
-                    </span>
-                    <a class="tag" href="${servePath}${article.articlePermalink}#comments">
-                        <i class="icon__comments"></i> ${article.articleCommentCount} ${commentLabel}
-                    </a>
-                    <span class="tag">
-                        <i class="icon__views"></i>
-                    ${article.articleViewCount} ${viewLabel}
-                    </span>
-                </div>
-
-                <div class="content-reset">
-                ${article.articleContent}
-                    <#if "" != article.articleSign.signHTML?trim>
-                    <div>
-                        ${article.articleSign.signHTML}
-                    </div>
-                    </#if>
-                </div>
-            </div>
+    <div class="post wrapper wrapper--miner">
+        <h2 class="item__title">
+            <a rel="bookmark" href="${servePath}${article.articlePermalink}">
+            ${article.articleTitle}
+            </a>
+            <#if article.articlePutTop>
+            <sup>
+                ${topArticleLabel}
+            </sup>
+            </#if>
+            <#if article.hasUpdated>
+            <sup>
+                ${updatedLabel}
+            </sup>
+            </#if>
+        </h2>
+        <div class="ft__gray item__meta">
+            Published on
+            <time>
+                <#setting locale="en_US">
+            ${article.articleCreateDate?string["MMM d, yyyy"]}
+            </time>
+            <#if article.category??>
+                in <a href="${servePath}/category/${article.category.categoryURI}">${article.category.categoryTitle}</a>
+            </#if>
+            with ${article.articleViewCount} views
+            <#if article.articleCommentCount != 0>
+                and <a href="#comments">${article.articleCommentCount} comments</a>
+            </#if>
         </div>
-
-        <#if previousArticlePermalink?? || nextArticlePermalink??>
-        <div class="module mobile__hidden">
-            <div class="module__content fn__clear">
-                <#if previousArticlePermalink??>
-                    <a href="${servePath}${previousArticlePermalink}" rel="prev" class="fn__left breadcrumb">
-                        ${previousArticleLabel}: ${previousArticleTitle}
-                    </a>
-                </#if>
-                <#if nextArticlePermalink??>
-                    <a href="${servePath}${nextArticlePermalink}" rel="next"
-                       class="fn__right breadcrumb">
-                        ${nextArticleTitle}: ${nextArticleLabel}
-                    </a>
-                </#if>
-            </div>
+        <div class="item__tags">
+             <#list article.articleTags?split(",") as articleTag>
+                 <a rel="tag" class="tag tag--${articleTag_index}" href="${servePath}/tags/${articleTag?url('UTF-8')}">
+                     <b># ${articleTag}</b>
+                 </a>
+             </#list>
         </div>
+        <div class="content-reset">
+        ${article.articleContent}
+        <#if "" != article.articleSign.signHTML?trim>
+            <div>
+                ${article.articleSign.signHTML}
+            </div>
         </#if>
-
-        <#if previousArticlePermalink??>
-        <div class="module mobile__hidden fn__none">
-            <div class="module__content">
-                <a href="${servePath}${previousArticlePermalink}" rel="prev" class="breadcrumb">
-                    ${previousArticleLabel}: ${previousArticleTitle}
-                </a>
-            </div>
         </div>
-        </#if>
-
-        <#if nextArticlePermalink??>
-        <div class="module mobile__hidden fn__none">
-            <div class="module__content">
-                <a href="${servePath}${nextArticlePermalink}" rel="next"
-                   class="breadcrumb">
-                    ${nextArticleLabel}: ${nextArticleTitle}
-                </a>
-            </div>
-        </div>
-        </#if>
-
-        <@comments commentList=articleComments article=article></@comments>
-
-        <div class="fn__flex article__relevant">
-            <div class="fn__flex-1" id="externalRelevantArticlesWrap">
-                <div class="module">
-                    <div id="externalRelevantArticles" class="module__list"></div>
-                </div>
-            </div>
-            <div class="mobile__hidden">&nbsp; &nbsp; &nbsp; &nbsp; </div>
-            <div class="fn__flex-1" id="randomArticlesWrap">
-                <div class="module">
-                    <div id="randomArticles" class="module__list"></div>
-                </div>
-            </div>
-            <div class="mobile__hidden">&nbsp; &nbsp; &nbsp; &nbsp; </div>
-            <div class="fn__flex-1" id="relevantArticlesWrap">
-                <div class="module">
-                    <div id="relevantArticles" class="module__list"></div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-</div>
+    <div class="post__toc"></div>
+    <div class="body--gray post__gray">
+        <div class="wrapper comment">
+            <@comments commentList=articleComments article=article></@comments>
+
+            <div class="post__list fn__flex">
+                <div class="fn__flex-1">
+                    <div id="externalRelevantArticles"></div>
+                </div>
+                <div class="post__list-mid fn__flex-1">
+                    <div id="randomArticles"></div>
+                </div>
+                <div class="fn__flex-1">
+                    <div id="relevantArticles"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="post__fix">
+        <div class="wrapper">
+            <span class="post__share">
+                Share
+                <span class="tag tag--4" data-type="weibo">WeiBo</span>
+                <span class="tag tag--5" data-type="twitter">Twitter</span>
+                <span class="tag tag--6" data-type="qqz">QZone</span>
+                <span class="post__code tag tag--7"
+                      data-type="wechat"
+                      data-title="${article.articleTitle}"
+                      data-blogtitle="${blogTitle}"
+                      data-url="${servePath}${article.articlePermalink}"
+                      data-avatar="${article.authorThumbnailURL}">WeChat</span>
+            </span>
+            <span class="post__arrow">
+                <#if previousArticlePermalink??>
+                <a href="${servePath}${previousArticlePermalink}" rel="prev"
+                   class="tooltipped__n tooltipped"
+                   pjax-title="${previousArticleTitle}"
+                   aria-label="${previousArticleLabel}: ${previousArticleTitle}">←</a>
+                </#if>
+
+                <#if nextArticlePermalink??>
+                 <a href="${servePath}${nextArticlePermalink}" rel="next"
+                    class="tooltipped__n tooltipped"
+                    pjax-title="${nextArticleTitle}"
+                    aria-label="${nextArticleLabel}: ${nextArticleTitle}">→</a>
+                </#if>
+                <a href="javascript:Util.goTop()" class="tooltipped__n tooltipped"
+                   aria-label="${goTopLabel}">↑</a>
+                <a href="javascript:Util.goBottom()" class="tooltipped__n tooltipped"
+                   aria-label="${goBottomLabel}">↓</a>
+            </span>
+        </div>
+    </div>
+<#if pjax><!---- pjax {#pjax} end ----></#if>
+</main>
 <#include "footer.ftl">
+
 <#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId commentable=article.commentable>
-page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
+    page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
     <#if 0 != randomArticlesDisplayCount>
-page.loadRandomArticles('<header class="module__header">${randomArticlesLabel}</header>');
+    page.loadRandomArticles('<h3>RECOMMEND POSTS</h3>');
     </#if>
     <#if 0 != externalRelevantArticlesDisplayCount>
-page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>"
-    , "<header class='module__header'>${externalRelevantArticlesLabel}</header>");
+    page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>",
+    '<h3>HACPAI POSTS</h3>');
     </#if>
     <#if 0 != relevantArticlesDisplayCount>
-    page.loadRelevantArticles('${article.oId}',
-    '<header class="module__header">${relevantArticlesLabel}</header>');
+    page.loadRelevantArticles('${article.oId}', '<h3>RELEVANT POSTS</h3>');
     </#if>
+Skin.initArticle()
 </@comment_script>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>

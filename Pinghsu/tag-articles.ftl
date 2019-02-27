@@ -27,28 +27,19 @@
           content="<#list articles as article>${article.articleTitle}<#if article_has_next>,</#if></#list>"/>
 </@head>
 </head>
-<body>
+<body class="body--gray">
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<main id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <div class="module">
-            <div class="module__content ft__center">
-                <i class="icon__home"></i>
-                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
-                &nbsp; > &nbsp;
-                <i class="icon__tags"></i>
-                <a href="${servePath}/tags.html" class="breadcrumb">${allTagsLabel}</a>
-                &nbsp; > &nbsp;
-                ${tag.tagTitle} ${tagLabel}
-            </div>
+    <div class="wrapper wrapper--min">
+        <div class="page__title">
+            <span class="ft__red">#</span>
+            ${tag.tagTitle} ${tagLabel}
         </div>
         <#include "article-list.ftl">
-    </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-</div>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
+</main>
 <#include "footer.ftl">
 </body>
 </html>

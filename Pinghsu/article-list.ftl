@@ -17,7 +17,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<div class="article-list fn__clear">
+<main class="article-list fn__clear">
     <#list articles as article>
         <article class="item">
             <div class="item__container">
@@ -57,7 +57,7 @@
             </div>
         </article>
     </#list>
-</div>
+</main>
 <#if 0 != paginationPageCount>
     <nav class="pagination">
         <#if 1 != paginationPageNums?first>

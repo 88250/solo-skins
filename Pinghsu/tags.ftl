@@ -26,36 +26,28 @@
     <meta name="description" content="<#list tags as tag>${tag.tagTitle}<#if tag_has_next>,</#if></#list>"/>
 </@head>
 </head>
-<body>
+<body class="body--gray">
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<main id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <div class="module">
-            <div class="module__content ft__center">
-                <i class="icon__home"></i>
-                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
-                &nbsp; > &nbsp;
-                <i class="icon__tags"></i> ${sumLabel} ${tags?size} ${tagLabel}
-            </div>
+    <div class="wrapper--min wrapper">
+        <div class="page__title">
+            <span class="ft__red">#</span>
+            ${sumLabel} ${tags?size} ${tagLabel}
         </div>
 
-        <div class="module">
-            <div class="module__content fn__clear tags">
-                 <#list tags as tag>
-                 <a rel="tag" data-count="${tag.tagPublishedRefCount}" class="tag"
-                    href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
-                     <span class="name">${tag.tagTitle}</span>
-                     (<b>${tag.tagPublishedRefCount}</b>)
-                 </a>
-                 </#list>
-            </div>
+        <div class="page__content page__tags fn__clear">
+         <#list tags as tag>
+             <a rel="tag" data-count="${tag.tagPublishedRefCount}" class="tag tag--${tag_index % 10}"
+                href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
+                 <span class="name">${tag.tagTitle}</span>
+                 (<b>${tag.tagPublishedRefCount}</b>)
+             </a>
+         </#list>
         </div>
-    </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-</div>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
+</main>
 <#include "footer.ftl">
 </body>
 </html>

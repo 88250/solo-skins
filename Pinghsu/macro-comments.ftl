@@ -18,26 +18,16 @@
 
 -->
 <#macro comments commentList article>
-<div class="comments__item">
-    <div class="comments__meta comments__meta--only">${commentLabel}</div>
+<div class="comment__title">
+    Responses
 </div>
+    <#if article.commentable>
+     <textarea rows="3" placeholder="Your comment here. Be cool. " id="comment"></textarea>
+    </#if>
 
-<ul class="comments" id="comments">
+<ul id="comments">
     <#list commentList as comment>
         <#include 'common-comment.ftl'/>
     </#list>
 </ul>
-
-<#if article.commentable>
-<div class="comments__item">
-    <div class="comments__meta">
-        ${postCommentsLabel}
-    </div>
-    <div class="comments__content">
-        <div class="form">
-            <textarea rows="3" placeholder="${postCommentsLabel}" id="comment"></textarea>
-        </div>
-    </div>
-</div>
-</#if>
 </#macro>

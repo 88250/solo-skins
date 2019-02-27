@@ -26,41 +26,30 @@
     <meta name="description" content="${metaDescription},${linkLabel}"/>
 </@head>
 </head>
-<body>
+<body class="body--gray">
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<main id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <main>
-        <div class="module">
-            <div class="module__content ft__center">
-                <i class="icon__home"></i>
-                <a href="${servePath}" class="breadcrumb">${blogTitle}</a>
-                &nbsp; > &nbsp;
-                <i class="icon__link"></i>
+    <div class="wrapper--min wrapper">
+        <div class="page__title">
+            <span class="ft__red">#</span>
             ${linkLabel}
-            </div>
         </div>
-        <div class="module">
-            <div class="module__list">
-                <#if 0 != links?size>
-                    <ul class="list">
-                    <#list links as link>
-                        <li>
-                            <a rel="friend" href="${link.linkAddress}" title="${link.linkDescription}"
-                               target="_blank">
-                                ${link.linkTitle}
-                            </a>
-                        </li>
-                    </#list>
-                    </ul>
-                </#if>
-            </div>
+        <div class="page__content fn__clear">
+        <#if 0 != links?size>
+            <#list links as link>
+                <a rel="friend" href="${link.linkAddress}"
+                   class="page__item"
+                   title="${link.linkDescription}"
+                   target="_blank">
+                    ${link.linkTitle}
+                </a>
+            </#list>
+        </#if>
         </div>
-    </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
-</div>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
+</main>
 <#include "footer.ftl">
 </body>
 </html>

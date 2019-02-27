@@ -47,8 +47,6 @@
     <meta name="twitter:title" content="${article.articleTitle}"/>
     <meta name="twitter:image" content="${article.authorThumbnailURL}"/>
     <meta name="twitter:url" content="${servePath}${article.articlePermalink}"/>
-    <meta name="twitter:site" content="@DL88250"/>
-    <meta name="twitter:creator" content="@DL88250"/>
 </head>
 <body>
 <#include "header.ftl">
@@ -181,18 +179,17 @@
 <#include "footer.ftl">
 <#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId commentable=article.commentable>
-page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
+    page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
     <#if 0 != randomArticlesDisplayCount>
-page.loadRandomArticles('<header class="module__header">${randomArticlesLabel}</header>');
+    page.loadRandomArticles('<header class="module__header">${randomArticlesLabel}</header>');
     </#if>
     <#if 0 != externalRelevantArticlesDisplayCount>
-page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>"
-    , "<header class='module__header'>${externalRelevantArticlesLabel}</header>");
+    page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>" , "<header class='module__header'>${externalRelevantArticlesLabel}</header>");
     </#if>
     <#if 0 != relevantArticlesDisplayCount>
-    page.loadRelevantArticles('${article.oId}',
-    '<header class="module__header">${relevantArticlesLabel}</header>');
+    page.loadRelevantArticles('${article.oId}', '<header class="module__header">${relevantArticlesLabel}</header>');
     </#if>
+    Skin.initArticle()
 </@comment_script>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>

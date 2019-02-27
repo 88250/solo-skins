@@ -27,23 +27,6 @@
  * @static
  */
 var Skin = {
-  _initCommon: function ($goTop) {
-    $(window).scroll(function () {
-      if ($(window).scrollTop() > 125) {
-        $goTop.show()
-      } else {
-        $goTop.hide()
-      }
-
-      if ($('.side .b3-solo-list').length > 0) {
-        if ($(window).scrollTop() > 50) {
-          $('.side').css('position', 'fixed')
-        } else {
-          $('.side').css('position', 'initial')
-        }
-      }
-    })
-  },
   init: function () {
     var header = new Headroom($('header')[0], {
       tolerance: 0,
@@ -61,87 +44,117 @@ var Skin = {
     header.init()
 
     Util.initPjax(function () {
-      if ($('#articlePage').length === 0) {
-        $('.b3-solo-list').closest('.module').remove()
+      if ($('.post__fix').length === 0) {
+        $('body').addClass('body--gray')
+      } else {
+        $('body').removeClass('body--gray')
       }
+      $('.header__nav a').each(function () {
+        $('.header__nav a').removeClass('current')
+        if (this.href === location.href) {
+          this.className = 'current'
+        }
+      })
     })
 
     $('body').on('click', '.content-reset img', function () {
       window.open(this.src)
     })
 
-    this._initCommon($('.icon__up'))
-
-    $('.header__nav a, .header__m a').each(function () {
+    $('.header__nav a').each(function () {
       if (this.href === location.href) {
         this.className = 'current'
       }
     }).click(function () {
-      $('.header__nav a, .header__m a').removeClass('current')
-      this.className = 'current'
-      $('.header__m .module__list').hide()
-    })
-
-    $('.header__logo').click(function () {
-      $('.header__nav a, .header__m a').removeClass('current')
+      $('.header__nav a').removeClass('current')
+      if (this.href === location.href) {
+        this.className = 'current'
+      }
     })
   },
-  _initArticleCommon: function () {
-    if ($(window).width() > 768) {
-      if ($('#articlePage .b3-solo-list li').length === 0) {
-        $('.side .b3-solo-list').closest('.module').remove()
-        $('.side').css({
-          height: 'auto',
-          position: 'initial',
-        })
+  _initToc: function () {
+    if ($('.content-reset .b3-solo-list li').length === 0 || $(window).width() < 768) {
+      $('.post__toc .b3-solo-list').remove()
+      return
+    }
+
+    $('.post__toc').html($('.b3-solo-list')).css('left', $('.post').offset().left + $('.post').outerWidth())
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 72) {
+        $('.post__toc').show()
+      } else {
+        $('.post__toc').hide()
+      }
+    })
+  },
+  _initShare: function () {
+    var $this = $('.post__share')
+    var $qrCode = $this.find('.post__code')
+    var shareURL = $qrCode.data('url')
+    var avatarURL = $qrCode.data('avatar')
+    var title = encodeURIComponent($qrCode.data('title') + ' - ' +
+      $qrCode.data('blogtitle')),
+      url = encodeURIComponent(shareURL)
+
+    var urls = {}
+    urls.weibo = 'http://v.t.sina.com.cn/share/share.php?title=' +
+      title + '&url=' + url + '&pic=' + avatarURL
+    urls.qqz = 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='
+      + url + '&sharesource=qzone&title=' + title + '&pics=' + avatarURL
+    urls.twitter = 'https://twitter.com/intent/tweet?status=' + title + ' ' +
+      url
+
+    $this.find('span').click(function () {
+      var key = $(this).data('type')
+
+      if (!key) {
         return
       }
 
-      $('#articlePage').width($('.main').width() - 310)
-      if ($('.side .b3-solo-list').length === 0) {
-        $('.side').
-          prepend('<div class="module"><div class="module__list"></div></div>').
-          css({
-            right: ($(window).width() - $('.main').width()) / 2,
-            position: 'fixed',
-            overflow: 'auto',
-            height: $(window).height() - 30,
-            top: 30,
+      if (key === 'wechat') {
+        if ($qrCode.find('canvas').length === 0) {
+          $.ajax({
+            method: 'GET',
+            url: latkeConfig.staticServePath +
+            '/skins/Pinghsu/js/jquery.qrcode.min.js',
+            dataType: 'script',
+            cache: true,
+            success: function () {
+              $qrCode.qrcode({
+                width: 128,
+                height: 128,
+                text: shareURL,
+              })
+            },
           })
+        } else {
+          $qrCode.find('canvas').slideToggle()
+        }
+        return false
       }
-      $('.side .module:eq(0) .module__list').html($('.b3-solo-list'))
-      $(window).scroll()
-      $('.side').scrollTop(0)
-    } else {
-      if ($('#articlePage .b3-solo-list li').length === 0) {
-        $('.header__m .icon__list').hide().next().hide()
-        return
-      }
-      $('.header__m .icon__list').show().next().html($('.b3-solo-list'))
-      $('.b3-solo-list a').click(function () {
-        $(this).closest('.module__list').hide()
-      })
-    }
+
+      window.open(urls[key], '_blank', 'top=100,left=200,width=648,height=618')
+    })
   },
   initArticle: function () {
-    this._initArticleCommon()
+    var postSharer = new Headroom($('.post__fix')[0], {
+      tolerance: 0,
+      offset: 48,
+      classes: {
+        initial: 'post__fix',
+        pinned: 'post__fix--pinned',
+        unpinned: 'post__fix--unpinned',
+        top: 'post__fix',
+        notTop: 'post__fix',
+        bottom: 'post__fix',
+        notBottom: 'post__fix',
+      },
+    })
+    postSharer.init()
 
-    setTimeout(function () {
-      if ($('#externalRelevantArticlesWrap li').length === 0) {
-        $('#externalRelevantArticlesWrap').next().remove()
-        $('#externalRelevantArticlesWrap').remove()
-      }
-
-      if ($('#relevantArticlesWrap li').length === 0) {
-        $('#relevantArticlesWrap').prev().remove()
-        $('#relevantArticlesWrap').remove()
-      }
-
-      if ($('#randomArticlesWrap li').length === 0) {
-        $('#randomArticlesWrap').prev().remove()
-        $('#randomArticlesWrap').remove()
-      }
-    }, 1000)
+    Skin._initShare()
+    Skin._initToc()
   },
 }
 Skin.init()
