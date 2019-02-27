@@ -73,7 +73,7 @@ var Skin = {
     })
   },
   _initToc: function () {
-    if ($('.content-reset .b3-solo-list li').length === 0 || $(window).width() < 768) {
+    if ($('.content-reset .b3-solo-list li').length === 0 || $(window).width() < 746) {
       $('.post__toc .b3-solo-list').remove()
       return
     }

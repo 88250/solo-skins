@@ -119,7 +119,7 @@
 
     <div class="post__fix">
         <div class="wrapper">
-            <span class="post__share">
+            <span class="post__share mobile__none">
                 Share
                 <span class="tag tag--4" data-type="weibo">WeiBo</span>
                 <span class="tag tag--5" data-type="twitter">Twitter</span>

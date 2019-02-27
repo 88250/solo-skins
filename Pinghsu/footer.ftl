@@ -18,7 +18,7 @@
 
 -->
 <footer class="footer">
-    <nav class="footer__nav">
+    <nav class="footer__nav mobile__none">
         <#list pageNavigations as page>
             <a href="${page.pagePermalink}" target="${page.pageOpenTarget}" rel="section">
                 ${page.pageTitle}
@@ -32,9 +32,9 @@
         <a href="${servePath}/start">${startToUseLabel}</a>
         </#if>
     </nav>
-    <div class="footer__border"></div>
+    <div class="footer__border mobile__none"></div>
     <div class="wrapper fn__flex">
-        <div class="fn__flex-1">
+        <div class="fn__flex-1 mobile__none">
             <div class="ft__gray">${adminUser.userName} - ${blogSubtitle}</div><br>
             <#if noticeBoard??>
                 ${noticeBoard}
@@ -42,7 +42,7 @@
         </div>
 
         <#if 0 != mostUsedCategories?size>
-            <div class="footer__mid fn__flex-1">
+            <div class="footer__mid fn__flex-1 mobile__none">
                 <div class="ft__gray">${categoryLabel}</div> <br>
                 <#list mostUsedCategories as category>
                     <a href="${servePath}/category/${category.categoryURI}"

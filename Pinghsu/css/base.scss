@@ -107,7 +107,7 @@ a:active, a:focus, a:hover {
 }
 
 .wrapper {
-  width: 1024px;
+  max-width: 1024px;
   padding: 0 10px;
   box-sizing: border-box;
   margin: 0 auto;
@@ -154,6 +154,11 @@ a:active, a:focus, a:hover {
       margin: 0 15px;
       &.current {
         color: #eb5055;
+      }
+
+      &.search {
+        float: right;
+        margin-top: 5px;
       }
     }
   }
@@ -453,10 +458,9 @@ a:active, a:focus, a:hover {
 
     &__tags {
       border-bottom: 1px solid #e0e0e0;
-      padding-bottom: 15px;
       margin-bottom: 15px;
-      .tag--0 {
-        margin-left: 0;
+      .tag {
+        margin: 0 10px 15px 0;
       }
     }
   }
@@ -543,7 +547,7 @@ a:active, a:focus, a:hover {
 }
 
 .comment {
-  width: 700px;
+  max-width: 700px;
   box-sizing: border-box;
   &-body-ref {
     position: absolute;
@@ -646,6 +650,85 @@ a:active, a:focus, a:hover {
   &__tags {
     .tag {
       margin: 15px;
+    }
+  }
+}
+
+@media (max-width: 746px) {
+  .mobile__none {
+    display: none;
+  }
+  .footer__copyright {
+    text-align: right;
+  }
+  .footer .wrapper {
+    padding: 10px 20px;
+  }
+  .article-list .item {
+    padding: 5px 0;
+    width: 100%;
+  }
+  .wrapper--min {
+    padding-top: 75px;
+  }
+  .wrapper--miner {
+    padding-top: 85px;
+  }
+  .page__title {
+    padding: 0;
+  }
+  .post__list {
+    display: block;
+  }
+  .post__list-mid {
+    margin: 20px 0;
+  }
+  .comment__title {
+    padding: 10px;
+  }
+  .comment #comment {
+    padding: 10px;
+    margin-bottom: 0;
+  }
+  .comment .item {
+    padding: 10px;
+    margin: 10px 0;
+  }
+  .page__item {
+    float: none;
+    display: block;
+    padding: 10px;
+    margin: 0 0 10px 0;
+  }
+  .page__content {
+    margin: 0;
+  }
+  .page__bottom {
+    height: 1px;
+  }
+  .page__tags .tag {
+    margin: 0 10px 10px 0;
+  }
+  .header__bar {
+    display: block;
+    float: right;
+    margin-top: 6px;
+  }
+  .header__menu {
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    left: 0;
+    li {
+      list-style: none;
+      a {
+        display: block;
+        line-height: 30px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #fff;
+      }
     }
   }
 }

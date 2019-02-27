@@ -50,7 +50,7 @@
                 <span class="tag tag--4" data-type="weibo">WeiBo</span>
                 <span class="tag tag--5" data-type="twitter">Twitter</span>
                 <span class="tag tag--6" data-type="qqz">QZone</span>
-                <span class="post__code tag tag--7"
+                <span class="post__code tag tag--7 mobile__none"
                       data-type="wechat"
                       data-title="${page.pageTitle}"
                       data-blogtitle="${blogTitle}"
