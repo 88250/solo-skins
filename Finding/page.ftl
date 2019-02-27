@@ -41,10 +41,15 @@
                     </section>
                     <footer>
                         <div class="share fn-right">
-                            <span class="icon icon-tencent" data-type="tencent"></span>
+                            <span class="icon icon-wechat"
+                                  data-type="wechat"
+                                  data-title="${page.pageTitle}"
+                                  data-blogtitle="${blogTitle}"
+                                  data-url="${servePath}${page.pagePermalink}"
+                                  data-avatar="${adminUser.userAvatar}"></span>
                             <span class="icon icon-weibo" data-type="weibo"></span>
                             <span class="icon icon-twitter" data-type="twitter"></span>
-                            <span class="icon icon-google" data-type="google"></span>
+                            <span class="icon icon-qqz" data-type="qqz"></span>
                         </div>
                     </footer>
                 </article>

@@ -19,7 +19,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 1.2.0.0, Nov 3, 2015
+ * @version 1.3.0.0, Feb 27, 2019
  */
 
 /**
@@ -75,20 +75,53 @@ var Yilia = {
         });
     },
     share: function () {
-        $(".share span").click(function () {
-            var key = $(this).data("type");
-            var title = encodeURIComponent($("title").text()),
-                    url = $(".post-title a").attr('href') ? $(".post-title a").attr('href') : location,
-                    pic = $(".post-content img:eq(0)").attr("src");
-            var urls = {};
-            urls.tencent = "http://share.v.t.qq.com/index.php?c=share&a=index&title=" + title +
-                    "&url=" + url + "&pic=" + pic;
-            urls.weibo = "http://v.t.sina.com.cn/share/share.php?title=" +
-                    title + "&url=" + url + "&pic=" + pic;
-            urls.google = "https://plus.google.com/share?url=" + url;
-            urls.twitter = "https://twitter.com/intent/tweet?status=" + title + " " + url;
-            window.open(urls[key], "_blank", "top=100,left=200,width=648,height=618");
-        });
+      var $this = $('.share .fn-right')
+      var $qrCode = $this.find('.icon-wechat')
+      var shareURL = $qrCode.data('url')
+      var avatarURL = $qrCode.data('avatar')
+      var title = encodeURIComponent($qrCode.data('title') + ' - ' +
+        $qrCode.data('blogtitle')),
+        url = encodeURIComponent(shareURL)
+
+      var urls = {}
+      urls.weibo = 'http://v.t.sina.com.cn/share/share.php?title=' +
+        title + '&url=' + url + '&pic=' + avatarURL
+      urls.qqz = 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='
+        + url + '&sharesource=qzone&title=' + title + '&pics=' + avatarURL
+      urls.twitter = 'https://twitter.com/intent/tweet?status=' + title + ' ' +
+        url
+
+      $this.find('span').click(function () {
+        var key = $(this).data('type')
+
+        if (!key) {
+          return
+        }
+
+        if (key === 'wechat') {
+          if ($qrCode.find('canvas').length === 0) {
+            $.ajax({
+              method: 'GET',
+              url: latkeConfig.staticServePath +
+              '/skins/yilia/js/jquery.qrcode.min.js',
+              dataType: 'script',
+              cache: true,
+              success: function () {
+                $qrCode.qrcode({
+                  width: 128,
+                  height: 128,
+                  text: shareURL,
+                })
+              },
+            })
+          } else {
+            $qrCode.find('canvas').slideToggle()
+          }
+          return false
+        }
+
+        window.open(urls[key], '_blank', 'top=100,left=200,width=648,height=618')
+      })
     }
 };
 

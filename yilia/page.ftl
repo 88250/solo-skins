@@ -37,10 +37,15 @@
                 </section>
                 <footer class="fn-clear share">
                     <div class="fn-right">
-                        <span class="icon icon-t-weibo" data-type="tencent"></span>
+                        <span class="icon icon-wechat"
+                              data-type="wechat"
+                              data-title="${page.pageTitle}"
+                              data-blogtitle="${blogTitle}"
+                              data-url="${servePath}${page.pagePermalink}"
+                              data-avatar="${adminUser.userAvatar}"></span>
                         <span class="icon icon-weibo" data-type="weibo"></span>
                         <span class="icon icon-twitter" data-type="twitter"></span>
-                        <span class="icon icon-gplus" data-type="google"></span>
+                        <span class="icon icon-qqz" data-type="qqz"></span>
                     </div>
                 </footer>
             </article>
@@ -48,7 +53,9 @@
 
             <#include "footer.ftl">
 
-            <@comment_script oId=page.oId commentable=page.commentable></@comment_script>
+            <@comment_script oId=page.oId commentable=page.commentable>
+                Yilia.share()
+            </@comment_script>
         </main>
     </body>
 </html>
