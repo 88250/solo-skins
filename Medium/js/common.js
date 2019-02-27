@@ -19,7 +19,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.1.0.0, Jan 29, 2018
+ * @version 0.1.0.0, Feb 27, 2019
  */
 
 /**
@@ -176,7 +176,8 @@ var Skin = {
       '&url=' + url + '&pic=' + avatarURL
     urls.weibo = 'http://v.t.sina.com.cn/share/share.php?title=' +
       title + '&url=' + url + '&pic=' + avatarURL
-    urls.google = 'https://plus.google.com/share?url=' + url
+    urls.qqz = 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='
+      + url + '&sharesource=qzone&title=' + title + '&pics=' + avatarURL
     urls.twitter = 'https://twitter.com/intent/tweet?status=' + title + ' ' + url
 
     $this.find('span').click(function () {

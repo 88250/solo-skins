@@ -101,10 +101,15 @@
                             </a>
                         </figure>
                         <div class="share fn-right">
-                            <span class="icon icon-tencent" data-type="tencent"></span>
+                            <span class="icon icon-wechat"
+                                  data-type="wechat"
+                                  data-title="${article.articleTitle}"
+                                  data-blogtitle="${blogTitle}"
+                                  data-url="${servePath}${article.articlePermalink}"
+                                  data-avatar="${article.authorThumbnailURL}"></span>
                             <span class="icon icon-weibo" data-type="weibo"></span>
                             <span class="icon icon-twitter" data-type="twitter"></span>
-                            <span class="icon icon-google" data-type="google"></span>
+                            <span class="icon icon-qqz" data-type="qqz"></span>
                         </div>
                     </footer>
                 </article>

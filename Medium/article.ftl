@@ -119,8 +119,8 @@
                         <span class="post__share-icon" data-type="twitter">
                             <svg><use xlink:href="#icon-twitter"></use></svg>
                         </span> &nbsp; &nbsp;
-                        <span class="post__share-icon" data-type="google">
-                            <svg><use xlink:href="#icon-google"></use></svg>
+                        <span class="post__share-icon" data-type="qqz">
+                            <svg><use xlink:href="#icon-qqz"></use></svg>
                         </span>
                         <span class="article__code"
                               data-title="${article.articleTitle}"
@@ -167,8 +167,8 @@
                     <span class="post__share-icon" data-type="twitter">
                         <svg><use xlink:href="#icon-twitter"></use></svg>
                     </span> &nbsp; &nbsp;
-                    <span class="post__share-icon" data-type="google">
-                        <svg><use xlink:href="#icon-google"></use></svg>
+                    <span class="post__share-icon" data-type="qqz">
+                        <svg><use xlink:href="#icon-qqz"></use></svg>
                     </span>
                     <span class="article__code"
                           data-title="${article.articleTitle}"
@@ -206,8 +206,8 @@
                 <span class="post__share-icon" data-type="twitter">
                 <svg><use xlink:href="#icon-twitter"></use></svg>
             </span> &nbsp; &nbsp;
-                <span class="post__share-icon" data-type="google">
-                <svg><use xlink:href="#icon-google"></use></svg>
+                <span class="post__share-icon" data-type="qqz">
+                <svg><use xlink:href="#icon-qqz"></use></svg>
             </span>
                 <span class="article__code"
                       data-title="${article.articleTitle}"
