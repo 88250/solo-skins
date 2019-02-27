@@ -159,7 +159,7 @@ var Finding = {
           $.ajax({
             method: 'GET',
             url: latkeConfig.staticServePath +
-            '/skins/Finding/js/jquery.qrcode.min.js',
+            '/js/lib/jquery.qrcode.min.js',
             dataType: 'script',
             cache: true,
             success: function () {

@@ -20,7 +20,8 @@
 <div class="article-list fn-clear">
     <#list articles as article>
     <div>
-        <div class="article-abstract">
+        <img src="${article.articleImg1URL}"/>
+        <div class="article-abstract article-image">
             <div class="fn-clear">
                 <div class="article-date" data-ico="&#xe200;">
                     <#if article.hasUpdated>

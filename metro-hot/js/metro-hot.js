@@ -19,7 +19,7 @@
  * @fileoverview metro-hot js.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 1.0.1.0, Sep 30, 2013
+ * @version 1.1.0.0, Feb 27, 2019
  */
 
 var MetroHot = {
@@ -150,18 +150,6 @@ var MetroHot = {
 
         $(window).scroll();
     },
-    initArticleList: function() {
-        $(".article-list .article-abstract").each(function() {
-            var $it = $(this);
-            var $images = $it.find("img");
-            if ($images.length > 0) {
-                $it.addClass("article-image");
-                $images.hide();
-
-                $it.before("<img onload='MetroHot.loadImg(this);' src='" + $($images[0]).attr("src") + "'/>");
-            }
-        });
-    },
     /**
      * @description 计算图片 margin-top
      * @param {BOM} it 图片元素
@@ -173,20 +161,53 @@ var MetroHot = {
      * @description 分享按钮
      */
     share: function() {
-        var title = encodeURIComponent($("title").text()),
-                url = window.location.href,
-                pic = $(".content-reset img").attr("src");
-        var urls = {};
-        urls.tencent = "http://share.v.t.qq.com/index.php?c=share&a=index&title=" + title +
-                "&url=" + url + "&pic=" + pic;
-        urls.sina = "http://v.t.sina.com.cn/share/share.php?title=" +
-                title + "&url=" + url + "&pic=" + pic;
-        urls.google = "https://plus.google.com/share?url=" + url;
-        urls.twitter = "https://twitter.com/intent/tweet?status=" + title + " " + url;
-        $(".share span").click(function() {
-            var key = $(this).attr("title").toLowerCase();
-            window.open(urls[key], "_blank", "top=100,left=200,width=648,height=618");
-        });
+      var $this = $('.share .text')
+      var $qrCode = $this.find('.icon-wechat')
+      var shareURL = $qrCode.data('url')
+      var avatarURL = $qrCode.data('avatar')
+      var title = encodeURIComponent($qrCode.data('title') + ' - ' +
+        $qrCode.data('blogtitle')),
+        url = encodeURIComponent(shareURL)
+
+      var urls = {}
+      urls.weibo = 'http://v.t.sina.com.cn/share/share.php?title=' +
+        title + '&url=' + url + '&pic=' + avatarURL
+      urls.qqz = 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='
+        + url + '&sharesource=qzone&title=' + title + '&pics=' + avatarURL
+      urls.twitter = 'https://twitter.com/intent/tweet?status=' + title + ' ' +
+        url
+
+      $this.find('span').click(function () {
+        var key = $(this).data('type')
+
+        if (!key) {
+          return
+        }
+
+        if (key === 'wechat') {
+          if ($qrCode.find('canvas').length === 0) {
+            $.ajax({
+              method: 'GET',
+              url: latkeConfig.staticServePath +
+              '/js/lib/jquery.qrcode.min.js',
+              dataType: 'script',
+              cache: true,
+              success: function () {
+                $qrCode.qrcode({
+                  width: 111,
+                  height: 111,
+                  text: shareURL,
+                })
+              },
+            })
+          } else {
+            $qrCode.find('canvas').slideToggle()
+          }
+          return false
+        }
+
+        window.open(urls[key], '_blank', 'top=100,left=200,width=648,height=618')
+      })
     },
     /*
      * @description 加载随机文章
@@ -304,7 +325,5 @@ var MetroHot = {
     Util.killIE();
     if ($(".article-header").length > 0) {
         MetroHot.share();
-    } else {
-        MetroHot.initArticleList();
     }
 })();

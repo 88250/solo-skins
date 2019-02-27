@@ -72,10 +72,24 @@
                 ${shareLabel}
             </div>
             <div class="text">
-                <span data-ico="&#xe0c1;" title="Tencent"></span>
-                <span data-ico="&#xe185;" title="Sina"></span>
-                <span data-ico="&#xe092;" title="Twitter"></span>
-                <span data-ico="&#xe08e;" title="Google"></span>
+                <#if article??>
+                <span class="icon-wechat"
+                      data-type="wechat"
+                      data-title="${article.articleTitle}"
+                      data-blogtitle="${blogTitle}"
+                      data-url="${servePath}${article.articlePermalink}"
+                      data-avatar="${article.authorThumbnailURL}">微信</span>
+                <#else>
+                <span class="icon-wechat"
+                      data-type="wechat"
+                      data-title="${page.pageTitle}"
+                      data-blogtitle="${blogTitle}"
+                      data-url="${servePath}${page.pagePermalink}"
+                      data-avatar="${adminUser.userAvatar}">微信</span>
+                </#if>
+                <span data-type="weibo">微博</span>
+                <span data-type="twitter">Twitter</span>
+                <span data-type="qqz">QQ</span>
             </div>
         </div>
 

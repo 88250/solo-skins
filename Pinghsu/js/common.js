@@ -117,7 +117,7 @@ var Skin = {
           $.ajax({
             method: 'GET',
             url: latkeConfig.staticServePath +
-            '/skins/Pinghsu/js/jquery.qrcode.min.js',
+            '/js/lib/jquery.qrcode.min.js',
             dataType: 'script',
             cache: true,
             success: function () {
