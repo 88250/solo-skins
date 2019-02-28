@@ -319,7 +319,9 @@ a:active, a:focus, a:hover {
       word-break: break-all;
       box-sizing: border-box;
       transition: all .5s;
-      & > div {
+      & > a {
+        color: #fff;
+        display: block;
         opacity: 0;
         overflow: hidden;
         -webkit-line-clamp: 7;
@@ -343,13 +345,6 @@ a:active, a:focus, a:hover {
         -webkit-box-orient: vertical;
         display: -webkit-box;
       }
-      sup {
-        font-weight: normal;
-        font-size: 12px;
-        float: left;
-        top: -33px;
-        color: $red;
-      }
     }
 
     &__tag {
@@ -367,7 +362,7 @@ a:active, a:focus, a:hover {
         }
         &__abstract {
           background-color: rgba(0, 0, 0, .5);
-          & > div {
+          & > a {
             animation: fade-in;
             animation-duration: .5s;
             opacity: 1;

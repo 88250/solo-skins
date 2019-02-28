@@ -23,27 +23,27 @@
             <div class="item__container">
                 <div class="item__cover" style="background-image: url(${article.articleImg1URL})"></div>
                 <div rel="bookmark" class="item__abstract">
-                    <div>
+                    <a pjax-title="${article.articleTitle}" href="${servePath}${article.articlePermalink}">
                         ${article.articleAbstractText}
-                    </div>
+                    </a>
                 </div>
                 <div class="item__slant"></div>
                 <div class="item__slant item__slant--white"></div>
                 <div class="item__main">
-                    <h2 class="item__title">
-                        <a rel="bookmark" href="${servePath}${article.articlePermalink}">
-                            ${article.articleTitle}
-                        </a>
                     <#if article.articlePutTop>
-                    <sup>
+                    <sup class="ft__red">
                         ${topArticleLabel}
                     </sup>
                     </#if>
                     <#if article.hasUpdated>
-                    <sup>
+                    <sup class="ft__red">
                         ${updatedLabel}
                     </sup>
                     </#if>
+                    <h2 class="item__title">
+                        <a rel="bookmark" href="${servePath}${article.articlePermalink}">
+                            ${article.articleTitle}
+                        </a>
                     </h2>
                 <#list article.articleTags?split(",") as articleTag>
                     <#if articleTag_index == 0>
