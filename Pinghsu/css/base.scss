@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.1.0.0, Feb 26, 2019
+ * @version 0.1.0.1, Feb 28, 2019
 */
 @import "../../../scss/reset";
 @import "../../../scss/reset-content";
@@ -30,26 +30,33 @@
 @import "icon";
 @import "vditor/src/assets/scss/classic";
 
+$red: #eb5055 !default;
+$black: #313131 !default;
+$fade: rgba(0,0,0,.38) !default;
+$gray:  #5f5f5f !default;
+$gray-lighter: #e0e0e0 !default;
+$gray-lightest: #f7f7f7 !default;
+
 .body--gray {
-  background-color: #f7f7f7;
+  background-color: $gray-lightest;
 }
 
 a {
   text-decoration: none;
-  color: #313131;
+  color: $black;
   outline: 0;
   transition: all .3s;
 }
 
 a:active, a:focus, a:hover {
-  color: #eb5055;
+  color: $red;
   outline: 0;
   text-decoration: none;
 }
 
 ::selection {
   color: #fff;
-  background-color: #eb5055;
+  background-color: $red;
 }
 
 .content-reset {
@@ -57,14 +64,30 @@ a:active, a:focus, a:hover {
   .b3-solo-list {
     display: none;
   }
+
+  a {
+    color: $black;
+    border-bottom: 1px solid $gray-lighter;
+    &:hover {
+      color: $red;
+      border-bottom: 1px solid $red;
+    }
+  }
 }
 
-.ft__gray {
-  color: #767676;
+.ft__fade {
+  color: $fade;
 }
 
 .ft__red {
-  color: #eb5055;
+  color: $red;
+}
+
+.ft__link {
+  color: $gray;
+  &:hover {
+    color: #000;
+  }
 }
 
 .tag {
@@ -79,8 +102,8 @@ a:active, a:focus, a:hover {
   border-radius: 12px;
   margin-left: 10px;
   &:hover {
-    color: #5f5f5f;
-    background: #f7f7f7;
+    color: $gray;
+    background: $gray-lighter;
   }
 
   &--1 {
@@ -90,7 +113,7 @@ a:active, a:focus, a:hover {
     background: #46c47c;
   }
   &--3 {
-    background: #eb5055;
+    background: $red;
   }
   &--4 {
     background: #db4437;
@@ -138,7 +161,6 @@ a:active, a:focus, a:hover {
   height: 70px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
   &__logo {
-    color: #4d4d4d;
     font-size: 20px;
     img {
       margin: 10px 5px 0 0;
@@ -153,7 +175,7 @@ a:active, a:focus, a:hover {
     a {
       margin: 0 15px;
       &.current {
-        color: #eb5055;
+        color: $red;
       }
 
       &.search {
@@ -231,17 +253,10 @@ a:active, a:focus, a:hover {
   &__copyright {
     font-size: 12px;
     text-align: center;
-    color: #767676;
+    color: $fade;
   }
   .wrapper {
     padding-bottom: 40px;
-  }
-
-  a {
-    color: #5f5f5f;
-    &:hover {
-      color: #313131;
-    }
   }
 }
 
@@ -333,13 +348,13 @@ a:active, a:focus, a:hover {
         font-size: 12px;
         float: left;
         top: -33px;
-        color: #eb5055;
+        color: $red;
       }
     }
 
     &__tag {
       float: right;
-      color: #5f5f5f;
+      color: $gray;
       margin: 12px 10px;
     }
 
@@ -367,11 +382,11 @@ a:active, a:focus, a:hover {
   text-align: center;
   margin: 25px 0 40px;
   &__item {
-    color: #5f5f5f;
+    color: $gray;
     padding: 0 15px;
 
     &--current {
-      color: #eb5055;
+      color: $red;
     }
   }
 }
@@ -385,7 +400,7 @@ a:active, a:focus, a:hover {
     bottom: 0;
     left: 0;
     height: 48px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid $gray-lighter;
     background-color: #fff;
     animation-duration: .5s;
     animation-fill-mode: both;
@@ -444,11 +459,10 @@ a:active, a:focus, a:hover {
       a {
         font-weight: 400;
         font-size: 21px;
-        color: #222;
       }
       sup {
         font-weight: normal;
-        color: #eb5055;
+        color: $red;
       }
     }
     &__meta {
@@ -457,7 +471,7 @@ a:active, a:focus, a:hover {
     }
 
     &__tags {
-      border-bottom: 1px solid #e0e0e0;
+      border-bottom: 1px solid $gray-lighter;
       margin-bottom: 15px;
       .tag {
         margin: 0 10px 15px 0;
@@ -475,7 +489,7 @@ a:active, a:focus, a:hover {
     h3 {
       font-size: 14px;
       padding-bottom: 10px;
-      color: #5f5f5f;
+      color: $fade;
       font-weight: normal;
     }
 
@@ -488,13 +502,20 @@ a:active, a:focus, a:hover {
       font-size: 13px;
       line-height: 26px;
     }
+
+    a {
+      color: $gray;
+      &:hover {
+        color: #000;
+      }
+    }
   }
 
   &__toc {
     position: fixed;
     top: 100px;
     max-width: 200px;
-    border-left: 1px solid #ddd;
+    border-left: 1px solid $gray-lighter;
 
     .b3-solo-list {
       margin: 0;
@@ -536,7 +557,7 @@ a:active, a:focus, a:hover {
         height: 7px;
         content: '';
         border-radius: 50%;
-        background-color: #eb5055;
+        background-color: $red;
       }
     }
   }
@@ -557,7 +578,7 @@ a:active, a:focus, a:hover {
 
   &__title {
     padding: 30px 20px;
-    color: #5f5f5f;
+    color: $gray;
   }
 
   .item {
@@ -570,7 +591,7 @@ a:active, a:focus, a:hover {
     padding: 20px;
 
     &__meta {
-      color: #5f5f5f;
+      color: $gray;
       font-size: 12px;
     }
 
@@ -579,14 +600,14 @@ a:active, a:focus, a:hover {
       height: 40px;
       width: 40px;
       border-radius: 20px;
-      border: 1px solid #eaeaea;
+      border: 1px solid $gray-lighter;
       margin: 0 20px 20px 0;
       background-size: cover;
       background-position: center center;
     }
 
     &__name {
-      color: #5f5f5f;
+      color: $gray;
       float: left;
       line-height: 40px;
     }
@@ -594,7 +615,7 @@ a:active, a:focus, a:hover {
     &:hover {
       .item__reply {
         display: block;
-        color: #eb5055;
+        color: $red;
       }
     }
   }
@@ -622,7 +643,7 @@ a:active, a:focus, a:hover {
   &__title {
     margin: 10px 0;
     padding: 0 15px;
-    color: #5f5f5f;
+    color: $gray;
   }
 
   &__content {
@@ -715,7 +736,7 @@ a:active, a:focus, a:hover {
     margin-top: 6px;
   }
   .header__menu {
-    background-color: #f7f7f7;
+    background-color: $gray-lightest;
     position: absolute;
     top: 70px;
     width: 100%;

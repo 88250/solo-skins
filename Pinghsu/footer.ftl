@@ -20,22 +20,22 @@
 <footer class="footer">
     <nav class="footer__nav mobile__none">
         <#list pageNavigations as page>
-            <a href="${page.pagePermalink}" target="${page.pageOpenTarget}" rel="section">
+            <a class="ft__link" href="${page.pagePermalink}" target="${page.pageOpenTarget}" rel="section">
                 ${page.pageTitle}
             </a>
         </#list>
-        <a rel="alternate" href="${servePath}/rss.xml" rel="section">RSS</a>
+        <a class="ft__link" rel="alternate" href="${servePath}/rss.xml" rel="section">RSS</a>
         <#if isLoggedIn>
-        <a href="${servePath}/admin-index.do#main" title="${adminLabel}">${adminLabel}</a>
-        <a href="${logoutURL}">${logoutLabel}</a>
+        <a class="ft__link" href="${servePath}/admin-index.do#main" title="${adminLabel}">${adminLabel}</a>
+        <a class="ft__link" href="${logoutURL}">${logoutLabel}</a>
         <#else>
-        <a href="${servePath}/start">${startToUseLabel}</a>
+        <a class="ft__link" href="${servePath}/start">${startToUseLabel}</a>
         </#if>
     </nav>
     <div class="footer__border mobile__none"></div>
     <div class="wrapper fn__flex">
         <div class="fn__flex-1 mobile__none">
-            <div class="ft__gray">${adminUser.userName} - ${blogSubtitle}</div><br>
+            <div class="ft__fade">${adminUser.userName} - ${blogSubtitle}</div><br>
             <#if noticeBoard??>
                 ${noticeBoard}
             </#if>
@@ -43,18 +43,18 @@
 
         <#if 0 != mostUsedCategories?size>
             <div class="footer__mid fn__flex-1 mobile__none">
-                <div class="ft__gray">${categoryLabel}</div> <br>
+                <div class="ft__fade">${categoryLabel}</div> <br>
                 <#list mostUsedCategories as category>
                     <a href="${servePath}/category/${category.categoryURI}"
                        aria-label="${category.categoryTagCnt} ${cntLabel}${tagsLabel}"
-                       class="ft__nowrap tooltipped tooltipped__n">
+                       class="ft__link ft__nowrap tooltipped tooltipped__n">
                         ${category.categoryTitle}</a> &nbsp; &nbsp;
                 </#list>
             </div>
         </#if>
 
         <div class="fn__flex-1 footer__copyright">
-            <a href="${servePath}/archives.html">
+            <a class="ft__link" href="${servePath}/archives.html">
             ${statistic.statisticPublishedBlogArticleCount}
             ${articleLabel}
             </a> &nbsp; &nbsp;
@@ -62,14 +62,15 @@
             ${commentLabel} <br>
             ${statistic.statisticBlogViewCount} <span class="ft-gray">${viewLabel}</span> &nbsp; &nbsp;
             ${onlineVisitorCnt} <span class="ft-gray">${onlineVisitorLabel}</span> <br>
-            <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}
+            <a class="ft__link" href="https://solo.b3log.org" target="_blank">Solo</a> ${version}
             &copy; ${year} ${footerContent}
-            <a href="${servePath}">${blogTitle}</a>
+            <a class="ft__link" href="${servePath}">${blogTitle}</a>
             <br>
-            Powered by <a href="https://b3log.org" target="_blank">B3log</a> 开源
+            Powered by <a class="ft__link" href="https://b3log.org" target="_blank">B3log</a> 开源
             <br>
-            Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">Pinghsu</a>
-            by <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
+            Theme <a class="ft__link" rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">Pinghsu</a>
+            <sup>[<a class="ft__link" target="_blank" href="https://github.com/chakhsu/pinghsu">Ref</a>]</sup>
+            by <a class="ft__link" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
         </div>
     </div>
 </footer>

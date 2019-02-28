@@ -35,7 +35,7 @@
         <div class="page__title">
             <span class="ft__red">#</span>
             ${category.categoryTitle}
-            <div class="ft__gray">${category.categoryDescription}</div>
+            <div class="ft__fade">${category.categoryDescription}</div>
         </div>
         <#include "article-list.ftl">
     </div>

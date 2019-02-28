@@ -68,7 +68,7 @@
             </sup>
             </#if>
         </h2>
-        <div class="ft__gray item__meta">
+        <div class="ft__fade item__meta">
             Published on
             <time>
                 <#setting locale="en_US">

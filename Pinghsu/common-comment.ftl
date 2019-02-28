@@ -23,9 +23,9 @@
         <div class="item__avatar" style="background-image: url(${comment.commentThumbnailURL})"></div>
         <div class="item__name">
             <#if "http://" == comment.commentURL>
-                ${comment.commentName}
+                <span class="ft__fade">${comment.commentName}</span>
             <#else>
-            <a href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
+            <a class="ft__link" href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
             </#if>
 
             <#if comment.isReply>
