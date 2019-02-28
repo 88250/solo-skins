@@ -59,7 +59,7 @@
                 </a>
             </h2>
             <div class="content-reset">
-                ${article.articleAbstract}
+                ${article.articleAbstractText}
             </div>
             <div data-ico="&#x003b;" title="${tagLabel}" class="article-tags">
                 <#list article.articleTags?split(",") as articleTag>

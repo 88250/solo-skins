@@ -24,7 +24,7 @@
                 <div class="item__cover" style="background-image: url(${article.articleImg1URL})"></div>
                 <div rel="bookmark" class="item__abstract">
                     <div>
-                        ${article.articleAbstract}
+                        ${article.articleAbstractText}
                     </div>
                 </div>
                 <div class="item__slant"></div>
