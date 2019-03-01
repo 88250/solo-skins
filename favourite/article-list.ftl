@@ -50,10 +50,10 @@
             </#if>
         </div>
     </div>
-    <div class="article-abstract content-reset">
+    <div class="article-abstract">
         <div class="note">
             <div class="corner"></div>
-            <div class="substance">
+            <div class="substance content-reset">
                 ${article.articleAbstract}
                 <div class="clear"></div>
             </div>

@@ -20,7 +20,7 @@
  * skin favoutite style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.0, Feb 28, 2019
+ * @version 2.1.0.1, Mar 1, 2019
  */
 
 @import "../../../scss/reset";
@@ -803,10 +803,9 @@ img {
 .note {
     background: none repeat scroll 0 0 #E7F5F7;
     margin: 40px 0 0 -49px;
-    padding: 10px 10px 10px 85px;
+    padding: 10px 10px 10px 50px;
     position: relative;
-    width: 574px;
-    z-index: 50;
+    width: 609px;
 }
 
 .corner {

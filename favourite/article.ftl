@@ -130,7 +130,7 @@
                                 <div class="clear"></div>
                             </div>
 
-                            <div>
+                            <div class="margin25">
                                 <#if nextArticlePermalink??>
                                 <div class="right">
                                     <a href="${servePath}${nextArticlePermalink}">${nextArticle1Label}${nextArticleTitle}</a>
