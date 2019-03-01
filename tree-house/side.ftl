@@ -150,6 +150,7 @@
         <h3>${archiveLabel}</h3>
         <ul>
             <#list archiveDates as archiveDate>
+            <#if archiveDate_index < 10>
             <li>
                 <#if "en" == localeString?substring(0, 2)>
                 <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
@@ -161,6 +162,7 @@
                     ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}(${archiveDate.archiveDatePublishedArticleCount})</a>
                 </#if>
             </li>
+            </#if>
             </#list>
         </ul>
         <div class='clear'></div>
