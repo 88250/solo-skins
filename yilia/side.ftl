@@ -47,14 +47,12 @@
                 </li>
                 <li>
                     <a href="${servePath}/tags.html">${allTagsLabel}</a>
-                </li>
-                <li>
+                    &nbsp; &nbsp;
                     <a href="${servePath}/archives.html">${archiveLabel}</a>
                 </li>
                 <li>
                     <a href="${servePath}/links.html">${linkLabel}</a>
-                </li>
-                <li>
+                    &nbsp; &nbsp;
                     <a href="${servePath}/search?keyword=">
                         Search
                     </a>
@@ -64,7 +62,7 @@
     </header>
     <footer>
         <#if noticeBoard??>
-        <div>${noticeBoard}</div>
+        <div class="content-reset">${noticeBoard}</div>
         </#if>
         <#if isLoggedIn>
         <a href="${servePath}/admin-index.do#main" title="${adminLabel}" class="icon-setting"></a>
