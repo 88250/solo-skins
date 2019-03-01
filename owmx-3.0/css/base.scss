@@ -29,7 +29,7 @@ Update: 	Dongxu Wang 2011-02-24
 /*
  * skin owmx-3.0 style
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.0.0.0, Feb 21, 2019
+ * @version 2.1.0.0, Mar 1, 2019
  */
 
 @import "../../../scss/reset-content";
@@ -273,7 +273,8 @@ article input, article textarea {
     border : 1px solid #CCC;
     font-size : 11px;
     padding : 4px 5px;
-    width : 458px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Lists */

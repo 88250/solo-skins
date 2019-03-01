@@ -117,8 +117,8 @@
                         <div class="clear"></div>
                     </div>
                     <div id="relevantArticles" class="article-relative"></div>
-                    <ol id="randomArticles"></ol>
-                    <ol id="externalRelevantArticles"></ol>
+                    <div id="randomArticles"></div>
+                    <div id="externalRelevantArticles"></div>
                     <@comments commentList=articleComments article=article></@comments>
                 </article>
                 <#include "side.ftl">
