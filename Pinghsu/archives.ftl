@@ -28,7 +28,7 @@
 </head>
 <body class="body--gray">
 <#include "header.ftl">
-<main id="pjax">
+<main id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <div class="wrapper wrapper--min">
         <div class="page__title">

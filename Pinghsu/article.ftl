@@ -50,7 +50,7 @@
 </head>
 <body>
 <#include "header.ftl">
-<main id="pjax">
+<main id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <div class="post wrapper wrapper--miner">
         <h2 class="item__title">

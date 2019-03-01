@@ -26,7 +26,7 @@
     <meta name="description" content="<#list tags as tag>${tag.tagTitle}<#if tag_has_next>,</#if></#list>"/>
 </@head>
 </head>
-<body class="body--gray">
+<body class="body--gray" class="fn__flex-1">
 <#include "header.ftl">
 <main id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
