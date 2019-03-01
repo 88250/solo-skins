@@ -19,7 +19,7 @@
  * Skin ease style.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.0.0.0, Feb 21, 2019
+ * @version 2.1.0.0, Mar 1, 2019
  */
 
 @import "../../../scss/reset-content";
@@ -374,6 +374,7 @@ sup {
     margin: 10px 0;
     padding: 0 20px 10px;
     width: 382px;
+    min-height: 134px;
 }
 
 .article-relative:hover {
@@ -390,7 +391,6 @@ sup {
 }
 
 #externalRelevantArticles {
-    width: 357px;
     margin-top: 0;
 }
 /* end article*/
@@ -483,7 +483,7 @@ sup {
 }
 
 .form textarea {
-    height: 120px;
+    height: 146px;
     overflow: auto;
     width: 426px;
     line-height: 16px;
