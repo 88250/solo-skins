@@ -32,7 +32,7 @@
         </#list>
     </ol>
     <#if article.commentable>
-    <div id="textinputwrap" style="margin-left: 10px">
+    <div id="textinputwrap" style="margin: 0 10px">
         <div id="refresher" style="display:none;">
             <img src="${staticServePath}/skins/${skinDirName}/images/good.png" alt="checkmark" />
             <h3>${commentSuccess}</h3>

@@ -54,7 +54,6 @@ a {
 
 input, textarea {
     font: 12px Helvetica;
-    max-width: 96%;
 }
 
 img {
@@ -1851,7 +1850,8 @@ textarea#comment, textarea#commentReply {
     font-size: 13px;
     color: #444;
     height: 110px;
-    width: 98%;
+    box-sizing: border-box;
+    width: 100%;
     padding: 3px;
     box-shadow: rgba(255,255,255,.8) 0px 1px 0px;
 }
