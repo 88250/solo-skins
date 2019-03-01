@@ -28,7 +28,9 @@
         Powered by <a href="https://b3log.org" target="_blank">B3log</a> 开源
         <div class="fn__none"></div>
         &nbsp; &heartsuit;  &nbsp;
-        Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">Jane</a> by <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
+        Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">Jane</a>
+        <sup>[<a href="https://github.com/hejianxian/hexo-theme-jane" target="_blank">ref</a>]</sup>
+        by <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
     </div>
 </footer>
 <div class="icon-up" onclick="Util.goTop()"></div>

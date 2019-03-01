@@ -69,7 +69,7 @@
             Powered by <a class="ft__link" href="https://b3log.org" target="_blank">B3log</a> 开源
             <br>
             Theme <a class="ft__link" rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">Pinghsu</a>
-            <sup>[<a class="ft__link" target="_blank" href="https://github.com/chakhsu/pinghsu">Ref</a>]</sup>
+            <sup>[<a class="ft__link" target="_blank" href="https://github.com/chakhsu/pinghsu">ref</a>]</sup>
             by <a class="ft__link" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
         </div>
     </div>
