@@ -33,7 +33,7 @@
         <#if 0 != mostViewCountArticles?size>
         <h4>${mostViewCountArticlesLabel}</h4>
         <div class="arrow-right"></div>
-        <div class="most-view-count-articles">
+        <div class="most-view-count-articles article-footer">
             <ul>
                 <#list mostViewCountArticles as article>
                 <li>
@@ -44,6 +44,23 @@
                 </#list>
             </ul>
         </div>
+        <#if 0 != mostCommentArticles?size>
+        <div class="clear"></div>
+        <div class="hr"></div>
+        <h4>${mostCommentArticlesLabel}</h4>
+        <div class="arrow-right"></div>
+        <div class="most-view-count-articles article-footer">
+            <ul>
+                <#list mostCommentArticles as article>
+                    <li>
+                        <a rel="nofollow" title="${article.articleTitle}" href="${servePath}${article.articlePermalink}">
+                            <sup>[${article.articleCommentCount}]</sup>${article.articleTitle}
+                        </a>
+                    </li>
+                </#list>
+            </ul>
+        </div>
+        </#if>
         <div class="clear"></div>
         <#if 0 != recentComments?size>
         <div class="hr"></div>
@@ -72,22 +89,6 @@
 </div>
 <div class="footer-widgets">
     <div class="content">
-        <#if 0 != mostCommentArticles?size>
-        <div class="left footer-block">
-            <h4>${mostCommentArticlesLabel}</h4>
-            <ul>
-                <#list mostCommentArticles as article>
-                <li>
-                    <sup>[${article.articleCommentCount}]</sup>
-                    <a rel="nofollow" title="${article.articleTitle}" href="${servePath}${article.articlePermalink}">
-                        ${article.articleTitle}
-                    </a>
-                </li>
-                </#list>
-            </ul>
-        </div>
-        </#if>
-
         <#if 0 != mostUsedCategories?size>
             <div class="left footer-block">
                 <h4><span class="left">${categoryLabel}</span></h4>
