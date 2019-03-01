@@ -21,8 +21,8 @@
 <#if article.commentable>
 <div class="comment-disabled">
     <h3>${postCommentsLabel}</h3>
+    <textarea rows="3" style="margin-bottom: 20px;width: 100%;box-sizing: border-box" placeholder="${postCommentsLabel}" id="comment"></textarea>
 </div>
-<textarea rows="3" style="margin-bottom: 20px;width: 80%" placeholder="${postCommentsLabel}" id="comment"></textarea>
 <#else>
 <div class="comment-disabled">
     <h3>${notAllowCommentLabel}</h3>
