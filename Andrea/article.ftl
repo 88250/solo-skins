@@ -114,7 +114,7 @@
                                 </a>
                             </div>
                             <div class="clear"></div>
-                            <div>
+                            <div class="marginTop12">
                                 <#if nextArticlePermalink??>
                                 <a href="${servePath}${nextArticlePermalink}">${nextArticle1Label}${nextArticleTitle}</a>
                                 <br>
