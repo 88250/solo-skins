@@ -53,9 +53,17 @@
 
         <div class="feed-link">
             <a href="${servePath}/rss.xml" rel="alternate">
-                <i class="icon-rss"></i>
                 RSS
             </a>
+                <a href="${servePath}/dynamic.html" rel="section">
+                ${dynamicLabel}
+                </a>
+                <a href="${servePath}/tags.html" rel="section">
+                ${allTagsLabel}
+                </a>
+                <a href="${servePath}/archives.html">
+                ${archiveLabel}
+                </a>
         </div>
 
         <div class="links-of-author">
