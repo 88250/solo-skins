@@ -2369,16 +2369,6 @@ p.thdrpy, p.thdmang {
 
 /* @end */
 
-/* @group Comment Reply Notification */
-
-#commentForm input#comment_mail_notify {
-    margin-right: 5px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-/* @end */
-
 /* @group Share and Follow */
 
 .footer #follow.right {
