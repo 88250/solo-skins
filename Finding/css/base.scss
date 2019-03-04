@@ -21,7 +21,7 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 2.1.0.0, Feb 27, 2019
+ * @version 2.2.0.0, Mar 4, 2019
  */
 @import "../../../scss/reset-content";
 @import "vditor/src/assets/scss/classic";
@@ -732,9 +732,7 @@ pre code, pre tt {
 }
 
 body.nav-closed .nav {
-  -webkit-transform: translate3D(97px, 0, 0);
-  -ms-transform: translate3D(97px, 0, 0);
-  transform: translate3D(97px, 0, 0);
+  transform: translate3D(240px, 0, 0);
 }
 
 body.nav-opened .nav {
@@ -897,7 +895,7 @@ article.post:after {
   -webkit-animation: upbounce 4s 2s infinite;
   animation: upbounce 4s 2s infinite;
   text-decoration: none;
-  z-index: 10;
+  z-index: 12;
 }
 
 .icon-gotop:hover {
@@ -1334,6 +1332,14 @@ ul.comments {
     border: 0;
     top: 0;
     right: 0;
+  }
+
+  .nav-opened .site-wrapper {
+    margin-right: 0;
+  }
+
+  .nav {
+    z-index: 11;
   }
 
   .nav-closed .menu-button:hover {

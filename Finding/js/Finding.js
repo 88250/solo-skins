@@ -74,7 +74,9 @@ var Finding = {
     }
 
     $('.nav ul:first').after($('.b3-solo-list'));
-    $("body").toggleClass("nav-opened nav-closed");
+    if ($(window).width() > 500) {
+      $("body").toggleClass("nav-opened nav-closed");
+    }
 
     $('.nav .icon-list').show();
     Finding.tabNav('toc')
