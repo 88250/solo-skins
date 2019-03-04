@@ -57,10 +57,6 @@ var Skin = {
       })
     })
 
-    $('body').on('click', '.content-reset img', function () {
-      window.open(this.src)
-    })
-
     $('.header__nav a').each(function () {
       if (this.href === location.href) {
         this.className = 'current'

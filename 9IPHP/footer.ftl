@@ -47,5 +47,6 @@
     Util.initSW();
     Util.parseMarkdown();
     Util.killIE(10)
+    Util.previewImg()
 </script>
 ${plugins}

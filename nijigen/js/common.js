@@ -87,10 +87,6 @@ var Skin = {
 
     Skin._initAnimation()
 
-    $('body').on('click', '.content-reset img', function () {
-      window.open(this.src)
-    })
-
     this._initCommon($('.icon__up'))
 
     $('.header__nav a, .header__m a').each(function () {

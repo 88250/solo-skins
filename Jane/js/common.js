@@ -64,10 +64,6 @@ var Skin = {
       $('.header a').removeClass('current')
       this.className = 'current tooltipped tooltipped__w'
     })
-
-    $('body').on('click', '.content-reset img', function () {
-      window.open(this.src)
-    })
   },
 }
 Skin.init()

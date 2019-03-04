@@ -89,10 +89,6 @@ var NexT = {
           'right': '0'
         });
       }, 500);
-
-      $('body').on('click', '.content-reset img', function () {
-        window.open(this.src);
-      });
     });
   },
   initArticle: function () {

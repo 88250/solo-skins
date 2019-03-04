@@ -44,5 +44,6 @@
 <script>
     Util.initSW();
     Util.parseMarkdown();
+    Util.previewImg()
 </script>
 ${plugins}

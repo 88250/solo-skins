@@ -28,10 +28,6 @@
  */
 var Skin = {
   init: function () {
-    $('body').on('click', '.content-reset img', function () {
-      window.open(this.src);
-    });
-
     $(window).scroll(function () {
       if ($('#headerNav').length === 0) {
         return

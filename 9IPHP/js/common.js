@@ -28,10 +28,6 @@
  */
 var Skin = {
     _initCommon: function ($goTop) {
-        $('body').on('click', '.content-reset img', function () {
-            window.open(this.src);
-        });
-
         var $banner = $('header .banner'),
         $navbar = $('header .navbar');
 
