@@ -20,9 +20,8 @@
  * skin i-nove style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.0.0.1, Mar 1, 2019
+ * @version 2.0.0.2, Mar 16, 2019
  */
-@import "../../../scss/reset-content";
 @import "../../../scss/reset";
 @import "vditor/src/assets/scss/classic";
 
@@ -309,7 +308,7 @@ h5 {
   background-position: 0 -480px;
 }
 
-.content-reset {
+.vditor-reset {
   line-height: 145%;
   padding: 5px 0 0 5px;
 }

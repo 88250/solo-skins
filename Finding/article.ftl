@@ -84,7 +84,7 @@
                             <time>${article.articleCreateDate?string("yyyy-MM-dd")}</time>
                         </section>
                     </header>
-                    <section class="post-content content-reset">
+                    <section class="post-content vditor-reset">
                         ${article.articleContent}
                         <#if "" != article.articleSign.signHTML?trim>
                         <div class="marginTop12">

@@ -32,7 +32,7 @@
         <#include "side.ftl">
         <main>
             <article class="post">
-                <section class="abstract content-reset">
+                <section class="abstract vditor-reset">
                     ${page.pageContent}
                 </section>
                 <footer class="fn-clear share">

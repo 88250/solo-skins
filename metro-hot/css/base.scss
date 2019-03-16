@@ -20,9 +20,8 @@
  * skin metro-hot style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.0, Feb 27, 2019
+ * @version 2.1.0.1, Mar 16, 2019
  */
-@import "../../../scss/reset-content";
 @import "vditor/src/assets/scss/classic";
 /* start base */
 @font-face {
@@ -185,11 +184,11 @@ textarea {
 .article-relative a:hover,
 .article-abstract .article-title a:hover,
 .article-abstract .article-tags a:hover,
-.content-reset a {
+.vditor-reset a {
   text-decoration: underline;
 }
 
-.content-reset a:hover {
+.vditor-reset a:hover {
   text-decoration: none;
 }
 
@@ -439,7 +438,7 @@ textarea {
   margin: 10px 0 0 10px;
 }
 
-.article-abstract > .content-reset {
+.article-abstract > .vditor-reset {
   margin: 10px;
   overflow: hidden;
   white-space: inherit;
@@ -726,7 +725,7 @@ textarea {
   margin: 0;
 }
 
-.content-reset {
+.vditor-reset {
   background-color: #323232;
   margin-bottom: 30px;
   overflow: hidden;
@@ -737,7 +736,7 @@ textarea {
   word-wrap: break-word;
 }
 
-.main > .content-reset {
+.main > .vditor-reset {
   margin-right: 10px;
   margin-top: 20px;
 }
@@ -762,7 +761,7 @@ pre.prettyprint {
   width: 80px;
 }
 
-#comments .content-reset {
+#comments .vditor-reset {
   margin: 10px 0;
   width: 800px;
 }
@@ -849,7 +848,7 @@ pre.prettyprint {
   padding: 25px 15px 15px 25px;
 }
 
-#dynamic #comments .content-reset {
+#dynamic #comments .vditor-reset {
   width: 743px;
 }
 

@@ -32,6 +32,8 @@
     
     var Label = {
         "markedAvailable": ${markedAvailable?c},
+        "hljsStyle": "atom-one-light",
+        "langLabel": "${langLabel}",
         "adminLabel": "${adminLabel}",
         "logoutLabel": "${logoutLabel}",
         "skinDirName": "${skinDirName}"
@@ -46,6 +48,7 @@
     // init
     $(document).ready(function () {
         Util.init();
+        Util.setTopBar()
         Util.replaceSideEm($("#naviComments li .side-comment"));
     
         // brush

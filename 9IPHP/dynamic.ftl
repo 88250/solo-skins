@@ -48,7 +48,7 @@
                                                 <time class="ft-gray">${comment.commentDate?string("yyyy-MM-dd HH:mm")}</time>
                                                 <a class="reply-btn" href="${servePath}${comment.commentSharpURL}">${viewLabel}»</a>
                                             </div>
-                                            <div class="content-reset">
+                                            <div class="vditor-reset">
                                                 ${comment.commentContent}
                                             </div>
                                         </main>
@@ -57,7 +57,7 @@
                             </#list>
                         </ul>
                     <#else>
-                    <div class="content-reset ft-center">
+                    <div class="vditor-reset ft-center">
                         ${noDynamicLabel}
                     </div>
                     </#if>
@@ -68,7 +68,7 @@
         <#include "footer.ftl">
 
         <script>
-            var $commentContents = $(".comments .content-reset");
+            var $commentContents = $(".comments .vditor-reset");
             for (var i = 0; i < $commentContents.length; i++) {
                 var str = $commentContents[i].innerHTML;
                 $commentContents[i].innerHTML = Util.replaceEmString(str);

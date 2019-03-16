@@ -62,7 +62,7 @@
     </header>
     <footer>
         <#if noticeBoard??>
-        <div class="content-reset">${noticeBoard}</div>
+        <div class="vditor-reset">${noticeBoard}</div>
         </#if>
         <#if isLoggedIn>
         <a href="${servePath}/admin-index.do#main" title="${adminLabel}" class="icon-setting"></a>

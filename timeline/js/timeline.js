@@ -449,7 +449,8 @@ var timeline = {
 
 (function() {
     Util.init();
-    Util.replaceSideEm($(".comments .content-reset"));
+    Util.setTopBar()
+    Util.replaceSideEm($(".comments .vditor-reset"));
     Util.buildTags("tagsSide");
 
     timeline.init();

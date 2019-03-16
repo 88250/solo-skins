@@ -20,9 +20,8 @@
  * skin community style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.0, Mar 1, 2019
+ * @version 2.1.0.1, Mar 16, 2019
  */
-@import "../../../scss/reset-content";
 @import "../../../scss/reset";
 @import "vditor/src/assets/scss/classic";
 
@@ -254,15 +253,15 @@ a.header-title {
   overflow: hidden;
 }
 
-.content-reset {
+.vditor-reset {
   line-height: 145%;
 }
 
-.content-reset a {
+.vditor-reset a {
   color: #075181;
 }
 
-.content-reset a:hover {
+.vditor-reset a:hover {
   color: #68ADD5;
 }
 

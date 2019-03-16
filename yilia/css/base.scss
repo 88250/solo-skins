@@ -21,9 +21,8 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 2.2.0.0, Mar 1, 2019
+ * @version 2.2.0.1, Mar 16, 2019
  */
-@import "../../../scss/reset-content";
 @import "vditor/src/assets/scss/classic";
 /* start reset */
 html {
@@ -360,8 +359,8 @@ pre code, pre tt {
   height: 100%;
   width: 300px;
 
-  .content-reset,
-  .content-reset a {
+  .vditor-reset,
+  .vditor-reset a {
     font-size: 12px;
     font-weight: normal;
   }

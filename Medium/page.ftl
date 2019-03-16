@@ -41,7 +41,7 @@
 </#if>
     <div class="wrapper content">
         <article class="post">
-            <section class="content-reset">
+            <section class="vditor-reset">
             ${page.pageContent}
             </section>
         </article>

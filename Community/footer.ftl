@@ -59,6 +59,8 @@
     
     var Label = {
         "markedAvailable": ${markedAvailable?c},
+        "hljsStyle": "atom-one-light",
+        "langLabel": "${langLabel}",
         "adminLabel": "${adminLabel}",
         "logoutLabel": "${logoutLabel}",
         "skinDirName": "${skinDirName}"
@@ -80,6 +82,7 @@
         }
 
         Util.init();
+        Util.setTopBar()
         
         $(".footer-block").each(function (num) {
             var $lis = $(this).find("li");

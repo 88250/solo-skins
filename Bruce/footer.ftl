@@ -36,6 +36,8 @@
 
     var Label = {
         "markedAvailable": ${markedAvailable?c},
+        "hljsStyle": "atom-one-light",
+        "langLabel": "${langLabel}",
         "tag1Label": "${tag1Label}",
         "viewLabel": "${viewLabel}",
         "commentLabel": "${commentLabel}",
@@ -53,5 +55,6 @@
 <script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/bootstrap${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
 <script>
     Util.init()
+    Util.setTopBar()
 </script>
 ${plugins}

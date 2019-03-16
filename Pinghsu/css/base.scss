@@ -19,10 +19,9 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.1.0.2, Mar 1, 2019
+ * @version 0.1.0.3, Mar 16, 2019
 */
 @import "../../../scss/reset";
-@import "../../../scss/reset-content";
 @import "../../../scss/function";
 @import "../../../scss/tooltipped";
 @import "../../../scss/comment";
@@ -65,7 +64,7 @@ a:active, a:focus, a:hover {
   background-color: $red;
 }
 
-.content-reset {
+.vditor-reset {
   font-size: 14px;
   .b3-solo-list {
     display: none;
@@ -517,9 +516,16 @@ a:active, a:focus, a:hover {
     position: fixed;
     top: 100px;
     max-width: 200px;
-    border-left: 1px solid $gray-lighter;
+    overflow: auto;
+    height: 70vh;
+    padding-left: 3px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .b3-solo-list {
+      border-left: 1px solid $gray-lighter;
       margin: 0;
       font-size: 14px;
       line-height: 24px;

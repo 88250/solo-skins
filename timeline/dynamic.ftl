@@ -61,7 +61,7 @@
                                                 ${viewLabel}
                                             </a>
                                         </span>
-                                        <div class="content-reset">
+                                        <div class="vditor-reset">
                                             ${comment.commentContent}
                                         </div>
                                     </div>

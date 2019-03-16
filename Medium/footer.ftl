@@ -55,11 +55,10 @@
 
     var Label = {
         "markedAvailable": ${markedAvailable?c},
+        "hljsStyle": "atom-one-light",
+        "langLabel": "${langLabel}",
         "skinDirName": "${skinDirName}"
     };
-    Util.initSW();
-    Util.killIE(8)
-    Util.parseMarkdown();
-    Util.previewImg()
+    Util.init()
 </script>
 ${plugins}

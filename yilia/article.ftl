@@ -53,7 +53,7 @@
     <body>
         <#include "side.ftl">
         <main>
-            <article class="post content-reset">
+            <article class="post vditor-reset">
                 <header>
                     <h2>
                         <a rel="bookmark" href="${servePath}${article.articlePermalink}">
@@ -84,7 +84,7 @@
                         </a>
                     </section>
                 </header>
-                <section class="abstract content-reset">
+                <section class="abstract vditor-reset">
                     ${article.articleContent}
                     <#if "" != article.articleSign.signHTML?trim>
                     <div>

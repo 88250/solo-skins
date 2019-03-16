@@ -37,7 +37,7 @@
                 <div class="main">
                     <div class="main-content">
                         <div class="article">
-                            <div class="content-reset" style="margin-top: 0px;">
+                            <div class="vditor-reset" style="margin-top: 0px;">
                                 ${page.pageContent}
                             </div>
                         </div>

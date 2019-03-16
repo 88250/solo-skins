@@ -37,7 +37,7 @@
                     <div class="body">
                         <div class="left main">
                             <div class="article">
-                                <div class="content-reset">
+                                <div class="vditor-reset">
                                     ${page.pageContent}
                                 </div>
                             </div>

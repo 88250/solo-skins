@@ -35,6 +35,8 @@ by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
 
     var Label = {
         "markedAvailable": ${markedAvailable?c},
+        "hljsStyle": "atom-one-light",
+        "langLabel": "${langLabel}",
         "skinDirName": "${skinDirName}"
     };
     
@@ -81,6 +83,7 @@ by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
         });
         
         Util.init();
+        Util.setTopBar()
         Util.replaceSideEm($("#recentComments li .side-comment"));
     });
 </script>

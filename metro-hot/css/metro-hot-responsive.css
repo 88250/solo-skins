@@ -42,11 +42,11 @@
         width: 434px;
     }
 
-    #comments .content-reset {
+    #comments .vditor-reset {
         width: 340px;
     }
 
-    #dynamic #comments .content-reset {
+    #dynamic #comments .vditor-reset {
         width: 283px;
     }
 
@@ -119,14 +119,14 @@
     }
 
     .main .pagination,
-    .main > .content-reset,
+    .main > .vditor-reset,
     .comment-disabled,
     #comments > div {
         margin-right: 0;
     }
 
     .side > div,
-    #comments .content-reset {
+    #comments .vditor-reset {
         position: static !important;
         width: auto !important;
     }

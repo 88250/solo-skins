@@ -33,7 +33,7 @@
         <#include "header.ftl">
         <div class="main">
             <div class="wrapper">
-                <div class="content-reset article">
+                <div class="vditor-reset article">
                     ${page.pageContent}
                 </div>
                 <@comments commentList=pageComments article=page></@comments>

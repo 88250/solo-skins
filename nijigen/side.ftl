@@ -19,7 +19,7 @@
 -->
 <aside class="side">
     <#if noticeBoard??>
-    <section class="content-reset module">
+    <section class="vditor-reset module">
         <main class="module__content">
             ${noticeBoard}
         </main>

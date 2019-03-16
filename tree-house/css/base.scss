@@ -20,11 +20,10 @@
  * skin tree-house style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.0, Mar 1, 2019
+ * @version 2.1.0.1, Mar 16, 2019
  */
 
 @import "../../../scss/reset";
-@import "../../../scss/reset-content";
 @import "vditor/src/assets/scss/classic";
 .left {
     float: left;
@@ -226,10 +225,10 @@ img {
     margin-top: 7px;
     padding-right: 10px;
 }
-.content-reset {
+.vditor-reset {
     margin: 0 12px 12px;
 }
-.content-reset a, .article-abstract a {
+.vditor-reset a, .article-abstract a {
     color: #242323;
     text-decoration: underline;
 }

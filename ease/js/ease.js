@@ -88,7 +88,7 @@ var getNextPage = function () {
                 '</div>' +
                 '<div class="clear"></div>' +
                 '</div>' +
-                '<div class="content-reset">' +
+                '<div class="vditor-reset">' +
                 '<div id="abstract' + article.oId + '">' +
                 article.articleAbstract + 
                 '</div>' +
@@ -159,6 +159,7 @@ var ease = {
     
     initCommon: function () {
         Util.init();
+        Util.setTopBar()
         Util.replaceSideEm($(".recent-comments-content"));
         Util.buildTags("tagsSide");
     },
@@ -279,7 +280,7 @@ var ease = {
         }
         
         // emotions
-        $(".content-reset").each(function () {
+        $(".vditor-reset").each(function () {
             this.innerHTML = Util.replaceEmString($(this).html());
         });
     }

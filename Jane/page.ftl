@@ -39,7 +39,7 @@
         <div class="fn__clear">
             <a class="ft__red fn__right" href="#comments"><#if page.pageCommentCount gt 0>${page.pageCommentCount} </#if>${commentLabel}</a>
         </div>
-        <div class="content-reset article__content">
+        <div class="vditor-reset article__content">
         ${page.pageContent}
         </div>
     </article>

@@ -36,7 +36,7 @@
                onmouseout="page.hideComment('${comment.commentOriginalCommentId}')">${comment.commentOriginalCommentName}</a>
         </#if>
             &nbsp;${comment.commentDate2?string("yyyy-MM-dd HH:mm:ss")}
-            <div class="comment-content content-reset">
+            <div class="comment-content vditor-reset">
             ${comment.commentContent}
             </div>
         <#if article.commentable>

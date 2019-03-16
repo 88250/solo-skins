@@ -58,7 +58,7 @@
                     ${article.articleTitle}
                 </a>
             </h2>
-            <div class="content-reset">
+            <div class="vditor-reset">
                 ${article.articleAbstractText}
             </div>
             <div data-ico="&#x003b;" title="${tagLabel}" class="article-tags">

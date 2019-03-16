@@ -19,11 +19,10 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 1.0.0.0, Feb 21, 2019
+ * @version 1.0.0.1, Mar 16, 2019
 */
 /* start common */
 @import "../../../scss/reset";
-@import "../../../scss/reset-content";
 @import "../../../scss/tooltipped";
 @import "vditor/src/assets/scss/classic";
 a {
@@ -35,7 +34,7 @@ a:hover {
     color: #ff4d3a;
     text-decoration: underline;
 }
-.content-reset a {
+.vditor-reset a {
     color: #ff4d3a;
 }
 .fn-pointer {
@@ -633,7 +632,7 @@ aside.has-toc > section:last-child {
     min-width: 1px;
 }
 
-.comments .content-reset {
+.comments .vditor-reset {
     margin-top: 10px;
 }
 

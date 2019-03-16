@@ -41,7 +41,7 @@
         </div>
     </#if>
         <span class="clear"></span>
-        <div class="content-reset">${comment.commentContent}</div>
+        <div class="vditor-reset">${comment.commentContent}</div>
     </div>
     <span class="clear"></span>
 </div>

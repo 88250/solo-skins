@@ -87,7 +87,7 @@
                         </div>
                     </header>
 
-                    <div class="post-body content-reset">
+                    <div class="post-body vditor-reset">
                         ${article.articleContent}
                         <#if "" != article.articleSign.signHTML?trim>
                         <div>

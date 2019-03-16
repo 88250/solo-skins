@@ -59,7 +59,7 @@
         </a>
     </div>
     <div class="clear"></div>
-    <div class="content-reset">
+    <div class="vditor-reset">
         <div id="abstract${article.oId}">
             ${article.articleAbstract}
         </div>

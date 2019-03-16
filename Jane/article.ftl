@@ -89,7 +89,7 @@
             </div>
         </div>
 
-        <div class="content-reset article__content">
+        <div class="vditor-reset article__content">
             ${article.articleContent}
             <#if "" != article.articleSign.signHTML?trim>
             <div>

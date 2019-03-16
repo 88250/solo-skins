@@ -34,6 +34,8 @@ by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
         
     var Label = {
         "markedAvailable": ${markedAvailable?c},
+        "hljsStyle": "atom-one-light",
+        "langLabel": "${langLabel}",
         "adminLabel": "${adminLabel}",
         "logoutLabel": "${logoutLabel}",
         "skinDirName": "${skinDirName}"
@@ -41,6 +43,7 @@ by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
     
     $(document).ready(function () {
         Util.init();
+        Util.setTopBar()
         Util.replaceSideEm($("#recentComments li a"));
     });
 </script>

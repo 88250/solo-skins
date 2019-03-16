@@ -19,10 +19,9 @@
  * skin neoease style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.0.0.0, Feb 21, 2019
+ * @version 2.0.0.1, Mar 16, 2019
  */
 
-@import "../../../scss/reset-content";
 @import "vditor/src/assets/scss/classic";
 /* start base */
 html, body, div, ul, li, h1, h2, h3, h4, h5, h6 {
@@ -626,7 +625,7 @@ textarea, input {
     line-height: 16px;
 }
 
-.comment-panel .content-reset {
+.comment-panel .vditor-reset {
     margin-top: 5px;
 }
 

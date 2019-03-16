@@ -38,7 +38,7 @@
 
         <time><span class="icon-date"></span> ${article.articleCreateDate?string("yyyy-MM-dd")}</time>
     </header>
-    <section class="abstract content-reset">
+    <section class="abstract vditor-reset">
         ${article.articleAbstract}
     </section>
     <footer class="tags">

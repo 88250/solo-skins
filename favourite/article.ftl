@@ -94,7 +94,7 @@
                             <div class="article-abstract">
                                 <div class="note">
                                     <div class="corner"></div>
-                                    <div class="substance content-reset">
+                                    <div class="substance vditor-reset">
                                         ${article.articleContent}
                                         <#if "" != article.articleSign.signHTML?trim>
                                         <div class="marginTop12">

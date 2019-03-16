@@ -59,7 +59,7 @@
             </div>
             <div class="clear"></div>
         </div>
-        <div class="content-reset">
+        <div class="vditor-reset">
             <div class="article-abstract">
                 ${article.articleAbstract}
             </div>

@@ -33,7 +33,7 @@
 <main id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <div class="post wrapper wrapper--miner">
-            <div class="content-reset">
+            <div class="vditor-reset">
             ${page.pageContent}
             </div>
     </div>

@@ -36,7 +36,7 @@
             <#include "header.ftl">
             <main>
                 <article class="post">
-                    <section class="post-content content-reset">
+                    <section class="post-content vditor-reset">
                         ${page.pageContent}
                     </section>
                     <footer>

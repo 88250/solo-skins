@@ -39,6 +39,6 @@
                 <a rel="nofollow" href="javascript:page.toggleEditor('${comment.oId}', '${comment.commentName}');">${replyLabel}</a>
             </span>
     </#if>
-        <div class="content-reset">${comment.commentContent}</div>
+        <div class="vditor-reset">${comment.commentContent}</div>
     </div>
 </li>

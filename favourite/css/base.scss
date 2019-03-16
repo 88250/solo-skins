@@ -20,11 +20,10 @@
  * skin favoutite style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.1, Mar 1, 2019
+ * @version 2.1.0.2, Mar 16, 2019
  */
 
 @import "../../../scss/reset";
-@import "../../../scss/reset-content";
 @import "vditor/src/assets/scss/classic";
 
 .left {
@@ -300,7 +299,7 @@ img {
     background: url("../images/category.jpg");
 }
 
-.content-reset {
+.vditor-reset {
     line-height: 145%;
     padding: 5px 0 0 5px;
 }

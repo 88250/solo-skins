@@ -34,7 +34,7 @@
         <div class="wrapper">
             <div class="container">
                 <div class="module">
-                    <div class="content-reset">
+                    <div class="vditor-reset">
                         ${page.pageContent}
                     </div>
                     <@comments commentList=pageComments article=page></@comments>

@@ -19,9 +19,8 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.0.0.1, Mar 1, 2019
+ * @version 2.0.0.2, Mar 16, 2019
  */
-@import "../../../scss/reset-content";
 @import "../../../scss/reset";
 @import "../../../scss/nprogress";
 @import "vditor/src/assets/scss/classic";
@@ -746,7 +745,7 @@
   margin-left: 5px;
 }
 
-.article__comment .comment__body .content-reset {
+.article__comment .comment__body .vditor-reset {
   min-height: 40px;
 }
 

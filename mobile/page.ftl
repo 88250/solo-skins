@@ -31,7 +31,7 @@
     <body class="classic-wptouch-bg ">
         <#include "header.ftl">
         <div class="content single">
-            <div class="post content-reset">
+            <div class="post vditor-reset">
                 ${page.pageContent}
             </div>
             <@comments commentList=pageComments article=page></@comments>

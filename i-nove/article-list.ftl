@@ -57,7 +57,7 @@
         </div>
         <div class="clear"></div>
     </div>
-    <div class="article-abstract content-reset">
+    <div class="article-abstract vditor-reset">
         ${article.articleAbstract}
         <div class="clear"></div>
     </div>

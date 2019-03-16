@@ -19,10 +19,9 @@
  * timeline skin style.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.0.0.0, Feb 21, 2019
+ * @version 2.0.0.1, Mar 16, 2019
  */
 
-@import "../../../scss/reset-content";
 @import "vditor/src/assets/scss/classic";
 /* start reset */
 html, body {
@@ -590,7 +589,7 @@ article .article-title a {
     font-style: italic;
 }
 
-.comments > li > div > div.content-reset {
+.comments > li > div > div.vditor-reset {
     padding-left: 75px;
     margin: 12px 0;
 }
@@ -852,7 +851,7 @@ article .article-title a {
         display: block;
     }
 
-    .comments > li > div > div.content-reset {
+    .comments > li > div > div.vditor-reset {
         padding-left: 0;
     }
 

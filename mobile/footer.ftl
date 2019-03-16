@@ -39,11 +39,14 @@
     
     var Label = {
         "markedAvailable": ${markedAvailable?c},
+        "hljsStyle": "atom-one-light",
+        "langLabel": "${langLabel}",
         "skinDirName": "${skinDirName}"
     };
     
     $(document).ready(function () {
         Util.init();
+        Util.setTopBar()
     
         var toggleArchive = function (it) {
             var $it = $(it);

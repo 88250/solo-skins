@@ -66,8 +66,8 @@
                 </div>
             </div>
             <div class="clearer"></div>
-            <div class="post content-reset" id="post-${article.oId}">
-                <div id="singlentry" class="left-justified content-reset">
+            <div class="post vditor-reset" id="post-${article.oId}">
+                <div id="singlentry" class="left-justified vditor-reset">
                     ${article.articleContent}
                     <#if "" != article.articleSign.signHTML?trim>
                     <div class=""><!--TODO sign class-->

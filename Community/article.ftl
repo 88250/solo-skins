@@ -103,7 +103,7 @@
                         </sup>
                         </#if>
                     </h2>
-                    <div class="content-reset">
+                    <div class="vditor-reset">
                         ${article.articleContent}
                         <#if "" != article.articleSign.signHTML?trim>
                         <div class="marginTop12">

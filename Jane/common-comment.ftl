@@ -44,7 +44,7 @@
             </#if>
             </div>
 
-            <div class="content-reset comment__content">
+            <div class="vditor-reset comment__content">
             ${comment.commentContent}
             </div>
         </main>

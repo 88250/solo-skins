@@ -47,7 +47,7 @@
             </div>
             <div class="fn-clear">
                 <div class="main">
-                    <div class="content-reset">
+                    <div class="vditor-reset">
                         ${page.pageContent}
                     </div>
                     <@comments commentList=pageComments article=page></@comments>

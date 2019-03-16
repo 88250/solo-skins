@@ -81,7 +81,7 @@ var Finding = {
     $('.nav .icon-list').show();
     Finding.tabNav('toc')
 
-    var $articleTocs = $('.content-reset [id^=b3_solo_h]'),
+    var $articleTocs = $('.vditor-reset [id^=b3_solo_h]'),
       $articleToc = $('.b3-solo-list');
 
     $(window).scroll(function (event) {

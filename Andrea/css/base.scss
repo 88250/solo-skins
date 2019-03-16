@@ -19,9 +19,8 @@
  * skin andrea style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.0, Mar 1, 2019
+ * @version 2.1.0.1, Mar 16, 2019
 */
-@import "../../../scss/reset-content";
 @import "vditor/src/assets/scss/classic";
 .left {
     float: left;
@@ -520,7 +519,7 @@ img {
 }
 
 /* article */
-.content-reset {
+.vditor-reset {
     border-top: 2px dashed #F1EEE9;
     margin-top: 15px;
     overflow: hidden;
@@ -528,7 +527,7 @@ img {
     line-height: 145%;
 }
 
-.content-reset p:first-child:first-letter, .content-reset:first-letter{
+.vditor-reset p:first-child:first-letter, .vditor-reset:first-letter{
     font-size: 48px;
     float: left;
     font-weight: bold;

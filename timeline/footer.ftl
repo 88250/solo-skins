@@ -56,6 +56,8 @@
 
                 var Label = {
                     "markedAvailable": ${markedAvailable?c},
+                    "hljsStyle": "atom-one-light",
+                    "langLabel": "${langLabel}",
                     "tagLabel": "${tagLabel}",
                     "viewLabel": "${viewLabel}",
                     "commentLabel": "${commentLabel}",

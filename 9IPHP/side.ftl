@@ -20,7 +20,7 @@
 <aside>
     <section>
         <#if noticeBoard??>
-            <div class="ad content-reset">
+            <div class="ad vditor-reset">
                 ${noticeBoard}
             </div>
         </#if>

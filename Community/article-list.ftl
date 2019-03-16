@@ -67,7 +67,7 @@
             </sup>
             </#if>
         </h2>
-        <div class="content-reset">
+        <div class="vditor-reset">
             ${article.articleAbstract}
         </div>
         <div class="read-more">

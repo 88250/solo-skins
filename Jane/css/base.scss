@@ -19,10 +19,9 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.2.0.0, Jan 30, 2019
+ * @version 0.2.0.1, Mar 16, 2019
 */
 @import "../../../scss/reset";
-@import "../../../scss/reset-content";
 @import "../../../scss/function";
 @import "../../../scss/tooltipped";
 @import "../../../scss/comment";
@@ -52,7 +51,7 @@ a {
   color: $gray;
 }
 
-.content-reset {
+.vditor-reset {
   overflow: hidden;
   color: #555;
   font-size: 14px;

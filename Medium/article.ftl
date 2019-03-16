@@ -77,7 +77,7 @@
                 </#if>
                     </h1>
                 </header>
-                <section class="content-reset">
+                <section class="vditor-reset">
                 ${article.articleContent}
             <#if "" != article.articleSign.signHTML?trim>
                 <div>

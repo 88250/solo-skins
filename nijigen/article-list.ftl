@@ -65,7 +65,7 @@
             </span>
         </div>
 
-        <div class="content-reset">
+        <div class="vditor-reset">
             ${article.articleAbstract}
         </div>
     </article>

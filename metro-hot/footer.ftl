@@ -26,6 +26,8 @@
     
     var Label = {
         "markedAvailable": ${markedAvailable?c},
+        "hljsStyle": "atom-one-light",
+        "langLabel": "${langLabel}",
         "tag1Label": "${tag1Label}",
         "viewLabel": "${viewLabel}",
         "commentLabel": "${commentLabel}",
@@ -42,8 +44,6 @@
 <script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/${skinDirName}${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
 <script>
-    Util.initSW();
-    Util.parseMarkdown();
-    Util.previewImg()
+    Util.init()
 </script>
 ${plugins}

@@ -51,7 +51,7 @@
                 <a class="ft__red" href="${servePath}${article.articlePermalink}">${article.articleViewCount} ${viewLabel}</a>
             </div>
         </div>
-        <div class="content-reset article__content">
+        <div class="vditor-reset article__content">
             ${article.articleAbstract}
         </div>
         <a class="article__more" href="${servePath}${article.articlePermalink}">More...</a>

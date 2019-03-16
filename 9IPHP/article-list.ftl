@@ -57,7 +57,7 @@
                 </span>
             </div>
         </header>
-        <div class="content-reset">
+        <div class="vditor-reset">
             ${article.articleAbstract}
         </div>
         <footer class="fn-clear tags">

@@ -161,6 +161,7 @@ var goTranslate = function () {
     });
     
     Util.init();
+    Util.setTopBar()
     Util.replaceSideEm($(".recent-comments-content"));
     Util.buildTags("tagsSide");
     

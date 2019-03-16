@@ -40,7 +40,7 @@
                     ${comment.commentName}<#else>
                     <a target="_blank" href="${comment.commentURL}">
                         ${comment.commentName}</a></#if>:
-                    <a rel="nofollow" class='side-comment content-reset' href="${servePath}${comment.commentSharpURL}">
+                    <a rel="nofollow" class='side-comment vditor-reset' href="${servePath}${comment.commentSharpURL}">
                         ${comment.commentContent}
                     </a>
                 </li>

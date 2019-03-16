@@ -36,7 +36,7 @@
     </div>
     <main class="comments__content fn__clear">
         <div class="comments__avatar" style="background-image: url(${comment.commentThumbnailURL})"></div>
-        <div class="content-reset">
+        <div class="vditor-reset">
         ${comment.commentContent}
         </div>
         <#if article?? && article.commentable>

@@ -69,7 +69,7 @@ var Skin = {
     })
   },
   _initToc: function () {
-    if ($('.content-reset .b3-solo-list li').length === 0 || $(window).width() < 746) {
+    if ($('.vditor-reset .b3-solo-list li').length === 0 || $(window).width() < 746) {
       $('.post__toc .b3-solo-list').remove()
       return
     }
@@ -83,6 +83,8 @@ var Skin = {
         $('.post__toc').hide()
       }
     })
+
+    $(window).scroll()
   },
   _initShare: function () {
     var $this = $('.post__share')

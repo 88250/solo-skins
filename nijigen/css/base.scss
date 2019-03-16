@@ -19,10 +19,9 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.4.0.0, Dec 17, 2018
+ * @version 0.4.0.1, Mar 16, 2019
 */
 @import "../../../scss/reset";
-@import "../../../scss/reset-content";
 @import "../../../scss/function";
 @import "../../../scss/tooltipped";
 @import "../../../scss/comment";
@@ -45,7 +44,7 @@ a {
   cursor: url(../images/pointer.cur), url(../images/pointer.cur), auto
 }
 
-.content-reset img {
+.vditor-reset img {
   vertical-align: sub;
 }
 
@@ -781,7 +780,7 @@ a {
     padding: 15px;
   }
 
-  .content-reset {
+  .vditor-reset {
     font-size: 14px;
   }
 

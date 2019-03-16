@@ -40,7 +40,7 @@
             </div>
         </#if>
         </div><!--end comtop-->
-        <div class="combody content-reset">
+        <div class="combody vditor-reset">
             <p>${comment.commentContent}</p>
         </div>
     </div>

@@ -36,7 +36,7 @@
     <main>
         <article class="module">
             <div class="module__content">
-                <div class="content-reset">
+                <div class="vditor-reset">
                 ${page.pageContent}
                 </div>
             </div>

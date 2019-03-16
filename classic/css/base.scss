@@ -21,10 +21,9 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 2.0.0.1, Mar 1, 2019
+ * @version 2.0.0.2, Mar 16, 2019
 */
 @import "../../../scss/reset";
-@import "../../../scss/reset-content";
 @import "vditor/src/assets/scss/classic";
 
 .left {
@@ -145,7 +144,7 @@ h5 {
   word-wrap: break-word;
 }
 
-.content-reset {
+.vditor-reset {
   margin-left: 12px;
   line-height: 145%;
 }

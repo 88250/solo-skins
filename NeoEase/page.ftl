@@ -34,7 +34,7 @@
         <div class="body">
             <div class="wrapper">
                 <div class="main">
-                    <div class="page content-reset" style="border-bottom: 0px;">
+                    <div class="page vditor-reset" style="border-bottom: 0px;">
                         ${page.pageContent}
                     </div>
                     <@comments commentList=pageComments article=page></@comments>
