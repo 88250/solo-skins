@@ -513,6 +513,7 @@ a:active, a:focus, a:hover {
   }
 
   &__toc {
+    display: none;
     position: fixed;
     top: 100px;
     max-width: 200px;
