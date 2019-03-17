@@ -65,7 +65,7 @@ overflow: hidden;
 
 </style>
 <link href="${servePath}/rss.xml" title="RSS" type="application/rss+xml" rel="alternate" />
-<link rel="icon" type="image/png" href="${servePath}/favicon.png" />
+<link rel="icon" type="image/png" href="${faviconURL}" />
 <script type='text/javascript' src='${staticServePath}/skins/${skinDirName}/js/l10n${miniPostfix}.js?${staticResourceVersion}'></script>
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
 <script type='text/javascript' src='${staticServePath}/skins/${skinDirName}/themes/core/core.js?${staticResourceVersion}'></script>
