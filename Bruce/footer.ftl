@@ -20,7 +20,7 @@
 <div class="footer">
     &copy; ${year} - <a href="${servePath}">${blogTitle}</a>${footerContent} Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> • <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}
     <div>
-        Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">Bruce</a>
+        Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
         by
         <a rel="friend" href="http://88250.b3log.org" target="_blank">88250</a>
     </div>

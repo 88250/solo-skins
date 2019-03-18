@@ -20,7 +20,7 @@
 <footer class="footer">
     <div class="fn-clear">
         <div class="fn-left">
-            Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">yilia</a>
+            Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
             by
             <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
         </div>

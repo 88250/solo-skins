@@ -28,7 +28,7 @@
     Powered by <a href="https://b3log.org" target="_blank">B3log</a> 开源
     <div class="fn__none"></div>
     &nbsp; &heartsuit;  &nbsp;
-    Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">nijigen</a>
+    Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
     <sup>[<a href="https://github.com/ZEROKISEKI/hexo-theme-gal" target="_blank">ref</a>]</sup>
     by <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
 </footer>

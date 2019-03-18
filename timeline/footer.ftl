@@ -22,8 +22,9 @@
         <div class="left">
             <span>&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>${footerContent}
             Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> • <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}&nbsp;&nbsp;
-            Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">timeline</a>
-            by <a rel="friend" target="_blank" href="http://themify.me/demo/themes/postline/">Postline</a> & <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
+            Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
+            <sup>[<a href="http://themify.me/demo/themes/postline/" target="_blank">ref</a>]</sup>
+            by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
         </div>
         <div class="right fn-clear">
             <span class="left">
