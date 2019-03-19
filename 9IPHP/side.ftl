@@ -17,7 +17,26 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<aside>
+<aside<#if article?? && article.articleToC?size &gt; 0 > class="has-toc"</#if>>
+    <ul class="fn__clear fn__none">
+        <li class="current" data-tab="toc">
+        ${tocLabel}
+        </li>
+        <li data-tab="site">
+        ${siteViewLabel}
+        </li>
+    </ul>
+    <section>
+        <#if article??>
+            <ul class="article__toc">
+                <#list article.articleToC as item>
+                    <li>
+                        <a class="${item.className}" href="#${item.id}">${item.text}</a>
+                    </li>
+                </#list>
+            </ul>
+        </#if>
+    </section>
     <section>
         <#if noticeBoard??>
             <div class="ad vditor-reset">
@@ -33,7 +52,7 @@
                         <a href="${servePath}/category/${category.categoryURI}"
                            aria-label="${category.categoryTagCnt} ${cntLabel}${tagsLabel}"
                            class="tag tooltipped tooltipped-n">
-                                ${category.categoryTitle}</a>
+                            ${category.categoryTitle}</a>
                     </#list>
                 </main>
             </div>
@@ -48,7 +67,7 @@
                            href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
                            class="tag tooltipped tooltipped-n"
                            aria-label="${tag.tagPublishedRefCount} ${countLabel}${articleLabel}">
-                                ${tag.tagTitle}</a>
+                            ${tag.tagTitle}</a>
                     </#list>
                 </main>
             </div>
@@ -62,13 +81,13 @@
                 <img src="${adminUser.userAvatar}" aria-label="${adminUser.userName}"/>
                 <div class="fn-right">
                     <a href="${servePath}/archives.html">
-                        ${statistic.statisticPublishedBlogArticleCount}
+                    ${statistic.statisticPublishedBlogArticleCount}
                         <span class="ft-gray">${articleLabel}</span></a><br/>
                     <a href="${servePath}/dynamic.html">
-                        ${statistic.statisticPublishedBlogCommentCount}
+                    ${statistic.statisticPublishedBlogCommentCount}
                         <span class="ft-gray">${commentLabel}</span></a><br/>
-                    ${statistic.statisticBlogViewCount} <span class="ft-gray">${viewLabel}</span><br/>
-                    ${onlineVisitorCnt} <span class="ft-gray">${onlineVisitorLabel}</span>
+                ${statistic.statisticBlogViewCount} <span class="ft-gray">${viewLabel}</span><br/>
+                ${onlineVisitorCnt} <span class="ft-gray">${onlineVisitorLabel}</span>
                 </div>
             </main>
         </div>

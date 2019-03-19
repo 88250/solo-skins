@@ -515,6 +515,10 @@ aside .b3-solo-list {
 aside.has-toc > section:last-child {
     margin-top: 20px;
 }
+
+.article__toc {
+    display: none;
+}
 /* end side */
 
 /* start article list */

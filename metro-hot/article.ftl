@@ -19,7 +19,7 @@
 -->
 <#include "macro-head.ftl">
 <#include "macro-comments.ftl">
-<#include "../../common-template/macro-comment-script.ftl">
+<#include "../../common-template/macro-comment_script.ftl">
 <#include "macro-side.ftl">
 <!DOCTYPE html>
 <html>
