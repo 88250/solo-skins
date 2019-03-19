@@ -214,11 +214,11 @@ var timeline = {
             path = "/articles/archives/" + archive + "/";
         }
         $.ajax({
-            url: latkeConfig.servePath + path + '?p=' + currentPage,
+            url: Label.servePath + path + '?p=' + currentPage,
             type: "GET",
             beforeSend: function() {
                 $more.css("background",
-                        "url(" + latkeConfig.staticServePath
+                        "url(" + Label.staticServePath
                         + "/skins/timeline/images/ajax-loader.gif) no-repeat scroll center center #60829F").text("");
             },
             success: function(result, textStatus) {
@@ -243,7 +243,7 @@ var timeline = {
                             + '<div class="arrow"></div><time class="article-time"><span>'
                             + Util.toDate(article.articleCreateTime, 'yy-MM-dd HH:mm')
                             + '</span></time><h3 class="article-title"><a rel="bookmark" href="'
-                            + latkeConfig.servePath + article.articlePermalink + '">'
+                            + Label.servePath + article.articlePermalink + '">'
                             + article.articleTitle + '</a>';
 
                     if (article.hasUpdated) {
@@ -259,7 +259,7 @@ var timeline = {
 
                     var articleTags = article.articleTags.split(",");
                     for (var j = 0; j < articleTags.length; j++) {
-                        articlesHTML += '<a rel="category tag" href="' + latkeConfig.servePath
+                        articlesHTML += '<a rel="category tag" href="' + Label.servePath
                                 + '/tags/' + encodeURIComponent(articleTags[j]) + '">' + articleTags[j] + '</a>';
 
                         if (j < articleTags.length - 1) {
@@ -268,9 +268,9 @@ var timeline = {
                     }
 
                     articlesHTML += '</span>&nbsp;<span class="ico-author ico" title="' + Label.authorLabel + '">'
-                            + '<a rel="author" href="' + latkeConfig.servePath + '/authors/' + article.authorId + '">'
+                            + '<a rel="author" href="' + Label.servePath + '/authors/' + article.authorId + '">'
                             + article.authorName + '</a></span>&nbsp;<span class="ico-comment ico" title="'
-                            + Label.commentLabel + '"><a rel="nofollow" href="' + latkeConfig.servePath + article.articlePermalink
+                            + Label.commentLabel + '"><a rel="nofollow" href="' + Label.servePath + article.articlePermalink
                             + '#comments">' + (article.articleCommentCount === 0 ? Label.noCommentLabel : article.articleCommentCount)
                             + '</a></span>&nbsp;<span class="ico-view ico" title="' + Label.viewLabel + '">'
                             + '<a rel="nofollow" href="${servePath}${article.articlePermalink}">' + article.articleViewCount
@@ -448,7 +448,6 @@ var timeline = {
 })(jQuery);
 
 (function() {
-    Util.init();
     Util.setTopBar()
     Util.replaceSideEm($(".comments .vditor-reset"));
     Util.buildTags("tagsSide");

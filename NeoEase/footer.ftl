@@ -29,23 +29,8 @@
     </div>
 </div>
 <div id="goTop" onclick="goTop()">TOP</div>
-<script type="text/javascript">
-    var latkeConfig = {
-        "servePath": "${servePath}",
-        "isLoggedIn": "${isLoggedIn?string}",
-        "staticServePath": "${staticServePath}"
-    };
-    
-    var Label = {
-        "markedAvailable": ${markedAvailable?c},
-        "hljsStyle": "atom-one-light",
-        "langLabel": "${langLabel}",
-        "adminLabel": "${adminLabel}",
-        "logoutLabel": "${logoutLabel}",
-        "skinDirName": "${skinDirName}"
-    };
-</script>
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/${skinDirName}${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
+<#include "../../common-template/skin-script.ftl">
 ${plugins}

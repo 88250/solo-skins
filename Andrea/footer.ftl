@@ -23,22 +23,8 @@
     Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a> by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
 </div>
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
+<#include "../../common-template/skin-script.ftl">
 <script type="text/javascript">
-    var latkeConfig = {
-        "servePath": "${servePath}",
-        "staticServePath": "${staticServePath}",
-        "isLoggedIn": "${isLoggedIn?string}"
-    };
-    
-    var Label = {
-        "markedAvailable": ${markedAvailable?c},
-        "hljsStyle": "atom-one-light",
-        "langLabel": "${langLabel}",
-        "adminLabel": "${adminLabel}",
-        "logoutLabel": "${logoutLabel}",
-        "skinDirName": "${skinDirName}"
-    };
-
     // init brush
     var buildBrush = function () {
         $("#brush").height(document.documentElement.scrollHeight - document.documentElement.clientHeight).css("background-position",
@@ -47,7 +33,6 @@
 
     // init
     $(document).ready(function () {
-        Util.init();
         Util.setTopBar()
         Util.replaceSideEm($("#naviComments li .side-comment"));
     

@@ -27,34 +27,11 @@
     <div><em>All rights reserved.</em></div>
 </div>
 
-<script type="text/javascript">
-    var latkeConfig = {
-        "servePath": "${servePath}",
-        "staticServePath": "${staticServePath}",
-        "isLoggedIn": "${isLoggedIn?string}"
-    };
-
-    var Label = {
-        "markedAvailable": ${markedAvailable?c},
-        "hljsStyle": "atom-one-light",
-        "langLabel": "${langLabel}",
-        "tag1Label": "${tag1Label}",
-        "viewLabel": "${viewLabel}",
-        "commentLabel": "${commentLabel}",
-        "topArticleLabel": "${topArticleLabel}",
-        "updatedLabel": "${updatedLabel}",
-        "contentLabel": "${fullContentLabel}",
-        "abstractLabel": "${abstractLabel}",
-        "adminLabel": "${adminLabel}",
-        "logoutLabel": "${logoutLabel}",
-        "skinDirName": "${skinDirName}"
-    };
-</script>
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/bootstrap${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
+<#include "../../common-template/skin-script.ftl">
 <script>
-    Util.init()
     Util.setTopBar()
 </script>
 ${plugins}

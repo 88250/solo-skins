@@ -95,7 +95,7 @@ var goTranslate = function () {
     window.open("http://translate.google.com/translate?sl=auto&tl=auto&u=" + location.href);
 };
     
-(function () {
+$(document).ready(function () {
     // go top icon show or hide
     $(window).scroll(function () {
         var y = $(window).scrollTop();
@@ -153,14 +153,13 @@ var goTranslate = function () {
     // nav current
     $(".nav ul li").each(function () {
         var $a = $(this).find("a");
-        if ($a.attr("href") === latkeConfig.servePath + location.pathname) {
+        if ($a.attr("href") === Label.servePath + location.pathname) {
             $(this).addClass("current");
         } else if (/\/[0-9]+$/.test(location.pathname)) {
             $(".nav ul li")[0].className = "current";
         }
     });
     
-    Util.init();
     Util.setTopBar()
     Util.replaceSideEm($(".recent-comments-content"));
     Util.buildTags("tagsSide");
@@ -175,4 +174,4 @@ var goTranslate = function () {
             });
         }
     });
-})();
+});

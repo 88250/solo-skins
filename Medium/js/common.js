@@ -48,7 +48,7 @@ var Skin = {
         if (!$('#articleSideShare .article__code').qrcode) {
           $.ajax({
             method: "GET",
-            url: latkeConfig.staticServePath + '/js/lib/jquery.qrcode.min.js',
+            url: Label.staticServePath + '/js/lib/jquery.qrcode.min.js',
             dataType: "script",
             cache: true
           });

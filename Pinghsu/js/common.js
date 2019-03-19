@@ -114,7 +114,7 @@ var Skin = {
         if ($qrCode.find('canvas').length === 0) {
           $.ajax({
             method: 'GET',
-            url: latkeConfig.staticServePath +
+            url: Label.staticServePath +
             '/js/lib/jquery.qrcode.min.js',
             dataType: 'script',
             cache: true,

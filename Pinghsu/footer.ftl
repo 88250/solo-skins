@@ -82,21 +82,5 @@
 <script type="text/javascript"
         src="${staticServePath}/skins/${skinDirName}/js/common${miniPostfix}.js?${staticResourceVersion}"
         charset="utf-8"></script>
-<script type="text/javascript">
-    var latkeConfig = {
-        'servePath': "${servePath}",
-        'staticServePath': "${staticServePath}",
-        'isLoggedIn': "${isLoggedIn?string}",
-        'userName': "${userName}",
-    }
-
-    var Label = {
-        'markedAvailable': ${markedAvailable?c},
-        "hljsStyle": "atom-one-light",
-        "langLabel": "${langLabel}",
-        'skinDirName': "${skinDirName}",
-    }
-
-    Util.init()
-</script>
+<#include "../../common-template/skin-script.ftl">
 ${plugins}

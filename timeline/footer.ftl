@@ -48,36 +48,21 @@
     </div>
 </div>
 <div class="ico-top none" onclick="Util.goTop()" title="TOP"></div>
-<script type="text/javascript">
-                var latkeConfig = {
-                    "servePath": "${servePath}",
-                    "isLoggedIn": "${isLoggedIn?string}",
-                    "staticServePath": "${staticServePath}"
-                };
-
-                var Label = {
-                    "markedAvailable": ${markedAvailable?c},
-                    "hljsStyle": "atom-one-light",
-                    "langLabel": "${langLabel}",
-                    "tagLabel": "${tagLabel}",
-                    "viewLabel": "${viewLabel}",
-                    "commentLabel": "${commentLabel}",
-                    "noCommentLabel": "${noCommentLabel}",
-                    "topArticleLabel": "${topArticleLabel}",
-                    "authorLabel": "${authorLabel}",
-                    "updatedLabel": "${updatedLabel}",
-                    "contentLabel": "${contentLabel}",
-                    "abstractLabel": "${abstractLabel}",
-                    "moreLabel": "${moreLabel}",
-                    "adminLabel": "${adminLabel}",
-                    "logoutLabel": "${logoutLabel}",
-                    "skinDirName": "${skinDirName}",
-                    "localeString": "${localeString}",
-                    "yearLabel": "${yearLabel}",
-                    "monthLabel": "${monthLabel}"
-                };
-</script>
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/${skinDirName}${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
+<#include "../../common-template/skin-script.ftl">
+<script type="text/javascript">
+    Label.localeString = "${localeString}"
+    Label.yearLabel = "${yearLabel}"
+    Label.monthLabel = "${monthLabel}"
+    Label.moreLabel = "${moreLabel}"
+    Label.viewLabel = "${viewLabel}"
+    Label.commentLabel = "${commentLabel}"
+    Label.noCommentLabel = "${noCommentLabel}"
+    Label.tagLabel = "${tagLabel}"
+    Label.topArticleLabel = "${topArticleLabel}"
+    Label.authorLabel = "${authorLabel}"
+    Label.updatedLabel = "${updatedLabel}"
+</script>
 ${plugins}

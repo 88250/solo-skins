@@ -45,7 +45,7 @@ var MetroHot = {
             $(".navigation").hide();
         });
         $(".header .title").click(function() {
-            window.location.href = latkeConfig.servePath;
+            window.location.href = Label.servePath;
         });
 
         // 当先用户在线数目
@@ -188,7 +188,7 @@ var MetroHot = {
           if ($qrCode.find('canvas').length === 0) {
             $.ajax({
               method: 'GET',
-              url: latkeConfig.staticServePath +
+              url: Label.staticServePath +
               '/js/lib/jquery.qrcode.min.js',
               dataType: 'script',
               cache: true,
@@ -215,7 +215,7 @@ var MetroHot = {
     loadRandomArticles: function() {
         // getRandomArticles
         $.ajax({
-            url: latkeConfig.servePath + "/articles/random",
+            url: Label.servePath + "/articles/random",
             type: "POST",
             success: function(result, textStatus) {
                 var randomArticles = result.randomArticles;
@@ -228,7 +228,7 @@ var MetroHot = {
                 for (var i = 0; i < randomArticles.length && i < 5; i++) {
                     var article = randomArticles[i];
                     var title = article.articleTitle;
-                    var randomArticleLiHtml = "<li>" + "<a rel='nofollow' title='" + title + "' href='" + latkeConfig.servePath +
+                    var randomArticleLiHtml = "<li>" + "<a rel='nofollow' title='" + title + "' href='" + Label.servePath +
                             article.articlePermalink + "'>" + title + "</a></li>";
                     listHtml += randomArticleLiHtml;
                 }
@@ -244,7 +244,7 @@ var MetroHot = {
      */
     loadRelevantArticles: function(id) {
         $.ajax({
-            url: latkeConfig.servePath + "/article/id/" + id + "/relevant/articles",
+            url: Label.servePath + "/article/id/" + id + "/relevant/articles",
             type: "GET",
             success: function(data, textStatus) {
                 var articles = data.relevantArticles;
@@ -258,7 +258,7 @@ var MetroHot = {
                     var title = article.articleTitle;
                     var articleLiHtml = "<li>"
                             + "<a rel='nofollow' title='" + title + "' href='"
-                            + latkeConfig.servePath + article.articlePermalink + "'>"
+                            + Label.servePath + article.articlePermalink + "'>"
                             + title + "</a></li>";
                     listHtml += articleLiHtml;
                 }
@@ -322,7 +322,6 @@ var MetroHot = {
 
 (function() {
     MetroHot.init();
-    Util.killIE();
     if ($(".article-header").length > 0) {
         MetroHot.share();
     }
