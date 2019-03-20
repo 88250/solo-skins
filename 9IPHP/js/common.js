@@ -44,12 +44,16 @@ var Skin = {
 
       if ($(window).scrollTop() > $banner.height()) {
         $navbar.addClass('pin')
-        $('.main-wrap').parent().css('margin-top', '86px')
+        $('.main-wrap').parent().css('margin-top', '81px')
+        $('.article__toc').css('position', 'fixed')
       } else {
         $navbar.removeClass('pin')
         $('.main-wrap').parent().css('margin-top', '0')
+        $('.article__toc').css('position', 'inherit')
       }
     })
+
+    $(window).scroll()
   },
   init: function () {
     this._initCommon($('.icon-up'))
@@ -70,63 +74,27 @@ var Skin = {
       $('.responsive .list').slideToggle()
     })
   },
-  _initArticleCommon: function (tocLabel, siteViewLabel) {
-    // TOC
-    if ($('.article__toc').length > 0 && $(window).width() > 1000) {
-      $('.article__toc, .article__toc > ul').show()
-
-      var $sectionF = $('aside section:first').html($('.b3-solo-list')),
-        $sectionL = $('aside section:last')
-      $sectionF.height($(window).height() - 154).
-        css({'overflow': 'auto', 'width': $('aside').width() + 'px'})
-      $sectionL.hide()
-      // 切换 tab
-      $('aside > ul > li').click(function () {
-        if ($(this).data('tab') === 'toc') {
-          $sectionL.animate({
-            'opacity': '0',
-            'top': '-50px',
-          }, 300, function () {
-            $sectionF.show().css('top', '-50px')
-            $sectionF.animate({
-              'opacity': '1',
-              'top': '0',
-            }, 300).show()
-          })
-        } else {
-          $sectionF.animate({
-            'opacity': '0',
-            'top': '-50px',
-          }, 300, function () {
-            $sectionF.hide().css('top', '-50px')
-            $sectionL.animate({
-              'opacity': '1',
-              'top': '0',
-            }, 300).show()
-          }).hide()
-        }
-        $('aside > ul > li').removeClass('current')
-        $(this).addClass('current')
-      })
-
-      $(window).scroll(function () {
-        if ($(window).scrollTop() > 125) {
-          $('aside section:eq(0)').css({
-            position: 'fixed',
-            top: '51px',
-            backgroundColor: '#fff',
-          })
-        } else {
-          $('aside section:eq(0)').css({
-            position: 'inherit',
-            borderLeft: 0,
-          })
-        }
-      })
+  initToc: function () {
+    var $articleToc = $('.article__toc')
+    if ($articleToc.length === 0) {
+      return false
     }
-  },
-  initArticle: function (tocLabel, siteViewLabel) {
-    this._initArticleCommon(tocLabel, siteViewLabel)
+
+    $articleToc.css({
+      width: $articleToc.parent().width(),
+      left: $articleToc.parent().offset().left,
+    }).find('a').click(function () {
+      $articleToc.find('li').removeClass('toc--current')
+      $(this).parent().addClass('toc--current')
+      var id = $(this).attr('href')
+      setTimeout(function () {
+        $(window).scrollTop($(id).offset().top - 60)
+      })
+    })
   },
 }
-Skin.init()
+
+$(document).ready(function () {
+  Util.init()
+  Skin.init()
+})

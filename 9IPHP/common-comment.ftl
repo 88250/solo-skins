@@ -19,7 +19,7 @@
 -->
 <li id="${comment.oId}">
     <div>
-        <div class="avatar tooltipped tooltipped-n" aria-label="${comment.commentName}"
+        <div class="avatar vditor-tooltipped vditor-tooltipped__n" aria-label="${comment.commentName}"
              style="background-image: url(${comment.commentThumbnailURL})"></div>
         <main>
             <div class="fn-clear">

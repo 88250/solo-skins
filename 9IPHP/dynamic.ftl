@@ -17,13 +17,12 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<#include "macro-head.ftl">
+<#include "../../common-template/macro-common_head.ftl">
 <!DOCTYPE html>
 <html>
     <head>
-        <@head title="${blogTitle}">
-        <meta name="keywords" content="${metaKeywords},${dynamicLabel}"/>
-        <meta name="description" content="${metaDescription},${dynamicLabel}"/>
+        <@head title="${dynamicLabel} - ${blogTitle}">
+            <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
         </@head>
     </head>
     <body>
@@ -36,7 +35,7 @@
                             <#list recentComments as comment>
                                 <li id="${comment.oId}">
                                     <div>
-                                        <div class="avatar tooltipped tooltipped-n" aria-label="${comment.commentName}"
+                                        <div class="avatar vditor-tooltipped vditor-tooltipped__n" aria-label="${comment.commentName}"
                                              style="background-image: url(${comment.commentThumbnailURL})"></div>
                                         <main>
                                             <div class="fn-clear">

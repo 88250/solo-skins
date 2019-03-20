@@ -17,13 +17,12 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<#include "macro-head.ftl">
+<#include "../../common-template/macro-common_head.ftl">
 <!DOCTYPE html>
 <html>
     <head>
         <@head title="${allTagsLabel} - ${blogTitle}">
-        <meta name="keywords" content="${metaKeywords},${allTagsLabel}"/>
-        <meta name="description" content="<#list tags as tag>${tag.tagTitle}<#if tag_has_next>,</#if></#list>"/>
+            <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
         </@head>
     </head>
     <body>
@@ -37,7 +36,7 @@
                     </div>
                     <div class="tags">
                         <#list tags as tag>
-                            <a rel="tag" data-count="${tag.tagPublishedRefCount}" class="tag"
+                            <a rel="tag" class="tag"
                                href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
                                 <span>${tag.tagTitle}</span>
                                 (<b>${tag.tagPublishedRefCount}</b>)
@@ -49,16 +48,5 @@
             </div>
         </div>
         <#include "footer.ftl">
-            <script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/isotope.pkgd.min.js" charset="utf-8"></script>
-            <script>
-            $('.tags').isotope({
-                transitionDuration: '1.5s',
-                filter: 'a',
-                layoutMode: 'fitRows'
-            });
-            $('.tags').isotope({
-                sortBy: 'random'
-            });
-            </script>
     </body>
 </html>

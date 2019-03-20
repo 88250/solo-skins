@@ -38,20 +38,20 @@
             </h1>
 
             <div class="meta">
-                <span class="tooltipped tooltipped-n" aria-label="${createDateLabel}">
+                <span class="vditor-tooltipped vditor-tooltipped__n" aria-label="${createDateLabel}">
                     <i class="icon-date"></i>
                     <time>
                         ${article.articleCreateDate?string("yyyy-MM-dd")}
                     </time>
                 </span>
                 &nbsp; | &nbsp;
-                <span class="tooltipped tooltipped-n" aria-label="${commentCountLabel}">
+                <span class="vditor-tooltipped vditor-tooltipped__n" aria-label="${commentCountLabel}">
                     <i class="icon-comments"></i>
                     <a href="${servePath}${article.articlePermalink}#comments">
                         ${article.articleCommentCount} ${commentLabel}</a>
                 </span>
                 &nbsp; | &nbsp;
-                <span class="tooltipped tooltipped-n" aria-label="${viewCountLabel}">
+                <span class="vditor-tooltipped vditor-tooltipped__n" aria-label="${viewCountLabel}">
                     <i class="icon-views"></i>
                     ${article.articleViewCount} ${viewLabel}
                 </span>

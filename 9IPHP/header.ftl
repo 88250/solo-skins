@@ -28,15 +28,15 @@
             <small> &nbsp; ${blogSubtitle}</small>
             <div class="fn-right">
                 <#if isLoggedIn>
-                    <a href="${servePath}/admin-index.do#main" title="${adminLabel}">
-                        <i class="icon-setting"></i> ${adminLabel}
+                    <a class="fn__flex-inline" href="${servePath}/admin-index.do#main" title="${adminLabel}">
+                        <i class="icon-setting"></i>&nbsp;${adminLabel}
                     </a>
-                    <a href="${logoutURL}">
-                        <i class="icon-logout"></i> ${logoutLabel}
+                    <a class="fn__flex-inline" href="${logoutURL}">
+                        <i class="icon-logout"></i>&nbsp;${logoutLabel}
                     </a>
                     <#else>
-                    <a href="${servePath}/start">
-                        <i class="icon-login"></i> ${startToUseLabel}
+                    <a class="fn__flex-inline" href="${servePath}/start">
+                        <i class="icon-login"></i>&nbsp;${startToUseLabel}
                     </a>
                 </#if>
             </div>

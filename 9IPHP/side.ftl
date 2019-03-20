@@ -17,117 +17,108 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<aside<#if article?? && article.articleToC?size &gt; 0 > class="has-toc"</#if>>
-    <ul class="fn__clear fn__none">
-        <li class="current" data-tab="toc">
-        ${tocLabel}
-        </li>
-        <li data-tab="site">
-        ${siteViewLabel}
-        </li>
-    </ul>
-    <section>
-        <#if article??>
-            <ul class="article__toc">
-                <#list article.articleToC as item>
-                    <li>
-                        <a class="${item.className}" href="#${item.id}">${item.text}</a>
-                    </li>
-                </#list>
-            </ul>
-        </#if>
-    </section>
+<#include "../../common-template/macro-user_site.ftl">
+<aside>
+    <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+        <#include "../../common-template/toc.ftl"/>
+    <#else>
     <section>
         <#if noticeBoard??>
-            <div class="ad vditor-reset">
-                ${noticeBoard}
-            </div>
+        <div class="ad vditor-reset">
+            ${noticeBoard}
+        </div>
         </#if>
 
         <#if 0 != mostUsedCategories?size>
-            <div class="module">
-                <header><h2>${categoryLabel}</h2></header>
-                <main>
-                    <#list mostUsedCategories as category>
-                        <a href="${servePath}/category/${category.categoryURI}"
-                           aria-label="${category.categoryTagCnt} ${cntLabel}${tagsLabel}"
-                           class="tag tooltipped tooltipped-n">
-                            ${category.categoryTitle}</a>
-                    </#list>
-                </main>
-            </div>
+        <div class="module">
+            <header><h2>${categoryLabel}</h2></header>
+            <main>
+                <#list mostUsedCategories as category>
+                    <a href="${servePath}/category/${category.categoryURI}"
+                       aria-label="${category.categoryTagCnt} ${cntLabel}${tagsLabel}"
+                       class="tag vditor-tooltipped vditor-tooltipped__n">
+                        ${category.categoryTitle}</a>
+                </#list>
+            </main>
+        </div>
         </#if>
 
         <#if 0 != mostUsedTags?size>
-            <div class="module">
-                <header><h2>${tagsLabel}</h2></header>
-                <main>
-                    <#list mostUsedTags as tag>
-                        <a rel="tag"
-                           href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
-                           class="tag tooltipped tooltipped-n"
-                           aria-label="${tag.tagPublishedRefCount} ${countLabel}${articleLabel}">
-                            ${tag.tagTitle}</a>
-                    </#list>
-                </main>
-            </div>
+        <div class="module">
+            <header><h2>${tagsLabel}</h2></header>
+            <main>
+                <#list mostUsedTags as tag>
+                    <a rel="tag"
+                       href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
+                       class="tag vditor-tooltipped vditor-tooltipped__n"
+                       aria-label="${tag.tagPublishedRefCount} ${countLabel}${articleLabel}">
+                        ${tag.tagTitle}</a>
+                </#list>
+            </main>
+        </div>
         </#if>
 
         <div class="module meta">
             <header>
-                <h2>${adminUser.userName}</h2>
+                <h2 class="fn__clear">
+                    ${adminUser.userName}
+                    <div class="fn__right">
+                        <@userSite dir="nw"></@userSite>
+                    </div>
+                </h2>
             </header>
-            <main class="fn-clear">
+            <main class="fn__clear">
                 <img src="${adminUser.userAvatar}" aria-label="${adminUser.userName}"/>
                 <div class="fn-right">
                     <a href="${servePath}/archives.html">
-                    ${statistic.statisticPublishedBlogArticleCount}
+                        ${statistic.statisticPublishedBlogArticleCount}
                         <span class="ft-gray">${articleLabel}</span></a><br/>
                     <a href="${servePath}/dynamic.html">
-                    ${statistic.statisticPublishedBlogCommentCount}
+                        ${statistic.statisticPublishedBlogCommentCount}
                         <span class="ft-gray">${commentLabel}</span></a><br/>
-                ${statistic.statisticBlogViewCount} <span class="ft-gray">${viewLabel}</span><br/>
-                ${onlineVisitorCnt} <span class="ft-gray">${onlineVisitorLabel}</span>
+                    ${statistic.statisticBlogViewCount} <span class="ft-gray">${viewLabel}</span><br/>
+                    ${onlineVisitorCnt} <span class="ft-gray">${onlineVisitorLabel}</span>
                 </div>
             </main>
         </div>
 
         <#if 0 != mostCommentArticles?size>
-            <div class="module">
-                <header><h2>${mostCommentArticlesLabel}</h2></header>
-                <main class="list">
-                    <ul>
-                        <#list mostCommentArticles as article>
-                            <li>
-                                <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
-                                   class="tooltipped tooltipped-e"
-                                   href="${servePath}${article.articlePermalink}">
-                                    ${article.articleTitle}
-                                </a>
-                            </li>
-                        </#list>
-                    </ul>
-                </main>
-            </div>
+        <div class="module">
+            <header><h2>${mostCommentArticlesLabel}</h2></header>
+            <main class="list">
+                <ul>
+                    <#list mostCommentArticles as article>
+                        <li>
+                            <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
+                               class="vditor-tooltipped vditor-tooltipped__e"
+                               href="${servePath}${article.articlePermalink}">
+                                ${article.articleTitle}
+                            </a>
+                        </li>
+                    </#list>
+                </ul>
+            </main>
+        </div>
         </#if>
 
         <#if 0 != mostViewCountArticles?size>
-            <div class="module">
-                <header><h2>${mostViewCountArticlesLabel}</h2></header>
-                <main class="list">
-                    <ul>
-                        <#list mostViewCountArticles as article>
-                            <li>
-                                <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
-                                   class="tooltipped tooltipped-e"
-                                   href="${servePath}${article.articlePermalink}">
-                                    ${article.articleTitle}
-                                </a>
-                            </li>
-                        </#list>
-                    </ul>
-                </main>
-            </div>
+        <div class="module">
+            <header><h2>${mostViewCountArticlesLabel}</h2></header>
+            <main class="list">
+                <ul>
+                    <#list mostViewCountArticles as article>
+                        <li>
+                            <a rel="nofollow" aria-label="${article.articleCommentCount} ${commentLabel}"
+                               class="vditor-tooltipped vditor-tooltipped__e"
+                               href="${servePath}${article.articlePermalink}">
+                                ${article.articleTitle}
+                            </a>
+                        </li>
+                    </#list>
+                </ul>
+            </main>
+        </div>
         </#if>
     </section>
+    </#if>
 </aside>
