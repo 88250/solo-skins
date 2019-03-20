@@ -85,13 +85,13 @@
 
         <div class="fn-right">
             <a href="${servePath}/search" aria-label="${searchLabel}"
-               class="pipe-tooltipped pipe-tooltipped--w header__icon">
+               class="vditor-tooltipped vditor-tooltipped__w header__icon">
                 <svg>
                     <use xlink:href="#icon-search"></use>
                 </svg>
             </a>
         <#if isLoggedIn>
-            <a class="avatar pipe-tooltipped pipe-tooltipped--w header__icon" aria-label="${adminLabel}"
+            <a class="avatar vditor-tooltipped vditor-tooltipped__w header__icon" aria-label="${adminLabel}"
                href="${servePath}/admin-index.do#main"
                style="background-image: url(${adminUser.userAvatar});"></a>
         <#else>

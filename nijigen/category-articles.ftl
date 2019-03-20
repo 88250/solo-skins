@@ -41,7 +41,7 @@
                 <i class="icon__category"></i>
                 ${categoryLabel}
                 &nbsp; > &nbsp;
-                <span class="tooltipped tooltipped__w"
+                <span class="vditor-tooltipped vditor-tooltipped__w"
                       aria-label="${category.categoryDescription}">${category.categoryTitle}</span>
             </div>
         </div>

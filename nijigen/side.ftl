@@ -54,7 +54,7 @@
                 <#list mostUsedCategories as category>
                     <a href="${servePath}/category/${category.categoryURI}"
                        aria-label="${category.categoryTagCnt} ${cntLabel}${tagsLabel}"
-                       class="tag tooltipped tooltipped__n">
+                       class="tag vditor-tooltipped vditor-tooltipped__n">
                         ${category.categoryTitle}</a>
                 </#list>
             </main>
@@ -68,7 +68,7 @@
                 <#list mostUsedTags as tag>
                     <a rel="tag"
                        href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
-                       class="tag tooltipped tooltipped__n"
+                       class="tag vditor-tooltipped vditor-tooltipped__n"
                        aria-label="${tag.tagPublishedRefCount} ${countLabel}${articleLabel}">
                         ${tag.tagTitle}</a>
                 </#list>

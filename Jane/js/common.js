@@ -47,9 +47,9 @@ var Skin = {
     Util.initPjax(function () {
       $('.header a').each(function () {
         if (this.href === location.href) {
-          this.className = 'current tooltipped tooltipped__w'
+          this.className = 'current vditor-tooltipped vditor-tooltipped__w'
         } else {
-          this.className = 'tooltipped tooltipped__w'
+          this.className = 'vditor-tooltipped vditor-tooltipped__w'
         }
       })
 
@@ -58,11 +58,11 @@ var Skin = {
 
     $('.header a').each(function () {
       if (this.href === location.href) {
-        this.className = 'current tooltipped tooltipped__w'
+        this.className = 'current vditor-tooltipped vditor-tooltipped__w'
       }
     }).click(function () {
       $('.header a').removeClass('current')
-      this.className = 'current tooltipped tooltipped__w'
+      this.className = 'current vditor-tooltipped vditor-tooltipped__w'
     })
   },
 }

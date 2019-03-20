@@ -134,20 +134,20 @@
             <span class="post__arrow">
                 <#if previousArticlePermalink??>
                 <a href="${servePath}${previousArticlePermalink}" rel="prev"
-                   class="tooltipped__n tooltipped"
+                   class="vditor-tooltipped__n vditor-tooltipped"
                    pjax-title="${previousArticleTitle}"
                    aria-label="${previousArticleLabel}: ${previousArticleTitle}">←</a>
                 </#if>
 
                 <#if nextArticlePermalink??>
                  <a href="${servePath}${nextArticlePermalink}" rel="next"
-                    class="tooltipped__n tooltipped"
+                    class="vditor-tooltipped__n vditor-tooltipped"
                     pjax-title="${nextArticleTitle}"
                     aria-label="${nextArticleLabel}: ${nextArticleTitle}">→</a>
                 </#if>
-                <a href="javascript:Util.goTop()" class="tooltipped__n tooltipped"
+                <a href="javascript:Util.goTop()" class="vditor-tooltipped__n vditor-tooltipped"
                    aria-label="${goTopLabel}">↑</a>
-                <a href="javascript:Util.goBottom()" class="tooltipped__n tooltipped"
+                <a href="javascript:Util.goBottom()" class="vditor-tooltipped__n vditor-tooltipped"
                    aria-label="${goBottomLabel}">↓</a>
             </span>
         </div>

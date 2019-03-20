@@ -100,7 +100,7 @@
                     <a class="post__view" href="${servePath}${article.articlePermalink}">
                     ${article.articleViewCount} ${viewLabel}</a>
                     <div class="fn-right">
-                    <span class="pipe-tooltipped pipe-tooltipped--n post__share-icon ft-green"
+                    <span class="vditor-tooltipped vditor-tooltipped__n post__share-icon ft-green"
                           onclick="$('#comment').focus()"
                           aria-label="${commentLabel}">
                         <svg>
@@ -149,7 +149,7 @@
                 ${article.articleViewCount} ${viewLabel}
                 </a>
                 <div class="fn-right">
-                <span class="pipe-tooltipped pipe-tooltipped--n post__share-icon ft-green"
+                <span class="vditor-tooltipped vditor-tooltipped__n post__share-icon ft-green"
                       onclick="$('#comment').focus()"
                       aria-label="${commentLabel}">
                     <svg>
@@ -188,7 +188,7 @@
         </div>
 
         <div class="post__side">
-        <span class="pipe-tooltipped pipe-tooltipped--e post__share-icon ft-green"
+        <span class="vditor-tooltipped vditor-tooltipped__e post__share-icon ft-green"
               onclick="$('#comment').focus()"
               aria-label="${commentLabel}">
             <span class="ft-gray">${article.articleCommentCount}</span>

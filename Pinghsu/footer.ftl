@@ -47,7 +47,7 @@
                 <#list mostUsedCategories as category>
                     <a href="${servePath}/category/${category.categoryURI}"
                        aria-label="${category.categoryTagCnt} ${cntLabel}${tagsLabel}"
-                       class="ft__link ft__nowrap tooltipped tooltipped__n">
+                       class="ft__link ft__nowrap vditor-tooltipped vditor-tooltipped__n">
                         ${category.categoryTitle}</a> &nbsp; &nbsp;
                 </#list>
             </div>
