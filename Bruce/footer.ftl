@@ -17,7 +17,10 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
+<#include "../../common-template/macro-user_site.ftl">
 <div class="footer">
+    <@userSite dir="n"></@userSite>
+    <br>
     &copy; ${year} - <a href="${servePath}">${blogTitle}</a>${footerContent} Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> • <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}
     <div>
         Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>

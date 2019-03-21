@@ -86,8 +86,12 @@
                     </#if>
                     <div class="col-sm-2"></div>
                 </div>
-            </div>  
+            </div>
         </div>
+
+        <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+            <#include "../../common-template/toc.ftl"/>
+        </#if>
 
         <#include "footer.ftl">
         <@comment_script oId=article.oId commentable=article.commentable>

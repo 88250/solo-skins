@@ -17,7 +17,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<div class="row comment" id="${comment.oId}">
+<div class="comment fn__clear" id="${comment.oId}">
     <img class="col-sm-1" title="${comment.commentName}"
          alt="${comment.commentName}" src="${comment.commentThumbnailURL}"/>
     <div class="col-sm-11">

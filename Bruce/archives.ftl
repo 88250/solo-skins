@@ -41,12 +41,10 @@
                         <#if curYear != archiveDate.archiveDateYear?number></div>
                     
                     <div class="row"><hr/><h2>${archiveDate.archiveDateYear} ${yearLabel}</h2></#if>
-                        <span>
                             <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
                                title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}(${archiveDate.archiveDatePublishedArticleCount})">
                                 ${archiveDate.archiveDateMonth} ${monthLabel}(${archiveDate.archiveDatePublishedArticleCount})</a>
-                            <span class="gray">•<span>
-                        </span>
+                            <span class="gray">•</span>
 
                         <#assign curYear = archiveDate.archiveDateYear?number>
                         </#list>

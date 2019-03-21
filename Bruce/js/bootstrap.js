@@ -2109,6 +2109,10 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   // ==============
 
   $(window).on('load', function () {
+    
+    $('.article__toc').animate({
+      'left': ($('.site').outerWidth() + $('.site').offset().left) + 'px'
+    }, 600)
     $('[data-spy="affix"]').each(function () {
       var $spy = $(this)
       var data = $spy.data()

@@ -33,10 +33,8 @@
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8 site article-list">
                     <h2>
-                        <a id="tag" rel="alternate" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
                             ${tag.tagTitle}
                             (${tag.tagPublishedRefCount})
-                        </a>
                     </h2>
                     <#include "article-list.ftl">
                 </div>

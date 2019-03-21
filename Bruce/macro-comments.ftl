@@ -18,15 +18,15 @@
 
 -->
 <#macro comments commentList article>
-<div class="row" id="comments">
+<div id="comments">
     <#list commentList as comment>
     <#include "common-comment.ftl"/>
     </#list>
 </div>
 
-<#if article.commentable>
-<div class="row cmtForm">
-    <textarea rows="3" placeholder="${postCommentsLabel}" id="comment" class="form-control"></textarea>
-</div>
-</#if>
+    <#if article.commentable>
+    <div class="cmtForm">
+        <textarea rows="3" placeholder="${postCommentsLabel}" id="comment" class="form-control"></textarea>
+    </div>
+    </#if>
 </#macro>
