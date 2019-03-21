@@ -95,6 +95,5 @@ var Skin = {
 }
 
 $(document).ready(function () {
-  Util.init()
   Skin.init()
 })

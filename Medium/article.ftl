@@ -17,38 +17,22 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<#include "macro-head.ftl">
+<#include "../../common-template/macro-common_head.ftl">
 <#include "macro-comments.ftl">
 <#include "../../common-template/macro-comment_script.ftl">
 <!DOCTYPE html>
 <html>
 <head>
-<@head title="${article.articleTitle} - ${blogTitle}">
-    <meta name="keywords" content="${article.articleTags}"/>
-    <meta name="description" content="${article.articleAbstract?html}"/>
+<@head title="${article.articleTitle} - ${blogTitle}" description="${article.articleAbstract?html}">
+    <link rel="stylesheet"
+          href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
+        <#if previousArticlePermalink??>
+            <link rel="prev" title="${previousArticleTitle}" href="${servePath}${previousArticlePermalink}">
+        </#if>
+        <#if nextArticlePermalink??>
+            <link rel="next" title="${nextArticleTitle}" href="${servePath}${nextArticlePermalink}">
+        </#if>
 </@head>
-<#if previousArticlePermalink??>
-    <link rel="prev" title="${previousArticleTitle}" href="${servePath}${previousArticlePermalink}">
-</#if>
-<#if nextArticlePermalink??>
-    <link rel="next" title="${nextArticleTitle}" href="${servePath}${nextArticlePermalink}">
-</#if>
-    <!-- Open Graph -->
-    <meta property="og:locale" content="zh_CN"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="${article.articleTitle}"/>
-    <meta property="og:description" content="${article.articleAbstract?html}"/>
-    <meta property="og:image" content="${article.authorThumbnailURL}"/>
-    <meta property="og:url" content="${servePath}${article.articlePermalink}"/>
-    <meta property="og:site_name" content="Solo"/>
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:description" content="${article.articleAbstract?html}"/>
-    <meta name="twitter:title" content="${article.articleTitle}"/>
-    <meta name="twitter:image" content="${article.authorThumbnailURL}"/>
-    <meta name="twitter:url" content="${servePath}${article.articlePermalink}"/>
-    <meta name="twitter:site" content="@DL88250"/>
-    <meta name="twitter:creator" content="@DL88250"/>
 </head>
 <body>
 <#include "header.ftl">

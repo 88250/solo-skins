@@ -25,27 +25,6 @@
             </a>
         </h1>
         <span class="sub-title">${blogSubtitle}</span>
-        <div>
-            <span>
-                ${viewCount1Label}
-                <span class='error-msg'>
-                    ${statistic.statisticBlogViewCount}
-                </span>
-            </span>
-            <span>
-                ${articleCount1Label}
-                <span class='error-msg'>
-                    ${statistic.statisticPublishedBlogArticleCount}
-                </span>
-            </span>
-            <span>
-                ${commentCount1Label}
-                <span class='error-msg'>
-                    ${statistic.statisticPublishedBlogCommentCount}
-                </span>
-            </span>
-        </div>
-        <span class="clear"></span>
     </div>
     <div class="right">
         <ul>

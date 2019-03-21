@@ -60,11 +60,8 @@
 
         <div class="module meta">
             <header>
-                <h2 class="fn__clear">
-                    ${adminUser.userName}
-                    <div class="fn__right">
-                        <@userSite dir="nw"></@userSite>
-                    </div>
+                <h2 class="ft__center">
+                    <@userSite dir="nw"></@userSite>
                 </h2>
             </header>
             <main class="fn__clear">

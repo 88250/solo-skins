@@ -17,7 +17,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<#include "macro-head.ftl">
+<#include "../../common-template/macro-common_head.ftl">
 <#include "macro-side.ftl">
 <#include "macro-comments.ftl">
 <#include "../../common-template/macro-comment_script.ftl">
@@ -25,8 +25,7 @@
 <html>
     <head>
         <@head title="${page.pageTitle} - ${blogTitle}">
-        <meta name="keywords" content="${metaKeywords},${page.pageTitle}" />
-        <meta name="description" content="${metaDescription}" />
+            <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
         </@head>
     </head>
     <body>

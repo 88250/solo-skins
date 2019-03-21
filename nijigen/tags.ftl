@@ -17,13 +17,12 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<#include "macro-head.ftl">
+<#include "../../common-template/macro-common_head.ftl">
 <!DOCTYPE html>
 <html>
 <head>
 <@head title="${allTagsLabel} - ${blogTitle}">
-    <meta name="keywords" content="${metaKeywords},${allTagsLabel}"/>
-    <meta name="description" content="<#list tags as tag>${tag.tagTitle}<#if tag_has_next>,</#if></#list>"/>
+    <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
 </@head>
 </head>
 <body>
@@ -58,22 +57,5 @@
     <#include "side.ftl">
 </div>
 <#include "footer.ftl">
-<#if pjax><!---- pjax {#pjax} start ----></#if>
-<script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/isotope.pkgd.min.js"
-        charset="utf-8"></script>
-<script>
-    $('.tags').isotope({
-        transitionDuration: '1.5s',
-        itemSelector: '.tag',
-        layoutMode: 'fitRows',
-        getSortData: {
-            name: '.name'
-        }
-    })
-    $('.tags').isotope({
-        sortBy: 'name',
-    })
-</script>
-<#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>

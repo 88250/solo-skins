@@ -17,13 +17,12 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<#include "macro-head.ftl">
+<#include "../../common-template/macro-common_head.ftl">
 <!DOCTYPE html>
 <html>
     <head>
         <@head title="${allTagsLabel} - ${blogTitle}">
-        <meta name="keywords" content="${metaKeywords},${allTagsLabel}"/>
-        <meta name="description" content="<#list tags as tag>${tag.tagTitle}<#if tag_has_next>,</#if></#list>"/>
+            <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
         </@head>
     </head>
     <body>
@@ -33,8 +32,8 @@
             <#include "header.ftl">
             <div>
                 <div class="main">
-                    <div class="main-content">
-                        <ul id="tags">
+                    <div class="main-content vditor-content">
+                        <ul id="tags" class="fn__clear">
                             <#list tags as tag>
                             <li>
                                 <a rel="tag" data-count="${tag.tagPublishedRefCount}"

@@ -17,14 +17,13 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<#include "macro-head.ftl">
+<#include "../../common-template/macro-common_head.ftl">
 <!DOCTYPE html>
 <html>
     <head>
-        <@head title="${tag.tagTitle} - ${blogTitle}">
-        <meta name="keywords" content="${metaKeywords},${tag.tagTitle}"/>
-        <meta name="description" content="<#list articles as article>${article.articleTitle}<#if article_has_next>,</#if></#list>"/>
-        </@head>
+       <@head title="${tag.tagTitle} ${tagLabel} - ${blogTitle}">
+           <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
+       </@head>
     </head>
     <body>
         ${topBarReplacement}

@@ -22,8 +22,7 @@
 <html>
     <head>
         <@head title="${blogTitle}">
-            <link rel="stylesheet"
-                  href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
+            <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
         </@head>
     </head>
     <body>

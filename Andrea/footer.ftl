@@ -23,12 +23,13 @@
     Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a> by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
 </div>
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
-<#include "../../common-template/skin-script.ftl">
+<script src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}"></script>
+<#include "../../common-template/label.ftl">
 <script type="text/javascript">
     // init brush
     var buildBrush = function () {
-        $("#brush").height(document.documentElement.scrollHeight - document.documentElement.clientHeight).css("background-position",
-        parseInt((document.documentElement.scrollWidth - 910) / 2 - 56) + "px -150px");
+        $("#brush").height($('body').height() - $(window).height() + 200).css("background-position",
+        parseInt((document.documentElement.scrollWidth - 910) / 2 - 56) + "px -200px");
     };
 
     // init

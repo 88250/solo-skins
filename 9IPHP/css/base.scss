@@ -428,6 +428,7 @@ aside {
 .navbar {
   border-bottom: 1px solid #eee;
   height: 50px;
+  overflow: hidden;
   margin-bottom: 30px;
 }
 
@@ -705,6 +706,10 @@ aside {
 @media (max-width: 700px) {
   .page-icon {
     margin: 13px 3px 0 0;
+  }
+
+  .article__toc {
+    display: none;
   }
 
   .wrapper {
