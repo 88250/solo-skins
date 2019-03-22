@@ -19,6 +19,18 @@
 -->
 <div class="footer-secondary">
     <div class="content">
+
+        <h4>
+            ${noticeBoardLabel}
+        </h4>
+        <div class="arrow-right"></div>
+        <div class="notice">
+            <#include "../../common-template/macro-user_site.ftl">
+            <@userSite dir="n"/>
+        </div>
+        <div class="clear"></div>
+        <div class="hr"></div>
+
         <#if "" != noticeBoard>
         <h4>
             ${noticeBoardLabel}

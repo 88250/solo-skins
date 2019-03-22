@@ -32,7 +32,7 @@
         </div>
         <div class="content">
             <h2>
-                ${commentName1Label}${authorName}
+                ${authorName}
             </h2>
             <#include "article-list.ftl">
         </div>

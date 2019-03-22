@@ -20,10 +20,26 @@
  * skin community style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.1, Mar 16, 2019
+ * @version 2.2.0.0, Mar 22, 2019
  */
 @import "../../../scss/reset";
+@import "../../../scss/toc";
+@import "../../../scss/usite";
 @import "vditor/src/assets/scss/classic";
+
+.user__site {
+  margin: 0 8px 0;
+  display: inline-block;
+  height: 25px;
+  &:hover {
+    color: #888;
+  }
+  svg {
+    height: 25px;
+    width: 25px;
+    fill: currentColor;
+  }
+}
 
 .left {
   float: left;
@@ -754,4 +770,22 @@ a.star-icon {
   margin: 3px;
   cursor: pointer;
   float: left;
+}
+
+#tags li {
+  list-style: none;
+  float: left;
+
+  a {
+    display: block;
+    color: #fff;
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 0 10px 10px 0;
+    background-color: #9BC4CE;
+    &:hover {
+      text-decoration: none;
+      background-color:  #B4D9E2;
+    }
+  }
 }

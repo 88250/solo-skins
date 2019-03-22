@@ -28,7 +28,7 @@
     ${postCommentsLabel}
 </div>
 <div class="comment">
-    <textarea rows="3" placeholder="${postCommentsLabel}" id="comment"></textarea>
+    <textarea rows="3" placeholder="${commentContentLabel}" id="comment"></textarea>
 </div>
 </#if>
 </#macro>

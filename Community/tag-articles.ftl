@@ -31,7 +31,7 @@
             <#include "header.ftl">
         </div>
         <div class="content">
-            <h2>${tag1Label}
+            <h2>
                 <a rel="alternate" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
                     <span id="tagArticlesTag">
                         ${tag.tagTitle}

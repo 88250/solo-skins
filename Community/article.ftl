@@ -72,6 +72,15 @@
                             </a>
                         </li>
                     </ul>
+                    <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+                        <br> <br>
+                        <div class="article-date">
+                            ${tocLabel}
+                        </div>
+                        <div class="arrow-right"></div>
+                        <div class="clear"></div>
+                        <#include "../../common-template/toc.ftl"/>
+                    </#if>
                 </div>
                 <div class="article-main article-detail-body">
                     <h2 class="title">

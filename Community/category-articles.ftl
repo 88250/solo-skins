@@ -31,8 +31,7 @@
             <#include "header.ftl">
         </div>
         <div class="content">
-            <h2>${categoryLabel}
-                ${category.categoryTitle}
+            <h2>${category.categoryTitle}
                 (${category.categoryTagCnt})<small> ${category.categoryDescription}</small>
             </h2>
             <#include "article-list.ftl">
