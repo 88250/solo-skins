@@ -18,6 +18,10 @@
 
 -->
 <footer class="footer">
+    <#include "../../common-template/macro-user_site.ftl"/>
+    <div class="ft__center">
+        <@userSite dir="n"/>
+    </div>
     <nav class="footer__nav mobile__none">
         <#list pageNavigations as page>
             <a class="ft__link" href="${page.pagePermalink}" target="${page.pageOpenTarget}" rel="section">

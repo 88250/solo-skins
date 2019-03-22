@@ -84,7 +84,11 @@
         </#if>
         </div>
     </div>
-    <div class="post__toc"></div>
+    <div class="post__toc">
+    <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+        <#include "../../common-template/toc.ftl"/>
+    </#if>
+    </div>
     <div class="body--gray post__gray">
         <div class="wrapper comment">
             <@comments commentList=articleComments article=article></@comments>

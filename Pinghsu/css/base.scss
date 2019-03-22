@@ -19,11 +19,12 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.1.0.3, Mar 16, 2019
+ * @version 0.2.0.0, Mar 22, 2019
 */
 @import "../../../scss/reset";
 @import "../../../scss/function";
 @import "../../../scss/nprogress";
+@import "../../../scss/toc";
 @import "icon";
 @import "vditor/src/assets/scss/classic";
 
@@ -33,6 +34,12 @@ $fade: rgba(0,0,0,.38) !default;
 $gray:  #5f5f5f !default;
 $gray-lighter: #e0e0e0 !default;
 $gray-lightest: #f7f7f7 !default;
+
+.user__site {
+  display: inline-block;
+  margin: 40px 5px 0;
+  height: 20px;
+}
 
 body {
   display: flex;
@@ -64,9 +71,6 @@ a:active, a:focus, a:hover {
 
 .vditor-reset {
   font-size: 14px;
-  .b3-solo-list {
-    display: none;
-  }
 
   a {
     color: $black;
@@ -239,8 +243,8 @@ a:active, a:focus, a:hover {
   }
   &__nav {
     text-align: center;
-    height: 65px;
-    line-height: 65px;
+    height: 95px;
+    line-height: 95px;
     a {
       padding: 0 25px;
     }
@@ -522,35 +526,19 @@ a:active, a:focus, a:hover {
       display: none;
     }
 
-    .b3-solo-list {
+    .article__toc {
+      overflow: initial;
       border-left: 1px solid $gray-lighter;
       margin: 0;
       font-size: 14px;
       line-height: 24px;
+      li.current a {
+        color: $red;
+      }
       a {
         display: block;
         margin-top: -24px;
       }
-    }
-
-    .b3-solo-list-h2,
-    .b3-solo-list-h4,
-    .b3-solo-list-h5,
-    .b3-solo-list-h3 {
-      margin-left: 0;
-    }
-
-    .b3-solo-list-h2 a {
-      margin-left: 10px;
-    }
-    .b3-solo-list-h3 a {
-      margin-left: 20px;
-    }
-    .b3-solo-list-h4 a {
-      margin-left: 30px;
-    }
-    .b3-solo-list-h5 a {
-      margin-left: 40px;
     }
 
     li {
@@ -563,6 +551,8 @@ a:active, a:focus, a:hover {
         height: 7px;
         content: '';
         border-radius: 50%;
+      }
+      &.current:before {
         background-color: $red;
       }
     }
