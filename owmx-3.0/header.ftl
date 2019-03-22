@@ -19,5 +19,9 @@
 -->
 <header>
     <a href="${servePath}" id="logoTitle">${blogTitle}</a>
-	<p>${blogSubtitle}</p>
+	<div>${blogSubtitle}</div>
+    <div class="user__sites">
+        <#include "../../common-template/macro-user_site.ftl"/>
+        <@userSite dir="n"/>
+    </div>
 </header>
