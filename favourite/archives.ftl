@@ -21,9 +21,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <@head title="${allTagsLabel} - ${blogTitle}">
-            <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
-        </@head>
+           <@head title="${archiveLabel} - ${blogTitle}">
+               <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
+           </@head>
     </head>
     <body>
         ${topBarReplacement}
@@ -34,18 +34,21 @@
                 <div class="roundtop"></div>
                 <div class="body">
                     <div class="left main">
-                        <div class="kind-title">${tagsLabel}</div>
-                        <ul id="tags">
-                            <#list tags as tag>
-                            <li class="kind-panel">
-                                <a rel="tag" data-count="${tag.tagPublishedRefCount}"
-                                   href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}" title="${tag.tagTitle}">
-                                    <span>${tag.tagTitle}</span>
-                                    (<b>${tag.tagPublishedRefCount}</b>)
-                                </a>
-                            </li>
+                        <#if 0 != archiveDates?size>
+                            <#assign curYear = year?number>
+                            <div class="kind-title">${year} ${yearLabel}</div>
+                            <#list archiveDates as archiveDate>
+                                <#if curYear != archiveDate.archiveDateYear?number>
+                                <div class="kind-title">${archiveDate.archiveDateYear} ${yearLabel}</div>
+                                </#if>
+                                <div class="kind-panel">
+                                    <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
+                                        ${archiveDate.archiveDateMonth} ${monthLabel}
+                                        - ${archiveDate.archiveDatePublishedArticleCount} ${countLabel}</a>
+                                </div>
+                                <#assign curYear = archiveDate.archiveDateYear?number>
                             </#list>
-                        </ul>
+                        </#if>
                     </div>
                     <div class="right">
                         <#include "side.ftl">
@@ -59,8 +62,5 @@
             <div class="footer-icon"><#include "statistic.ftl"></div>
             <#include "footer.ftl">
         </div>
-        <script type="text/javascript">
-            Util.buildTags();
-        </script>
     </body>
 </html>

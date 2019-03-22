@@ -20,10 +20,12 @@
  * skin favoutite style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.2, Mar 16, 2019
+ * @version 2.2.0.0, Mar 22, 2019
  */
 
 @import "../../../scss/reset";
+@import "../../../scss/toc";
+@import "../../../scss/usite";
 @import "vditor/src/assets/scss/classic";
 
 .left {
@@ -47,6 +49,19 @@
 .none {
     display: none;
 }
+
+.marginTop12 {
+    margin-top: 12px;
+}
+
+.marginLeft12 {
+    margin-left: 12px;
+}
+
+#tags li {
+    list-style: none;
+}
+
 body {
     background: url("../images/bg.jpg") repeat scroll left top transparent;
 }
