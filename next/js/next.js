@@ -76,7 +76,7 @@ var NexT = {
               'top': '0'
             }, function () {
               // 当有文章页面有目录时，回调不放这里，侧边栏就会一片空白
-              if ($('.b3-solo-list li').length > 0 && $(window).width() > 1000) {
+              if ($('.article__toc li').length > 0 && $(window).width() > 1000) {
                 $('.sidebar-toggle').click();
               }
             });
@@ -92,54 +92,18 @@ var NexT = {
     });
   },
   initArticle: function () {
-    if ($('.b3-solo-list li').length > 0 && $(window).width() > 1000) {
+    if ($('.article__toc li').length > 0 && $(window).width() > 1000) {
       // add color to sidebar menu
       $('.sidebar-toggle').addClass('has-toc');
-
-      // append toc to sidebar menu
-      var articleTocHTML = '<ul><li class="current" data-tab="toc">' + Label.tocLabel + '</li><li data-tab="site">' + Label.siteViewLabel + '</li></ul><section></section>';
-      $('.sidebar').prepend(articleTocHTML);
-      var $sectionF = $('.sidebar section:first').html($('.b3-solo-list')),
-        $sectionL = $('.sidebar section:last');
-      $sectionF.height($(window).height() - 90);
-      // 切换 tab
-      $('.sidebar > ul > li').click(function () {
-        if ($(this).data('tab') === 'toc') {
-          $sectionL.animate({
-            "opacity": '0',
-            "top": '-50px'
-          }, 300, function () {
-            $sectionF.show().css('top', '-50px');
-            $sectionF.animate({
-              "opacity": '1',
-              "top": '0'
-            }, 300);
-          });
-        } else {
-          $sectionF.animate({
-            "opacity": '0',
-            "top": '-50px'
-          }, 300, function () {
-            $sectionF.hide().css('top', '-50px');
-            $sectionL.animate({
-              "opacity": '1',
-              "top": '0'
-            }, 300);
-          });
-        }
-        $('.sidebar > ul > li').removeClass('current');
-        $(this).addClass('current');
-      });
-
       this.initToc();
     }
   },
   initToc: function () {
     var $articleTocs = $('.vditor-reset [id^=b3_solo_h]'),
-      $articleToc = $('.b3-solo-list');
+      $articleToc = $('.article__toc');
 
     $(window).scroll(function (event) {
-      if ($('.b3-solo-list li').length === 0) {
+      if ($('.article__toc li').length === 0) {
         return false;
       }
 

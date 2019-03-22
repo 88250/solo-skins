@@ -18,29 +18,40 @@
 
 -->
 <footer class="footer">
-    <div class="wrapper fn-clear">
-        <a href="${servePath}">${blogTitle}</a>  •
-        ${onlineVisitor1Label}${onlineVisitorCnt} <br/>
-        &copy; ${year}
+    <div class="wrapper">
+        <div class="fn-clear">
+            <a href="${servePath}">${blogTitle}</a> •
+        ${onlineVisitor1Label}${onlineVisitorCnt}
+            <div class="fn-right">
+            <#include "../../common-template/macro-user_site.ftl"/>
+            <@userSite dir="n"/>
+            </div>
+        </div>
+        <div class="fn-clear">
+            &copy; ${year}
         ${footerContent}
-        Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> •
-        <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}
-        
-        <div class="fn-right">
-            Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
-            <sup>[<a href="https://github.com/iissnan/hexo-theme-next" target="_blank">ref</a>]</sup>
-            by <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
+            Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> •
+            <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}
+
+            <div class="fn-right">
+                Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
+                <sup>[<a href="https://github.com/iissnan/hexo-theme-next" target="_blank">ref</a>]</sup>
+                by <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
+            </div>
         </div>
     </div>
 </footer>
 <div class="back-to-top" onclick="Util.goTop()"></div>
 
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
-<script type="text/javascript" src="${staticServePath}/skins/${skinDirName}/js/${skinDirName}${miniPostfix}.js?${staticResourceVersion}" charset="utf-8"></script>
+<script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}"
+        charset="utf-8"></script>
+<script type="text/javascript"
+        src="${staticServePath}/skins/${skinDirName}/js/${skinDirName}${miniPostfix}.js?${staticResourceVersion}"
+        charset="utf-8"></script>
 <#include "../../common-template/label.ftl">
 <script type="text/javascript">
-    Label.tocLabel = "${tocLabel}";
-    Label.siteViewLabel = "${siteViewLabel}";
+    Label.tocLabel = "${tocLabel}"
+    Label.siteViewLabel = "${siteViewLabel}"
 </script>
 ${plugins}

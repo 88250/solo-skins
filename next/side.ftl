@@ -24,6 +24,9 @@
 </div>
 
 <aside class="sidebar">
+    <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+        <#include "../../common-template/toc.ftl"/>
+    <#else>
     <section>
         <img class="site-author-image" src="${adminUser.userAvatar}" title="${userName}"/>
         <p class="site-author-name">${userName}</p>
@@ -108,4 +111,5 @@
         </div>
         </#if>
     </section>
+    </#if>
 </aside>

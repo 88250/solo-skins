@@ -30,7 +30,7 @@
         <main class="main">
             <div class="wrapper">
             <div class="content page-archive">
-                <section class="posts-collapse">
+                <section class="posts-collapse posts-collapse--line">
                     <span class="archive-move-on"></span>
                     <span class="archive-page-counter">
                         ${ohLabel}..!  ${sumLabel} ${statistic.statisticPublishedBlogArticleCount} ${fightLabel}
