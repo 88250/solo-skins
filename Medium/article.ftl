@@ -203,6 +203,9 @@
         <div class="main">
         <#include "bottom.ftl">
         </div>
+        <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+            <#include "../../common-template/toc.ftl"/>
+        </#if>
     </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>

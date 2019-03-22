@@ -19,9 +19,11 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.0.0.2, Mar 16, 2019
+ * @version 2.1.0.0, Mar 22, 2019
  */
 @import "../../../scss/reset";
+@import "../../../scss/usite";
+@import "../../../scss/toc";
 @import "../../../scss/nprogress";
 @import "vditor/src/assets/scss/classic";
 
@@ -343,6 +345,18 @@
 
 /* star article */
 .article {
+  &__toc {
+    left: 100%;
+    position: fixed;
+    top: 90px;
+    bottom: 60px;
+    a {
+      color: rgba(0, 0, 0, 0.54);
+      &:hover {
+        color: rgba(0, 0, 0, 0.68);
+      }
+    }
+  }
   &__main {
     display: flex;
     flex-direction: column;
@@ -442,10 +456,6 @@
 /* end article list */
 
 /* start article */
-.b3-solo-list {
-  display: none;
-}
-
 .post {
   max-width: 740px;
   margin: 50px auto 20px;
@@ -556,7 +566,9 @@
 
 .article__bottom {
   background-color: #fafafa;
-  padding: 40px 20px
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .article__bottom .footer__tag {

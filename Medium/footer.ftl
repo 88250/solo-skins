@@ -21,6 +21,8 @@
     <footer class="footer">
         <div class="fn-clear">
         ${blogSubtitle}
+            <#include "../../common-template/macro-user_site.ftl"/>
+            <@userSite dir="n"/>
             <div class="fn-right">
             ${blogTitle} &copy; ${year} ${footerContent}
             </div>

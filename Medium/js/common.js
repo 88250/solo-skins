@@ -19,7 +19,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.1.0.0, Feb 27, 2019
+ * @version 0.1.0.1, Mar 22, 2019
  */
 
 /**
@@ -28,7 +28,16 @@
  */
 var Skin = {
   init: function () {
+    const $article__toc = $('.article__toc')
     $(window).scroll(function () {
+      if ($article__toc.length === 1) {
+        if ($('.article__bottom').offset().top < $(window).scrollTop()) {
+          $article__toc.hide()
+        } else {
+          $article__toc.show()
+        }
+      }
+
       if ($('#headerNav').length === 0) {
         return
       }
@@ -54,7 +63,9 @@ var Skin = {
           });
         }
       }
+      Skin.initToc()
     })
+    Skin.initToc()
   },
   initTags: function () {
     var $tags = $('#tags');
@@ -198,6 +209,15 @@ var Skin = {
 
       window.open(urls[key], '_blank', 'top=100,left=200,width=648,height=618')
     })
+  },
+  initToc: function () {
+    if ($('.article__toc').length !== 0 && $(window).width() > 1000) {
+      $('.article__toc').animate({
+        'left': ($('.post').outerWidth() + $('.post').offset().left) + 'px'
+      }, 600)
+    } else {
+      $('.article__toc').hide()
+    }
   }
 };
 Skin.init();
