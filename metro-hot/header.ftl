@@ -50,9 +50,12 @@
         </li>
     </ul>
     <div class="fn-right top-info">
-        <a href="${servePath}/admin-index.do#main" title="${adminLabel}" id="settings" data-ico="&#x0070;"></a>
-        <hr>
-        <a id="logout" title="${logoutLabel}" data-ico="&#xe040;"></a>
-        <a href="${servePath}/start" title="${startToUseLabel}" id="register" data-ico="&#xe03f;"></a>
+        <#if isLoggedIn>
+            <a href="${servePath}/admin-index.do#main" title="${adminLabel}" data-ico="&#x0070;"></a>
+            <hr>
+            <a href="${logoutURL}" title="${logoutLabel}" data-ico="&#xe040;"></a>
+        <#else>
+          <a href="${servePath}/start" title="${startToUseLabel}" data-ico="&#xe03f;"></a>
+        </#if>
     </div>
 </div>

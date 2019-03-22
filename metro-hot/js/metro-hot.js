@@ -52,15 +52,6 @@ var MetroHot = {
         var onlineVisitorCnt = $("#top > span").first().text();
         $(".online-count .text").append(onlineVisitorCnt.substr(1, onlineVisitorCnt.length));
 
-        // 登录与否的显示设置
-        var isLogin = $("#admin").data("login");
-        if (isLogin) {
-            $(".user .text").html($("#admin > span").text());
-            $(".login, .register, #login, #register, .logout, .settings").hide();
-        } else {
-            $(".login, .register, .user, .clear, .logout, .settings, #logout, #settings").hide();
-        }
-
         if ($("#dynamic").length === 1) {
             // 滚动处理
             $(window).scroll(function() {
@@ -81,53 +72,13 @@ var MetroHot = {
             return;
         }
 
-        // 侧边栏点击事件
-        $("#login, .login").attr("href", $("#admin > a").first().attr("href"));
-
         // 滚动处理
         $(window).scroll(function() {
             var y = $(window).scrollTop();
             if (y > MetroHot.headerH) {
-                if (isLogin) {
-                    $(".logout, .settings").show();
-                } else {
-                    $(".login, .register").show();
-                }
-            } else {
-                if (isLogin) {
-                    $(".logout, .settings").hide();
-                } else {
-                    $(".login, .register").hide();
-                }
-            }
-
-            if (y > MetroHot.headerH) {
                 $("#goTop").fadeIn("slow");
             } else {
                 $("#goTop").hide();
-            }
-
-            if ($(".side > div").height() < 620) {
-                if (y > MetroHot.headerH) {
-                    $(".side > div").css({
-                        "position": "fixed",
-                        "top": "0px",
-                        "width": "240px"
-                    });
-                } else {
-                    $(".side > div").css("position", "static");
-                }
-            } else {
-                if (y + $(window).height() > $(".side > div").height() + MetroHot.headerH) {
-                    $(".side > div").css({
-                        "position": "fixed",
-                        "top": "auto",
-                        "bottom": "10px",
-                        "width": "240px"
-                    });
-                } else {
-                    $(".side > div").css("position", "static");
-                }
             }
         }).click(function(event) {
             if (event.target.className === "title" || event.target.parentElement.className === "title") {

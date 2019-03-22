@@ -20,9 +20,25 @@
  * skin metro-hot style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.1, Mar 16, 2019
+ * @version 2.2.0.0, Mar 22, 2019
  */
+@import "../../../scss/toc";
+@import "../../../scss/usite";
+@import "../../../scss/function";
 @import "vditor/src/assets/scss/classic";
+
+.vditor-reset pre > code {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.user__site {
+  svg {
+    height: 14px;
+    width: 14px;
+    fill: currentColor;
+  }
+}
+
 /* start base */
 @font-face {
   font-family: 'IcoMoon';
@@ -52,7 +68,6 @@ body {
   font-family: Verdana, arial, '\5fae\8f6f\96c5\9ed1';
   font-size: 12px;
   background-color: #292929;
-  min-height: 1990px;
   margin: 0;
   color: #D1D2D1;
 }
@@ -539,7 +554,6 @@ textarea {
   background-color: #2E8BCC;
 }
 
-.login,
 .settings {
   background-color: #008641;
 }
@@ -627,9 +641,8 @@ textarea {
   height: auto;
 }
 
-.user .text,
-.notice-board .text {
-  top: 36px;
+.user .text {
+  top: 27px;
 }
 
 /* end side */
@@ -941,6 +954,9 @@ pre.prettyprint {
 /* end dynamic */
 
 @media (max-width: 860px) and (min-width: 460px) {
+  .fn__flex {
+    display: block;
+  }
   .wrapper {
     width: 720px;
   }
@@ -969,37 +985,33 @@ pre.prettyprint {
     width: 283px;
   }
 
-  .most-comment,
-  .most-view {
-    width: 300px;
-    margin-bottom: 20px;
-    margin-top: 40px;
-  }
-
-  .most-comment .text,
-  .most-view .text {
-    width: 195px;
-  }
-
   .tags-tile,
   .links-tile,
-  .archives-tile {
+  .archives-tile,
+  .most-comment,
+  .most-view {
     width: 670px;
   }
 
   .tags-tile .text,
   .links-tile .text,
-  .archives-tile .text {
+  .archives-tile .text,
+  .most-comment .text,
+  .most-view .text{
     width: 580px;
   }
 
   .links-tile,
-  .tags-tile {
+  .tags-tile,
+  .most-view {
     margin-left: 0;
   }
 }
 
 @media (max-width: 460px) {
+  .fn__flex {
+    display: block;
+  }
   .side,
   .top-info,
   .header > .fn-left,
@@ -1023,7 +1035,6 @@ pre.prettyprint {
   #search {
     width: 237px;
   }
-
 
   .side-tile {
     width: 94px;

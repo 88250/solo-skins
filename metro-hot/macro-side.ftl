@@ -28,12 +28,8 @@
 
         <#if "" != noticeBoard>
         <div class="notice-board side-tile">
-            <span data-ico="&#xe1e9;"></span>
             <div class="title">
                 ${noticeBoard}
-            </div>
-            <div class="text">
-                ${noticeBoardLabel}
             </div>
         </div>
         </#if>
@@ -165,24 +161,35 @@
 
         <div class="user side-tile">
             <span>
-                <img src="<#if gravatar??>${gravatar}</#if>"/>
+                <img src="${faviconURL}"/>
             </span>
-            <div class="text"></div>
+            <div class="text fn-clear">
+                <#include "../../common-template/macro-user_site.ftl"/>
+                <@userSite dir="n"/>
+            </div>
         </div>
 
-        <a href="${servePath}/admin-index.do#main" class="settings side-tile">
-            <span data-ico="&#x0070;"></span>
-            <div class="title">
-                ${adminLabel}
-            </div>
-        </a>
-
-        <a href="${servePath}/start" class="register side-tile">
-            <span data-ico="&#xe040;"></span>
-            <div class="title">
-                ${startToUseLabel}
-            </div>
-        </a>
+        <#if isLoggedIn>
+             <a href="${servePath}/admin-index.do#main" class="settings side-tile">
+                 <span data-ico="&#x0070;"></span>
+                 <div class="title">
+                     ${adminLabel}
+                 </div>
+             </a>
+            <a class="logout side-tile" href="${logoutURL}">
+                <span data-ico="&#xe040;"></span>
+                <div class="title">
+                    ${logoutLabel}
+                </div>
+            </a>
+        <#else>
+         <a href="${servePath}/start" class="register side-tile">
+             <span data-ico="&#xe040;"></span>
+             <div class="title">
+                 ${startToUseLabel}
+             </div>
+         </a>
+        </#if>
     </div>
 </div>
 </#macro>

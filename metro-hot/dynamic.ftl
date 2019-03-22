@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="fn-clear">
+            <div class="fn__flex">
                 <#if 0 != mostCommentArticles?size>
                 <div class="side-tile most-comment fn-clear">
                     <div class="fn-left">
@@ -163,7 +163,7 @@
                 </#if>
             </div>
 
-            <div class="fn-clear">
+            <div class="fn__flex">
                 <#if 0 != links?size>
                 <div class="side-tile links-tile fn-clear">
                     <div class="fn-left">
@@ -208,15 +208,6 @@
             $("#comments .vditor-reset").each(function () {
                 this.innerHTML = Util.replaceEmString($(this).html());
             });
-
-            if ($(".side").height() < $(".main").height()) {
-                $(".main").height($(".side").height() - 5).css({
-                    "overflow": "auto",
-                    "margin-top": "5px"
-                });
-
-                $("#comments").css("margin-top", "0");
-            }
         </script> 
     </body>
 </html>
