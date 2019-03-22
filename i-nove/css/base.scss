@@ -20,10 +20,21 @@
  * skin i-nove style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.0.0.2, Mar 16, 2019
+ * @version 2.1.0.0, Mar 22, 2019
  */
+@import "../../../scss/toc";
 @import "../../../scss/reset";
+@import "../../../scss/usite";
 @import "vditor/src/assets/scss/classic";
+
+#tags li {
+  list-style: none;
+  line-height: 20px;
+}
+
+.user__site {
+  margin-right: 10px  ;
+}
 
 .left {
   float: left;
@@ -53,6 +64,10 @@
 
 .marginTop12 {
   margin-top: 12px;
+}
+
+.marginRight12 {
+  margin-right: 12px;
 }
 
 .margin5 {

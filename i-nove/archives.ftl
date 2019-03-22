@@ -21,7 +21,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <@head title="${allTagsLabel} - ${blogTitle}">
+        <@head title="${archiveLabel} - ${blogTitle}">
             <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
         </@head>
     </head>
@@ -33,17 +33,24 @@
                     <#include "header.ftl">
                     <div class="body">
                         <div class="left main">
-                            <ul id="tags">
-                                <#list tags as tag>
-                                <li class="kind-panel left marginRight12">
-                                    <a rel="tag" data-count="${tag.tagPublishedRefCount}"
-                                       href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}" title="${tag.tagTitle}">
-                                        <span>${tag.tagTitle}</span>
-                                        (<b>${tag.tagPublishedRefCount}</b>)
-                                    </a>
-                                </li>
+                            <div class="kind-title">${archiveLabel}</div>
+                            <#if 0 != archiveDates?size>
+                                <ul class="fn-clear fn-wrap" id='tags'>
+                                <#list archiveDates as archiveDate>
+                                    <li class="kind-panel">
+                                    <#if "en" == localeString?substring(0, 2)>
+                                        <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
+                                           title="${archiveDate.monthName} ${archiveDate.archiveDateYear}(${archiveDate.archiveDatePublishedArticleCount})">
+                                            ${archiveDate.monthName} ${archiveDate.archiveDateYear}(${archiveDate.archiveDatePublishedArticleCount})</a>
+                                    <#else>
+                                    <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}"
+                                       title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}(${archiveDate.archiveDatePublishedArticleCount})">
+                                        ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}(${archiveDate.archiveDatePublishedArticleCount})</a>
+                                    </#if>
+                                    </li>
                                 </#list>
-                            </ul>
+                                </ul>
+                            </#if>
                         </div>
                         <div class="right">
                             <#include "side.ftl">
