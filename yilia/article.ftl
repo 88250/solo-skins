@@ -64,7 +64,7 @@
                         </#list>
 
                         <a rel="nofollow" href="${servePath}/authors/${article.authorId}">
-                            <img class="avatar" title="${article.authorName}" alt="${article.authorName}" src="${article.authorThumbnailURL}"/>
+                            <img class="avatar prevent" title="${article.authorName}" alt="${article.authorName}" src="${article.authorThumbnailURL}"/>
                         </a>
                     </section>
                 </header>

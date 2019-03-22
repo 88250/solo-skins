@@ -59,14 +59,9 @@ var Yilia = {
         $(window).scroll();
     },
     _initToc: function () {
-        if ($('.b3-solo-list li').length === 0) {
+        if ($('.article__toc li').length === 0) {
             return false;
         }
-        
-        $('.side footer').after('<div class="toc"><a onclick="$(\'.side .toc\').hide();" href="javascript:void(0)" class="close">X</a></div>');
-
-         $('.side .toc a').after($('.b3-solo-list'));
-
         $('.side .toc-btn').show();
     },
     resetTags: function () {

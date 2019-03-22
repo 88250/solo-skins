@@ -21,9 +21,26 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 2.2.0.1, Mar 16, 2019
+ * @version 2.3.0.0, Mar 22, 2019
  */
+@import "../../../scss/toc";
+@import "../../../scss/usite";
 @import "vditor/src/assets/scss/classic";
+
+.user__sites {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 27px;
+  .user__site {
+    svg {
+      height: 20px;
+      width: 20px;
+      fill: currentColor;
+    }
+  }
+}
+
 /* start reset */
 html {
   height: 100%;
@@ -329,6 +346,10 @@ pre code, pre tt {
   font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
 }
 
+.form textarea {
+  margin-bottom: 30px;
+}
+
 .form button {
   width: auto;
   vertical-align: bottom;
@@ -476,19 +497,17 @@ pre code, pre tt {
   display: block;
 }
 
-.side .b3-solo-list {
+.side .article__toc {
   padding: 0;
-  margin-top: 50px;
-}
-
-.abstract .b3-solo-list {
-  display: none;
+  height: 100%;
+  margin: 0;
 }
 
 .side .toc .close {
   color: #fff;
-  float: right;
   padding: 0 10px;
+  position: absolute;
+  right: 0;
 }
 
 /* end side */

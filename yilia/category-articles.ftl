@@ -29,7 +29,7 @@
         <#include "side.ftl">
         <main>
             <h2 class="classify-name">
-                ${categoryLabel}
+                ${categoryLabel}：
                 ${category.categoryTitle}
                 (${category.categoryTagCnt})<small> ${category.categoryDescription}</small>
             </h2>
