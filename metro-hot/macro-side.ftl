@@ -21,29 +21,35 @@
 <div class="side">
     <div class="fn-clear">
         <#if !isArticle>
-        <form action="${servePath}/search">
-            <input placeholder="Search" id="search" type="text" name="keyword" /><span onclick="$(this).parent().submit()" data-ico="&#x0067;"></span>
-            <input type="submit" value="" class="fn-none" />
-        </form>
+            <form action="${servePath}/search">
+                <input placeholder="Search" id="search" type="text" name="keyword" /><span onclick="$(this).parent().submit()" data-ico="&#x0067;"></span>
+                <input type="submit" value="" class="fn-none" />
+            </form>
 
-        <#if "" != noticeBoard>
-        <div class="notice-board side-tile">
-            <div class="title">
-                ${noticeBoard}
+            <#if "" != noticeBoard>
+            <div class="notice-board side-tile">
+                <div class="title">
+                    ${noticeBoard}
+                </div>
             </div>
-        </div>
+            </#if>
+
+            <div class="online-count side-tile">
+                <span data-ico="&#xe037;"></span>
+                <div class="text">
+                    ${viewCount1Label}
+                    ${statistic.statisticBlogViewCount}<br/>
+                    ${articleCount1Label}
+                    ${statistic.statisticPublishedBlogArticleCount}<br/>
+                    ${commentCount1Label}
+                    ${statistic.statisticPublishedBlogCommentCount}<br/>
+                </div>
+            </div>
         </#if>
 
-        <div class="online-count side-tile">
-            <span data-ico="&#xe037;"></span>
-            <div class="text">
-                ${viewCount1Label}
-                ${statistic.statisticBlogViewCount}<br/>
-                ${articleCount1Label}
-                ${statistic.statisticPublishedBlogArticleCount}<br/>
-                ${commentCount1Label}
-                ${statistic.statisticPublishedBlogCommentCount}<br/>
-            </div>
+        <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+        <div class="vditor-reset" style="margin-top: 20px">
+            <#include "../../common-template/toc.ftl"/>
         </div>
         </#if>
 

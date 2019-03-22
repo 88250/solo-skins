@@ -206,12 +206,15 @@ var timeline = {
                 path = "/articles/";
         if ($("#tag").length === 1) {
             var pathnames = location.pathname.split("/");
-            path = "/articles/tags/" + pathnames[pathnames.length - 1] + "/";
+            path = "/articles/tags/" + pathnames[pathnames.length - 1];
         } else if ($("#author").length === 1) {
             var pathnames = location.pathname.split("/");
-            path = "/articles/authors/" + pathnames[pathnames.length - 1] + "/";
+            path = "/articles/authors/" + pathnames[pathnames.length - 1];
+        } else if ($("#category").length === 1) {
+            var pathnames = location.pathname.split("/");
+            path = "/articles/category/" + pathnames[pathnames.length - 1];
         } else if (archive) {
-            path = "/articles/archives/" + archive + "/";
+            path = "/articles/archives/" + archive;
         }
         $.ajax({
             url: Label.servePath + path + '?p=' + currentPage,

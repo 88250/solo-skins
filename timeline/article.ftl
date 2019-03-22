@@ -22,7 +22,7 @@
 <#include "../../common-template/macro-comment_script.ftl">
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
         <@head title="${article.articleTitle} - ${blogTitle}" description="${article.articleAbstract?html}">
             <link rel="stylesheet"
                   href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
@@ -33,26 +33,28 @@
             <link rel="next" title="${nextArticleTitle}" href="${servePath}${nextArticlePermalink}">
         </#if>
         </@head>
-    </head>
-    <body>
-        ${topBarReplacement}
+</head>
+<body>
+${topBarReplacement}
         <#include "header.ftl">
-        <div class="wrapper">
-            <div class="container">
+<div class="wrapper">
+    <div class="container">
+        <div class="fn-clear">
+            <div<#if article?? && article.articleToC?? && article.articleToC?size &gt; 0> class="dynamic-l"</#if>>
                 <div class="module">
                     <article class="article">
                         <time class="article-time">
                             <span>
                                 <#if article.hasUpdated>
-                                ${article.articleUpdateDate?string("yy-MM-dd HH:mm")}
+                                    ${article.articleUpdateDate?string("yy-MM-dd HH:mm")}
                                 <#else>
-                                ${article.articleCreateDate?string("yy-MM-dd HH:mm")}
+                                    ${article.articleCreateDate?string("yy-MM-dd HH:mm")}
                                 </#if>
                             </span>
                         </time>
                         <h2 class="article-title">
                             <a href="${servePath}${article.articlePermalink}">
-                                ${article.articleTitle}
+                            ${article.articleTitle}
                             </a>
                             <#if article.hasUpdated>
                             <sup>
@@ -66,7 +68,7 @@
                             </#if>
                         </h2>
                         <div class="vditor-reset">
-                            ${article.articleContent}
+                        ${article.articleContent}
                         </div>
                         <#if "" != article.articleSign.signHTML?trim>
                         <p>
@@ -74,7 +76,11 @@
                         </p>
                         </#if>
                         <span class="ico-tags ico" title="${tagLabel}">
-                            <#list article.articleTags?split(",") as articleTag><a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">${articleTag}</a><#if articleTag_has_next>,</#if></#list>
+                            <#list article.articleTags?split(",") as articleTag>
+                                <a rel="tag"
+                                   href="${servePath}/tags/${articleTag?url('UTF-8')}">${articleTag}</a>
+                                <#if articleTag_has_next>,</#if>
+                            </#list>
                         </span>
                         <span class="ico-author ico" title="${authorLabel}">
                             <a rel="author" href="${servePath}/authors/${article.authorId}">${article.authorName}</a>
@@ -83,15 +89,15 @@
 
                             <a rel="nofollow" href="${servePath}${article.articlePermalink}#comments">
                                 <#if article.articleCommentCount == 0>
-                                ${noCommentLabel}
+                                    ${noCommentLabel}
                                 <#else>
-                                ${article.articleCommentCount}
+                                    ${article.articleCommentCount}
                                 </#if>
                             </a>
                         </span>
                         <span class="ico-view ico" title="${viewLabel}">
                             <a rel="nofollow" href="${servePath}${article.articlePermalink}">
-                                ${article.articleViewCount}
+                            ${article.articleViewCount}
                             </a>
                         </span>
                     </article>
@@ -103,13 +109,13 @@
                                 <span class="ft-pre">${nextArticleTitle}</span>
                             </a>
                         </div>
-                        </#if>                            
+                        </#if>
                         <#if previousArticlePermalink??>
                         <div class="right">
                             <a href="${servePath}${previousArticlePermalink}">
                                 <span class="left ft-next">${previousArticleTitle}</span>
                                 <span class="ico-next">»</span>
-                            </a> 
+                            </a>
                         </div>
                         </#if>
                     </div>
@@ -125,19 +131,29 @@
                     <@comments commentList=articleComments article=article></@comments>
                 </div>
             </div>
+            <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+            <div class="dynamic-r">
+                <div class="module">
+                    <h3 class="title">${tocLabel}</h3>
+                    <#include "../../common-template/toc.ftl"/>
+                </div>
+            </div>
+            </#if>
         </div>
+    </div>
+</div>
         <#include "footer.ftl">
         <@comment_script oId=article.oId commentable=article.commentable>
         page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
-        <#if 0 != externalRelevantArticlesDisplayCount>
+            <#if 0 != externalRelevantArticlesDisplayCount>
         page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>");
-        </#if>
-        <#if 0 != randomArticlesDisplayCount>
+            </#if>
+            <#if 0 != randomArticlesDisplayCount>
         page.loadRandomArticles();
-        </#if>
-        <#if 0 != relevantArticlesDisplayCount>
+            </#if>
+            <#if 0 != relevantArticlesDisplayCount>
         page.loadRelevantArticles('${article.oId}', '<h4>${relevantArticles1Label}</h4>');
-        </#if>
-        </@comment_script>    
-    </body>
+            </#if>
+        </@comment_script>
+</body>
 </html>

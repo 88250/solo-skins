@@ -26,7 +26,7 @@
 <#if article.commentable>
 <h3>${commentLabel}</h3>
 <div class="comment-form">
-    <textarea style="width:96%" rows="3" placeholder="${postCommentsLabel}" id="comment"></textarea>
+    <textarea rows="3" placeholder="${postCommentsLabel}" id="comment"></textarea>
 </div>
 <#if externalRelevantArticlesDisplayCount?? && 0 != externalRelevantArticlesDisplayCount>
 <div id="externalRelevantArticles"></div>

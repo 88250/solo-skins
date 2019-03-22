@@ -19,6 +19,10 @@
 -->
 <div class="footer">
     <div class="container fn-clear">
+        <#include "../../common-template/macro-user_site.ftl"/>
+        <div class="ft__center">
+        <@userSite dir="ne"/>
+        </div>
         <div class="left">
             <span>&copy; ${year}</span> - <a href="${servePath}">${blogTitle}</a>${footerContent}
             Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> • <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}&nbsp;&nbsp;
