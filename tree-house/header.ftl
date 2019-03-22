@@ -30,7 +30,9 @@
             <a href="${servePath}/tags.html">${allTagsLabel}</a>&nbsp;&nbsp;
         </li>
         <li>
-            <a rel="alternate" href="${servePath}/rss.xml">RSS</a><a href="${servePath}/rss.xml"><img src="${staticServePath}/images/feed.png" alt="RSS"/></a> &nbsp;
+            <a rel="alternate" href="${servePath}/rss.xml">
+                <img class="page-icon" src="${staticServePath}/images/feed.png" alt="RSS"/>RSS</a>
+            </a> &nbsp;&nbsp;
         </li>
         <li>
             <a href="${servePath}/search?keyword=">Search</a>
@@ -44,4 +46,9 @@
         </a>
     </h1>
     <div>${blogSubtitle}</div>
+    <#include "../../common-template/macro-user_site.ftl"/>
+    <div>
+        <br>
+        <@userSite dir="ne"/>
+    </div>
 </div>

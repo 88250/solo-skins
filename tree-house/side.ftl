@@ -45,6 +45,16 @@
     </div>
     <div class="line"></div>
     </#if>
+
+    <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+         <div class="block">
+             <h3>${tocLabel}</h3>
+             <#include "../../common-template/toc.ftl"/>
+         </div>
+        <div class="line"></div>
+    </#if>
+
+
     <#if 0 != recentComments?size>
     <div class="block">
         <h3 id="recentCommentsLabel">${recentCommentsLabel}</h3>
@@ -147,7 +157,10 @@
     </#if>
     <#if 0 != archiveDates?size>
     <div class="block">
-        <h3>${archiveLabel}</h3>
+        <h3 class="fn__clear">
+            ${archiveLabel}
+            <a class="fn__right" href="${servePath}/archives.html">More</a>
+        </h3>
         <ul>
             <#list archiveDates as archiveDate>
             <#if archiveDate_index < 10>

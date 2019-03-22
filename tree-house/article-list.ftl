@@ -39,9 +39,9 @@
     <div class="left article-info">
         <div class="article-date">
             <#if article.hasUpdated>
-            ${article.articleUpdateDate?string("yyyy-MM-dd HH:mm:ss")}
+            ${article.articleUpdateDate?string("yyyy-MM-dd")}<br>${article.articleUpdateDate?string("HH:mm:ss")}
             <#else>
-            ${article.articleCreateDate?string("yyyy-MM-dd HH:mm:ss")}
+            ${article.articleCreateDate?string("yyyy-MM-dd")}<br>${article.articleCreateDate?string("HH:mm:ss")}
             </#if>
         </div>
         <div class="article-comment">
@@ -62,7 +62,9 @@
     </div>
     <div class="clear"></div>
 </div>
+<#if article_has_next>
 <div class="line right"></div>
+</#if>
 <div class="clear"></div>
 </#list>
 <#if 0 != paginationPageCount>
