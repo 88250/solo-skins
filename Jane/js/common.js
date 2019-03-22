@@ -19,7 +19,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.2.0.0, Jan 30, 2019
+ * @version 0.2.0.1, Mar 22, 2019
  */
 
 /**
@@ -28,8 +28,8 @@
  */
 var Skin = {
   initToc: function () {
-    if ($('.b3-solo-list li').length > 0 && $(window).width() > 768) {
-      $('.b3-solo-list').css({
+    if ($('.article__toc li').length > 0 && $(window).width() > 768) {
+      $('.article__toc').css({
         right: '50px',
         'border-right': '1px solid #fff',
         opacity: 1,

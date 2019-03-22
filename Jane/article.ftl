@@ -115,6 +115,9 @@
     <#if externalRelevantArticlesDisplayCount?? && 0 != externalRelevantArticlesDisplayCount>
         <div id="externalRelevantArticles" class="article__near"></div>
     </#if>
+    <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+        <#include "../../common-template/toc.ftl"/>
+    </#if>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">

@@ -18,6 +18,10 @@
 
 -->
 <footer class="footer wrapper fn__clear">
+    <#include "../../common-template/macro-user_site.ftl"/>
+    <div class="ft__center user__sites">
+        <@userSite dir="n"/>
+    </div>
     &copy; ${year}
     ${footerContent}
     <a href="${servePath}">${blogTitle}</a>  <span class="fn__none--m">&nbsp; • &nbsp;</span>

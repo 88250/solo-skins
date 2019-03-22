@@ -19,16 +19,53 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.2.0.1, Mar 16, 2019
+ * @version 0.3.0.0, Mar 22, 2019
 */
 @import "../../../scss/reset";
 @import "../../../scss/function";
 @import "../../../scss/nprogress";
+@import "../../../scss/usite";
+@import "../../../scss/toc";
 @import "icon";
 @import "vditor/src/assets/scss/classic";
 
 $red: #991a1a !default;
 $gray: #999 !default;
+
+.user__sites {
+  padding-top: 30px;
+  border-top: 1px dashed #d9d9d9;
+}
+
+.user__site {
+  display: inline-block;
+  color: $gray !important;
+  margin: 0 5px 20px 0;
+  &:hover {
+    color: $red !important;
+  }
+}
+
+.article__toc {
+  position: fixed;
+  right: -200px;
+  background-color: #2a2a2a;
+  top: 0;
+  margin: 0 !important;
+  height: 100vh;
+  overflow: auto;
+  width: 200px;
+  padding: 10px !important;
+  box-sizing: border-box;
+  transition: all 1s ease;
+  opacity: 0;
+  color: #fff;
+  font-size: 14px !important;
+
+  a {
+    color: #fff;
+  }
+}
 
 // reset
 body {
@@ -70,31 +107,6 @@ a {
     color: #555;
     background-color: #f7f7f7;
     padding: 10px;
-  }
-}
-
-.b3-solo-list {
-  position: fixed;
-  right: -200px;
-  background-color: #2a2a2a;
-  top: 0;
-  margin: 0 !important;
-  height: 100vh;
-  overflow: auto;
-  width: 200px;
-  padding: 10px !important;
-  box-sizing: border-box;
-  transition: all 1s ease;
-  opacity: 0;
-  color: #fff;
-  font-size: 14px !important;
-
-  a {
-    color: #fff;
-  }
-
-  &::-webkit-scrollbar {
-    display: none;
   }
 }
 
@@ -159,6 +171,9 @@ a {
     margin: 50px 0;
     border-bottom: 1px dashed #d9d9d9;
     text-align: justify;
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   &__title {
