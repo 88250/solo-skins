@@ -19,9 +19,6 @@
 -->
 <div class="fn-clear">
     <span class="fn-right">
-        <a href="javascript:Finding.tabNav('link')" title="${permalinkLabel}" class="icon-sitemap current"></a>
-        &nbsp;
-        <a href="javascript:Finding.tabNav('toc')" title="${tocLabel}" class="icon-list fn-none"> &nbsp; </a>
         <#if isLoggedIn>
         <a href="${servePath}/admin-index.do#main" title="${adminLabel}" class="icon-setting"></a>
         &nbsp; 
@@ -31,35 +28,43 @@
         </#if>
     </span>
 </div>
-<ul>
-    <#list pageNavigations as page>
-    <li>
-        <a href="${page.pagePermalink}" target="${page.pageOpenTarget}"><#if page.pageIcon != ''><img class="page-icon" src="${page.pageIcon}"></#if>${page.pageTitle}</a>
-    </li>
-    </#list>
-    <li>
-        <a href="${servePath}/dynamic.html">${dynamicLabel}</a>
-    </li>
-    <li>
-        <a href="${servePath}/category.html">${categoryLabel}</a>
-    </li>
-    <li>
-        <a href="${servePath}/tags.html">${allTagsLabel}</a>
-    </li>
-    <li>
-        <a href="${servePath}/archives.html">${archiveLabel}</a>
-    </li>
-    <li>
-        <a href="${servePath}/links.html">${linkLabel}</a>
-    </li>
-    <li>
-        <a rel="alternate" href="${servePath}/rss.xml">${subscribeLabel}</a>
-    </li>
-    <Li>
-        <a href="${servePath}/search?keyword=">Search</a>
-    </Li>
-</ul>
+<#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+    <#include "../../common-template/toc.ftl"/>
+<#else>
+    <ul>
+        <#list pageNavigations as page>
+        <li>
+            <a href="${page.pagePermalink}" target="${page.pageOpenTarget}"><#if page.pageIcon != ''><img class="page-icon" src="${page.pageIcon}"></#if>${page.pageTitle}</a>
+        </li>
+        </#list>
+        <li>
+            <a href="${servePath}/dynamic.html">${dynamicLabel}</a>
+        </li>
+        <li>
+            <a href="${servePath}/category.html">${categoryLabel}</a>
+        </li>
+        <li>
+            <a href="${servePath}/tags.html">${allTagsLabel}</a>
+        </li>
+        <li>
+            <a href="${servePath}/archives.html">${archiveLabel}</a>
+        </li>
+        <li>
+            <a href="${servePath}/links.html">${linkLabel}</a>
+        </li>
+        <li>
+            <a rel="alternate" href="${servePath}/rss.xml">${subscribeLabel}</a>
+        </li>
+        <Li>
+            <a href="${servePath}/search?keyword=">Search</a>
+        </Li>
+    </ul>
+</#if>
 <div class="count">
+    <div class="fn-clear">
+        <#include "../../common-template/macro-user_site.ftl"/>
+        <@userSite dir=""/>
+    </div>
     <span>
         ${viewCount1Label}
         ${statistic.statisticBlogViewCount}

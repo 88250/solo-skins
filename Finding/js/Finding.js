@@ -67,65 +67,12 @@ var Finding = {
    * @returns {undefined}
    */
   _initToc: function () {
-    if ($('.b3-solo-list li').length === 0) {
-      $('.nav .icon-list').hide();
-      $('.nav .icon-sitemap').click();
+    if ($('.article__toc li').length === 0) {
       return;
     }
 
-    $('.nav ul:first').after($('.b3-solo-list'));
     if ($(window).width() > 500) {
       $("body").toggleClass("nav-opened nav-closed");
-    }
-
-    $('.nav .icon-list').show();
-    Finding.tabNav('toc')
-
-    var $articleTocs = $('.vditor-reset [id^=b3_solo_h]'),
-      $articleToc = $('.b3-solo-list');
-
-    $(window).scroll(function (event) {
-      if ($('.b3-solo-list li').length === 0) {
-        return false;
-      }
-
-      // 界面各种图片加载会导致帖子目录定位
-      var toc = [];
-      $articleTocs.each(function (i) {
-        toc.push({
-          id: this.id,
-          offsetTop: this.offsetTop
-        });
-      });
-
-      // 当前目录样式
-      var scrollTop = $(window).scrollTop();
-      for (var i = 0, iMax = toc.length; i < iMax; i++) {
-        if (scrollTop < toc[i].offsetTop + 280) {
-          $articleToc.find('li').removeClass('current');
-          var index = i > 0 ? i - 1 : 0;
-          $articleToc.find('a[href="#' + toc[index].id + '"]').parent().addClass('current');
-          break;
-        }
-      }
-      if (scrollTop >= toc[toc.length - 1].offsetTop + 280) {
-        $articleToc.find('li').removeClass('current');
-        $articleToc.find('li:last').addClass('current');
-      }
-    });
-
-    $(window).scroll();
-  },
-  tabNav: function (type) {
-    $('.nav .current').removeClass('current');
-    if (type === 'toc') {
-      $('.nav ul:first, .nav .count').hide();
-      $('.nav ul:last').show();
-      $('.icon-list').addClass('current');
-    } else {
-      $('.nav ul:first, .nav .count').show();
-      $('.nav ul:last').hide();
-      $('.icon-sitemap').addClass('current');
     }
   },
   /**

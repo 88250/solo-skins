@@ -21,9 +21,22 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 2.2.0.1, Mar 16, 2019
+ * @version 2.3.0.0, Mar 22, 2019
  */
+@import "../../../scss/toc";
+@import "../../../scss/usite";
 @import "vditor/src/assets/scss/classic";
+
+.user__site {
+  float: left;
+  margin-left: 10px;
+  svg {
+    height: 20px;
+    width: 20px;
+    fill: currentColor;
+  }
+}
+
 /* start reset */
 html {
   height: 100%;
@@ -637,6 +650,8 @@ pre code, pre tt {
 
 .nav {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
   right: 0;
   bottom: 0;
@@ -654,9 +669,14 @@ pre code, pre tt {
   transition: transform 0.5s ease,
   opacity 0.3s ease 0.7s;
   overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .nav ul {
+  flex: 1;
   margin: 0;
   padding: 0px 0 5%;
   list-style: none;
@@ -710,17 +730,10 @@ pre code, pre tt {
 }
 
 .nav .count {
-  position: absolute;
-  bottom: 10px;
   font-size: 1rem;
-  width: 100%;
   word-wrap: normal;
   word-break: break-all;
   white-space: nowrap;
-}
-
-.nav .b3-solo-list li.current a {
-  color: #fff;
 }
 
 .nav .page-icon {
