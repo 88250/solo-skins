@@ -29,9 +29,9 @@
 </head>
 <body>
 <#include "header.ftl">
-<div class="main">
-    <div id="pjax" class="content">
+<div class="main" id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
+    <div class="content">
     <main>
         <article class="module">
             <div class="module__content">
@@ -42,9 +42,9 @@
         </article>
         <@comments commentList=pageComments article=page></@comments>
     </main>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
     </div>
     <#include "side.ftl">
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
 <#if pjax><!---- pjax {#pjax} start ----></#if>

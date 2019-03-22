@@ -18,6 +18,13 @@
 
 -->
 <aside class="side">
+    <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+    <div class="module">
+        <div class="module__list">
+        <#include "../../common-template/toc.ftl"/>
+        </div>
+    </div>
+    </#if>
     <#if noticeBoard??>
     <section class="vditor-reset module">
         <main class="module__content">
@@ -41,7 +48,9 @@
         </header>
         <main class="module__content ft__center">
             <img class="side__avatar" src="${adminUser.userAvatar}" alt="${adminUser.userName}"/>
-        ${blogSubtitle}
+            ${blogSubtitle} <br> <br>
+            <#include "../../common-template/macro-user_site.ftl"/>
+            <@userSite dir=""/>
         </main>
     </div>
 

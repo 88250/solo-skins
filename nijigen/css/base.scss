@@ -19,11 +19,13 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.4.0.1, Mar 16, 2019
+ * @version 0.5.0.0, Mar 22, 2019
 */
 @import "../../../scss/reset";
 @import "../../../scss/function";
 @import "../../../scss/nprogress";
+@import "../../../scss/toc";
+@import "../../../scss/usite";
 @import "icon";
 @import "vditor/src/assets/scss/classic";
 
@@ -31,6 +33,13 @@ $purple: #7266BA !default;
 $purple-dark: #6658b8 !default;
 $red: #b94a48 !default;
 $black: #3d4450 !default;
+
+.user__site {
+  color: rgba(10, 10, 0, 0.7);
+  &:hover {
+    color: $red;
+  }
+}
 
 // reset
 body {

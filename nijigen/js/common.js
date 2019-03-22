@@ -35,7 +35,7 @@ var Skin = {
         $goTop.hide()
       }
 
-      if ($('.side .b3-solo-list').length > 0) {
+      if ($('.side .article__toc').length > 0 && $(window).width() > 768) {
         if ($(window).scrollTop() > 50) {
           $('.side').css('position', 'fixed')
         } else {
@@ -80,9 +80,6 @@ var Skin = {
   init: function () {
     Util.initPjax(function () {
       Skin._initAnimation()
-      if ($('#articlePage').length === 0) {
-        $('.b3-solo-list').closest('.module').remove()
-      }
     })
 
     Skin._initAnimation()
@@ -105,8 +102,7 @@ var Skin = {
   },
   _initArticleCommon: function () {
     if ($(window).width() > 768) {
-      if ($('#articlePage .b3-solo-list li').length === 0) {
-        $('.side .b3-solo-list').closest('.module').remove()
+      if ($('.article__toc li').length === 0) {
         $('.side').css({
           height: 'auto',
           position: 'initial',
@@ -115,29 +111,15 @@ var Skin = {
       }
 
       $('#articlePage').width($('.main').width() - 310)
-      if ($('.side .b3-solo-list').length === 0) {
-        $('.side').
-          prepend('<div class="module"><div class="module__list"></div></div>').
-          css({
-            right: ($(window).width() - $('.main').width()) / 2,
-            position: 'fixed',
-            overflow: 'auto',
-            height: $(window).height() - 30,
-            top: 30,
-          })
-      }
-      $('.side .module:eq(0) .module__list').html($('.b3-solo-list'))
+      $('.side').css({
+        right: ($(window).width() - $('.main').width()) / 2,
+        position: 'fixed',
+        overflow: 'auto',
+        height: $(window).height() - 30,
+        top: 30,
+      })
       $(window).scroll()
       $('.side').scrollTop(0)
-    } else {
-      if ($('#articlePage .b3-solo-list li').length === 0) {
-        $('.header__m .icon__list').hide().next().hide()
-        return
-      }
-      $('.header__m .icon__list').show().next().html($('.b3-solo-list'))
-      $('.b3-solo-list a').click(function () {
-        $(this).closest('.module__list').hide()
-      })
     }
   },
   initArticle: function () {
