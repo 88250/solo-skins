@@ -66,7 +66,7 @@
             ${commentLabel} <br>
             ${statistic.statisticBlogViewCount} <span class="ft-gray">${viewLabel}</span> &nbsp; &nbsp;
             ${onlineVisitorCnt} <span class="ft-gray">${onlineVisitorLabel}</span> <br>
-            <a class="ft__link" href="https://solo.b3log.org" target="_blank">Solo</a> ${version}
+            <a class="ft__link" href="https://solo.b3log.org" target="_blank">Solo</a>
             &copy; ${year} ${footerContent}
             <a class="ft__link" href="${servePath}">${blogTitle}</a>
             <br>

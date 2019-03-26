@@ -19,7 +19,7 @@
 -->
 <div class="copyright">
     &copy; ${year} - <a href="${servePath}">${blogTitle}</a>${footerContent}<br/>
-    Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> • <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}<br/>
+    Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> • <a href="https://solo.b3log.org" target="_blank">Solo</a><br/>
     Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a> by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
 </div>
 <script type="text/javascript" src="${staticServePath}/js/lib/jquery/jquery.min.js" charset="utf-8"></script>

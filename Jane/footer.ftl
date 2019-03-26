@@ -26,7 +26,7 @@
     ${footerContent}
     <a href="${servePath}">${blogTitle}</a>  <span class="fn__none--m">&nbsp; • &nbsp;</span>
     <div class="fn__none"></div>
-    <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}
+    <a href="https://solo.b3log.org" target="_blank">Solo</a>
 
     <div class="fn__right">
         Powered by <a href="https://b3log.org" target="_blank">B3log</a> 开源

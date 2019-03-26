@@ -21,7 +21,7 @@
     &copy; ${year}
     ${footerContent}
     <a href="${servePath}">${blogTitle}</a>  &nbsp;   • &nbsp;
-    <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}  <br/>
+    <a href="https://solo.b3log.org" target="_blank">Solo</a><br/>
 
     Powered by <a href="https://b3log.org" target="_blank">B3log</a> 开源 &nbsp;
     <span class="ft-warn">&heartsuit;</span>

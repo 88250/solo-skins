@@ -31,7 +31,7 @@
             &copy; ${year}
         ${footerContent}
             Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> •
-            <a href="https://solo.b3log.org" target="_blank">Solo</a> ${version}
+            <a href="https://solo.b3log.org" target="_blank">Solo</a>
 
             <div class="fn-right">
                 Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
