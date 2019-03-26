@@ -17,50 +17,66 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<div class="fn-clear article__wrap">
+<div class="articles">
 <#list articles as article>
-    <article class="article__item
-    <#if article_index == 0 || article_index == 10>article__item--big
-    <#elseif article_index &gt; 0 && article_index &lt; 5>article__item--small
-    <#elseif article_index &gt; 4 && article_index &lt; 8>article__item--big
-    <#elseif article_index == 8 || article_index == 9>article__item--mid
-    <#elseif article_index &gt; 10 && article_index &lt; 15>article__item--small
-    <#elseif article_index &gt; 14 && article_index &lt; 18>article__item--big
-    <#elseif article_index &gt; 17 && article_index &lt; 20>article__item--mid
-    <#else>article__item--big
-    </#if>">
-        <header class="article__panel">
-            <div class="article__main">
-                <h2 class="article__title">
-                    <a rel="bookmark" href="${servePath}${article.articlePermalink}">
-                    ${article.articleTitle}
+    <article class="item<#if article_index % 6 ==0> item--large</#if>">
+        <a href="${servePath}${article.articlePermalink}" class="item__cover"
+           style="background-image: url(${article.articleImg1URL})">
+        </a>
+        <div class="item__main">
+            <#list article.articleTags?split(",") as articleTag>
+                <#if articleTag_index == 0>
+                    <#if article.category??>
+                    <a class="item__tag"
+                       href="${servePath}/category/${article.category.categoryURI}">${article.category.categoryTitle}</a>
+                    <#else>
+                    <a rel="tag" class="item__tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
+                        ${articleTag}
                     </a>
-                    <#if article.articlePutTop>
-                        <sup>
-                        ${topArticleLabel}
-                        </sup>
                     </#if>
-                    <#if article.hasUpdated>
-                        <sup>
-                        ${updatedLabel}
-                        </sup>
-                    </#if>
-                </h2>
-                <div class="article__thumbnail" style="background-image: url(${article.articleImg1URL})"/>
-            </div>
-
-            <div class="article__meta ft-gray fn-flex">
-                <time>
-                ${article.articleCreateDate?string("yyyy-MM-dd")}
-                </time> &nbsp;•&nbsp;
-                <a href="${servePath}${article.articlePermalink}#comments" class="ft-gray">
-                    ${article.articleCommentCount} ${commentLabel}
-                </a> &nbsp;•&nbsp;
-                <a href="${servePath}${article.articlePermalink}" class="ft-gray">
-                ${article.articleViewCount} ${viewLabel}
+                </#if>
+            </#list>
+            <h2 class="item__title">
+                <a rel="bookmark" href="${servePath}${article.articlePermalink}">
+                    ${article.articleTitle}
                 </a>
+                <#if article.articlePutTop>
+                    <sup>
+                        ${topArticleLabel}
+                    </sup>
+                </#if>
+                <#if article.hasUpdated>
+                    <sup>
+                        ${updatedLabel}
+                    </sup>
+                </#if>
+            </h2>
+            <a class="item__abstract" pjax-title="${article.articleTitle}"
+               href="${servePath}${article.articlePermalink}">
+                <#if article.articleAbstractText?length gt 80>
+                    ${article.articleAbstractText[0..81]}
+                <#else>
+                    ${article.articleAbstractText}
+                </#if>
+
+            </a>
+            <div class="fn__clear">
+                <a href="${servePath}/authors/${article.authorId}"
+                   aria-label="${article.authorName}"
+                   class="vditor-tooltipped vditor-tooltipped__n item__avatar">
+                    <img src="${article.authorThumbnailURL}" />
+                </a>
+                <#if article.articleCommentCount != 0>
+                <a class="item__meta" href="${servePath}${article.articlePermalink}#comments">
+                    ${article.articleCommentCount} ${commentLabel}
+                </a>
+                <#else>
+                    <a class="item__meta" href="${servePath}${article.articlePermalink}">
+                        ${article.articleViewCount} ${viewLabel}
+                    </a>
+                </#if>
             </div>
-        </header>
+        </div>
     </article>
 </#list>
 </div>
@@ -68,9 +84,11 @@
 <#if 0 != paginationPageCount>
 <nav class="pagination">
     <#if 1 != paginationPageNums?first>
-        <a href="${servePath}${path}?p=${paginationPreviousPageNum}" class="pagination__item">&laquo;</a>
+        <a href="${servePath}${path}?p=${paginationPreviousPageNum}"
+           aria-label="${previousPageLabel}"
+           class="pagination__item vditor-tooltipped__n vditor-tooltipped">&laquo;</a>
         <a class="pagination__item" href="${servePath}${path}">1</a>
-        <span class="pagination__item pagination__omit">...</span>
+        <span class="pagination__item pagination__item--omit">...</span>
     </#if>
     <#list paginationPageNums as paginationPageNum>
         <#if paginationPageNum == paginationCurrentPageNum>
@@ -80,9 +98,10 @@
         </#if>
     </#list>
     <#if paginationPageNums?last != paginationPageCount>
-        <span class="pagination__item pagination__omit">...</span>
+        <span class="pagination__item pagination__item--omit">...</span>
         <a href="${servePath}${path}?p=${paginationPageCount}" class="pagination__item">${paginationPageCount}</a>
-        <a href="${servePath}${path}?p=${paginationNextPageNum}" class="pagination__item">&raquo;</a>
+        <a href="${servePath}${path}?p=${paginationNextPageNum}" aria-label="${nextPagePabel}"
+           class="pagination__item vditor-tooltipped__n vditor-tooltipped">&raquo;</a>
     </#if>
 </nav>
 </#if>

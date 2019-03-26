@@ -17,30 +17,36 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<div class="wrapper">
-    <footer class="footer">
-        <div class="fn-clear">
-        ${blogSubtitle}
-            <#include "../../common-template/macro-user_site.ftl"/>
-            <@userSite dir="n"/>
-            <div class="fn-right">
-            ${blogTitle} &copy; ${year} ${footerContent}
-            </div>
+<footer class="footer">
+    <div class="wrapper fn__clear">
+        <div class="fn__left">
+            ${blogTitle} &copy; ${year} ${footerContent} <br>
+            Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> &nbsp;•&nbsp;
+            <a href="https://solo.b3log.org" target="_blank">Solo</a> &nbsp;•&nbsp;
+            Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
+            <sup>[<a href="https://github.com/TryGhost/Casper" target="_blank">ref</a>]</sup>
+            by <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
         </div>
-        <div class="fn-clear">
-        ${statistic.statisticPublishedBlogArticleCount} ${articleLabel} &nbsp;
-        ${statistic.statisticPublishedBlogCommentCount} ${commentLabel} &nbsp;
-        ${statistic.statisticBlogViewCount} ${viewLabel} &nbsp;
-        ${onlineVisitorCnt} ${onlineVisitorLabel}
-            <div class="fn-right">
-                Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> •
-                <a href="https://solo.b3log.org" target="_blank">Solo</a> •
-                Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
-                by <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
-            </div>
+        <div class="fn__right">
+            <a href="${servePath}/tags.html" rel="section">
+            ${allTagsLabel}
+            </a>
+            &nbsp;•&nbsp;
+            <a href="${servePath}/archives.html">
+            ${archiveLabel}
+            </a>
+            &nbsp;•&nbsp;
+            <a rel="archive" href="${servePath}/links.html">
+            ${linkLabel}
+            </a>
+            <br>
+            ${statistic.statisticPublishedBlogArticleCount} ${articleLabel} &nbsp;
+            ${statistic.statisticPublishedBlogCommentCount} ${commentLabel} &nbsp;
+            ${statistic.statisticBlogViewCount} ${viewLabel} &nbsp;
+            ${onlineVisitorCnt} ${onlineVisitorLabel}
         </div>
-    </footer>
-</div>
+    </div>
+</footer>
 
 <script type="text/javascript" src="${staticServePath}/js/lib/compress/pjax.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}"
