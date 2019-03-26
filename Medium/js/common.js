@@ -28,7 +28,7 @@
  */
 var Skin = {
   init: function () {
-    const $article__toc = $('.article__toc')
+    var $article__toc = $('.article__toc')
     $(window).scroll(function () {
       if ($article__toc.length === 1) {
         if ($('.article__bottom').offset().top < $(window).scrollTop()) {
