@@ -26,11 +26,13 @@
 </@head>
 </head>
 <body>
-<#include "marcr-header.ftl">
-<@header type='index'></@header>
-<div id="pjax" class="wrapper">
+<div id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
+    <#include "marcr-header.ftl">
+    <@header type='index'></@header>
+    <div class="wrapper">
         <#include "article-list.ftl">
+    </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">

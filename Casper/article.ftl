@@ -26,29 +26,39 @@
 <@head title="${article.articleTitle} - ${blogTitle}" description="${article.articleAbstract?html}">
     <link rel="stylesheet"
           href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
-        <#if previousArticlePermalink??>
-            <link rel="prev" title="${previousArticleTitle}" href="${servePath}${previousArticlePermalink}">
-        </#if>
-        <#if nextArticlePermalink??>
-            <link rel="next" title="${nextArticleTitle}" href="${servePath}${nextArticlePermalink}">
-        </#if>
+    <#if previousArticlePermalink??>
+        <link rel="prev" title="${previousArticleTitle}" href="${servePath}${previousArticlePermalink}">
+    </#if>
+    <#if nextArticlePermalink??>
+        <link rel="next" title="${nextArticleTitle}" href="${servePath}${nextArticlePermalink}">
+    </#if>
 </@head>
 </head>
 <body>
-<#include "header.ftl">
-<div id="pjax">
+<div class="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <div class="main post__main">
-        <#if noticeBoard??>
-        <div class="board">
-            ${noticeBoard}
+    <#include "marcr-header.ftl">
+    <@header type="article"></@header>
+    <div class="article__top">
+        <div class="fn__clear">
+            <div class="title">${article.articleTitle}</div>
+            <#include "../../common-template/share.ftl">
         </div>
-        </#if>
-        <div class="wrapper content">
-            <article class="post">
-                <header>
-                    <h1 class="post__title">
-                    ${article.articleTitle}
+        <progress class="article__progress"></progress>
+    </div>
+    <div class="article">
+        <div class="ft__center">
+            <div class="item__meta">
+                <time>
+                ${article.articleCreateDate?string("yyyy-MM-dd")}
+                </time>
+                /
+                <#list article.articleTags?split(",") as articleTag>
+                <a class="tag" rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">${articleTag}</a> &nbsp;
+                </#list>
+            </div>
+            <h2 class="item__title">
+            ${article.articleTitle}
                 <#if article.articlePutTop>
                     <sup>
                         ${topArticleLabel}
@@ -59,177 +69,52 @@
                         ${updatedLabel}
                     </sup>
                 </#if>
-                    </h1>
-                </header>
-                <section class="vditor-reset">
-                ${article.articleContent}
+            </h2>
+        </div>
+        <div class="item__cover" style="background-image: url(${article.articleImg1URL})"></div>
+        <section class="vditor-reset item__content wrapper">
+        ${article.articleContent}
             <#if "" != article.articleSign.signHTML?trim>
                 <div>
                     ${article.articleSign.signHTML}
                 </div>
             </#if>
-                </section>
-                <footer data-oid="${article.oId}"
-                        class="post__tags"
-                        data-tag="<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>">
-            <#list article.articleTags?split(",") as articleTag>
-                <a class="tag" rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-                    ${articleTag}</a>
-            </#list>
-                </footer>
-                <div class="post__share fn-clear">
-                    <time class="ft-gray">
-                    ${article.articleCreateDate?string("yyyy-MM-dd")} •
-                    </time>
-                    <a class="post__view" href="${servePath}${article.articlePermalink}">
-                    ${article.articleViewCount} ${viewLabel}</a>
-                    <div class="fn-right">
-                    <span class="vditor-tooltipped vditor-tooltipped__n post__share-icon ft-green"
-                          onclick="$('#comment').focus()"
-                          aria-label="${commentLabel}">
-                        <svg>
-                            <use xlink:href="#icon-comment"></use>
-                        </svg>
-                    ${article.articleCommentCount}  &nbsp; &nbsp;
-                    </span>
-
-                        <span id="articleShare">
-                        <span class="post__share-icon" data-type="wechat">
-                            <svg><use xlink:href="#icon-wechat"></use></svg>
-                        </span> &nbsp; &nbsp;
-                        <span class="post__share-icon" data-type="weibo">
-                            <svg><use xlink:href="#icon-weibo"></use></svg>
-                        </span> &nbsp; &nbsp;
-                        <span class="post__share-icon" data-type="twitter">
-                            <svg><use xlink:href="#icon-twitter"></use></svg>
-                        </span> &nbsp; &nbsp;
-                        <span class="post__share-icon" data-type="qqz">
-                            <svg><use xlink:href="#icon-qqz"></use></svg>
-                        </span>
-                        <span class="article__code"
-                              data-title="${article.articleTitle}"
-                              data-blogtitle="${blogTitle}"
-                              data-url="${servePath}${article.articlePermalink}"
-                              data-avatar="${article.authorThumbnailURL}"></span>
-                    </span>
-                    </div>
-                </div>
-            </article>
-        </div>
-        <div class="article__bottom">
-            <div class="wrapper">
-                <div class="fn-flex footer__tag">
-                    <div class="fn-flex-1" id="externalRelevantArticles"></div>
-                    <div class="fn-flex-1" id="relevantArticles"></div>
-                    <div class="fn-flex-1" id="randomArticles"></div>
-                </div>
-            <@comments commentList=articleComments article=article></@comments>
+        </section>
+    </div>
+    <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+    <div class="post__toc">
+        <#include "../../common-template/toc.ftl"/>
+    </div>
+    </#if>
+    <@comments commentList=articleComments article=article></@comments>
+    <div class="article__bottom">
+        <div class="wrapper">
+            <div class="fn__flex">
+                <div class="item" id="externalRelevantArticles"></div>
+                <div class="item" id="randomArticles"></div>
+                <div class="item" id="relevantArticles"></div>
             </div>
         </div>
-
-        <div class="article__toolbar">
-            <div class="wrapper">
-                <a class="post__view" href="${servePath}${article.articlePermalink}">
-                ${article.articleViewCount} ${viewLabel}
-                </a>
-                <div class="fn-right">
-                <span class="vditor-tooltipped vditor-tooltipped__n post__share-icon ft-green"
-                      onclick="$('#comment').focus()"
-                      aria-label="${commentLabel}">
-                    <svg>
-                        <use xlink:href="#icon-comment"></use>
-                    </svg>
-                ${article.articleCommentCount}  &nbsp; &nbsp;
-                </span>
-                    <span id="articleBottomShare">
-                    <span class="post__share-icon" data-type="wechat">
-                        <svg><use xlink:href="#icon-wechat"></use></svg>
-                    </span> &nbsp; &nbsp;
-                    <span class="post__share-icon" data-type="weibo">
-                        <svg><use xlink:href="#icon-weibo"></use></svg>
-                    </span> &nbsp; &nbsp;
-                    <span class="post__share-icon" data-type="twitter">
-                        <svg><use xlink:href="#icon-twitter"></use></svg>
-                    </span> &nbsp; &nbsp;
-                    <span class="post__share-icon" data-type="qqz">
-                        <svg><use xlink:href="#icon-qqz"></use></svg>
-                    </span>
-                    <span class="article__code"
-                          data-title="${article.articleTitle}"
-                          data-blogtitle="${blogTitle}"
-                          data-url="${servePath}${article.articlePermalink}"
-                          data-avatar="${article.authorThumbnailURL}"></span>
-                </span>
-
-                <#if nextArticlePermalink??>
-                    <a href="${servePath}${nextArticlePermalink}" rel="next" class="article__next">
-                        <span class="ft-12 ft-gray">${nextArticleLabel}</span> <br>
-                        ${nextArticleTitle}
-                    </a>
-                </#if>
-                </div>
-            </div>
-        </div>
-
-        <div class="post__side">
-        <span class="vditor-tooltipped vditor-tooltipped__e post__share-icon ft-green"
-              onclick="$('#comment').focus()"
-              aria-label="${commentLabel}">
-            <span class="ft-gray">${article.articleCommentCount}</span>
-            <svg>
-                <use xlink:href="#icon-comment"></use>
-            </svg>
-        </span>
-            <div id="articleSideShare">
-            <span class="post__share-icon" data-type="wechat">
-                <svg><use xlink:href="#icon-wechat"></use></svg>
-            </span> &nbsp; &nbsp;
-                <span class="post__share-icon" data-type="weibo">
-                <svg><use xlink:href="#icon-weibo"></use></svg>
-            </span> &nbsp; &nbsp;
-                <span class="post__share-icon" data-type="twitter">
-                <svg><use xlink:href="#icon-twitter"></use></svg>
-            </span> &nbsp; &nbsp;
-                <span class="post__share-icon" data-type="qqz">
-                <svg><use xlink:href="#icon-qqz"></use></svg>
-            </span>
-                <span class="article__code"
-                      data-title="${article.articleTitle}"
-                      data-blogtitle="${blogTitle}"
-                      data-url="${servePath}${article.articlePermalink}"
-                      data-avatar="${article.authorThumbnailURL}"></span>
-            </div>
-        </div>
-        <div class="main">
-        <#include "bottom.ftl">
-        </div>
-        <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
-            <#include "../../common-template/toc.ftl"/>
-        </#if>
     </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
-<script type="text/javascript"
-        src="${staticServePath}/skins/${skinDirName}/js/jquery.qrcode${miniPostfix}.js"></script>
+<script type="text/javascript" src="${staticServePath}/js/lib/jquery.qrcode.min.js"></script>
 <#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId commentable=article.commentable>
     Skin.initArticle()
-    Skin.initComment = function (articleOId, articleTags) {
-        page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
+    page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
     <#if 0 != randomArticlesDisplayCount>
-        page.loadRandomArticles("<div class='module__title'><span>${randomArticlesLabel}</span></div>");
+    page.loadRandomArticles('<h3>${randomArticlesLabel}</h3>');
     </#if>
     <#if 0 != externalRelevantArticlesDisplayCount>
-        page.loadExternalRelevantArticles(articleTags, "<div class='module__title'><span>${externalRelevantArticlesLabel}</span></div>");
+    page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>",
+    '<h3>${externalRelevantArticlesLabel}</h3>');
     </#if>
     <#if 0 != relevantArticlesDisplayCount>
-        page.loadRelevantArticles(articleOId, '<div class="module__title"><span>${relevantArticlesLabel}</span></div>');
+    page.loadRelevantArticles('${article.oId}', '<h3>${relevantArticlesLabel}</h3>');
     </#if>
-    }
-    Skin.initComment('${article.oId}', "<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>")
 </@comment_script>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
-${plugins}
 </body>
 </html>

@@ -210,8 +210,7 @@
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
-<script type="text/javascript"
-        src="${staticServePath}/skins/${skinDirName}/js/jquery.qrcode${miniPostfix}.js"></script>
+<script type="text/javascript" src="${staticServePath}/js/lib/jquery.qrcode.min.js"></script>
 <#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId commentable=article.commentable>
     Skin.initArticle()
@@ -230,6 +229,5 @@
     Skin.initComment('${article.oId}', "<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>")
 </@comment_script>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
-${plugins}
 </body>
 </html>

@@ -27,8 +27,12 @@
         <h2 class="header__h2">${blogSubtitle}</h2>
     </div>
     <nav class="wrapper header__nav fn__clear">
-        <a href="${servePath}">
-            ${indexLabel}
+        <a href="${servePath}" rel="start">
+            <#if type == 'article'>
+                ${blogTitle}
+            <#else>
+                ${indexLabel}
+            </#if>
         </a>
 
         <#list pageNavigations as page>

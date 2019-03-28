@@ -17,38 +17,34 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<div id="${comment.oId}" class="comment__item">
-    <img class="comment__avatar" src="${comment.commentThumbnailURL}"/>
-    <main class="comment__body">
-        <div class="fn-clear">
-            <span class="comment__user">
-                <#if "http://" == comment.commentURL>
-                ${comment.commentName}
-                <#else>
-                    <a href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
-                </#if>
-            </span>
-            <span class="ft-12">
-                <#if comment.isReply>
-                    <a class="ft-gray" href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
-                        onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 23);"
-                        onmouseout="page.hideComment('${comment.commentOriginalCommentId}')">
-                        <svg class="ft-gray"><use xlink:href="#icon-reply"></use></svg>
-                        ${reply1Label} ${comment.commentOriginalCommentName}
-                    </a>
-                </#if>
-                <time class="ft-fade"> • ${comment.commentDate2?string("yyyy-MM-dd")}</time>
-            </span>
+<li id="${comment.oId}" class="item">
+    <div class="fn__clear">
+        <div class="item__avatar" style="background-image: url(${comment.commentThumbnailURL})"></div>
+        <div class="item__name">
+            <#if "http://" == comment.commentURL>
+                <span class="ft__fade">${comment.commentName}</span>
+            <#else>
+            <a class="ft__link" href="${comment.commentURL}" target="_blank">${comment.commentName}</a>
+            </#if>
 
-
-            <#if article.commentable>
-                <a class="fn-right ft-green" href="javascript:page.toggleEditor('${comment.oId}', '${comment.commentName}')">
-                    <svg><use xlink:href="#icon-reply"></use></svg> ${reply1Label}
-                </a>
+            <#if comment.isReply>
+            @ <a href="${servePath}${article.permalink}#${comment.commentOriginalCommentId}"
+                 onmouseover="page.showComment(this, '${comment.commentOriginalCommentId}', 20);"
+                 onmouseout="page.hideComment('${comment.commentOriginalCommentId}')"
+            >${comment.commentOriginalCommentName}</a>
             </#if>
         </div>
-        <div class="vditor-reset">
-            ${comment.commentContent}
-        </div>
-    </main>
-</div>
+    </div>
+    <div class="vditor-reset">
+    ${comment.commentContent}
+    </div>
+    <div class="item__meta fn__clear">
+        <time>
+        ${comment.commentDate2?string["MMM d, yyyy"]}
+        </time>
+        <#if article?? && article.commentable>
+            <a class="fn__right fn__none item__reply"
+               href="javascript:page.toggleEditor('${comment.oId}', '${comment.commentName}')">Reply</a>
+        </#if>
+    </div>
+</li>

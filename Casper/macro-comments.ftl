@@ -18,16 +18,20 @@
 
 -->
 <#macro comments commentList article>
-<div class="article__comment">
-    <div class="comment__title">${commentLabel}</div>
-    <div id="comments">
+<div class="comment">
+    <div class="comment__wrapper wrapper">
+        <div class="comment__title">
+            ${commentLabel}
+        </div>
+        <#if article.commentable>
+        <textarea rows="3" placeholder="${commentContentCannotEmptyLabel}" id="comment"></textarea>
+        </#if>
+
+        <ul id="comments">
         <#list commentList as comment>
             <#include 'common-comment.ftl'/>
         </#list>
+        </ul>
     </div>
-    <#if article.commentable>
-        <textarea rows="3" placeholder="${postCommentsLabel}"
-                  class="comment__textarea"  id="comment"></textarea>
-    </#if>
 </div>
 </#macro>
