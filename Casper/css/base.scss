@@ -471,6 +471,9 @@ a {
       height: 800px;
       background-size: cover;
       background-position: center center;
+      max-width: 1404px;
+      margin: 0 auto;
+      border-radius: 5px;
     }
     &__content {
       padding: 70px 100px 0;
