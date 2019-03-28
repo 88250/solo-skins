@@ -72,7 +72,7 @@
             </h2>
         </div>
         <div class="item__cover" style="background-image: url(${article.articleImg1URL})"></div>
-        <section class="vditor-reset item__content wrapper">
+        <section class="vditor-reset item__content item__content--article wrapper">
         ${article.articleContent}
             <#if "" != article.articleSign.signHTML?trim>
                 <div>
@@ -99,10 +99,8 @@
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
-<script type="text/javascript" src="${staticServePath}/js/lib/jquery.qrcode.min.js"></script>
 <#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId commentable=article.commentable>
-    Skin.initArticle()
     page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";
     <#if 0 != randomArticlesDisplayCount>
     page.loadRandomArticles('<h3>${randomArticlesLabel}</h3>');
@@ -114,6 +112,7 @@
     <#if 0 != relevantArticlesDisplayCount>
     page.loadRelevantArticles('${article.oId}', '<h3>${relevantArticlesLabel}</h3>');
     </#if>
+    Skin.initArticle()
 </@comment_script>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>

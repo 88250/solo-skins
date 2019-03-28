@@ -28,35 +28,22 @@
 </@head>
 </head>
 <body>
-<#include "header.ftl">
-<div id="pjax">
+<div id="pjax"></div>
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-<#include "nav.ftl">
-<div class="main">
-<#if noticeBoard??>
-    <div class="board">
-    ${noticeBoard}
+    <#include "marcr-header.ftl">
+    <@header type='article'></@header>
+    <div class="article">
+        <section class="vditor-reset item__content wrapper">
+        ${page.pageContent}
+        </section>
     </div>
-</#if>
-    <div class="wrapper content">
-        <article class="post">
-            <section class="vditor-reset">
-            ${page.pageContent}
-            </section>
-        </article>
-    </div>
-</div>
-<div class="article__bottom">
-<@comments commentList=pageComments article=page></@comments>
-</div>
-    <div style="margin-left: 20px;margin-right: 20px">
-    <#include "bottom.ftl">
-    </div>
+
+    <@comments commentList=pageComments article=page></@comments>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
 <#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=page.oId commentable=page.commentable></@comment_script>
- <#if pjax><!---- pjax {#pjax} end ----></#if>
+<#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>

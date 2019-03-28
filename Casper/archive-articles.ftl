@@ -26,34 +26,24 @@
  </@head>
 </head>
 <body>
-<#include "header.ftl">
 <div id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-<#include "nav.ftl">
-<div class="main">
-<#if noticeBoard??>
-    <div class="board">
-    ${noticeBoard}
-    </div>
-</#if>
-    <div class="wrapper content">
-        <div class="module__title">
-            <span>
-                <#if "en" == localeString?substring(0, 2)>
-                    ${archiveDate.archiveDateMonth} ${archiveDate.archiveDateYear}
-                <#else>
-                    ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
-                </#if>
-                <span class="ft-green">
-                    ${archiveDate.archiveDatePublishedArticleCount}
-                    <span class="ft-12">${cntArticleLabel}</span>
-                </span>
-            </span>
+    <#include "marcr-header.ftl">
+    <@header type='other'></@header>
+    <div class="wrapper other">
+        <h2 class="other__title">
+            <a href="${servePath}/archives.html" class="ft__a">${archiveLabel}</a> -
+             <#if "en" == localeString?substring(0, 2)>
+                 ${archiveDate.archiveDateMonth} ${archiveDate.archiveDateYear}
+             <#else>
+                 ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
+             </#if>
+        </h2>
+        <div class="other__meta other__meta--list">
+            ${archiveDate.archiveDatePublishedArticleCount} ${cntArticleLabel}
         </div>
         <#include "article-list.ftl">
     </div>
-<#include "bottom2.ftl">
-</div>
 <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">

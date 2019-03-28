@@ -26,41 +26,29 @@
 </@head>
 </head>
 <body>
-<#include "header.ftl">
 <div id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-<#include "nav.ftl">
-<div class="main">
-<#if noticeBoard??>
-    <div class="board">
-        ${noticeBoard}
-    </div>
-</#if>
-    <div class="wrapper content">
-        <div class="module__title">
-            <span>
-                ${links?size}
-                    <span class="ft-green ft-12">${linkLabel}</span>
-            </span>
+<#include "marcr-header.ftl">
+    <@header type='other'></@header>
+    <div class="wrapper other">
+        <h2 class="other__title"><a href="${servePath}" class="ft__a">${blogTitle}</a> - ${linkLabel}</h2>
+        <div class="other__meta">
+        ${links?size} ${linkLabel}
         </div>
-    <#if 0 != links?size>
-        <#list links as link>
-            <div class="page__item">
-                <h3>
-                    <a rel="friend" class="ft-gray" href="${link.linkAddress}" target="_blank">
+        <div class="other__content">
+        <#if 0 != links?size>
+            <#list links as link>
+                <div class="other__item">
+                    <a rel="friend" href="${link.linkAddress}" target="_blank">
                         ${link.linkTitle}
-                        <span class="ft-12 ft-green">${link.linkDescription}</span>
                     </a>
-                </h3>
-
-            </div>
-        </#list>
-    </#if>
+                    <div class="ft-12 ft-green">${link.linkDescription}</div>
+                </div>
+            </#list>
+        </#if>
+        </div>
     </div>
-<#include "bottom.ftl">
-</div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
-</div>
 <#include "footer.ftl">
 </body>
 </html>

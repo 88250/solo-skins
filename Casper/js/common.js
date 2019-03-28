@@ -19,7 +19,7 @@
  * @fileoverview util and every page should be used.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.1.0.1, Mar 22, 2019
+ * @version 0.1.0.1, Mar 28, 2019
  */
 
 /**
@@ -28,151 +28,11 @@
  */
 var Skin = {
   init: function () {
-    var $article__toc = $('.article__toc')
-    $(window).scroll(function () {
-      if ($article__toc.length === 1) {
-        if ($('.article__bottom').offset().top < $(window).scrollTop()) {
-          $article__toc.hide()
-        } else {
-          $article__toc.show()
-        }
-      }
-
-      if ($('#headerNav').length === 0) {
-        return
-      }
-      if ($(window).scrollTop() > 64) {
-        $('#headerNav').addClass('header__nav--fixed')
-        $('.main').css('margin-top', '100px')
-      } else {
-        $('#headerNav').removeClass('header__nav--fixed')
-        $('.main').css('margin-top', '50px')
-      }
-    })
-    $(window).scroll()
-
-    Util.initPjax(function () {
-      Util.parseMarkdown()
-      if (Util.isArticlePage(location.href)) {
-        if (!$('#articleSideShare .article__code').qrcode) {
-          $.ajax({
-            method: 'GET',
-            url: Label.staticServePath + '/js/lib/jquery.qrcode.min.js',
-            dataType: 'script',
-            cache: true,
-          })
-        }
-      }
-      Skin.initToc()
-    })
-    Skin.initToc()
-  },
-  initTags: function () {
-    var $tags = $('#tags')
-    var tagsArray = $tags.find('.tag')
-    // 根据引用次数添加样式，产生云效果
-    var max = parseInt(tagsArray.first().data('count'))
-    var distance = Math.ceil(max / 5)
-    for (var i = 0; i < tagsArray.length; i++) {
-      var count = parseInt($(tagsArray[i]).data('count'))
-      // 算出当前 tag 数目所在的区间，加上 class
-      for (var j = 0; j < 5; j++) {
-        if (count > j * distance && count <= (j + 1) * distance) {
-          tagsArray[i].className = 'tag tag__level' + j
-          break
-        }
-      }
-    }
-
-    // 按字母或者中文拼音进行排序
-    $tags.html(tagsArray.get().sort(function (a, b) {
-      var valA = $(a).text().toLowerCase()
-      var valB = $(b).text().toLowerCase()
-      // 对中英文排序的处理
-      return valA.localeCompare(valB)
-    }))
-  },
-  initArticle1111: function () {
-    if ($('#articleShare').length === 0) {
-      return
-    }
-
-    var $postSide = $('.post__side')
-    if ($(window).height() >= $('.post').height()) {
-      $postSide.css('opacity', 1)
-    }
-    $postSide.css('left', (($('.post').offset().left - 20) / 2 - 27) + 'px')
-
-    var sideAbsoluteTop = ($(window).height() - 249) / 2 + 125
-    var beforScrollTop = $(window).scrollTop()
-    $(window).scroll(function () {
-      if ($('#articleShare').length === 0) {
-        return
-      }
-      var scrollTop = $(window).scrollTop()
-      var bottomTop = $('.article__bottom').offset().top
-      if (scrollTop > 65) {
-        $postSide.css('opacity', 1)
-
-        if (beforScrollTop - scrollTop > 0) {
-          // up
-          $('.header').addClass('header--fixed').css({'top': '0'})
-          $('.main').css('padding-top', '64px')
-          if ($(window).height() <= $('.post').height() && scrollTop <
-            bottomTop - $(window).height()) {
-            $('.article__toolbar').css({
-              'bottom': 0,
-              'opacity': 1,
-            })
-          }
-        } else if (beforScrollTop - scrollTop < 0) {
-          // down
-          $('.header').css({'top': '-64px'}).removeClass('header--fixed')
-          $('.main').css('padding-top', '0')
-          $('.article__toolbar').css({
-            'bottom': '-44px',
-            'opacity': 0,
-          })
-        }
-
-      } else {
-        if ($(window).height() <= $('.post').height()) {
-          $postSide.css('opacity', 0)
-        }
-
-        $('.header').removeClass('header--fixed').css('top', '-64px')
-        $('.main').css('padding-top', '0')
-      }
-
-      if (scrollTop > bottomTop - $(window).height()) {
-        if (bottomTop < $(window).height()) {
-          $postSide.css({
-            'position': 'absolute',
-            'top': (bottomTop - 125) + 'px',
-          })
-        } else {
-          $postSide.css({
-            'position': 'absolute',
-            'top': (bottomTop - sideAbsoluteTop) + 'px',
-          })
-        }
-      } else {
-        $postSide.css({
-          'position': 'fixed',
-          'top': '50%',
-        })
-      }
-
-      beforScrollTop = scrollTop
-    })
-
-    $(window).scroll()
+    Util.initPjax()
   },
   initArticle: function () {
-    this._initPage()
     page.share()
-  },
-  _initPage: function () {
+
     var $articleTocs = $('.vditor-reset [id^=b3_solo_h]')
     var $articleToc = $('.article__toc')
     var $articleProgress = $('.article__progress')
@@ -182,6 +42,7 @@ var Skin = {
         css('left', $('.article .item__content').offset().left +
           $('.article .item__content').outerWidth() - 80)
     }
+
     $(window).unbind('scroll').scroll(function (event) {
       if ($articleProgress.length === 0) {
         return false
@@ -194,14 +55,14 @@ var Skin = {
       if ($(window).scrollTop() > 236) {
         $('.article__top').css('top', 0)
       } else {
-        $('.article__top').css('top', -60)
+        $('.article__top').css('top', -61)
       }
 
       if ($('.article__toc li').length === 0) {
         return false
       }
 
-      if ($(window).scrollTop() > 990 && $(window).scrollTop() <
+      if ($(window).scrollTop() > 975 && $(window).scrollTop() <
         $('.article').outerHeight() + 100) {
         $('.post__toc').show()
       } else {
@@ -239,4 +100,4 @@ var Skin = {
     $(window).scroll()
   },
 }
-// Skin.init();
+Skin.init();

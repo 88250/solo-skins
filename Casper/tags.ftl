@@ -26,42 +26,39 @@
 </@head>
 </head>
 <body>
-<#include "header.ftl">
 <div id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-<#include "nav.ftl">
-<div class="main">
-<#if noticeBoard??>
-    <div class="board">
-    ${noticeBoard}
-    </div>
-</#if>
-    <div class="wrapper content">
-        <div class="module__title">
-            <span>
-                ${tags?size}
-                    <span class="ft-green ft-12">${tagLabel}</span>
-            </span>
+<#include "marcr-header.ftl">
+    <@header type='other'></@header>
+    <div class="wrapper other">
+        <h2 class="other__title"><a href="${servePath}" class="ft__a">${blogTitle}</a> - ${allTagsLabel}</h2>
+        <div class="other__meta">
+        ${tags?size} ${tagLabel}
         </div>
-        <div id="tags">
+        <div class="other__content">
+         <#list mostUsedCategories as category>
+             <span class="other__item--archive other__item">
+                 <a href="${servePath}/category/${category.categoryURI}">
+                     ${category.categoryTitle}
+                 </a>
+                 <span>${category.categoryTagCnt} ${tagLabel}</span>
+             </span>
+         </#list>
+        </div>
+        <div class="other__content">
         <#list tags as tag>
-            <a rel="tag" data-count="${tag.tagPublishedRefCount}" class="tag"
-               href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
-            ${tag.tagTitle}
-                <span class="ft-green ft-12">${tag.tagPublishedRefCount} ${countLabel}</span>
-            </a>
+            <span class="other__item other__item--archive">
+                 <a rel="tag" data-count="${tag.tagPublishedRefCount}" class="tag"
+                    href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
+                     ${tag.tagTitle}
+                 </a>
+                <span>${tag.tagPublishedRefCount} ${countLabel}</span>
+            </span>
         </#list>
         </div>
     </div>
-<#include "bottom.ftl">
-</div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
- <#if pjax><!---- pjax {#pjax} start ----></#if>
-<script>
-    Skin.initTags()
-</script>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
 </body>
 </html>

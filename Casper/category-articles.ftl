@@ -26,30 +26,18 @@
 </@head>
 </head>
 <body>
-<#include "header.ftl">
 <div id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-<#include "nav.ftl">
-<div class="main">
-<#if noticeBoard??>
-    <div class="board">
-    ${noticeBoard}
-    </div>
-</#if>
-    <div class="wrapper content">
-        <div class="module__title">
-            <span>
-                ${category.categoryTitle}
-                <span class="ft-green ft-12">
-                    ${category.categoryDescription}
-                </span>
-            </span>
+<#include "marcr-header.ftl">
+    <@header type='other'></@header>
+    <div class="wrapper other">
+        <h2 class="other__title"><a href="${servePath}" class="ft__a">${blogTitle}</a> - ${category.categoryTitle}</h2>
+        <div class="other__meta other__meta--list">
+            ${category.categoryDescription} &nbsp;
         </div>
-    <#include "article-list.ftl">
+        <#include "article-list.ftl">
     </div>
-<#include "bottom2.ftl">
-</div>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
+<#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
 </body>

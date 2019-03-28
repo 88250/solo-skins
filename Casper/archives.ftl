@@ -26,48 +26,36 @@
 </@head>
 </head>
 <body>
-<#include "header.ftl">
 <div id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-<#include "nav.ftl">
-<div class="main">
-<#if noticeBoard??>
-    <div class="board">
-    ${noticeBoard}
-    </div>
-</#if>
-    <div class="wrapper content">
-        <div class="module__title">
-            <span>
-                ${archiveDates?size}
-                <span class="ft-green ft-12">${cntMonthLabel}</span>
-                ${statistic.statisticPublishedBlogArticleCount}
-                <span class="ft-green ft-12">${cntArticleLabel}</span>
-            </span>
+<#include "marcr-header.ftl">
+    <@header type='other'></@header>
+    <div class="wrapper other">
+        <h2 class="other__title"><a href="${servePath}" class="ft__a">${blogTitle}</a> - ${archiveLabel}</h2>
+        <div class="other__meta">
+        ${archiveDates?size} ${cntMonthLabel}
+        ${statistic.statisticPublishedBlogArticleCount} ${cntArticleLabel}
         </div>
-    <#if 0 != archiveDates?size>
-        <#list archiveDates as archiveDate>
-            <div class="page__item">
-                <h3>
-                    <a class="ft-gray"
-                       href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
-                        <#if "en" == localeString?substring(0, 2)>
+        <div class="other__content">
+            <#if 0 != archiveDates?size>
+            <#list archiveDates as archiveDate>
+                <div class="other__item other__item--archive">
+                    <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
+                    <#if "en" == localeString?substring(0, 2)>
                         ${archiveDate.monthName} ${archiveDate.archiveDateYear}
-                        <#else>
+                    <#else>
                         ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
-                        </#if>
-                        <span class="ft-green">
-                            ${archiveDate.archiveDatePublishedArticleCount}
-                            <span class="ft-12">${cntArticleLabel}</span>
-                        </span>
+                    </#if>
                     </a>
-                </h3>
-            </div>
-        </#list>
-    </#if>
+                    <span>
+                        ${archiveDate.archiveDatePublishedArticleCount}
+                        ${cntArticleLabel}
+                    </span>
+                </div>
+            </#list>
+            </#if>
+        </div>
     </div>
-<#include "bottom.ftl">
-</div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">

@@ -47,7 +47,7 @@
 
         <div class="fn__right">
             <#include "../../common-template/macro-user_site.ftl">
-            <@userSite dir="n"></@userSite>
+            <@userSite dir=""></@userSite>
             <a rel="alternate" href="${servePath}/rss.xml">
                 RSS
             </a>

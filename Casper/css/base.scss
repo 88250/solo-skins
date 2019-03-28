@@ -47,6 +47,13 @@ a {
   color: $link;
 }
 
+.ft__a {
+  color: $gray;
+  &:hover {
+    color: rgba($gray, .8);
+  }
+}
+
 .wrapper {
   max-width: 1040px;
   margin: 0 auto;
@@ -73,6 +80,26 @@ a {
     height: 64px;
     .header__title {
       display: none;
+    }
+    .header__nav a {
+      margin-bottom: 0;
+      line-height: 64px;
+    }
+  }
+  &--other {
+    height: 407px;
+    .header__title {
+      display: none;
+    }
+    &:before {
+      content: "";
+      height: 100%;
+      position: absolute;
+      background: url("../images/header-bg.jpg") no-repeat center center;
+      width: 100%;
+      top: 0;
+      background-size: cover;
+      filter: brightness(38%);
     }
     .header__nav a {
       margin-bottom: 0;
@@ -343,7 +370,7 @@ a {
   &__top {
     position: fixed;
     width: 100%;
-    top: -60px;
+    top: -61px;
     background-color: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid rgba($gray, 0.1);
     height: 60px;
@@ -445,8 +472,10 @@ a {
     &__content {
       padding: 70px 100px 0;
       box-sizing: border-box;
-      margin-top: -164px;
       background-color: #fff;
+      &--article {
+        margin-top: -164px;
+      }
     }
     &__tip {
       margin-bottom: 40px;
@@ -469,7 +498,7 @@ a {
 .post__toc {
   display: none;
   position: fixed;
-  top: 64px;
+  top: 84px;
   bottom: 80px;
   overflow: auto;
   padding-left: 3px;
@@ -592,5 +621,45 @@ a {
     cursor: pointer;
     width: 100%;
     box-sizing: border-box;
+  }
+}
+
+.other {
+  position: relative;
+  &__title {
+    margin: -220px 0 5px;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+  }
+  &__meta {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    &--list {
+      margin-bottom: 154px;
+    }
+  }
+  &__content {
+    background-color: #fff;
+    padding: 70px 100px;
+    margin: 77px auto 40px;
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
+    border-radius: 5px;
+  }
+  &__item {
+    line-height: 20px;
+    margin: 10px;
+    white-space: nowrap;
+    display: block;
+    &--archive {
+      width: 187px;
+      display: inline-block;
+    }
+    span, div {
+      color: $gray;
+      font-size: 12px;
+    }
   }
 }
