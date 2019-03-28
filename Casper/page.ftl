@@ -28,7 +28,7 @@
 </@head>
 </head>
 <body>
-<div id="pjax"></div>
+<div id="pjax">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <#include "marcr-header.ftl">
     <@header type='article'></@header>

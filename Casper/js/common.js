@@ -58,7 +58,7 @@ var Skin = {
         $('.article__top').css('top', -61)
       }
 
-      if ($('.article__toc li').length === 0) {
+      if ($('.article__toc li').length === 0 || $(window).width() < 1000) {
         return false
       }
 

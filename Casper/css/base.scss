@@ -132,6 +132,7 @@ a {
     font-weight: 300;
     margin: 5px 0 70px;
     color: $fade-lighter;
+    line-height: 24px;
   }
   &__nav {
     position: relative;
@@ -326,11 +327,12 @@ a {
     background-color: #fff;
     position: relative;
     .fn__flex {
+      flex-wrap: wrap;
       margin: 0 -20px;
     }
     .item {
       position: relative;
-      flex: 1;
+      flex: 1 1 300px;
       margin: 40px 20px;
       box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
       border-radius: 5px;
@@ -468,6 +470,7 @@ a {
     &__cover {
       height: 800px;
       background-size: cover;
+      background-position: center center;
     }
     &__content {
       padding: 70px 100px 0;
@@ -660,6 +663,144 @@ a {
     span, div {
       color: $gray;
       font-size: 12px;
+      word-break: break-all;
+      white-space: normal;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 0;
+    &__h1 {
+      padding-top: 60px;
+    }
+    &__h2 {
+      margin-bottom: 40px;
+    }
+    &__nav {
+      .fn__right {
+        float: none;
+      }
+      a {
+        margin: 0 10px 0 0;
+      }
+    }
+    &--article {
+      height: auto;
+      .header__nav a {
+        line-height: 24px;
+      }
+    }
+    &--other {
+      height: 360px;
+      .header__nav a {
+        line-height: 24px;
+      }
+    }
+  }
+
+  .articles {
+    position: initial;
+    margin: 10px -5px 0 -5px;
+    .item {
+      margin: 0 5px 10px;
+      &--large {
+        flex-direction: column;
+        flex: 1 1 300px;
+
+        .item__cover {
+          height: 200px;
+        }
+
+        .item__main {
+          padding: 25px;
+          width: auto;
+          flex: 1;
+        }
+      }
+    }
+  }
+  .pagination {
+    margin-top: 0;
+    margin-bottom: 5px;
+    &__item {
+      margin-bottom: 5px;
+    }
+  }
+
+  .footer {
+    .fn__left,
+    .fn__right {
+      float: none;
+      text-align: center;
+    }
+  }
+
+  .article {
+    &__top {
+      height: 40px;
+      .title {
+        display: none;
+      }
+    }
+    &__share .item {
+      height: 40px;
+      width: 40px;
+      padding: 10px 0;
+    }
+    .item {
+      &__meta {
+        padding-top: 40px;
+      }
+      &__cover {
+        height: 380px;
+      }
+      &__content {
+        padding: 10px 10px 0;
+        &--article {
+          margin-top: -20px;
+        }
+      }
+    }
+    &__bottom {
+      .fn__flex {
+        margin: 0 0 10px 0;
+      }
+      .item {
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+
+  .comment {
+    &__title {
+      padding: 10px 0;
+    }
+    &__wrapper {
+      padding: 0 10px 0.1px;
+    }
+
+    #comment,
+    .item {
+      margin-bottom: 10px;
+      padding: 10px;
+      &__avatar {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .other {
+    &__title {
+      margin-top: -280px;
+    }
+    &__content {
+      padding: 20px;
+      margin: 40px auto 10px;
+    }
+    &__meta--list {
+      margin-bottom: 40px;
     }
   }
 }

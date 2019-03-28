@@ -33,7 +33,7 @@
     <div class="wrapper other">
         <h2 class="other__title"><a href="${servePath}/tags.html" class="ft__a">${allTagsLabel}</a> - ${tag.tagTitle}</h2>
         <div class="other__meta--list other__meta">
-        ${tag.tagPublishedRefCount} ${tagLabel}
+        ${tag.tagPublishedRefCount} ${cntArticleLabel}
         </div>
         <#include "article-list.ftl">
     </div>

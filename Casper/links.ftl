@@ -42,7 +42,7 @@
                     <a rel="friend" href="${link.linkAddress}" target="_blank">
                         ${link.linkTitle}
                     </a>
-                    <div class="ft-12 ft-green">${link.linkDescription}</div>
+                    <div>${link.linkDescription}</div>
                 </div>
             </#list>
         </#if>
