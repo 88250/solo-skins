@@ -41,7 +41,7 @@
     <@header type="article"></@header>
     <div class="article__top">
         <div class="fn__clear">
-            <div class="title">${article.articleTitle}</div>
+            <div class="title fn__pointer" onclick="Util.goTop()">${article.articleTitle}</div>
             <#include "../../common-template/share.ftl">
         </div>
         <progress class="article__progress"></progress>
