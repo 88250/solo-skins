@@ -38,9 +38,15 @@ var Skin = {
     var $articleProgress = $('.article__progress')
 
     if ($articleToc.length === 1) {
-      $('.post__toc').
-        css('left', $('.article .item__content').offset().left +
-          $('.article .item__content').outerWidth() - 80)
+      if ($(window).width() > 876) {
+        $('.post__toc').
+          css('left', $('.article .item__content').offset().left +
+            $('.article .item__content').outerWidth() - 80)
+      } else {
+        $('.post__toc a').click(function () {
+          $('.post__toc').hide()
+        })
+      }
     }
 
     $(window).unbind('scroll').scroll(function (event) {
@@ -58,16 +64,17 @@ var Skin = {
         $('.article__top').css('top', -61)
       }
 
-      if ($('.article__toc li').length === 0 || $(window).width() < 1000) {
+      if ($('.article__toc li').length === 0) {
         return false
       }
 
-      if ($(window).scrollTop() > 975 && $(window).scrollTop() <
-        $('.article').outerHeight() + 100) {
-        $('.post__toc').show()
-      } else {
-        $('.post__toc').hide()
-        return
+      if ($(window).width() > 876) {
+        if ($(window).scrollTop() > 975 && $(window).scrollTop() <
+          $('.article').outerHeight() + 100) {
+          $('.post__toc').show()
+        } else {
+          $('.post__toc').hide()
+        }
       }
 
       // 界面各种图片加载会导致帖子目录定位

@@ -747,6 +747,13 @@ a {
       .title {
         display: none;
       }
+      .toc {
+        display: block;
+        float: left;
+        line-height: 40px;
+        padding: 0 10px;
+        cursor: pointer;
+      }
     }
     &__share .item {
       height: 40px;
@@ -806,5 +813,13 @@ a {
     &__meta--list {
       margin-bottom: 40px;
     }
+  }
+
+  .post__toc {
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    top: 41px;
+    bottom: 0;
   }
 }

@@ -41,6 +41,7 @@
     <@header type="article"></@header>
     <div class="article__top">
         <div class="fn__clear">
+            <div class="toc fn__none" onclick="$('.post__toc').slideToggle()">${tocLabel}</div>
             <div class="title fn__pointer" onclick="Util.goTop()">${article.articleTitle}</div>
             <#include "../../common-template/share.ftl">
         </div>
