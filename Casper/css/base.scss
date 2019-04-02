@@ -333,12 +333,13 @@ a {
     .item {
       position: relative;
       flex: 1 1 300px;
-      margin: 40px 20px;
+      margin: 40px 20px 40px;
       box-shadow: 8px 14px 38px rgba(39, 44, 49, .06), 1px 3px 8px rgba(39, 44, 49, .03);
       border-radius: 5px;
       padding: 40px;
       overflow: hidden;
       text-align: center;
+      box-sizing: border-box;
       &:before {
         content: "";
         position: absolute;
