@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
 </@head>
 </head>
-<body>
-<div id="pjax">
+<body class="fn__flex-column">
+<div id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <#include "marcr-header.ftl">
     <@header type='article'></@header>

@@ -34,8 +34,8 @@
     </#if>
 </@head>
 </head>
-<body>
-<div class="pjax">
+<body class="fn__flex-column">
+<div id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <#include "marcr-header.ftl">
     <@header type="article"></@header>
