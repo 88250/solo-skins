@@ -49,6 +49,15 @@ var Skin = {
       }
     }
 
+    $articleToc.find('a').click(function (event) {
+      const id = $(this).attr('href')
+      window.location.hash = id
+      $(window).scrollTop($(id).offset().top - 60)
+      event.preventDefault()
+      event.stopPropagation()
+      return false
+    })
+
     $(window).unbind('scroll').scroll(function (event) {
       if ($articleProgress.length === 0) {
         return false
@@ -82,14 +91,14 @@ var Skin = {
       $articleTocs.each(function (i) {
         toc.push({
           id: this.id,
-          offsetTop: this.offsetTop,
+          offsetTop: $(this).offset().top,
         })
       })
 
       // 当前目录样式
       var scrollTop = $(window).scrollTop()
       for (var i = 0, iMax = toc.length; i < iMax; i++) {
-        if (scrollTop < toc[i].offsetTop) {
+        if (scrollTop < toc[i].offsetTop - 61) {
           $articleToc.find('li').removeClass('current')
           var index = i > 0 ? i - 1 : 0
           $articleToc.find('a[href="#' + toc[index].id + '"]').
@@ -98,7 +107,7 @@ var Skin = {
           break
         }
       }
-      if (scrollTop >= toc[toc.length - 1].offsetTop) {
+      if (scrollTop >= toc[toc.length - 1].offsetTop - 61) {
         $articleToc.find('li').removeClass('current')
         $articleToc.find('li:last').addClass('current')
       }
@@ -107,4 +116,4 @@ var Skin = {
     $(window).scroll()
   },
 }
-Skin.init();
+Skin.init()
