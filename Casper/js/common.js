@@ -50,7 +50,7 @@ var Skin = {
     }
 
     $articleToc.find('a').click(function (event) {
-      const id = $(this).attr('href')
+      var id = $(this).attr('href')
       window.location.hash = id
       $(window).scrollTop($(id).offset().top - 60)
       event.preventDefault()

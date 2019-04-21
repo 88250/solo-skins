@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.1.0.0, Mar 26, 2019
+ * @version 0.1.0.1, Apr 21, 2019
  */
 @import "../../../scss/reset";
 @import "../../../scss/usite";
@@ -304,15 +304,10 @@ a {
     line-height: 30px;
     font-size: 12px;
     margin: 0 5px 40px;
-    &:hover {
-      opacity: 0.8;
-      text-decoration: none;
-    }
+    &:hover,
     &--active {
-      background: $black-bg;
-      &:hover {
-        opacity: 1;
-      }
+      opacity: 0.68;
+      text-decoration: none;
     }
     &--omit {
       background-color: transparent;
