@@ -20,12 +20,12 @@
 <div class="icon__up" onclick="Util.goTop()"></div>
 <footer class="footer">
     &copy; ${year}
-    ${footerContent}
-    <a href="${servePath}">${blogTitle}</a>  <span class="fn__none--m">&nbsp; • &nbsp;</span>
+    <a href="${servePath}">${blogTitle}</a>
+    ${footerContent}  <span class="fn__none--m">&nbsp; • &nbsp;</span>
     <div class="fn__none"></div>
-    <a href="https://solo.b3log.org" target="_blank">Solo</a>  <br/>
+    <br/>
 
-    Powered by <a href="https://b3log.org" target="_blank">B3log</a> 开源
+    Powered by <a href="https://solo.b3log.org" target="_blank">Solo</a>
     <div class="fn__none"></div>
     &nbsp; &heartsuit;  &nbsp;
     Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>

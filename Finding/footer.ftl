@@ -18,11 +18,11 @@
 
 -->
 <footer class="site-footer fn-clear">
-    <a href="${servePath}">${blogTitle}</a> 
     &copy; ${year}
+    <a href="${servePath}">${blogTitle}</a>
     ${footerContent}
     <span class="fn-right">
-        Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> • <a href="https://solo.b3log.org" target="_blank">Solo</a>&nbsp;&nbsp;
+        Powered by <a href="https://solo.b3log.org" target="_blank">Solo</a>&nbsp;&nbsp;
         Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
         by <a rel="friend" href="http://vanessa.b3log.org" target="_blank">Vanessa</a>.
     </span>

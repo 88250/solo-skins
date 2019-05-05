@@ -66,11 +66,11 @@
             ${commentLabel} <br>
             ${statistic.statisticBlogViewCount} <span class="ft-gray">${viewLabel}</span> &nbsp; &nbsp;
             ${onlineVisitorCnt} <span class="ft-gray">${onlineVisitorLabel}</span> <br>
-            <a class="ft__link" href="https://solo.b3log.org" target="_blank">Solo</a>
-            &copy; ${year} ${footerContent}
+            &copy; ${year}
             <a class="ft__link" href="${servePath}">${blogTitle}</a>
+            ${footerContent}
             <br>
-            Powered by <a class="ft__link" href="https://b3log.org" target="_blank">B3log</a> 开源
+            Powered by <a class="ft__link" href="https://solo.b3log.org" target="_blank">Solo</a>
             <br>
             Theme <a class="ft__link" rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
             <sup>[<a class="ft__link" target="_blank" href="https://github.com/chakhsu/pinghsu">ref</a>]</sup>

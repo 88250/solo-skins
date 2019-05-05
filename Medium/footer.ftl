@@ -24,7 +24,9 @@
             <#include "../../common-template/macro-user_site.ftl"/>
             <@userSite dir="n"/>
             <div class="fn-right">
-            ${blogTitle} &copy; ${year} ${footerContent}
+                &copy; ${year}
+                <a href="${servePath}">${blogTitle}</a>
+                ${footerContent}
             </div>
         </div>
         <div class="fn-clear">
@@ -33,8 +35,7 @@
         ${statistic.statisticBlogViewCount} ${viewLabel} &nbsp;
         ${onlineVisitorCnt} ${onlineVisitorLabel}
             <div class="fn-right">
-                Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> •
-                <a href="https://solo.b3log.org" target="_blank">Solo</a> •
+                Powered by <a href="https://solo.b3log.org" target="_blank">Solo</a> •
                 Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
                 by <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a>
             </div>

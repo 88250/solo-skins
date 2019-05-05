@@ -35,12 +35,11 @@
         </span>
     </div>
     <div class="fn-clear">
-        <a href="${servePath}">${blogTitle}</a> 
         &copy; ${year}
+        <a href="${servePath}">${blogTitle}</a>
         ${footerContent}
         <span class="fn-right">
-            Powered by <a href="https://b3log.org" target="_blank">B3log 开源</a> •
-            <a href="https://solo.b3log.org" target="_blank">Solo</a>
+            Powered by <a href="https://solo.b3log.org" target="_blank">Solo</a>
         </span>
     </div>
     <span onclick="Util.goTop()" class="icon-goup"></span>
