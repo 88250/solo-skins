@@ -52,12 +52,5 @@
     <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
-<script>
-    var $commentContents = $('.comments .vditor-reset')
-    for (var i = 0; i < $commentContents.length; i++) {
-        var str = $commentContents[i].innerHTML
-        $commentContents[i].innerHTML = Util.replaceEmString(str)
-    }
-</script>
 </body>
 </html>

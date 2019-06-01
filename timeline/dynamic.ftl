@@ -146,10 +146,5 @@
             </div>
         </div>
         <#include "footer.ftl">
-        <script>
-            $(".comments > li > div > p").each(function () {
-                this.innerHTML = Util.replaceEmString($(this).html());
-            });
-        </script>
     </body>
 </html>

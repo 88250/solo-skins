@@ -106,13 +106,5 @@
 
             <#include "footer.ftl">
         </main>
-
-        <script>
-            var $commentContents = $(".comments .comment-content");
-            for (var i = 0; i < $commentContents.length; i++) {
-                var str = $commentContents[i].innerHTML;
-                $commentContents[i].innerHTML = Util.replaceEmString(str);
-            }
-        </script>
     </body>
 </html>
