@@ -22,7 +22,7 @@
     <header class="header header--${type}">
         <div class="wrapper header__title">
             <h1 class="header__h1 fn__flex-inline">
-                <a href="${servePath}" rel="start" class="header__title">${blogTitle}</a>
+                <a href="${servePath}" rel="start">${blogTitle}</a>
             </h1>
             <h2 class="header__desc header__desc--title">${blogSubtitle}</h2>
             <div class="header__desc">

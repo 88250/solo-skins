@@ -431,11 +431,11 @@ a {
   }
 
   a {
-    color: #2daebf;
+    color: $fade-lighter;
 
     &:hover {
       text-decoration: none;
-      color: #f60;
+      color: #fff;
     }
   }
 }

@@ -83,6 +83,22 @@ var Skin = {
         Util.goTop()
       }
     })
+
+    var timer = 0
+    var blogTitle = $('.header__h1').text()
+    document.addEventListener('visibilitychange', function () {
+      if (timer) clearTimeout(timer)
+      if (document.hidden) {
+        timer = setTimeout(function () {
+          document.title = '(◍´꒳`◍)' + ' - ' + blogTitle
+        }, 500)
+      } else {
+        document.title = '(*´∇｀*) 欢迎回来！'
+        timer = setTimeout(function () {
+          document.title = blogTitle
+        }, 1000)
+      }
+    }, false)
   },
   initArticle: function () {
     page.share()
