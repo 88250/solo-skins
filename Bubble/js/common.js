@@ -29,6 +29,17 @@
 var Skin = {
   init: function () {
     Util.initPjax()
+    $('#headerDown').click(function () {
+      $('html, body').animate({scrollTop: $(window).height()}, 300)
+    })
+
+    $(window).scroll(function (event) {
+      $('.fn__progress').attr('value', parseInt($(window).scrollTop())).
+        attr('max', parseInt($('body').outerHeight() -
+          $(window).height()))
+    })
+
+    $('.header').circleMagic();
   },
   initArticle: function () {
     page.share()

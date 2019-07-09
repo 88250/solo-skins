@@ -17,6 +17,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
+<img src="${faviconURL}">
 <nav class="wrapper header__nav fn__clear">
     <a href="${servePath}" rel="start">
         <#if type == 'article'>
