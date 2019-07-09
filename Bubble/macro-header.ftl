@@ -17,24 +17,14 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<#include "../../common-template/macro-common_head.ftl">
-<!DOCTYPE html>
-<html>
-<head>
-<@head title="${blogTitle}">
-    <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
-</@head>
-</head>
-<body class="fn__flex-column">
-<div id="pjax" class="fn__flex-1">
-    <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <#include "macro-header.ftl">
-    <@header type='index'></@header>
-    <div class="wrapper">
-        <#include "article-list.ftl">
+<#macro header type>
+<header class="header header--${type}">
+    <div class="wrapper header__title">
+        <h1 class="header__h1 fn__flex-inline">
+            <img src="${faviconURL}">
+            <a href="${servePath}" rel="start" class="header__title">${blogTitle}</a>
+        </h1>
+        <h2 class="header__h2">${blogSubtitle}</h2>
     </div>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
-</div>
-<#include "footer.ftl">
-</body>
-</html>
+</header>
+</#macro>

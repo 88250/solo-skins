@@ -17,24 +17,21 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<#include "../../common-template/macro-common_head.ftl">
-<!DOCTYPE html>
-<html>
-<head>
-<@head title="${blogTitle}">
-    <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
-</@head>
-</head>
-<body class="fn__flex-column">
-<div id="pjax" class="fn__flex-1">
-    <#if pjax><!---- pjax {#pjax} start ----></#if>
-    <#include "macro-header.ftl">
-    <@header type='index'></@header>
-    <div class="wrapper">
-        <#include "article-list.ftl">
+<#macro comments commentList article>
+<div class="comment">
+    <div class="comment__wrapper wrapper">
+        <div class="comment__title">
+            ${commentLabel}
+        </div>
+        <#if article.commentable>
+        <textarea rows="3" placeholder="${commentContentCannotEmptyLabel}" id="comment"></textarea>
+        </#if>
+
+        <ul id="comments">
+        <#list commentList as comment>
+            <#include 'common-comment.ftl'/>
+        </#list>
+        </ul>
     </div>
-    <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
-<#include "footer.ftl">
-</body>
-</html>
+</#macro>
