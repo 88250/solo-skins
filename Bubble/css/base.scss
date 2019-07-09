@@ -31,7 +31,7 @@
 $fade-lighter: rgba(255, 255, 255, .8) !default;
 $gray: #738a94 !default;
 $black: #15171a !default;
-$black-bg: #090a0b !default;
+$black-bg: #232323 !default;
 $link: rgb(119, 182, 255) !default;
 
 body {
@@ -106,6 +106,58 @@ a {
   }
 }
 
+@keyframes bounceInLeft {
+  from {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    transform: translate3d(20px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+@keyframes beating {
+  0% {
+    transform: scale(1)
+  }
+
+  20% {
+    transform: scale(1.6)
+  }
+
+  30% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.6)
+  }
+
+  70%,to {
+    transform: scale(1)
+  }
+}
+
 .wrapper {
   max-width: 1040px;
   margin: 0 auto;
@@ -114,6 +166,7 @@ a {
 
 .header {
   position: relative;
+  z-index: 1;
 
   #canvas {
     position: absolute;
@@ -171,6 +224,7 @@ a {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    z-index: 1;
   }
 
   &__h1 {
@@ -213,6 +267,10 @@ a {
     position: absolute;
     bottom: 10px;
     cursor: pointer;
+
+    &:hover {
+      color: #fff;
+    }
   }
 
   //&__nav {
@@ -241,23 +299,144 @@ a {
   //}
 }
 
-.footer {
-  font-size: 13px;
-  padding: 20px 0;
-  background-color: $black-bg;
-  color: #fff;
-
-  a {
-    color: $fade-lighter;
+.side {
+  &__menu {
+    position: fixed;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: left .3s ease;
 
     &:hover {
-      text-decoration: none;
-      color: #fff;
+      opacity: .6;
+    }
+
+    &--edge {
+      left: -3px;
+      font-size: 0;
+      background-color: #333;
     }
   }
 
-  .fn__right {
-    text-align: right;
+  &__main {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    transition: all 1s ease;
+
+    &--show {
+      opacity: 1;
+
+      .side__bg {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .side__panel {
+        animation-name: bounceInLeft;
+      }
+    }
+  }
+
+  &__bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: background-color 1s ease;
+  }
+
+  &__panel {
+    width: 280px;
+    height: 100vh;
+    overflow: auto;
+    background: #000 url(../images/side-bg.gif) top / contain no-repeat;
+    animation-name: bounceOutLeft;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    position: fixed;
+    left: 0;
+    z-index: 4;
+    top: 0;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    color: #555;
+    opacity: .5;
+    transition: all .5s ease-out;
+    &--bottom {
+      transform: rotate(-180deg);
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.footer {
+  font-size: 12px;
+  padding: 20px 0;
+  background-color: $black-bg;
+  color: #888;
+  margin-top: 200px;
+  line-height: 24px;
+  text-align: center;
+
+  .wrapper {
+    position: relative;
+    &:after {
+      background: url(../images/footer.png) no-repeat center center / cover;
+      position: absolute;
+      bottom: 88px;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+      content: "";
+      height: 300px;
+    }
+  }
+
+  &__heart {
+    display: inline-block;
+    animation: beating 1s infinite;
+    animation-timing-function: ease-out;
+    margin: 0 3px 5px 5px;
+  }
+
+  svg {
+    margin: 0 5px;
+  }
+
+  a {
+    color: #2daebf;
+
+    &:hover {
+      text-decoration: none;
+      color: #f60;
+    }
   }
 }
 
