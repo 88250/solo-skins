@@ -21,23 +21,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<@head title="${category.categoryTitle} - ${blogTitle}">
-    <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
-</@head>
+    <@head title="${categoryLabel} - ${blogTitle}">
+        <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
+    </@head>
 </head>
 <body class="fn__flex-column">
 <div id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-<#include "macro-header.ftl">
+    <#include "macro-header.ftl">
     <@header type='index'></@header>
     <div class="wrapper">
-        <h2 class="other__title"><a href="${servePath}" class="ft__a">${blogTitle}</a> - ${category.categoryTitle}</h2>
+        <h2 class="other__title">
+            <a href="${servePath}" class="ft__a">${blogTitle}</a> - ${categoryLabel}
+        </h2>
         <div class="ft__center">
-            ${category.categoryDescription}
+            ${categories?size} ${cntLabel}${categoryLabel}
         </div>
-        <#include "article-list.ftl">
+        <div class="articles">
+            <br>
+            <#list categories as category>
+                <a href="${servePath}/category/${category.categoryURI}"
+                   class="other__item">
+                    ${category.categoryTitle} -
+                    <b>${category.categoryTagCnt}</b> ${tagsLabel}
+                </a>
+            </#list>
+            <br><br>
+        </div>
     </div>
-<#if pjax><!---- pjax {#pjax} end ----></#if>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
 </body>

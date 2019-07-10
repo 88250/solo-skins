@@ -21,30 +21,30 @@
 <!DOCTYPE html>
 <html>
 <head>
- <@head title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel} ${archiveLabel} - ${blogTitle}">
-     <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
- </@head>
+    <@head title="${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel} ${archiveLabel} - ${blogTitle}">
+        <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
+    </@head>
 </head>
 <body class="fn__flex-column">
 <div id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <#include "macro-header.ftl">
-    <@header type='other'></@header>
-    <div class="wrapper other">
+    <@header type='index'></@header>
+    <div class="wrapper">
         <h2 class="other__title">
             <a href="${servePath}/archives.html" class="ft__a">${archiveLabel}</a> -
-             <#if "en" == localeString?substring(0, 2)>
-                 ${archiveDate.archiveDateMonth} ${archiveDate.archiveDateYear}
-             <#else>
-                 ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
-             </#if>
+            <#if "en" == localeString?substring(0, 2)>
+                ${archiveDate.archiveDateMonth} ${archiveDate.archiveDateYear}
+            <#else>
+                ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
+            </#if>
         </h2>
-        <div class="other__meta other__meta--list">
+        <div class="ft__center">
             ${archiveDate.archiveDatePublishedArticleCount} ${cntArticleLabel}
         </div>
         <#include "article-list.ftl">
     </div>
-<#if pjax><!---- pjax {#pjax} end ----></#if>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
 </body>

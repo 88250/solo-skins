@@ -30,12 +30,11 @@
 <div id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
     <#include "macro-header.ftl">
-    <@header type='other'></@header>
-    <div class="wrapper other">
+    <@header type='index'></@header>
+    <div class="wrapper">
         <h2 class="other__title">
             <a href="${servePath}" class="ft__a">${blogTitle}</a> - ${authorName}
         </h2>
-        <div class="other__meta other__meta--list">&nbsp;</div>
         <#include "article-list.ftl">
     </div>
 <#if pjax><!---- pjax {#pjax} end ----></#if>

@@ -21,23 +21,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<@head title="${tag.tagTitle} ${tagLabel} - ${blogTitle}">
-    <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
-</@head>
+    <@head title="${tag.tagTitle} ${tagLabel} - ${blogTitle}">
+        <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
+    </@head>
 </head>
 <body class="fn__flex-column">
 <div id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-<#include "macro-header.ftl">
-    <@header type='other'></@header>
-    <div class="wrapper other">
-        <h2 class="other__title"><a href="${servePath}/tags.html" class="ft__a">${allTagsLabel}</a> - ${tag.tagTitle}</h2>
-        <div class="other__meta--list other__meta">
-        ${tag.tagPublishedRefCount} ${cntArticleLabel}
+    <#include "macro-header.ftl">
+    <@header type='index'></@header>
+    <div class="wrapper">
+        <h2 class="other__title"><a href="${servePath}/tags.html" class="ft__a">${allTagsLabel}</a> - ${tag.tagTitle}
+        </h2>
+        <div class="ft__center">
+            ${tag.tagPublishedRefCount} ${cntArticleLabel}
         </div>
         <#include "article-list.ftl">
     </div>
-<#if pjax><!---- pjax {#pjax} end ----></#if>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
 </div>
 <#include "footer.ftl">
 </body>

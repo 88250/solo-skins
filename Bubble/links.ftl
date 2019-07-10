@@ -21,34 +21,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<@head title="${linkLabel} - ${blogTitle}">
-    <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
-</@head>
+    <@head title="${linkLabel} - ${blogTitle}">
+        <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
+    </@head>
 </head>
 <body class="fn__flex-column">
 <div id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-<#include "macro-header.ftl">
-    <@header type='other'></@header>
-    <div class="wrapper other">
+    <#include "macro-header.ftl">
+    <@header type='index'></@header>
+    <div class="wrapper">
         <h2 class="other__title"><a href="${servePath}" class="ft__a">${blogTitle}</a> - ${linkLabel}</h2>
-        <div class="other__meta">
-        ${links?size} ${linkLabel}
+        <div class="ft__center">
+            ${links?size} ${linkLabel}
         </div>
-        <div class="other__content">
-        <#if 0 != links?size>
-            <#list links as link>
-                <div class="other__item">
-                    <a rel="friend" href="${link.linkAddress}" target="_blank">
-                        ${link.linkTitle}
-                    </a>
-                    <div>${link.linkDescription}</div>
-                </div>
-            </#list>
-        </#if>
+        <div class="articles">
+            <br>
+            <#if 0 != links?size>
+                <#list links as link>
+                    <div class="other__item">
+                        <a rel="friend" href="${link.linkAddress}" target="_blank">
+                            ${link.linkTitle}
+                        </a>
+                        <div>${link.linkDescription}</div>
+                    </div>
+                </#list>
+            </#if>
+            <br><br>
         </div>
     </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
-<#include "footer.ftl">
+    <#include "footer.ftl">
 </body>
 </html>

@@ -21,40 +21,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<@head title="${allTagsLabel} - ${blogTitle}">
-    <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
-</@head>
+    <@head title="${allTagsLabel} - ${blogTitle}">
+        <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
+    </@head>
 </head>
 <body class="fn__flex-column">
 <div id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
-<#include "macro-header.ftl">
-    <@header type='other'></@header>
-    <div class="wrapper other">
+    <#include "macro-header.ftl">
+    <@header type='index'></@header>
+    <div class="wrapper">
         <h2 class="other__title"><a href="${servePath}" class="ft__a">${blogTitle}</a> - ${allTagsLabel}</h2>
-        <div class="other__meta">
-        ${tags?size} ${tagLabel}
+        <div class="ft__center">
+            ${tags?size} ${tagLabel}
         </div>
-        <div class="other__content">
-         <#list mostUsedCategories as category>
-             <span class="other__item--archive other__item">
-                 <a href="${servePath}/category/${category.categoryURI}">
-                     ${category.categoryTitle}
-                 </a>
-                 <span>${category.categoryTagCnt} ${tagLabel}</span>
-             </span>
-         </#list>
-        </div>
-        <div class="other__content">
-        <#list tags as tag>
-            <span class="other__item other__item--archive">
-                 <a rel="tag" data-count="${tag.tagPublishedRefCount}" class="tag"
-                    href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
-                     ${tag.tagTitle}
-                 </a>
-                <span>${tag.tagPublishedRefCount} ${countLabel}</span>
-            </span>
-        </#list>
+        <div class="articles">
+            <div class="fn__clear">
+                <#list tags as tag>
+                    <a rel="tag" data-count="${tag.tagPublishedRefCount}" class="other__item fn__left"
+                       href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
+                        ${tag.tagTitle} - <b>${tag.tagPublishedRefCount}</b> ${countLabel}
+                    </a>
+                </#list>
+            </div>
+            <br><br>
         </div>
     </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>

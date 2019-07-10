@@ -352,7 +352,7 @@ a {
     box-shadow: inset 1px 1px 4px rgba(0, 0, 0, .3), 0 2px 3px rgba(0, 0, 0, .4);
     margin: 0 auto 20px;
     display: block;
-    transition: transform .3s ease;
+    transition: all .3s ease;
 
     &:hover {
       transform: rotate3d(0, 0, 1, -45deg);
@@ -580,6 +580,29 @@ a {
     &--omit {
       background-color: transparent;
       color: $black;
+    }
+  }
+}
+
+.other {
+  &__title {
+    margin: 40px 0 10px;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  &__item {
+    line-height: 20px;
+    margin: 20px 35px 0 35px;
+    white-space: nowrap;
+    display: block;
+    color: $gray;
+    word-break: break-all;
+
+    &--archive {
+      width: 150px;
+      display: inline-block;
     }
   }
 }
@@ -912,55 +935,6 @@ a {
     cursor: pointer;
     width: 100%;
     box-sizing: border-box;
-  }
-}
-
-.other {
-  position: relative;
-
-  &__title {
-    margin: -220px 0 5px;
-    color: #fff;
-    font-size: 28px;
-    text-align: center;
-    font-weight: 400;
-  }
-
-  &__meta {
-    color: #fff;
-    font-size: 14px;
-    text-align: center;
-
-    &--list {
-      margin-bottom: 154px;
-    }
-  }
-
-  &__content {
-    background-color: #fff;
-    padding: 70px 100px;
-    margin: 77px auto 40px;
-    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06), 1px 3px 8px rgba(39, 44, 49, 0.03);
-    border-radius: 5px;
-  }
-
-  &__item {
-    line-height: 20px;
-    margin: 10px;
-    white-space: nowrap;
-    display: block;
-
-    &--archive {
-      width: 187px;
-      display: inline-block;
-    }
-
-    span, div {
-      color: $gray;
-      font-size: 12px;
-      word-break: break-all;
-      white-space: normal;
-    }
   }
 }
 

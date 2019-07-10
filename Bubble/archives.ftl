@@ -29,15 +29,14 @@
 <div id="pjax" class="fn__flex-1">
     <#if pjax><!---- pjax {#pjax} start ----></#if>
 <#include "macro-header.ftl">
-    <@header type='other'></@header>
-    <div class="wrapper other">
+    <@header type='index'></@header>
+    <div class="wrapper">
         <h2 class="other__title"><a href="${servePath}" class="ft__a">${blogTitle}</a> - ${archiveLabel}</h2>
-        <div class="other__meta">
+        <div class="ft__center">
         ${archiveDates?size} ${cntMonthLabel}
         ${statistic.statisticPublishedBlogArticleCount} ${cntArticleLabel}
         </div>
-        <div class="other__content">
-            <#if 0 != archiveDates?size>
+        <div class="articles">
             <#list archiveDates as archiveDate>
                 <div class="other__item other__item--archive">
                     <a href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
@@ -53,7 +52,7 @@
                     </span>
                 </div>
             </#list>
-            </#if>
+            <br><br><br>
         </div>
     </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
