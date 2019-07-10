@@ -70,7 +70,7 @@ var Skin = {
     $('.side__menu').click(function () {
       $('.side__main').addClass('side__main--show').show()
     })
-    $('.side__bg').click(function () {
+    $('.side__bg, .side__close').click(function () {
       $('.side__main').removeClass('side__main--show')
       setTimeout(function () {
         $('.side__main').hide()
@@ -99,6 +99,8 @@ var Skin = {
         }, 1000)
       }
     }, false)
+
+    $(window).scroll()
   },
   initArticle: function () {
     page.share()

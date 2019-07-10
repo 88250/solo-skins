@@ -19,6 +19,8 @@
 -->
 <footer class="footer">
     <div class="wrapper">
+        <#include "../../common-template/macro-user_site.ftl">
+        <@userSite dir=""></@userSite> <br>
         &copy; ${year}
         <a href="${servePath}">${blogTitle}</a>
         ${footerContent}
@@ -28,12 +30,6 @@
         Theme <a rel="friend" href="https://github.com/b3log/solo-skins" target="_blank">${skinDirName}</a>
         <sup>[<a href="https://www.cnblogs.com/jajian" target="_blank">ref</a>]</sup>
         by <a href="http://vanessa.b3log.org" target="_blank">Vanessa</a> <br>
-        <#include "../../common-template/macro-user_site.ftl">
-        <@userSite dir=""></@userSite> <br>
-        ${statistic.statisticPublishedBlogArticleCount} ${articleLabel} &nbsp;
-        ${statistic.statisticPublishedBlogCommentCount} ${commentLabel} &nbsp;
-        ${statistic.statisticBlogViewCount} ${viewLabel} &nbsp;
-        ${onlineVisitorCnt} ${onlineVisitorLabel}
     </div>
 </footer>
 <svg class="side__top" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">

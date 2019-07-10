@@ -18,24 +18,8 @@
 
 -->
 <div class="articles">
-<#list articles as article>
-    <article class="item<#if article_index % 6 ==0> item--large</#if>">
-        <a href="${servePath}${article.articlePermalink}" class="item__cover"
-           style="background-image: url(${article.articleImg1URL})">
-        </a>
-        <div class="item__main">
-            <#list article.articleTags?split(",") as articleTag>
-                <#if articleTag_index == 0>
-                    <#if article.category??>
-                    <a class="item__tag"
-                       href="${servePath}/category/${article.category.categoryURI}">${article.category.categoryTitle}</a>
-                    <#else>
-                    <a rel="tag" class="item__tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-                        ${articleTag}
-                    </a>
-                    </#if>
-                </#if>
-            </#list>
+    <#list articles as article>
+        <article class="item">
             <h2 class="item__title">
                 <a rel="bookmark" href="${servePath}${article.articlePermalink}">
                     ${article.articleTitle}
@@ -58,50 +42,53 @@
                 <#else>
                     ${article.articleAbstractText}
                 </#if>
-
             </a>
             <div class="fn__clear">
-                <a href="${servePath}/authors/${article.authorId}"
-                   aria-label="${article.authorName}"
-                   class="vditor-tooltipped vditor-tooltipped__n item__avatar">
-                    <img src="${article.authorThumbnailURL}" />
-                </a>
+                <a href="${servePath}/authors/${article.authorId}">${article.authorName}</a>
+                &nbsp;·&nbsp;
+                <#list article.articleTags?split(",") as articleTag>
+                    <a rel="tag" class="item__tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
+                        ${articleTag}
+                    </a> &nbsp;
+                </#list>
                 <#if article.articleCommentCount != 0>
-                <a class="item__meta" href="${servePath}${article.articlePermalink}#comments">
-                    ${article.articleCommentCount} ${commentLabel}
-                </a>
-                <#else>
-                    <a class="item__meta" href="${servePath}${article.articlePermalink}">
+                    &nbsp;·&nbsp;
+                    <a class="item__tag" href="${servePath}${article.articlePermalink}#comments">
+                        ${article.articleCommentCount} ${commentLabel}
+                    </a>
+                </#if>
+                <#if article.articleViewCount != 0>
+                    &nbsp;·&nbsp;
+                    <a class="item__tag" href="${servePath}${article.articlePermalink}">
                         ${article.articleViewCount} ${viewLabel}
                     </a>
                 </#if>
             </div>
-        </div>
-    </article>
-</#list>
-</div>
-
-<#if 0 != paginationPageCount>
-<nav class="pagination">
-    <#if 1 != paginationPageNums?first>
-        <a href="${servePath}${path}?p=${paginationPreviousPageNum}"
-           aria-label="${previousPageLabel}"
-           class="pagination__item vditor-tooltipped__n vditor-tooltipped">&laquo;</a>
-        <a class="pagination__item" href="${servePath}${path}">1</a>
-        <span class="pagination__item pagination__item--omit">...</span>
-    </#if>
-    <#list paginationPageNums as paginationPageNum>
-        <#if paginationPageNum == paginationCurrentPageNum>
-            <span class="pagination__item pagination__item--active">${paginationPageNum}</span>
-        <#else>
-            <a class="pagination__item" href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a>
-        </#if>
+        </article>
     </#list>
-    <#if paginationPageNums?last != paginationPageCount>
-        <span class="pagination__item pagination__item--omit">...</span>
-        <a href="${servePath}${path}?p=${paginationPageCount}" class="pagination__item">${paginationPageCount}</a>
-        <a href="${servePath}${path}?p=${paginationNextPageNum}" aria-label="${nextPagePabel}"
-           class="pagination__item vditor-tooltipped__n vditor-tooltipped">&raquo;</a>
+
+    <#if 0 != paginationPageCount>
+        <nav class="pagination">
+            <#if 1 != paginationPageNums?first>
+                <a href="${servePath}${path}?p=${paginationPreviousPageNum}"
+                   aria-label="${previousPageLabel}"
+                   class="pagination__item vditor-tooltipped__n vditor-tooltipped">&laquo;</a>
+                <a class="pagination__item" href="${servePath}${path}">1</a>
+                <span class="pagination__item pagination__item--omit">...</span>
+            </#if>
+            <#list paginationPageNums as paginationPageNum>
+                <#if paginationPageNum == paginationCurrentPageNum>
+                    <span class="pagination__item pagination__item--active">${paginationPageNum}</span>
+                <#else>
+                    <a class="pagination__item" href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a>
+                </#if>
+            </#list>
+            <#if paginationPageNums?last != paginationPageCount>
+                <span class="pagination__item pagination__item--omit">...</span>
+                <a href="${servePath}${path}?p=${paginationPageCount}" class="pagination__item">${paginationPageCount}</a>
+                <a href="${servePath}${path}?p=${paginationNextPageNum}" aria-label="${nextPagePabel}"
+                   class="pagination__item vditor-tooltipped__n vditor-tooltipped">&raquo;</a>
+            </#if>
+        </nav>
     </#if>
-</nav>
-</#if>
+</div>

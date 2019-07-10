@@ -44,57 +44,81 @@
     <div class="side__main">
         <div class="side__bg"></div>
         <div class="side__panel">
-            <img src="${faviconURL}">
-            <a href="${servePath}/tags.html" rel="section">
-                ${allTagsLabel}
-            </a>
-            &nbsp;•&nbsp;
-            <a href="${servePath}/archives.html">
-                ${archiveLabel}
-            </a>
-            &nbsp;•&nbsp;
-            <a rel="archive" href="${servePath}/links.html">
-                ${linkLabel}
-            </a>
-            <nav class="wrapper header__nav fn__clear">
-                <a href="${servePath}" rel="start">
-                    <#if type == 'article'>
-                        ${blogTitle}
-                    <#else>
-                        ${indexLabel}
-                    </#if>
-                </a>
+            <svg class="side__close ft__a" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                 viewBox="0 0 20 20">
+                <path d="M18.362 19.324c-0.902 0.902-2.363 0.902-3.263 0l-5.098-5.827-5.098 5.825c-0.902 0.902-2.363 0.902-3.263 0-0.902-0.902-0.902-2.363 0-3.263l5.304-6.057-5.306-6.061c-0.902-0.902-0.902-2.361 0-3.263s2.361-0.902 3.263 0l5.1 5.829 5.098-5.829c0.902-0.902 2.361-0.902 3.263 0s0.902 2.363 0 3.263l-5.304 6.061 5.304 6.057c0.902 0.902 0.902 2.363 0 3.265z"></path>
+            </svg>
 
+            <div class="side__header">
+                <a href="${servePath}" rel="start"><img class="side__logo" src="${faviconURL}"></a>
+
+                <div class="side__meta">
+                    ${statistic.statisticPublishedBlogArticleCount} ${articleLabel} <br>
+                    ${statistic.statisticPublishedBlogCommentCount} ${commentLabel} <br>
+                    ${statistic.statisticBlogViewCount} ${viewLabel} <br>
+                    ${onlineVisitorCnt} ${onlineVisitorLabel}
+                </div>
+            </div>
+
+            <div class="side__title">
+                <span>ღゝ◡╹)ノ❤️</span>
+            </div>
+            <ul class="side__nav">
+                <li>
+                    <a href="${servePath}" rel="start">
+                        <#if type == 'article'>
+                            ${blogTitle}
+                        <#else>
+                            ${indexLabel}
+                        </#if>
+                    </a>
+                </li>
                 <#list pageNavigations as page>
-                    <a class="fn__flex-inline" href="${page.pagePermalink}" target="${page.pageOpenTarget}" rel="section">
-                        <#if page.pageIcon != ''><img src="${page.pageIcon}"></#if> ${page.pageTitle}
-                    </a>
+                    <li>
+                        <a href="${page.pagePermalink}" target="${page.pageOpenTarget}"><#if page.pageIcon != ''><img
+                                class="page-icon" src="${page.pageIcon}"></#if>${page.pageTitle}</a>
+                    </li>
                 </#list>
-
-                <a href="${servePath}/search">
-                    ${searchLabel}
-                </a>
-
-                <div class="fn__right">
-
-                    <a rel="alternate" href="${servePath}/rss.xml">
-                        RSS
-                    </a>
-
-                    <#if isLoggedIn>
+                <li>
+                    <a href="${servePath}/dynamic.html">${dynamicLabel}</a>
+                </li>
+                <li>
+                    <a href="${servePath}/category.html">${categoryLabel}</a>
+                </li>
+                <li>
+                    <a href="${servePath}/tags.html">${allTagsLabel}</a>
+                </li>
+                <li>
+                    <a href="${servePath}/archives.html">${archiveLabel}</a>
+                </li>
+                <li>
+                    <a href="${servePath}/links.html">${linkLabel}</a>
+                </li>
+                <li>
+                    <a rel="alternate" href="${servePath}/rss.xml">RSS</a>
+                </li>
+                <li>
+                    <a href="${servePath}/search?keyword=">Search</a>
+                </li>
+                <#if isLoggedIn>
+                    <li>
                         <a href="${servePath}/admin-index.do#main">
                             ${adminLabel}
                         </a>
+                    </li>
+                    <li>
                         <a href="${logoutURL}">
                             ${logoutLabel}
                         </a>
-                    <#else>
+                    </li>
+                <#else>
+                    <li>
                         <a rel="alternate" href="${servePath}/start">
                             ${startToUseLabel}
                         </a>
-                    </#if>
-                </div>
-            </nav>
+                    </li>
+                </#if>
+            </ul>
         </div>
     </div>
 </#macro>
