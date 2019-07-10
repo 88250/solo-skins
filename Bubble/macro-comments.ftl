@@ -19,7 +19,7 @@
 -->
 <#macro comments commentList article>
 <div class="comment">
-    <div class="comment__wrapper wrapper">
+    <div class="wrapper">
         <div class="comment__title">
             ${commentLabel}
         </div>

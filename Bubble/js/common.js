@@ -38,33 +38,13 @@ var Skin = {
         attr('max', parseInt($('body').outerHeight() -
           $(window).height()))
 
-      if ($(window).scrollTop() > $(window).height() - 20) {
+      if ($(window).scrollTop() > $(window).height() / 2 - 20) {
         $('.side__menu').addClass('side__menu--edge')
         $('.side__top').removeClass('side__top--bottom')
       } else {
         $('.side__menu').removeClass('side__menu--edge')
         $('.side__top').addClass('side__top--bottom')
       }
-    })
-
-    $('.header').circleMagic({
-      clearOffset: 0.3,
-      color: 'rgba(255,255,255, .2)',
-      density: 0.2,
-      radius: 15,
-    })
-
-    new Ribbons({
-      colorSaturation: '60%',
-      colorBrightness: '50%',
-      colorAlpha: 0.5,
-      colorCycleSpeed: 5,
-      verticalPosition: 'random',
-      horizontalSpeed: 200,
-      ribbonCount: 3,
-      strokeSize: 0,
-      parallaxAmount: -0.2,
-      animateSections: true,
     })
 
     $('.side__menu').click(function () {
@@ -101,61 +81,51 @@ var Skin = {
     }, false)
 
     $(window).scroll()
+
+    new Ribbons({
+      colorSaturation: '60%',
+      colorBrightness: '50%',
+      colorAlpha: 0.5,
+      colorCycleSpeed: 5,
+      verticalPosition: 'random',
+      horizontalSpeed: 200,
+      ribbonCount: 3,
+      strokeSize: 0,
+      parallaxAmount: -0.2,
+      animateSections: true,
+    })
+
+    if ($('#comments').length === 1) {
+      return
+    }
+
+    $('.header').circleMagic({
+      clearOffset: 0.3,
+      color: 'rgba(255,255,255, .2)',
+      density: 0.2,
+      radius: 15,
+    })
   },
   initArticle: function () {
     page.share()
 
+    initCanvas('articleTop');
+
     var $articleTocs = $('.vditor-reset [id^=b3_solo_h]')
     var $articleToc = $('.article__toc')
-    var $articleProgress = $('.article__progress')
-
-    if ($articleToc.length === 1) {
-      if ($(window).width() > 876) {
-        $('.post__toc').
-          css('left', $('.article .item__content').offset().left +
-            $('.article .item__content').outerWidth() - 80)
-      } else {
-        $('.post__toc a').click(function () {
-          $('.post__toc').hide()
-        })
-      }
-    }
 
     $articleToc.find('a').click(function (event) {
       var id = $(this).attr('href')
       window.location.hash = id
-      $(window).scrollTop($(id).offset().top - 60)
+      $(window).scrollTop($(id).offset().top)
       event.preventDefault()
       event.stopPropagation()
       return false
     })
 
-    $(window).unbind('scroll').scroll(function (event) {
-      if ($articleProgress.length === 0) {
-        return false
-      }
-
-      $articleProgress.attr('value', parseInt($(window).scrollTop())).
-        attr('max', parseInt($('body').outerHeight() -
-          $(window).height()))
-
-      if ($(window).scrollTop() > 236) {
-        $('.article__top').css('top', 0)
-      } else {
-        $('.article__top').css('top', -61)
-      }
-
+    $(window).scroll(function (event) {
       if ($('.article__toc li').length === 0) {
         return false
-      }
-
-      if ($(window).width() > 876) {
-        if ($(window).scrollTop() > 975 && $(window).scrollTop() <
-          $('.article').outerHeight() + 100) {
-          $('.post__toc').show()
-        } else {
-          $('.post__toc').hide()
-        }
       }
 
       // 界面各种图片加载会导致帖子目录定位
@@ -170,7 +140,7 @@ var Skin = {
       // 当前目录样式
       var scrollTop = $(window).scrollTop()
       for (var i = 0, iMax = toc.length; i < iMax; i++) {
-        if (scrollTop < toc[i].offsetTop - 61) {
+        if (scrollTop < toc[i].offsetTop) {
           $articleToc.find('li').removeClass('current')
           var index = i > 0 ? i - 1 : 0
           $articleToc.find('a[href="#' + toc[index].id + '"]').
@@ -179,13 +149,11 @@ var Skin = {
           break
         }
       }
-      if (scrollTop >= toc[toc.length - 1].offsetTop - 61) {
+      if (scrollTop >= toc[toc.length - 1].offsetTop) {
         $articleToc.find('li').removeClass('current')
         $articleToc.find('li:last').addClass('current')
       }
     })
-
-    $(window).scroll()
   },
 }
 
