@@ -28,7 +28,6 @@
  */
 var Skin = {
   init: function () {
-    Util.initPjax()
     $('#headerDown').click(function () {
       $('html, body').animate({scrollTop: $(window).height()}, 300)
     })
