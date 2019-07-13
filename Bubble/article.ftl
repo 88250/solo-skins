@@ -40,6 +40,7 @@
     <#include "macro-header.ftl">
     <@header type="article"></@header>
     <div class="article__top" style="background-image: url(${article.articleImg1URL})">
+        <div style="background-image: url(${article.articleImg1URL})"></div>
         <canvas id="articleTop"></canvas>
     </div>
     <div class="article">
