@@ -105,6 +105,11 @@
         src="${staticServePath}/skins/${skinDirName}/js/TweenMax${miniPostfix}.js?${staticResourceVersion}"
         charset="utf-8"></script>
 <#include "footer.ftl">
+<#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+    <svg viewBox="0 0 32 32" width="100%" height="100%" class="side__top side__top--toc">
+        <path d="M30 18h-28c-1.1 0-2-0.9-2-2s0.9-2 2-2h28c1.1 0 2 0.9 2 2s-0.9 2-2 2zM30 6.25h-28c-1.1 0-2-0.9-2-2s0.9-2 2-2h28c1.1 0 2 0.9 2 2s-0.9 2-2 2zM2 25.75h28c1.1 0 2 0.9 2 2s-0.9 2-2 2h-28c-1.1 0-2-0.9-2-2s0.9-2 2-2z"></path>
+    </svg>
+</#if>
 <#if pjax><!---- pjax {#pjax} start ----></#if>
 <@comment_script oId=article.oId commentable=article.commentable>
     page.tips.externalRelevantArticlesDisplayCount = "${externalRelevantArticlesDisplayCount}";

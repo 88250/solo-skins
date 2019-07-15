@@ -39,10 +39,10 @@ var Skin = {
 
       if ($(window).scrollTop() > $(window).height() / 2 - 20) {
         $('.side__menu').addClass('side__menu--edge')
-        $('.side__top').removeClass('side__top--bottom')
+        $('#sideTop').removeClass('side__top--bottom')
       } else {
         $('.side__menu').removeClass('side__menu--edge')
-        $('.side__top').addClass('side__top--bottom')
+        $('#sideTop').addClass('side__top--bottom')
       }
     })
 
@@ -55,7 +55,7 @@ var Skin = {
         $('.side__main').hide()
       }, 1000)
     })
-    $('.side__top').click(function () {
+    $('#sideTop').click(function () {
       if ($(this).hasClass('side__top--bottom')) {
         Util.goBottom()
       } else {
@@ -110,12 +110,18 @@ var Skin = {
 
     initCanvas('articleTop')
 
-    $('.post__toc').css({
-      left: document.querySelector('.article__content').
-        getBoundingClientRect().right + 20,
-      right: 'auto',
-      display: 'block'
-    })
+    if ($(window).width() >= 768) {
+      $('.post__toc').css({
+        left: document.querySelector('.article__content').
+          getBoundingClientRect().right + 20,
+        right: 'auto',
+        display: 'block',
+      })
+    } else {
+      $('.side__top--toc').click(function () {
+        $('.post__toc').slideToggle()
+      })
+    }
 
     var $articleTocs = $('.vditor-reset [id^=b3_solo_h]')
     var $articleToc = $('.article__toc')
@@ -124,6 +130,9 @@ var Skin = {
       var id = $(this).attr('href')
       window.location.hash = id
       $(window).scrollTop($(id).offset().top)
+      if ($(window).width() < 768) {
+        $('.post__toc').slideToggle()
+      }
       event.preventDefault()
       event.stopPropagation()
       return false
@@ -144,7 +153,7 @@ var Skin = {
       })
 
       // 当前目录样式
-      var scrollTop = $(window).scrollTop()
+      var scrollTop = $(window).scrollTop() + 10
       for (var i = 0, iMax = toc.length; i < iMax; i++) {
         if (scrollTop < toc[i].offsetTop) {
           $articleToc.find('li').removeClass('current')
