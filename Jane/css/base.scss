@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.3.0.0, Mar 22, 2019
+ * @version 0.4.0.0, Jul 17, 2019
 */
 @import "../../../scss/reset";
 @import "../../../scss/function";
@@ -41,6 +41,7 @@ $gray: #999 !default;
   display: inline-block;
   color: $gray !important;
   margin: 0 5px 20px 0;
+
   &:hover {
     color: $red !important;
   }
@@ -90,6 +91,10 @@ a {
   overflow: hidden;
   color: #555;
   font-size: 14px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   a {
     color: $red;
@@ -160,6 +165,7 @@ a {
   margin: 30px auto;
   line-height: 1.6em;
   font-size: 0.85em;
+
   a {
     color: $red;
   }
@@ -171,6 +177,7 @@ a {
     margin: 50px 0;
     border-bottom: 1px dashed #d9d9d9;
     text-align: justify;
+
     &:last-child {
       border-bottom: 0;
     }
@@ -178,12 +185,14 @@ a {
 
   &__title {
     padding: 20px 0;
+
     a {
       text-decoration: none;
       font-size: 25px;
       font-weight: bold;
       color: #555;
       transition: color 0.2s;
+
       &:hover {
         color: $red;
       }
@@ -199,6 +208,7 @@ a {
 
   &__content {
     margin: 20px 0;
+
     & > p:last-child {
       margin-bottom: 0
     }
@@ -214,6 +224,7 @@ a {
   &__near {
     margin: 50px 0 70px;
     position: relative;
+
     &--point:before {
       width: 8px;
       height: 8px;
@@ -227,14 +238,17 @@ a {
       background: #ddd;
       box-shadow: 0 1px 2px #fff;
     }
+
     ul {
       list-style: none;
     }
+
     a {
       font-size: 12px;
       line-height: 1.6em;
       color: $gray;
       padding: 0 20px;
+
       &:hover {
         text-decoration: none;
         color: #555;
@@ -244,6 +258,7 @@ a {
         text-align: right;
       }
     }
+
     strong,
     h4 {
       margin-bottom: 6px;
@@ -258,6 +273,7 @@ a {
 
 .pagination {
   margin: 20px 0 40px;
+
   &__item {
     padding: 10px 10px;
     color: $gray;
@@ -341,6 +357,7 @@ a {
       border-width: 8px;
       border-right-color: #CFD8DC;
     }
+
     &:after {
       margin-top: 1px;
       margin-left: 2px;
@@ -359,6 +376,7 @@ a {
   &__btn {
     cursor: pointer;
     color: #666;
+
     &:hover {
       color: #333;
     }
@@ -366,6 +384,7 @@ a {
 
   &__content {
     margin-top: 20px;
+
     & > p:last-child {
       margin-bottom: 0;
     }

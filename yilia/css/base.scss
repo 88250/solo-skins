@@ -21,11 +21,15 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 2.3.0.0, Mar 22, 2019
+ * @version 2.4.0.0, Jul 17, 2019
  */
 @import "../../../scss/toc";
 @import "../../../scss/usite";
 @import "vditor/src/assets/scss/classic";
+
+.vditor-reset::-webkit-scrollbar {
+  display: none;
+}
 
 .user__sites {
   position: absolute;
@@ -33,6 +37,7 @@
   right: 10px;
   top: 27px;
   text-align: center;
+
   .user__site {
     svg {
       height: 20px;
@@ -642,11 +647,13 @@ article .abstract a:hover {
     position: relative;
     z-index: 12;
   }
+
   canvas {
     position: absolute;
     right: -54px;
     top: 18px;
   }
+
   span {
     transition: all 0.2s ease-out 0s;
     cursor: pointer;

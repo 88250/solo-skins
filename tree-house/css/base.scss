@@ -20,7 +20,7 @@
  * skin tree-house style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.2.0.0, Mar 22, 2019
+ * @version 2.3.0.0, Jul 17, 2019
  */
 @import "../../../scss/reset";
 @import "../../../scss/toc";
@@ -42,6 +42,7 @@
     margin: 0 10px 10px 0;
     background-color: rgba(255, 255, 255, 0.39);
     display: block;
+
     &:hover {
       background: url(../images/bg-menu-active.png) repeat scroll -8px -8px transparent;
       text-decoration: none;
@@ -299,6 +300,10 @@ img {
 .vditor-reset {
   margin: 0 12px;
   padding-bottom: 12px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .vditor-reset a, .article-abstract a {

@@ -19,9 +19,8 @@
  * skin andrea style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.2.0.0, Mar 21, 2019
+ * @version 2.3.0.0, Jul 17, 2019
 */
-
 @import "../../../scss/toc";
 @import "vditor/src/assets/scss/classic";
 
@@ -342,6 +341,7 @@ img {
     display: inline-block;
     height: 20px;
     margin-right: 6px;
+
     svg {
       height: 20px;
       width: 20px;
@@ -543,7 +543,11 @@ img {
 
 /* article */
 .vditor-reset--article {
-   padding-bottom: 20px;
+  padding-bottom: 20px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .article-relative {

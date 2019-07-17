@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 1.1.0.0, Mar 20, 2019
+ * @version 1.2.0.0, Jul 17, 2019
 */
 /* start common */
 @import "../../../scss/reset";
@@ -39,8 +39,14 @@ a:hover {
   text-decoration: underline;
 }
 
-.vditor-reset a {
-  color: #ff4d3a;
+.vditor-reset {
+  a {
+    color: #ff4d3a;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .fn-pointer {
@@ -353,6 +359,7 @@ a {
 aside {
   width: 28%;
   min-width: 236px;
+
   .tag.vditor-tooltipped {
     display: inline-block;
     padding: 2px 5px;
@@ -362,6 +369,7 @@ aside {
     margin-right: 10px;
     line-height: 22px;
   }
+
   .ad {
     background-color: #3cbc8d;
     color: #fff;
@@ -624,6 +632,7 @@ aside {
 .article__toc {
   top: 81px;
   bottom: 132px;
+
   .toc--current a {
     color: #ff4d3a
   }

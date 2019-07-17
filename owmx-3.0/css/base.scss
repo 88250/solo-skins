@@ -29,13 +29,17 @@ Update: 	Dongxu Wang 2011-02-24
 /*
  * skin owmx-3.0 style
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.2.0.0, Mar 22, 2019
+ * @version 2.3.0.0, Jul 17, 2019
  */
 @import "../../../scss/toc";
 @import "vditor/src/assets/scss/classic";
 
 .vditor-reset--article {
   padding-bottom: 10px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .left {
@@ -175,14 +179,17 @@ header .user__sites {
   position: absolute;
   right: 20px;
   width: 396px;
+
   .user__site {
     float: left;
     margin-right: 8px;
     height: 20px;
     color: #016f93;
+
     &:hover {
       color: #DB0202;
     }
+
     svg {
       height: 20px;
       width: 20px;

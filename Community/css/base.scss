@@ -20,7 +20,7 @@
  * skin community style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.2.0.0, Mar 22, 2019
+ * @version 2.3.0.0, Jul 17, 2019
  */
 @import "../../../scss/reset";
 @import "../../../scss/toc";
@@ -31,9 +31,11 @@
   margin: 0 8px 0;
   display: inline-block;
   height: 25px;
+
   &:hover {
     color: #888;
   }
+
   svg {
     height: 25px;
     width: 25px;
@@ -271,17 +273,22 @@ a.header-title {
 
 .vditor-reset {
   line-height: 145%;
+
   &--article {
     padding-bottom: 20px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
-}
 
-.vditor-reset a {
-  color: #075181;
-}
+  a {
+    color: #075181;
 
-.vditor-reset a:hover {
-  color: #68ADD5;
+    :hover {
+      color: #68ADD5;
+    }
+  }
 }
 
 .article-main h2.title {
@@ -383,6 +390,7 @@ a.header-title {
 .article-relative {
   margin-top: 20px;
   width: 360px;
+
   li {
     list-style: none;
   }
@@ -790,9 +798,10 @@ a.star-icon {
     padding: 0 10px;
     margin: 0 10px 10px 0;
     background-color: #9BC4CE;
+
     &:hover {
       text-decoration: none;
-      background-color:  #B4D9E2;
+      background-color: #B4D9E2;
     }
   }
 }

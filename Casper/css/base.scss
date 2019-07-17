@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.1.0.1, Apr 21, 2019
+ * @version 0.2.0.0, Jul 17, 2019
  */
 @import "../../../scss/reset";
 @import "../../../scss/usite";
@@ -480,6 +480,9 @@ a {
         margin-top: -164px;
         position: relative;
         padding-bottom: 30px;
+        &::-webkit-scrollbar {
+          display: none;
+        }
       }
     }
     &__tip {

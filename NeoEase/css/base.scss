@@ -19,7 +19,7 @@
  * skin neoease style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.0, Mar 22, 2019
+ * @version 2.2.0.0, Jul 17, 2019
  */
 @import "../../../scss/toc";
 @import "../../../scss/usite";
@@ -28,6 +28,7 @@
 .user__site {
   display: inline-block;
   margin-right: 15px;
+
   svg {
     height: 20px;
     width: 20px;
@@ -491,6 +492,7 @@ textarea, input {
   font-size: 11px;
   line-height: 16px;
   margin: 12px 0;
+
   &--article {
     margin-top: 0;
   }
@@ -498,6 +500,10 @@ textarea, input {
 
 .vditor-reset--article {
   padding-bottom: 12px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .article-element a {

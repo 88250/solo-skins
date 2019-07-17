@@ -20,7 +20,7 @@
  * skin next style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.0, Mar 22, 2019
+ * @version 2.2.0.0, Jul 17, 2019
  */
 @import "../../../scss/usite";
 @import "../../../scss/toc";
@@ -32,6 +32,7 @@
   line-height: 16px;
   border-bottom: 0;
   margin: 8px 5px 0 0;
+
   svg {
     height: 16px;
     width: 16px;
@@ -552,6 +553,7 @@ img {
   padding: 0;
   font-size: 14px;
   line-height: 2;
+
   li {
     display: block;
   }
@@ -742,10 +744,14 @@ img {
 
 .vditor-reset {
   text-align: justify;
-}
 
-.vditor-reset p {
-  margin: 0 0 25px 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  p {
+    margin: 0 0 25px 0;
+  }
 }
 
 /* end article */

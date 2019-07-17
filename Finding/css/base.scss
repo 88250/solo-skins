@@ -21,7 +21,7 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 2.3.0.0, Mar 22, 2019
+ * @version 2.4.0.0, Jul 17, 2019
  */
 @import "../../../scss/toc";
 @import "../../../scss/usite";
@@ -30,6 +30,7 @@
 .user__site {
   float: left;
   margin-left: 10px;
+
   svg {
     height: 20px;
     width: 20px;
@@ -756,6 +757,7 @@ article.post {
 
   .share {
     position: relative;
+
     canvas {
       position: absolute;
       left: 0;
@@ -766,6 +768,10 @@ article.post {
 
 .post-content--article {
   padding-bottom: 10px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 article.post:after {

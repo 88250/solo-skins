@@ -19,11 +19,15 @@
  * timeline skin style.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.0, Mar 22, 2019
+ * @version 2.2.0.0, Jul 17, 2019
  */
 @import "../../../scss/usite";
 @import "../../../scss/toc";
 @import "vditor/src/assets/scss/classic";
+
+.vditor-reset::-webkit-scrollbar {
+  display: none;
+}
 
 .article__toc {
   padding-left: 0;
@@ -33,10 +37,12 @@
   display: inline-block;
   height: 14px;
   margin: 0 5px 0 0;
+
   &:hover {
     text-decoration: none;
     color: #363A3D;
   }
+
   svg {
     height: 14px;
     width: 14px;

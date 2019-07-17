@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.5.0.0, Mar 22, 2019
+ * @version 0.6.0.0, Jul 17, 2019
 */
 @import "../../../scss/reset";
 @import "../../../scss/function";
@@ -36,6 +36,7 @@ $black: #3d4450 !default;
 
 .user__site {
   color: rgba(10, 10, 0, 0.7);
+
   &:hover {
     color: $red;
   }
@@ -51,8 +52,15 @@ a {
   cursor: url(../images/pointer.cur), url(../images/pointer.cur), auto
 }
 
-.vditor-reset img {
-  vertical-align: sub;
+.vditor-reset {
+
+  img {
+    vertical-align: sub;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .ft__red {
@@ -70,6 +78,7 @@ a {
   &.item {
     transform: translateY(30px);
     transition: transform 2s cubic-bezier(.175, .885, .32, 1.275);
+
     &--active {
       transform: translate(0);
     }
@@ -84,6 +93,7 @@ a {
     padding: 15px;
     color: $black;
     display: block;
+
     &:hover {
       background-color: #fff;
     }
@@ -112,6 +122,7 @@ a {
       border-bottom: 1px solid #ddd;
       background-color: rgba(255, 255, 255, 0.8);
       line-height: 20px;
+
       a {
         padding: 15px 15px;
         display: block;
@@ -130,6 +141,7 @@ a {
 // form
 .form {
   position: relative;
+
   &__input {
     border: 1px solid $purple;
     height: 30px;
@@ -159,18 +171,22 @@ a {
     background-image: url(../images/background2.jpg);
     animation-delay: 6s;
   }
+
   &--2 {
     background-image: url(../images/background3.jpg);
     animation-delay: 12s;
   }
+
   &--3 {
     background-image: url(../images/background4.jpg);
     animation-delay: 18s;
   }
+
   &--4 {
     background-image: url(../images/background5.jpg);
     animation-delay: 24s;
   }
+
   &--5 {
     background-image: url(../images/background6.jpg);
     animation-delay: 30s;
@@ -329,6 +345,7 @@ a {
 
 .breadcrumb {
   color: $purple !important;
+
   &:hover {
     color: $black !important;
   }
@@ -340,6 +357,7 @@ a {
   color: #fff;
   padding: 15px;
   margin-bottom: 30px;
+
   a {
     color: $purple;
   }
@@ -375,6 +393,7 @@ a {
       text-align: center;
       font-size: 24px;
       font-weight: 500;
+
       a {
         color: rgba(10, 10, 0, 0.7);
         padding: 0 15px;
@@ -452,6 +471,7 @@ a {
 // comment
 .comments {
   position: relative;
+
   &__item {
     border-radius: 5px;
     list-style: none;
@@ -494,6 +514,7 @@ a {
     a {
       font-weight: 700;
       color: $black;
+
       &:hover {
         color: $red;
       }
@@ -564,6 +585,7 @@ a {
 
 .form {
   width: 100%;
+
   input,
   textarea {
     border: 1px solid #d1d5da;
@@ -615,6 +637,7 @@ a {
 
 .article__relevant {
   margin-bottom: 30px;
+
   .module {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
@@ -625,6 +648,7 @@ a {
 @media (max-width: 768px) {
   .mobile__hidden {
     display: none;
+
     &.fn__none {
       display: block;
     }
@@ -643,16 +667,19 @@ a {
 
   .article-list {
     overflow: hidden;
+
     .item {
       &__title {
         font-size: 20px;
       }
+
       &__date--m {
         text-align: center;
         margin-bottom: 10px;
         color: $black;
         display: block;
       }
+
       &__date {
         display: none;
       }
@@ -758,6 +785,7 @@ a {
   .article__relevant {
     display: block;
     margin-bottom: 0;
+
     .module {
       margin-bottom: 15px;
     }

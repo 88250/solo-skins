@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.1.0.0, Mar 22, 2019
+ * @version 2.2.0.0, Jul 17, 2019
  */
 @import "../../../scss/reset";
 @import "../../../scss/usite";
@@ -350,23 +350,28 @@
     position: fixed;
     top: 90px;
     bottom: 60px;
+
     a {
       color: rgba(0, 0, 0, 0.54);
+
       &:hover {
         color: rgba(0, 0, 0, 0.68);
       }
     }
   }
+
   &__main {
     display: flex;
     flex-direction: column;
   }
+
   &__thumbnail {
     margin: 10px 0;
     background-position: center center;
     background-size: cover;
     flex: 1;
   }
+
   &__wrap {
     margin-right: -20px
   }
@@ -391,6 +396,7 @@
   &__item--small {
     width: 318px;
     margin-right: 20px;
+
     .article__thumbnail {
       background-image: none !important;
     }
@@ -463,6 +469,10 @@
 
   .vditor-reset {
     padding-bottom: 16px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 

@@ -20,7 +20,7 @@
  * skin metro-hot style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.2.0.0, Mar 22, 2019
+ * @version 2.3.0.0, Jul 17, 2019
  */
 @import "../../../scss/toc";
 @import "../../../scss/usite";
@@ -597,8 +597,10 @@ textarea {
   line-height: 54px;
   top: 5px;
   width: 105px;
+
   .icon-wechat {
     position: relative;
+
     canvas {
       position: absolute;
       right: 43px;
@@ -747,6 +749,10 @@ textarea {
   word-break: break-all;
   font-size: 14px;
   word-wrap: break-word;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .main > .vditor-reset {
@@ -997,7 +1003,7 @@ pre.prettyprint {
   .links-tile .text,
   .archives-tile .text,
   .most-comment .text,
-  .most-view .text{
+  .most-view .text {
     width: 580px;
   }
 
