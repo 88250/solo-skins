@@ -417,6 +417,11 @@ a {
   }
 }
 
+#articlePage .vditor-reset {
+  padding-bottom: 15px;
+  margin-bottom: -15px;
+}
+
 // pagination
 .pagination {
   &__item {

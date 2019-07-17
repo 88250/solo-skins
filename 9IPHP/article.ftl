@@ -77,7 +77,7 @@
                     </div>
                 </header>
 
-                <div class="vditor-reset">
+                <div class="vditor-reset post__content">
                 ${article.articleContent}
                             <#if "" != article.articleSign.signHTML?trim>
                                 <div>

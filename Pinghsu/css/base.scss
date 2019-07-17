@@ -394,6 +394,10 @@ a:active, a:focus, a:hover {
 }
 
 .post {
+  .vditor-reset {
+    padding-bottom: 15px;
+  }
+
   &__fix {
     position: fixed;
     box-sizing: border-box;

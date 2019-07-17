@@ -29,6 +29,10 @@
 @import "../../../scss/function";
 @import "vditor/src/assets/scss/classic";
 
+.vditor-reset--article {
+    padding-bottom: 10px;
+}
+
 .article__toc {
     position: fixed;
     top: 90px;
@@ -78,7 +82,7 @@ h4, h5, h6 {
 } 
 
 .article {
-    margin-bottom: 90px;
+    margin-bottom: 80px;
 }
 
 .article-title {

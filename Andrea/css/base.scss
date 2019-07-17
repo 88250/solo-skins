@@ -542,20 +542,9 @@ img {
 }
 
 /* article */
-//.vditor-reset {
-//    border-top: 2px dashed #F1EEE9;
-//    margin-top: 15px;
-//    overflow: hidden;
-//    padding: 20px 0 25px;
-//    line-height: 145%;
-//}
-//
-//.vditor-reset p:first-child:first-letter, .vditor-reset:first-letter{
-//    font-size: 48px;
-//    float: left;
-//    font-weight: bold;
-//    margin: 0 3px 3px 0;
-//}
+.vditor-reset--article {
+   padding-bottom: 20px;
+}
 
 .article-relative {
   margin: 15px 0;

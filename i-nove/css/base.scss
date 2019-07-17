@@ -326,6 +326,10 @@ h5 {
 .vditor-reset {
   line-height: 145%;
   padding: 5px 0 0 5px;
+
+  &--article {
+    padding-bottom: 7px;
+  }
 }
 
 .article-footer {

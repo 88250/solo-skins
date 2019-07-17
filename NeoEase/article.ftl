@@ -77,7 +77,7 @@
                             </a>
                         </div>
                         <div class="clear"></div>
-                        <div class="vditor-reset">
+                        <div class="vditor-reset vditor-reset--article">
                             ${article.articleContent}
                             <#if "" != article.articleSign.signHTML?trim>
                             <div>
@@ -85,7 +85,7 @@
                             </div>
                             </#if>
                         </div>
-                        <div class="article-element">
+                        <div class="article-element article-element--article">
                             <span class="tag-ico" title="${tagsLabel}">
                                 <#list article.articleTags?split(",") as articleTag>
                                 <a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">

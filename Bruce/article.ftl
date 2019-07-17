@@ -63,7 +63,7 @@
                             </div>
 
                             <div class="row article-content code-highlight">
-                                <div class="col-sm-12 vditor-reset" id="abstract${article.oId}">
+                                <div class="col-sm-12 vditor-reset vditor-reset--article" id="abstract${article.oId}">
                                     ${article.articleContent}
                                     <#if "" != article.articleSign.signHTML?trim>
                                     <p>

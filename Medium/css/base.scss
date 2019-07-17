@@ -459,7 +459,11 @@
 .post {
   max-width: 740px;
   margin: 50px auto 20px;
-  position: relative
+  position: relative;
+
+  .vditor-reset {
+    padding-bottom: 16px;
+  }
 }
 
 .post__main {

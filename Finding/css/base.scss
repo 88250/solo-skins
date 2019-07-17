@@ -214,21 +214,6 @@ code, tt {
   border-radius: 2px;
 }
 
-pre {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0 0 1.75em 0;
-  border: #E3EDF3 1px solid;
-  width: 100%;
-  padding: 10px;
-  font-family: Inconsolata, monospace, "Microsoft Yahei", 'Helvetica';
-  font-size: 0.9em;
-  white-space: pre;
-  overflow: auto;
-  background: #F7FAFB;
-  border-radius: 3px;
-}
-
 pre code, pre tt {
   font-size: inherit;
   white-space: pre-wrap;
@@ -777,6 +762,10 @@ article.post {
       top: 36px;
     }
   }
+}
+
+.post-content--article {
+  padding-bottom: 10px;
 }
 
 article.post:after {

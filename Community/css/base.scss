@@ -271,6 +271,9 @@ a.header-title {
 
 .vditor-reset {
   line-height: 145%;
+  &--article {
+    padding-bottom: 20px;
+  }
 }
 
 .vditor-reset a {
@@ -356,7 +359,11 @@ a.header-title {
   margin-right: 0px;
 }
 
-.article-detail-body .tags, #replyForm {
+.article-detail-body .tags {
+  margin-bottom: 20px;
+}
+
+#replyForm {
   margin: 20px 0;
 }
 

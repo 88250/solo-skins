@@ -491,6 +491,13 @@ textarea, input {
   font-size: 11px;
   line-height: 16px;
   margin: 12px 0;
+  &--article {
+    margin-top: 0;
+  }
+}
+
+.vditor-reset--article {
+  padding-bottom: 12px;
 }
 
 .article-element a {

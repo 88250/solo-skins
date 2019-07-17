@@ -76,7 +76,7 @@
                                 </div>
                             </div>
                             <div class="clear"></div>
-                            <div class="vditor-reset">
+                            <div class="vditor-reset vditor-reset--article">
                                 ${article.articleContent}
                                 <#if "" != article.articleSign.signHTML?trim>
                                 <div class="marginTop12">

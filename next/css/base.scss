@@ -688,15 +688,15 @@ img {
 
 .post-body {
   word-wrap: break-word;
+
+  &--article {
+    padding-bottom: 40px;
+  }
 }
 
 .post-body img {
   box-sizing: border-box;
   margin: auto;
-}
-
-.posts-expand .post-tags {
-  margin-top: 40px;
 }
 
 .posts-expand .post-tags a {
