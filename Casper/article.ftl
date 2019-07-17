@@ -74,8 +74,8 @@
             </h2>
         </div>
         <div class="item__cover" style="background-image: url(${article.articleImg1URL})"></div>
-        <div class="wrapper item__content item__content--article">
-            <section class="vditor-reset">
+        <div class="wrapper">
+            <section class="item__content item__content--article vditor-reset">
                 ${article.articleContent}
                 <#if "" != article.articleSign.signHTML?trim>
                     <div>
