@@ -20,14 +20,14 @@
  * skin next style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.2.0.0, Jul 17, 2019
+ * @version 2.2.1.0, Jul 19, 2019
  */
 @import "../../../scss/usite";
 @import "../../../scss/toc";
 @import "vditor/src/assets/scss/classic";
 
 .user__site {
-  float: left;
+  display: inline-block;
   height: 16px;
   line-height: 16px;
   border-bottom: 0;
