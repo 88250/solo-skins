@@ -85,11 +85,6 @@
                 <div class="article-main article-detail-body">
                     <h2 class="title">
                         <a href="${servePath}${article.articlePermalink}">${article.articleTitle}</a>
-                        <#if article.hasUpdated>
-                        <sup class="red">
-                            ${updatedLabel}
-                        </sup>
-                        </#if>
                         <#if article.articlePutTop>
                         <sup class="red">
                             ${topArticleLabel}

@@ -50,11 +50,6 @@
                     </span>
 
                     <h2>  
-                        <#if article.hasUpdated>
-                        <span>
-                            [${updatedLabel}]
-                        </span>
-                        </#if>
                         <#if article.articlePutTop>
                         <span>
                             [${topArticleLabel}]

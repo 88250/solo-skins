@@ -49,16 +49,11 @@
                 <header>
                     <h1 class="post__title">
                     ${article.articleTitle}
-                <#if article.articlePutTop>
-                    <sup>
-                        ${topArticleLabel}
-                    </sup>
-                </#if>
-                <#if article.hasUpdated>
-                    <sup>
-                        ${updatedLabel}
-                    </sup>
-                </#if>
+                    <#if article.articlePutTop>
+                        <sup>
+                            ${topArticleLabel}
+                        </sup>
+                    </#if>
                     </h1>
                 </header>
                 <section class="vditor-reset">

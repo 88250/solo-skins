@@ -42,11 +42,6 @@
                 <article>
                     <h1>
                         ${article.articleTitle}
-                        <#if article.hasUpdated>
-                        <sup class="red">
-                            ${updatedLabel}
-                        </sup>
-                        </#if>
                         <#if article.articlePutTop>
                         <sup class="red">
                             ${topArticleLabel}

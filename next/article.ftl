@@ -48,11 +48,6 @@
                                 ${topArticleLabel}
                             </sup>
                             </#if>
-                            <#if article.hasUpdated>
-                            <sup>
-                                ${updatedLabel}
-                            </sup>
-                            </#if>
                         </h1>
                         <div class="post-meta">
                             <span class="post-time">

@@ -48,11 +48,6 @@
                             ${topArticleLabel}
                         </sup>
                         </#if>
-                        <#if article.hasUpdated>
-                        <sup>
-                            ${updatedLabel}
-                        </sup>
-                        </#if>
                     </h2>
                     <time><span class="icon-date"></span> ${article.articleCreateDate?string("yyyy-MM-dd")}</time>
 

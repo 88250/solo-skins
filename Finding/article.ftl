@@ -47,11 +47,6 @@
                             <a rel="bookmark" href="${servePath}${article.articlePermalink}">
                                 ${article.articleTitle}
                             </a>
-                            <#if article.hasUpdated>
-                            <sup class="post-tip">
-                                ${updatedLabel}
-                            </sup>
-                            </#if>
                             <#if article.articlePutTop>
                             <sup class="post-tip">
                                 ${topArticleLabel}

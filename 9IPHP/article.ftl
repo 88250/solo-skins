@@ -50,11 +50,6 @@
                                         ${topArticleLabel}
                                     </sup>
                                 </#if>
-                                <#if article.hasUpdated>
-                                    <sup>
-                                        ${updatedLabel}
-                                    </sup>
-                                </#if>
                     </h1>
                     <div class="meta">
                                 <span class="vditor-tooltipped vditor-tooltipped__n" aria-label="${createDateLabel}">

@@ -62,11 +62,6 @@
                         ${topArticleLabel}
                     </sup>
                 </#if>
-                <#if article.hasUpdated>
-                    <sup>
-                        ${updatedLabel}
-                    </sup>
-                </#if>
             </h2>
             <#include "../../common-template/share.ftl">
         </div>

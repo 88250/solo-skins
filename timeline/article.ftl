@@ -56,11 +56,6 @@ ${topBarReplacement}
                             <a href="${servePath}${article.articlePermalink}">
                             ${article.articleTitle}
                             </a>
-                            <#if article.hasUpdated>
-                            <sup>
-                                ${updatedLabel}
-                            </sup>
-                            </#if>
                             <#if article.articlePutTop>
                             <sup>
                                 ${topArticleLabel}

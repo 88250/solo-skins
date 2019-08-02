@@ -48,11 +48,6 @@
                 ${topArticleLabel}
             </sup>
             </#if>
-            <#if article.hasUpdated>
-            <sup>
-                ${updatedLabel}
-            </sup>
-            </#if>
         </h2>
 
         <div class="ft__gray fn__clear">

@@ -66,11 +66,6 @@
                         ${topArticleLabel}
                     </sup>
                 </#if>
-                <#if article.hasUpdated>
-                    <sup>
-                        ${updatedLabel}
-                    </sup>
-                </#if>
             </h2>
         </div>
         <div class="item__cover" style="background-image: url(${article.articleImg1URL})"></div>

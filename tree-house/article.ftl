@@ -49,11 +49,6 @@
                                     <h2 class="marginBottom12">
                                         <a class="no-underline" href="${servePath}${article.articlePermalink}">
                                             ${article.articleTitle}
-                                            <#if article.hasUpdated>
-                                            <sup>
-                                                ${updatedLabel}
-                                            </sup>
-                                            </#if>
                                             <#if article.articlePutTop>
                                             <sup>
                                                 ${topArticleLabel}

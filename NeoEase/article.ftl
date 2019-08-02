@@ -45,11 +45,6 @@
                             <a class="article-title" href="${servePath}${article.articlePermalink}">
                                 ${article.articleTitle}
                             </a>
-                            <#if article.hasUpdated>
-                            <sup class="tip">
-                                ${updatedLabel}
-                            </sup>
-                            </#if>
                             <#if article.articlePutTop>
                             <sup class="tip">
                                 ${topArticleLabel}

@@ -48,11 +48,6 @@
                                 <a class="no-underline" href="${servePath}${article.articlePermalink}">
                                     ${article.articleTitle}
                                 </a>
-                                <#if article.hasUpdated>
-                                <sup class="red">
-                                    ${updatedLabel}
-                                </sup>
-                                </#if>
                                 <#if article.articlePutTop>
                                 <sup class="red">
                                     ${topArticleLabel}
