@@ -21,7 +21,7 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 2.5.0.0, Aug 2, 2019
+ * @version 2.6.0.0, Aug 2, 2019
  */
 @import "../../../scss/toc";
 @import "../../../scss/usite";
@@ -605,6 +605,19 @@ article header sup {
   font-size: 14px;
   font-weight: normal;
   color: #999;
+
+  a {
+    cursor: text;
+    color: #999;
+
+    &:hover {
+      color: #999;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
 }
 
 article header time {
@@ -988,7 +1001,7 @@ footer.footer .icon-goup:hover {
   }
 
   .side .avatar {
-   display: none;
+    display: none;
   }
 
   .side .content {

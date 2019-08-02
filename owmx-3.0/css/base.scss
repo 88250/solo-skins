@@ -29,7 +29,7 @@ Update: 	Dongxu Wang 2011-02-24
 /*
  * skin owmx-3.0 style
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.3.0.0, Jul 17, 2019
+ * @version 2.4.0.0, Aug 2, 2019
  */
 @import "../../../scss/toc";
 @import "vditor/src/assets/scss/classic";
@@ -146,6 +146,23 @@ h4 {
 sup {
   color: #444;
   top: -4px;
+}
+
+a.sup {
+  color: #444;
+  cursor: text;
+  font-size: 12.5px;
+
+  &:link {
+    color: #444;
+  }
+  &:hover {
+    color: #444;
+  }
+
+  &:visited {
+    color: #fff;
+  }
 }
 
 /* Header */

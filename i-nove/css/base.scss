@@ -20,7 +20,7 @@
  * skin i-nove style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.2.0.0, Jul 17, 2019
+ * @version 2.3.0.0, JAug 2, 2019
  */
 @import "../../../scss/toc";
 @import "../../../scss/reset";
@@ -277,6 +277,19 @@ h5 {
 
 .article-title sup {
   font-size: 12px;
+
+  a {
+    color: #555555;
+    cursor: text;
+
+    &:hover {
+      color: #555555;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
 }
 
 .article-title a {

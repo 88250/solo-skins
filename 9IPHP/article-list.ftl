@@ -31,9 +31,11 @@
                 </sup>
                 </#if>
                 <#if article.hasUpdated>
-                <sup>
-                    ${updatedLabel}
-                </sup>
+                    <sup>
+                        <a href="${servePath}${article.articlePermalink}">
+                            ${updatedLabel}
+                        </a>
+                    </sup>
                 </#if>
             </h1>
 

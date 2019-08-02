@@ -44,15 +44,15 @@
             </div>
 
             <h2 class="article-title">
-                <#if article.hasUpdated>
-                <span>
-                    [${updatedLabel}]
-                </span>
-                </#if>
                 <#if article.articlePutTop>
-                <span>
+                    <span>
                     [${topArticleLabel}]
-                </span>
+                    </span>
+                </#if>
+                <#if article.hasUpdated>
+                    <span>
+                        [${updatedLabel}]
+                    </span>
                 </#if>
                 <a rel="bookmark" title="${article.articleTitle}" href="${servePath}${article.articlePermalink}">
                     ${article.articleTitle}

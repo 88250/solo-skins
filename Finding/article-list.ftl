@@ -36,15 +36,17 @@
             <a rel="bookmark" href="${servePath}${article.articlePermalink}">
                 ${article.articleTitle}
             </a>
-            <#if article.hasUpdated>
-            <sup class="post-tip">
-                ${updatedLabel}
-            </sup>
-            </#if>
             <#if article.articlePutTop>
-            <sup class="post-tip">
-                ${topArticleLabel}
-            </sup>
+                <sup class="post-tip">
+                    ${topArticleLabel}
+                </sup>
+            </#if>
+            <#if article.hasUpdated>
+                <sup>
+                    <a class="post-tip" href="${servePath}${article.articlePermalink}">
+                        ${updatedLabel}
+                    </a>
+                </sup>
             </#if>
         </h2>
     </header>

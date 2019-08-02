@@ -36,9 +36,11 @@
                     </sup>
                     </#if>
                     <#if article.hasUpdated>
-                    <sup class="ft__red">
-                        ${updatedLabel}
-                    </sup>
+                        <sup>
+                            <a class="ft__red" href="${servePath}${article.articlePermalink}">
+                                ${updatedLabel}
+                            </a>
+                        </sup>
                     </#if>
                     <h2 class="item__title">
                         <a rel="bookmark" href="${servePath}${article.articlePermalink}">

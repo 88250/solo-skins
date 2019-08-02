@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.2.0.0, Jul 17, 2019
+ * @version 2.3.0.0, Aug 2, 2019
  */
 @import "../../../scss/reset";
 @import "../../../scss/usite";
@@ -441,6 +441,19 @@
     top: -6px;
     font-size: 12px;
     color: #03a87c;
+
+    a {
+      cursor: text;
+      color: #03a87c;
+
+      &:hover {
+        color: #03a87c;
+      }
+
+      &:visited {
+        color: #fff;
+      }
+    }
   }
 
   &__content {

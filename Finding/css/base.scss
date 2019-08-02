@@ -21,7 +21,7 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 2.4.0.0, Jul 17, 2019
+ * @version 2.5.0.0, Aug 2, 2019
  */
 @import "../../../scss/toc";
 @import "../../../scss/usite";
@@ -799,6 +799,15 @@ article.post:after {
   font-size: 1.3rem;
   white-space: nowrap;
   color: #9EABB3;
+  cursor: text;
+
+  &:hover {
+    color: #9EABB3;
+  }
+
+  &:visited {
+    color: #fff;
+  }
 }
 
 .post-excerpt p {

@@ -29,15 +29,17 @@
                 <a rel="bookmark" href="${servePath}${article.articlePermalink}" title="${tags1Label}${article.articleTags}">
                     ${article.articleTitle}
                 </a>
-                <#if article.hasUpdated>
-                <sup>
-                    ${updatedLabel}
-                </sup>
-                </#if>
                 <#if article.articlePutTop>
-                <sup>
-                    ${topArticleLabel}
-                </sup>
+                    <sup>
+                        ${topArticleLabel}
+                    </sup>
+                </#if>
+                <#if article.hasUpdated>
+                    <sup>
+                        <a href="${servePath}${article.articlePermalink}">
+                            ${updatedLabel}
+                        </a>
+                    </sup>
                 </#if>
             </h2>
             <div class="article-date">

@@ -36,9 +36,9 @@
             </sup>
             </#if>
             <#if article.hasUpdated>
-            <sup>
-                ${updatedLabel}
-            </sup>
+                <sup>
+                    ${updatedLabel}
+                </sup>
             </#if>
         </h2>
 

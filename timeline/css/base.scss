@@ -19,7 +19,7 @@
  * timeline skin style.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.2.0.0, Jul 17, 2019
+ * @version 2.3.0.0, Aug 2, 2019
  */
 @import "../../../scss/usite";
 @import "../../../scss/toc";
@@ -537,6 +537,13 @@ article .article-title {
 article .article-title > sup {
   color: #6599C6;
   font-size: 70%;
+  a {
+    color: #6599C6;
+    cursor: text;
+    &:visited {
+      color: #fff;
+    }
+  }
 }
 
 article .article-title a {

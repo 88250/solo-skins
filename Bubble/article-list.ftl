@@ -31,7 +31,9 @@
                 </#if>
                 <#if article.hasUpdated>
                     <sup>
+                        <a href="${servePath}${article.articlePermalink}">
                         ${updatedLabel}
+                        </a>
                     </sup>
                 </#if>
             </h2>

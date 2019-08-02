@@ -56,15 +56,17 @@
             <a rel="bookmark" class="no-underline" href="${servePath}${article.articlePermalink}">
                 ${article.articleTitle}
             </a>
-            <#if article.hasUpdated>
-            <sup class="red">
-                ${updatedLabel}
-            </sup>
-            </#if>
             <#if article.articlePutTop>
-            <sup class="red">
-                ${topArticleLabel}
-            </sup>
+                <sup>
+                    ${topArticleLabel}
+                </sup>
+            </#if>
+            <#if article.hasUpdated>
+                <sup>
+                    <a href="${servePath}${article.articlePermalink}">
+                        ${updatedLabel}
+                    </a>
+                </sup>
             </#if>
         </h2>
         <div class="vditor-reset">

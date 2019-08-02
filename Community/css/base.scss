@@ -20,7 +20,7 @@
  * skin community style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.3.0.0, Jul 17, 2019
+ * @version 2.4.0.0, Aug 2, 2019
  */
 @import "../../../scss/reset";
 @import "../../../scss/toc";
@@ -298,6 +298,20 @@ a.header-title {
 
 .article-main h2.title sup {
   font-size: 12px;
+
+  a {
+    cursor: text;
+    color: #555555;
+
+    &:hover {
+      color: #555555;
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
 }
 
 .read-more a {

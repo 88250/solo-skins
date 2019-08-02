@@ -19,7 +19,7 @@
  * skin neoease style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.2.0.0, Jul 17, 2019
+ * @version 2.3.0.0, Aug 2, 2019
  */
 @import "../../../scss/toc";
 @import "../../../scss/usite";
@@ -120,6 +120,19 @@ textarea, input {
 .tip {
   color: #D54E21;
   font-size: 11px;
+
+  &__sup {
+    cursor: text;
+    &:link {
+      color: #D54E21;
+    }
+    &:hover {
+      color: #D54E21;
+    }
+    &:visited {
+      color: #F9F9F9;
+    }
+  }
 }
 
 .em-span {

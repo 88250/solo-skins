@@ -19,7 +19,7 @@
  * @fileoverview timeline js.
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 1.0.1.2, Jun 6, 2013
+ * @version 1.1.0.0, Aug 2, 2019
  */
 var timeline = {
     _COLHA: 0,
@@ -249,12 +249,13 @@ var timeline = {
                             + Label.servePath + article.articlePermalink + '">'
                             + article.articleTitle + '</a>';
 
-                    if (article.hasUpdated) {
-                        articlesHTML += '<sup>' + Label.updatedLabel + '</sup>';
-                    }
-
                     if (article.articlePutTop) {
                         articlesHTML += '<sup>' + Label.topArticleLabel + '</sup>';
+                    }
+
+                    if (article.hasUpdated) {
+                        articlesHTML += '<sup><a href="'
+                          + Label.servePath + article.articlePermalink + '">' + Label.updatedLabel + '</a></sup>';
                     }
 
                     articlesHTML += '</h3><p>' + article.articleAbstract + '</p>'

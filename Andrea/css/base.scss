@@ -19,7 +19,7 @@
  * skin andrea style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.3.0.0, Jul 17, 2019
+ * @version 2.4.0.0, Aug 2, 2019
 */
 @import "../../../scss/toc";
 @import "vditor/src/assets/scss/classic";
@@ -190,7 +190,7 @@ img {
 /* main */
 .main-content {
   padding: 0 45px;
-  background-color: #D4D4D4;
+  background-color: #d9d7d4;
 }
 
 .main-content > h2 {
@@ -268,14 +268,14 @@ img {
   *line-height: 28px;
 }
 
-.article h2 a {
+.article h2 > a {
   color: #363636;
   font-size: 24px;
   line-height: 24px;
   text-decoration: none;
 }
 
-.article h2 a:hover {
+.article h2 > a:hover {
   color: #BE0700;
   text-decoration: underline;
 }
@@ -284,6 +284,17 @@ img {
   color: #BE0700;
   font-size: 10px;
   vertical-align: top;
+  a {
+    text-decoration: none;
+    cursor: text;
+    vertical-align: top;
+    &:hover {
+      color:  #BE0700;
+    }
+    &:visited {
+      color: #d9d7d4;
+    }
+  }
 }
 
 .article-abstract {
@@ -544,6 +555,7 @@ img {
 /* article */
 .vditor-reset--article {
   padding-bottom: 20px;
+  margin-top: 20px;
 
   &::-webkit-scrollbar {
     display: none;
@@ -681,7 +693,7 @@ h2.comment-label {
 #tagsPanel a {
   display: block;
   float: left;
-  border: 1px solid #D4D4D4;
+  border: 1px solid #d9d7d4;
 }
 
 #tagsPanel a:hover {

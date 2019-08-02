@@ -20,7 +20,7 @@
  * skin favoutite style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.3.0.0, Jul 17, 2019
+ * @version 2.4.0.0, Aug 2, 2019
  */
 @import "../../../scss/reset";
 @import "../../../scss/toc";
@@ -272,6 +272,19 @@ img {
 
 .article-title sup {
   font-size: 12px;
+
+  a {
+    color: #000;
+    cursor: text;
+
+    &:hover {
+      color: #000;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
 }
 
 .article-title a {

@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.3.0.0, Jul 17, 2019
+ * @version 0.4.0.0, Aug 2, 2019
  */
 @import "../../../scss/reset";
 @import "../../../scss/usite";
@@ -518,7 +518,7 @@ a {
     }
 
     &__title {
-      a {
+      & > a {
         color: $black;
         font-size: 24px;
         line-height: 24px;
@@ -533,6 +533,19 @@ a {
         font-size: 12px;
         font-weight: normal;
         color: rgba($gray, 0.8);
+
+        a {
+          color: rgba($gray, 0.8);
+          cursor: text;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &:visited {
+            color: #fff;
+          }
+        }
       }
     }
 

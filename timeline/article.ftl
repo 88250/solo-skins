@@ -62,6 +62,7 @@ ${topBarReplacement}
                             </sup>
                             </#if>
                         </h2>
+                        <br>
                         <div class="vditor-reset">
                         ${article.articleContent}
                         </div>

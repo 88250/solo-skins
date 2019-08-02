@@ -20,7 +20,7 @@
  * skin next style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 2.2.1.0, Jul 19, 2019
+ * @version 2.3.0.0, Aug 2, 2019
  */
 @import "../../../scss/usite";
 @import "../../../scss/toc";
@@ -754,6 +754,16 @@ img {
   }
 }
 
+.post__sup {
+  cursor: text;
+  border-bottom: 0;
+  &:hover {
+    color: #555;
+  }
+  &:visited {
+    color: #fff;
+  }
+}
 /* end article */
 
 /* start comments */

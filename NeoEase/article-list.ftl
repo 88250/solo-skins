@@ -24,15 +24,17 @@
         <a rel="bookmark" class="article-title" href="${servePath}${article.articlePermalink}">
             ${article.articleTitle}
         </a>
-        <#if article.hasUpdated>
-        <sup class="tip">
-            ${updatedLabel}
-        </sup>
-        </#if>
         <#if article.articlePutTop>
-        <sup class="tip">
-            ${topArticleLabel}
-        </sup>
+            <sup class="tip">
+                ${topArticleLabel}
+            </sup>
+        </#if>
+        <#if article.hasUpdated>
+            <sup>
+                <a class="tip tip__sup" href="${servePath}${article.articlePermalink}">
+                ${updatedLabel}
+                </a>
+            </sup>
         </#if>
         </span>
         <span class="expand-ico" onclick="getArticle(this, '${article.oId}');"></span>

@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.3.0.0, Jul 17, 2019
+ * @version 0.4.0.0, Aug 2, 2019
 */
 @import "../../../scss/reset";
 @import "../../../scss/function";
@@ -346,6 +346,14 @@ a:active, a:focus, a:hover {
       background-color: #fff;
       position: absolute;
       width: 100%;
+
+      sup a {
+        cursor: text;
+
+        &:visited {
+          color: #fff;
+        }
+      }
     }
 
     &__abstract {
