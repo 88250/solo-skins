@@ -17,7 +17,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
-<div class="side">
+<div class="side fn__flex-column">
     <div class="overlay">
         <a onclick="$('.side .toc').show()" href="javascript:void(0)" class="toc-btn">${tocLabel}</a>
     </div>
@@ -25,7 +25,7 @@
     <div class="user__sites">
         <@userSite dir=""/>
     </div>
-    <header class="content">
+    <header class="content fn__flex-1">
         <a href="${servePath}">
             <img class="avatar" src="${adminUser.userAvatar}" title="${userName}"/>
         </a>
@@ -34,11 +34,9 @@
                 <a href="${servePath}">${blogTitle}</a>
             </h1>
         </hgroup>
-        <#if "" != noticeBoard>
         <p class="subtitle">
             ${blogSubtitle}
         </p>
-        </#if>
         <nav>
             <ul>
                 <#list pageNavigations as page>

@@ -21,10 +21,11 @@
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
  * @author <a href="http://88250.b3log.org">Liang Ding</a>
- * @version 2.4.0.0, Jul 17, 2019
+ * @version 2.5.0.0, Aug 2, 2019
  */
 @import "../../../scss/toc";
 @import "../../../scss/usite";
+@import "../../../scss/function";
 @import "vditor/src/assets/scss/classic";
 
 .vditor-reset::-webkit-scrollbar {
@@ -385,6 +386,11 @@ pre code, pre tt {
   background-color: #FFF;
   height: 100%;
   width: 300px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .vditor-reset,
   .vditor-reset a {
@@ -462,12 +468,7 @@ pre code, pre tt {
 }
 
 .side footer {
-  position: absolute;
-  bottom: 15px;
-  width: 228px;
   text-align: center;
-  left: 50%;
-  margin-left: -114px;
 }
 
 .side footer > div {
@@ -978,9 +979,16 @@ footer.footer .icon-goup:hover {
     position: relative;
     height: auto;
     width: 100%;
+    min-height: auto;
+
+    .user__sites {
+      position: relative;
+      top: 16px;
+    }
   }
+
   .side .avatar {
-    position: relative;
+   display: none;
   }
 
   .side .content {
@@ -989,18 +997,8 @@ footer.footer .icon-goup:hover {
   }
 
   .side .overlay {
-    height: 100px;
+    height: 104px;
     z-index: 0;
-  }
-
-  .side nav {
-    display: none;
-  }
-
-  .side footer {
-    position: initial;
-    margin: 10px auto;
-    padding-bottom: 16px;
   }
 
   main {
