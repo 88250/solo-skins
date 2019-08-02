@@ -21,8 +21,8 @@
     <#list articles as article>
     <dd class="article">
         <div class="date">
-            <div class="month">${article.articleCreateDate?string("MM")}</div>
-            <div class="day">${article.articleCreateDate?string("dd")}</div>
+            <div class="month">${article.articleUpdateDate?string("MM")}</div>
+            <div class="day">${article.articleUpdateDate?string("dd")}</div>
         </div>
         <div class="left">
             <h2>

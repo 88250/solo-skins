@@ -34,7 +34,7 @@
 
     <div class="row article-date">
         <#setting locale="en_US">
-        ${article.articleCreateDate?string("MMMM d, yyyy")}
+        ${article.articleUpdateDate?string("MMMM d, yyyy")}
         <#setting locale=localeString>
     </div>
 

@@ -51,7 +51,7 @@
 
             <div class="article__meta ft-gray fn-flex">
                 <time>
-                ${article.articleCreateDate?string("yyyy-MM-dd")}
+                ${article.articleUpdateDate?string("yyyy-MM-dd")}
                 </time> &nbsp;•&nbsp;
                 <a href="${servePath}${article.articlePermalink}#comments" class="ft-gray">
                     ${article.articleCommentCount} ${commentLabel}

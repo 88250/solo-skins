@@ -41,7 +41,7 @@
                 <span>
                     ${postTimeLabel}
                     <time>
-                        ${article.articleCreateDate?string("yyyy-MM-dd")}
+                        ${article.articleUpdateDate?string("yyyy-MM-dd")}
                     </time>
                 </span>
                 <span>

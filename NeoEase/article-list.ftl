@@ -43,7 +43,7 @@
             <#if article.hasUpdated>
             ${article.articleUpdateDate?string("yyyy-MM-dd HH:mm:ss")}
             <#else>
-            ${article.articleCreateDate?string("yyyy-MM-dd HH:mm:ss")}
+            ${article.articleUpdateDate?string("yyyy-MM-dd HH:mm:ss")}
             </#if>
         </span>
         <span class="user-ico" title="${authorLabel}">

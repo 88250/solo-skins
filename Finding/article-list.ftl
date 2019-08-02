@@ -61,7 +61,7 @@
                 ${articleTag}</a><#if articleTag_has_next>,</#if>
         </span>
         </#list>
-        <time>${article.articleCreateDate?string("yyyy-MM-dd")}</time>
+        <time>${article.articleUpdateDate?string("yyyy-MM-dd")}</time>
     </footer>
 </article>
 </#list>

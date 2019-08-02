@@ -35,8 +35,7 @@
             </sup>
             </#if>
         </h2>
-
-        <time><span class="icon-date"></span> ${article.articleCreateDate?string("yyyy-MM-dd")}</time>
+        <time><span class="icon-date"></span> ${article.articleUpdateDate?string("yyyy-MM-dd")}</time>
     </header>
     <section class="abstract vditor-reset">
         ${article.articleAbstract}

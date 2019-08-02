@@ -27,7 +27,7 @@
                 <div class="arrow"></div>
                 <time class="article-time">
                     <span>
-                        ${article.articleCreateDate?string("yy-MM-dd HH:mm")}
+                        ${article.articleUpdateDate?string("yy-MM-dd HH:mm")}
                     </span>
                 </time>
                 <h3 class="article-title">
