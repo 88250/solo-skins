@@ -50,7 +50,7 @@
             </svg>
 
             <div class="side__header">
-                <a href="${servePath}" rel="start"><img class="side__logo" src="${faviconURL}"></a>
+                <a href="${servePath}" rel="start"><img class="side__logo" src="${adminUser.userAvatar}"></a>
 
                 <div class="side__meta">
                     ${statistic.statisticPublishedBlogArticleCount} ${articleLabel} <br>
