@@ -40,16 +40,16 @@
             <#include "header.ftl">
             <div id="b">
                 <article>
-                    <h1>
+                    <h2 class="h2">
                         ${article.articleTitle}
                         <#if article.articlePutTop>
                         <sup class="red">
                             ${topArticleLabel}
                         </sup>
                         </#if>
-                    </h1>
+                    </h2>
                     <section class="meta">
-                        <p> 
+                        <p>
                             ${author1Label}<a rel="nofollow" href="${servePath}/authors/${article.authorId}">${article.authorName}</a> |
                             <#if article.hasUpdated>
                             ${updateDateLabel}:${article.articleUpdateDate?string("yyyy-MM-dd HH:mm:ss")}
@@ -59,14 +59,14 @@
                             ${viewCount1Label}<a rel="nofollow" href="${servePath}${article.articlePermalink}">
                                 <span class="left article-browserIcon" title="${viewLabel}"></span>
                                 ${article.articleViewCount}
-                            </a> | ${commentCount1Label}  
+                            </a> | ${commentCount1Label}
                             <a rel="nofollow" href="${servePath}${article.articlePermalink}#comments">
                                 <span class="left articles-commentIcon" title="${commentLabel}"></span>
                                 ${article.articleCommentCount}
                             </a>
                         </p>
                         <p>
-                            ${tags1Label} 
+                            ${tags1Label}
                             <#list article.articleTags?split(",") as articleTag>
                             <span>
                                 <a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">${articleTag}</a><#if articleTag_has_next>,</#if>
@@ -111,11 +111,11 @@
         page.loadRandomArticles();
         </#if>
         <#if 0 != relevantArticlesDisplayCount>
-        page.loadRelevantArticles('${article.oId}', '<h4>${relevantArticles1Label}</h4>');
+        page.loadRelevantArticles('${article.oId}', '<h4 class="h4">${relevantArticles1Label}</h4>');
         </#if>
         <#if 0 != externalRelevantArticlesDisplayCount>
         page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>");
         </#if>
-        </@comment_script>    
+        </@comment_script>
     </body>
 </html>

@@ -20,12 +20,12 @@
 <header class="main-header"<#if !isIndex> style='height:30vh;'</#if>>
     <div class="fn-vertical">
         <div class="main-header-content fn-wrap">
-            <h1 class="page-title">
+            <h2 class="page-title">
                 <a href="${servePath}">${blogTitle}</a>
             <#if "" != noticeBoard>
                 <small class="page-description"> &nbsp; ${blogSubtitle}</small>
             </#if>
-            </h1>
+            </h2>
             <h2 class="page-description">
             <#if "" != noticeBoard>
                 ${noticeBoard}

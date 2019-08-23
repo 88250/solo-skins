@@ -41,14 +41,14 @@
             <div class="content">
                 <article class="posts-expand">
                     <header class="post-header">
-                        <h1 class="post-title">
+                        <h2 class="post-title">
                             ${article.articleTitle}
                             <#if article.articlePutTop>
                             <sup>
                                 ${topArticleLabel}
                             </sup>
                             </#if>
-                        </h1>
+                        </h2>
                         <div class="post-meta">
                             <span class="post-time">
                                 ${postTimeLabel}
@@ -92,7 +92,7 @@
                             <#if nextArticlePermalink??>
                             <div class="post-nav-next post-nav-item fn-left">
                                 <a href="${servePath}${nextArticlePermalink}" rel="next" title="${nextArticleTitle}">
-                                   < ${nextArticleTitle} 
+                                   < ${nextArticleTitle}
                                 </a>
                             </div>
                             </#if>

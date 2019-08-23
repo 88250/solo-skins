@@ -19,14 +19,14 @@
 -->
 <aside>
     <nav>
-        <h4>Search</h4>
+        <h4 class="h4">Search</h4>
         <form action="${servePath}/search">
             <input style="width: 194px" id="search" type="text" name="keyword" />
             <input type="submit" value="" class="none" />
         </form>
     </nav>
     <nav>
-        <h4>Navigation</h4>
+        <h4 class="h4">Navigation</h4>
         <ul>
             <li>
                 <a rel="nofollow" class="home" href="${servePath}">${indexLabel}</a>
@@ -53,7 +53,7 @@
         </ul>
     </nav>
     <#if "" != noticeBoard>
-    <h4>${noticeBoardLabel}</h4>
+    <h4 class="h4">${noticeBoardLabel}</h4>
     <div id="c">
         <p>
             ${noticeBoard}
@@ -66,7 +66,7 @@
     <#else>
 
         <#if 0 != recentComments?size>
-        <h4>${recentCommentsLabel}</h4>
+        <h4 class="h4">${recentCommentsLabel}</h4>
         <ul class="aside-comments">
             <#list recentComments as comment>
             <li>
@@ -91,7 +91,7 @@
         </ul>
         </#if>
         <#if 0 != mostCommentArticles?size>
-        <h4>${mostCommentArticlesLabel}</h4>
+        <h4 class="h4">${mostCommentArticlesLabel}</h4>
         <ul id="mostCommentArticles">
             <#list mostCommentArticles as article>
             <li>
@@ -105,7 +105,7 @@
         </ul>
         </#if>
         <#if 0 != mostViewCountArticles?size>
-        <h4>${mostViewCountArticlesLabel}</h4>
+        <h4 class="h4">${mostViewCountArticlesLabel}</h4>
         <ul id="mostViewCountArticles">
             <#list mostViewCountArticles as article>
             <li>
@@ -120,7 +120,7 @@
         </#if>
 
         <#if 0 != mostUsedCategories?size>
-            <h4>${categoryLabel}</h4>
+            <h4 class="h4">${categoryLabel}</h4>
             <ul>
                 <#list mostUsedCategories as category>
                     <li>
@@ -133,7 +133,7 @@
         </#if>
 
         <#if 0 != mostUsedTags?size>
-        <h4>${tagsLabel}</h4>
+        <h4 class="h4">${tagsLabel}</h4>
         <ul class="navi-tags">
             <#list mostUsedTags as tag>
             <li>
@@ -145,7 +145,7 @@
         </ul>
         </#if>
         <#if 0 != links?size>
-        <h4>${linkLabel}</h4>
+        <h4 class="h4">${linkLabel}</h4>
         <ul id="sideLink" class="navi-tags">
             <#list links as link>
             <li>
@@ -160,7 +160,7 @@
         </ul>
         </#if>
         <#if 0 != archiveDates?size>
-        <h4><a href="${servePath}/archives.html">${archiveLabel}</a></h4>
+        <h4 class="h4"><a href="${servePath}/archives.html">${archiveLabel}</a></h4>
         <ul>
             <#list archiveDates as archiveDate>
                 <#if archiveDate_index < 10>

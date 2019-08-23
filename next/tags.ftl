@@ -38,11 +38,11 @@
                     <#list mostUsedCategories as category>
                         <article>
                             <header class="post-header">
-                                <h1>
+                                <h2>
                                     <a class="post-title" href="${servePath}/category/${category.categoryURI}">
                                         ${category.categoryTitle} (${category.categoryTagCnt})</a>
                                     <small>${category.categoryDescription}</small>
-                                </h1>
+                                </h2>
                             </header>
                         </article>
                     </#list>

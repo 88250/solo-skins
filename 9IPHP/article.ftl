@@ -41,7 +41,7 @@
         <main>
             <article class="post">
                 <header>
-                    <h1>
+                    <h2>
                         <a rel="bookmark" href="${servePath}${article.articlePermalink}">
                         ${article.articleTitle}
                         </a>
@@ -50,7 +50,7 @@
                                         ${topArticleLabel}
                                     </sup>
                                 </#if>
-                    </h1>
+                    </h2>
                     <div class="meta">
                                 <span class="vditor-tooltipped vditor-tooltipped__n" aria-label="${createDateLabel}">
                                     <i class="icon-date"></i>

@@ -47,14 +47,14 @@
         <div class="wrapper content">
             <article class="post">
                 <header>
-                    <h1 class="post__title">
+                    <h2 class="post__title">
                     ${article.articleTitle}
                     <#if article.articlePutTop>
                         <sup>
                             ${topArticleLabel}
                         </sup>
                     </#if>
-                    </h1>
+                    </h2>
                 </header>
                 <section class="vditor-reset">
                 ${article.articleContent}

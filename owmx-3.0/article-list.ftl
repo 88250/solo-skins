@@ -18,7 +18,7 @@
 
 -->
 <#list articles as article>
-<h1>
+<h2 class="h2">
     <a rel="bookmark" href="${servePath}${article.articlePermalink}">
         ${article.articleTitle}
     </a>
@@ -34,7 +34,7 @@
             </a>
         </sup>
     </#if>
-</h1>
+</h2>
 <div class="vditor-reset">${article.articleAbstract}</div>
 <section class="meta">
     <p>
@@ -48,14 +48,14 @@
         </#if> | ${viewCount1Label} <a rel="nofollow" href="${servePath}${article.articlePermalink}">
             <span class="left article-browserIcon" title="${viewLabel}"></span>
             ${article.articleViewCount}
-        </a> | ${commentCount1Label} 
+        </a> | ${commentCount1Label}
         <a rel="nofollow" href="${servePath}${article.articlePermalink}#comments">
             <span class="left articles-commentIcon" title="${commentLabel}"></span>
 	        ${article.articleCommentCount}
         </a>
     </p>
     <p>
-        ${tags1Label} 
+        ${tags1Label}
         <#list article.articleTags?split(",") as articleTag>
         <span>
             <a rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">

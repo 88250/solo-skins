@@ -21,7 +21,7 @@
     <#list articles as article>
     <article class="post-item">
         <header>
-            <h1>
+            <h2>
                 <a class="post-title-link"  rel="bookmark" href="${servePath}${article.articlePermalink}">
                     ${article.articleTitle}
                 </a>
@@ -37,7 +37,7 @@
                         </a>
                     </sup>
                 </#if>
-            </h1>
+            </h2>
 
             <div class="post-meta">
                 <span>

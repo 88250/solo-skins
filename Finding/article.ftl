@@ -43,7 +43,7 @@
             <main>
                 <article class="post fn-wrap">
                     <header>
-                        <h1 class="post-title">
+                        <h2 class="post-title">
                             <a rel="bookmark" href="${servePath}${article.articlePermalink}">
                                 ${article.articleTitle}
                             </a>
@@ -52,7 +52,7 @@
                                 ${topArticleLabel}
                             </sup>
                             </#if>
-                        </h1>
+                        </h2>
                         <section class="post-meta">
                             <#list article.articleTags?split(",") as articleTag>
                             <span>
@@ -138,7 +138,7 @@
             <#if 0 != relevantArticlesDisplayCount>
             page.loadRelevantArticles('${article.oId}', '<h4>${relevantArticles1Label}</h4>');
             </#if>
-             </@comment_script>    
+             </@comment_script>
         </div>
     </body>
 </html>
