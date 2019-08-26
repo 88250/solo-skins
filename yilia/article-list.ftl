@@ -19,8 +19,8 @@
 -->
 <#list articles as article>
 <article>
-    <header>
-        <h2>
+    <header class="fn__flex">
+        <h2 class="fn__flex-1">
             <a rel="bookmark" href="${servePath}${article.articlePermalink}">
                 ${article.articleTitle}
             </a>
@@ -42,14 +42,33 @@
     <section class="abstract vditor-reset">
         ${article.articleAbstract}
     </section>
-    <footer class="tags">
-        <span class="icon-tag"></span>  &nbsp;
-        <#list article.articleTags?split(",") as articleTag>
-        <a class="tag" rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-            ${articleTag}</a>
-        </#list>
-
-        <a rel="nofollow" href="${servePath}/authors/${article.authorId}">
+    <footer class="article__footer fn__flex">
+        <span class="icon-tag fn__flex-center"></span>
+        <span>&nbsp;&nbsp;&nbsp;</span>
+        <div class="tags fn__flex-1 fn__flex-center">
+            <#list article.articleTags?split(",") as articleTag>
+                <a class="tag" rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
+                    ${articleTag}</a>
+            </#list>
+        </div>
+        <span>&nbsp;&nbsp;&nbsp;</span>
+        <#if article.articleCommentCount != 0>
+            <a href="${servePath}${article.articlePermalink}#comments"
+               class="vditor-tooltipped__n vditor-tooltipped link fn__flex-center"
+               aria-label="${commentLabel}">
+                ${article.articleCommentCount}
+                <span class="icon-chat"></span>
+            </a>
+        </#if>
+        <#if article.articleViewCount != 0>
+            <a class="vditor-tooltipped__n vditor-tooltipped link fn__flex-center"
+               href="${servePath}${article.articlePermalink}"
+               aria-label="${viewLabel}">
+                ${article.articleViewCount}
+                <span class="icon-views"></span>
+            </a>
+        </#if>
+        <a rel="nofollow" href="${servePath}/authors/${article.authorId}" class="fn__flex-center">
             <img class="avatar" title="${article.authorName}" alt="${article.authorName}" src="${article.authorThumbnailURL}"/>
         </a>
     </footer>

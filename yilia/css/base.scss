@@ -250,11 +250,11 @@ pre code, pre tt {
 /* start common */
 @font-face {
   font-family: 'icomoon';
-  src: url('fonts/icomoon.eot?nqk4b3');
-  src: url('fonts/icomoon.eot?nqk4b3#iefix') format('embedded-opentype'),
-  url('fonts/icomoon.ttf?nqk4b3') format('truetype'),
-  url('fonts/icomoon.woff?nqk4b3') format('woff'),
-  url('fonts/icomoon.svg?nqk4b3#icomoon') format('svg');
+  src: url('fonts/icomoon.eot?g8w5p');
+  src: url('fonts/icomoon.eot?g8w5p#iefix') format('embedded-opentype'),
+  url('fonts/icomoon.ttf?g8w5p') format('truetype'),
+  url('fonts/icomoon.woff?g8w5p') format('woff'),
+  url('fonts/icomoon.svg?g8w5p#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -272,6 +272,22 @@ pre code, pre tt {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chat:before {
+  content: "\e906";
+}
+
+.icon-views:before {
+  content: "\e907";
+}
+
+.icon-github:before {
+  content: "\e900";
+}
+
+.icon-rss:before {
+  content: "\e901";
 }
 
 .icon-register:before {
@@ -312,14 +328,6 @@ pre code, pre tt {
 
 .icon-date:before {
   content: "\e905";
-}
-
-.icon-github:before {
-  content: "\e900";
-}
-
-.icon-rss:before {
-  content: "\e901";
 }
 
 .icon-wechat:before {
@@ -505,9 +513,10 @@ pre code, pre tt {
 }
 
 .side .article__toc {
-  padding: 0;
+  padding: 30px 0 0 0;
   height: 100%;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .side .toc .close {
@@ -587,7 +596,7 @@ article header:hover {
 article header h2 {
   margin: 0;
   font-size: 26px;
-  padding-right: 110px;
+  padding-right: 20px;
 }
 
 article header a {
@@ -595,6 +604,7 @@ article header a {
   margin-left: 0px;
   font-weight: 300;
   line-height: 35px;
+  word-break: break-all;
 }
 
 article header a:hover {
@@ -622,10 +632,8 @@ article header sup {
 
 article header time {
   font-size: 14px;
-  position: absolute;
-  right: 30px;
   color: #aaa;
-  top: 18px;
+  align-self: center;
 }
 
 article .abstract {
@@ -636,24 +644,32 @@ article .abstract {
   word-wrap: break-word
 }
 
-article footer {
-  padding: 20px 35px 0 0;
+.article__footer {
+  padding: 20px 0 0 0;
   margin: 30px 30px 20px 30px;
   border-top: 1px solid #ddd;
+
+  .avatar {
+    float: left;
+    width: 20px;
+    border-radius: 15px;
+    transition: all 0.2s ease-out 0s;
+  }
+
+  .link {
+    color: #b0a0aa;
+    margin-right: 20px;
+    font-size: 14px;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
 }
 
 .tags .tag:hover,
 article .abstract a:hover {
   opacity: 0.7;
-}
-
-.tags .avatar {
-  width: 20px;
-  border-radius: 10px;
-  right: 30px;
-  position: absolute;
-  bottom: 25px;
-  transition: all 0.2s ease-out 0s;
 }
 
 .share {
@@ -674,7 +690,7 @@ article .abstract a:hover {
   }
 }
 
-.tags .avatar:hover,
+article footer .avatar:hover,
 .share span:hover {
   transform: rotate(360deg);
   color: #333;
@@ -797,18 +813,15 @@ article.post {
   margin-top: 4px;
 }
 
-.post section.tags {
-  margin: 0;
-}
-
 .post header {
   padding-bottom: 0;
 }
 
 .post .share {
   padding: 10px 0 0 0;
-  margin-top: 15px;
   font-size: 14px;
+  margin: 30px 30px 20px 30px;
+  border-top: 1px solid #ddd;
 }
 
 .post aside a {
