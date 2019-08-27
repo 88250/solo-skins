@@ -38,7 +38,7 @@
         <#setting locale=localeString>
     </div>
 
-    <div class="row article-content">
+    <div class="row article-content vditor-reset">
         <div class="col-sm-12" id="abstract${article.oId}">
             ${article.articleAbstract}
         </div>
@@ -48,20 +48,20 @@
 
 <div class="row">
     <div class="col-sm-2"></div>
-    
+
     <div class="col-sm-4">
     <#if 1 < paginationCurrentPageNum>
     <#assign prePage = paginationCurrentPageNum - 1>
     <a class="btn btn-success" href="${servePath}${path}?p=${prePage}">Newer</a>
     </#if>
     </div>
-    
+
     <div class="col-sm-4 text-right">
     <#if paginationCurrentPageNum < paginationPageCount>
     <#assign nextPage = paginationCurrentPageNum + 1>
     <a class="btn btn-success" href="${servePath}${path}?p=${nextPage}">Older</a>
     </#if>
     </div>
-    
+
     <div class="col-sm-2"></div>
 </div>

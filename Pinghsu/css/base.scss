@@ -318,6 +318,11 @@ a:active, a:focus, a:hover {
       background-size: cover;
     }
 
+    &__sup {
+      position: absolute;
+      top: 7px;
+    }
+
     &__slant {
       transform: rotate(-10deg) translate(10px, -10px);
       opacity: .7;

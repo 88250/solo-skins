@@ -49,7 +49,7 @@
                     <span class="article-archive">
                         <#if "en" == localeString?substring(0, 2)>
                         ${archiveDate.monthName} ${archiveDate.archiveDateYear}
-                        <#else>   
+                        <#else>
                         ${archiveDate.archiveDateYear} ${yearLabel} ${archiveDate.archiveDateMonth} ${monthLabel}
                         </#if>
                     </span>
@@ -62,7 +62,7 @@
                         <div class="arrow"></div>
                         <time class="article-time">
                             <span>
-                                ${article.articleCreateDate?string("yy-MM-dd HH:mm")}
+                                ${article.articleUpdateDate?string("yy-MM-dd HH:mm")}
                             </span>
                         </time>
                         <h3 class="article-title">
@@ -108,10 +108,10 @@
                     </div>
                 </article>
                 <#if paginationCurrentPageNum != paginationPageCount && 0 != paginationPageCount && !article_has_next>
-                <div class="article-more" onclick="timeline.getNextPage(this, '${article.articleCreateDate?string("yyyy/MM")}')" data-page="${paginationCurrentPageNum}">${moreLabel}</div>
+                <div class="article-more" onclick="timeline.getNextPage(this, '${article.articleUpdateDate?string("yyyy/MM")}')" data-page="${paginationCurrentPageNum}">${moreLabel}</div>
                 </#if>
                 </#if>
-                </#list>    
+                </#list>
             </div>
             </#list>
         </div>

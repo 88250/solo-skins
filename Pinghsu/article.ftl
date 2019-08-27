@@ -41,16 +41,20 @@
     <div class="post wrapper wrapper--miner">
         <h2 class="item__title">
             <a rel="bookmark" href="${servePath}${article.articlePermalink}">
-            ${article.articleTitle}
+                ${article.articleTitle}
             </a>
             <#if article.articlePutTop>
-            <sup>
-                ${topArticleLabel}
-            </sup>
+                <sup>
+                    ${topArticleLabel}
+                </sup>
             </#if>
         </h2>
         <div class="ft__fade item__meta">
-            Published on
+            <#if article.articleCreateDate?datetime != article.articleUpdateDate?datetime>
+                Updated on
+            <#else>
+                Published on
+            </#if>
             <time>
                 <#setting locale="en_US">
                 ${article.articleUpdateDate?string["MMM d, yyyy"]}
@@ -64,25 +68,25 @@
             </#if>
         </div>
         <div class="item__tags">
-             <#list article.articleTags?split(",") as articleTag>
-                 <a rel="tag" class="tag tag--${articleTag_index}" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-                     <b># ${articleTag}</b>
-                 </a>
-             </#list>
+            <#list article.articleTags?split(",") as articleTag>
+                <a rel="tag" class="tag tag--${articleTag_index}" href="${servePath}/tags/${articleTag?url('UTF-8')}">
+                    <b># ${articleTag}</b>
+                </a>
+            </#list>
         </div>
         <div class="vditor-reset">
-        ${article.articleContent}
-        <#if "" != article.articleSign.signHTML?trim>
-            <div>
-                ${article.articleSign.signHTML}
-            </div>
-        </#if>
+            ${article.articleContent}
+            <#if "" != article.articleSign.signHTML?trim>
+                <div>
+                    ${article.articleSign.signHTML}
+                </div>
+            </#if>
         </div>
     </div>
     <div class="post__toc">
-    <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
-        <#include "../../common-template/toc.ftl"/>
-    </#if>
+        <#if article?? && article.articleToC?? && article.articleToC?size &gt; 0>
+            <#include "../../common-template/toc.ftl"/>
+        </#if>
     </div>
     <div class="body--gray post__gray">
         <div class="wrapper comment">
@@ -118,17 +122,17 @@
             </span>
             <span class="post__arrow">
                 <#if previousArticlePermalink??>
-                <a href="${servePath}${previousArticlePermalink}" rel="prev"
-                   class="vditor-tooltipped__n vditor-tooltipped"
-                   pjax-title="${previousArticleTitle}"
-                   aria-label="${previousArticleLabel}: ${previousArticleTitle}">←</a>
+                    <a href="${servePath}${previousArticlePermalink}" rel="prev"
+                       class="vditor-tooltipped__n vditor-tooltipped"
+                       pjax-title="${previousArticleTitle}"
+                       aria-label="${previousArticleLabel}: ${previousArticleTitle}">←</a>
                 </#if>
 
                 <#if nextArticlePermalink??>
-                 <a href="${servePath}${nextArticlePermalink}" rel="next"
-                    class="vditor-tooltipped__n vditor-tooltipped"
-                    pjax-title="${nextArticleTitle}"
-                    aria-label="${nextArticleLabel}: ${nextArticleTitle}">→</a>
+                    <a href="${servePath}${nextArticlePermalink}" rel="next"
+                       class="vditor-tooltipped__n vditor-tooltipped"
+                       pjax-title="${nextArticleTitle}"
+                       aria-label="${nextArticleLabel}: ${nextArticleTitle}">→</a>
                 </#if>
                 <a href="javascript:Util.goTop()" class="vditor-tooltipped__n vditor-tooltipped"
                    aria-label="${goTopLabel}">↑</a>
@@ -137,7 +141,7 @@
             </span>
         </div>
     </div>
-<#if pjax><!---- pjax {#pjax} end ----></#if>
+    <#if pjax><!---- pjax {#pjax} end ----></#if>
 </main>
 <#include "footer.ftl">
 

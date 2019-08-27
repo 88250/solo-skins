@@ -52,7 +52,7 @@
                                 </#if>
                     </h2>
                     <div class="meta">
-                                <span class="vditor-tooltipped vditor-tooltipped__n" aria-label="${createDateLabel}">
+                                <span class="vditor-tooltipped vditor-tooltipped__n" aria-label="<#if article.articleCreateDate?datetime != article.articleUpdateDate?datetime>${updateDateLabel}<#else>${createDateLabel}</#if>">
                                     <i class="icon-date"></i>
                                     <time>
                                     ${article.articleUpdateDate?string("yyyy-MM-dd")}

@@ -43,11 +43,7 @@
                 </#if>
             </h2>
             <div class="article-date">
-                <#if article.hasUpdated>
                 ${article.articleUpdateDate?string("yyyy HH:mm:ss")}
-                <#else>
-                ${article.articleCreateDate?string("yyyy HH:mm:ss")}
-                </#if>
                 by
                 <a rel="nofollow" class="underline" title="${article.authorName}" href="${servePath}/authors/${article.authorId}">
                     ${article.authorName}</a> |

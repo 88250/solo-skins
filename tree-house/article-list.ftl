@@ -38,11 +38,7 @@
     </div>
     <div class="left article-info">
         <div class="article-date">
-            <#if article.hasUpdated>
             ${article.articleUpdateDate?string("yyyy-MM-dd")}<br>${article.articleUpdateDate?string("HH:mm:ss")}
-            <#else>
-            ${article.articleCreateDate?string("yyyy-MM-dd")}<br>${article.articleCreateDate?string("HH:mm:ss")}
-            </#if>
         </div>
         <div class="article-comment">
             <a rel="nofollow" href="${servePath}${article.articlePermalink}#comments">

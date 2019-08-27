@@ -30,35 +30,36 @@
                 <div class="item__slant"></div>
                 <div class="item__slant item__slant--white"></div>
                 <div class="item__main">
-                    <#if article.articlePutTop>
-                    <sup class="ft__red">
-                        ${topArticleLabel}
-                    </sup>
-                    </#if>
-                    <#if article.hasUpdated>
-                        <sup>
-                            <a class="ft__red" href="${servePath}${article.articlePermalink}">
+                    <span class="item__sup">
+                        <#if article.articlePutTop>
+                            <sup class="ft__red">
+                            ${topArticleLabel}
+                            </sup>
+                        </#if>
+                        <#if article.hasUpdated>
+                            <sup class="ft__red">
                                 ${updatedLabel}
-                            </a>
-                        </sup>
-                    </#if>
+                            </sup>
+                        </#if>
+                    </span>
                     <h2 class="item__title">
                         <a rel="bookmark" href="${servePath}${article.articlePermalink}">
                             ${article.articleTitle}
                         </a>
                     </h2>
-                <#list article.articleTags?split(",") as articleTag>
-                    <#if articleTag_index == 0>
-                        <div class="ico ico--${article_index % 10}"></div>
-                        <#if article.category??>
-                        <a class="item__tag" href="${servePath}/category/${article.category.categoryURI}">${article.category.categoryTitle}</a>
-                        <#else>
-                        <a rel="tag" class="item__tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-                            ${articleTag}
-                        </a>
+                    <#list article.articleTags?split(",") as articleTag>
+                        <#if articleTag_index == 0>
+                            <div class="ico ico--${article_index % 10}"></div>
+                            <#if article.category??>
+                                <a class="item__tag"
+                                   href="${servePath}/category/${article.category.categoryURI}">${article.category.categoryTitle}</a>
+                            <#else>
+                                <a rel="tag" class="item__tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
+                                    ${articleTag}
+                                </a>
+                            </#if>
                         </#if>
-                    </#if>
-                </#list>
+                    </#list>
                 </div>
             </div>
         </article>
@@ -73,10 +74,10 @@
         </#if>
         <#list paginationPageNums as paginationPageNum>
             <#if paginationPageNum == paginationCurrentPageNum>
-            <span class="pagination__item pagination__item--current">${paginationPageNum}</span>
+                <span class="pagination__item pagination__item--current">${paginationPageNum}</span>
             <#else>
-            <a class="pagination__item"
-               href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a>
+                <a class="pagination__item"
+                   href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a>
             </#if>
         </#list>
         <#if paginationPageNums?last != paginationPageCount>

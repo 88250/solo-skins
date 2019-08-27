@@ -24,11 +24,7 @@
         <div class="article-abstract article-image">
             <div class="fn-clear">
                 <div class="article-date" data-ico="&#xe200;">
-                    <#if article.hasUpdated>
                     ${article.articleUpdateDate?string("yy-MM-dd HH:mm")}
-                    <#else>
-                    ${article.articleCreateDate?string("yy-MM-dd HH:mm")}
-                    </#if>  
                 </div>
                 <div class="fn-right">
                     <a rel="nofollow" data-ico="&#xe14e;" href="${servePath}${article.articlePermalink}#comments">

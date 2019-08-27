@@ -38,18 +38,10 @@
     </h2>
     <div class="posttime-blue">
         <div class="posttime-MY">
-            <#if article.hasUpdated>
             ${article.articleUpdateDate?string("yyyy-MM")}
-            <#else>
-            ${article.articleCreateDate?string("yyyy-MM")}
-            </#if>
         </div>
         <div class="posttime-D">
-            <#if article.hasUpdated>
             ${article.articleUpdateDate?string("dd")}
-            <#else>
-            ${article.articleCreateDate?string("dd")}
-            </#if>
         </div>
     </div>
     <div class="article-abstract">
