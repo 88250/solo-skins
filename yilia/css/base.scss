@@ -641,7 +641,9 @@ article .abstract {
   padding-right: 30px;
   padding-left: 30px;
   overflow: hidden;
-  word-wrap: break-word
+  word-wrap: break-word;
+  display: block;
+  color: rgba(0,0,0,0.6);
 }
 
 .article__footer {

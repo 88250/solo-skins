@@ -18,79 +18,86 @@
 
 -->
 <#list articles as article>
-<article>
-    <header class="fn__flex">
-        <h2 class="fn__flex-1">
-            <a rel="bookmark" href="${servePath}${article.articlePermalink}">
-                ${article.articleTitle}
+    <article>
+        <header class="fn__flex">
+            <h2 class="fn__flex-1">
+                <a rel="bookmark" href="${servePath}${article.articlePermalink}">
+                    ${article.articleTitle}
+                </a>
+                <#if article.articlePutTop>
+                    <sup>
+                        ${topArticleLabel}
+                    </sup>
+                </#if>
+                <#if article.hasUpdated>
+                    <sup>
+                        <a href="${servePath}${article.articlePermalink}">
+                            ${updatedLabel}
+                        </a>
+                    </sup>
+                </#if>
+            </h2>
+            <time><span class="icon-date"></span> ${article.articleUpdateDate?string("yyyy-MM-dd")}</time>
+        </header>
+        <#if article.articleAbstractText == ''>
+            <a class="abstract" href="${servePath}${article.articlePermalink}">
+               <img src="${article.articleImg1URL}"/>
             </a>
-            <#if article.articlePutTop>
-            <sup>
-                ${topArticleLabel}
-            </sup>
-            </#if>
-            <#if article.hasUpdated>
-                <sup>
-                    <a href="${servePath}${article.articlePermalink}">
-                        ${updatedLabel}
-                    </a>
-                </sup>
-            </#if>
-        </h2>
-        <time><span class="icon-date"></span> ${article.articleUpdateDate?string("yyyy-MM-dd")}</time>
-    </header>
-    <section class="abstract vditor-reset">
-        ${article.articleAbstract}
-    </section>
-    <footer class="article__footer fn__flex">
-        <span class="icon-tag fn__flex-center"></span>
-        <span>&nbsp;&nbsp;&nbsp;</span>
-        <div class="tags fn__flex-1 fn__flex-center">
-            <#list article.articleTags?split(",") as articleTag>
-                <a class="tag" rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
-                    ${articleTag}</a>
-            </#list>
-        </div>
-        <span>&nbsp;&nbsp;&nbsp;</span>
-        <#if article.articleCommentCount != 0>
-            <a href="${servePath}${article.articlePermalink}#comments"
-               class="vditor-tooltipped__n vditor-tooltipped link fn__flex-center"
-               aria-label="${commentLabel}">
-                ${article.articleCommentCount}
-                <span class="icon-chat"></span>
+        <#else>
+            <a class="abstract vditor-reset" href="${servePath}${article.articlePermalink}">
+                ${article.articleAbstractText}
             </a>
         </#if>
-        <#if article.articleViewCount != 0>
-            <a class="vditor-tooltipped__n vditor-tooltipped link fn__flex-center"
-               href="${servePath}${article.articlePermalink}"
-               aria-label="${viewLabel}">
-                ${article.articleViewCount}
-                <span class="icon-views"></span>
+        <footer class="article__footer fn__flex">
+            <span class="icon-tag fn__flex-center"></span>
+            <span>&nbsp;&nbsp;&nbsp;</span>
+            <div class="tags fn__flex-1 fn__flex-center">
+                <#list article.articleTags?split(",") as articleTag>
+                    <a class="tag" rel="tag" href="${servePath}/tags/${articleTag?url('UTF-8')}">
+                        ${articleTag}</a>
+                </#list>
+            </div>
+            <span>&nbsp;&nbsp;&nbsp;</span>
+            <#if article.articleCommentCount != 0>
+                <a href="${servePath}${article.articlePermalink}#comments"
+                   class="vditor-tooltipped__n vditor-tooltipped link fn__flex-center"
+                   aria-label="${commentLabel}">
+                    ${article.articleCommentCount}
+                    <span class="icon-chat"></span>
+                </a>
+            </#if>
+            <#if article.articleViewCount != 0>
+                <a class="vditor-tooltipped__n vditor-tooltipped link fn__flex-center"
+                   href="${servePath}${article.articlePermalink}"
+                   aria-label="${viewLabel}">
+                    ${article.articleViewCount}
+                    <span class="icon-views"></span>
+                </a>
+            </#if>
+            <a rel="nofollow" href="${servePath}/authors/${article.authorId}" class="fn__flex-center">
+                <img class="avatar" title="${article.authorName}" alt="${article.authorName}"
+                     src="${article.authorThumbnailURL}"/>
             </a>
-        </#if>
-        <a rel="nofollow" href="${servePath}/authors/${article.authorId}" class="fn__flex-center">
-            <img class="avatar" title="${article.authorName}" alt="${article.authorName}" src="${article.authorThumbnailURL}"/>
-        </a>
-    </footer>
-</article>
+        </footer>
+    </article>
 </#list>
 
 <#if 0 != paginationPageCount>
     <nav class="pagination">
         <#if 1 != paginationPageNums?first>
-        <a href="${servePath}${path}?p=${paginationPreviousPageNum}" class="extend">${previousPageLabel}</a>
-        <a class="page-num" href="${servePath}${path}">1</a> ...
+            <a href="${servePath}${path}?p=${paginationPreviousPageNum}" class="extend">${previousPageLabel}</a>
+            <a class="page-num" href="${servePath}${path}">1</a> ...
         </#if>
         <#list paginationPageNums as paginationPageNum>
-        <#if paginationPageNum == paginationCurrentPageNum>
-        <span class="current page-num">${paginationPageNum}</span>
-        <#else>
-        <a class="page-num" href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a>
-        </#if>
+            <#if paginationPageNum == paginationCurrentPageNum>
+                <span class="current page-num">${paginationPageNum}</span>
+            <#else>
+                <a class="page-num" href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a>
+            </#if>
         </#list>
         <#if paginationPageNums?last != paginationPageCount> ...
-        <a href="${servePath}${path}?p=${paginationPageCount}" class="page-num">${paginationPageCount}</a>
-        <a href="${servePath}${path}?p=${paginationNextPageNum}" class="extend">${nextPagePabel}</a>
+            <a href="${servePath}${path}?p=${paginationPageCount}" class="page-num">${paginationPageCount}</a>
+            <a href="${servePath}${path}?p=${paginationNextPageNum}" class="extend">${nextPagePabel}</a>
         </#if>
     </nav>
-    </#if>
+</#if>
