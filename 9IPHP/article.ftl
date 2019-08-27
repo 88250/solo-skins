@@ -55,7 +55,7 @@
                                 <span class="vditor-tooltipped vditor-tooltipped__n" aria-label="${createDateLabel}">
                                     <i class="icon-date"></i>
                                     <time>
-                                    ${article.articleCreateDate?string("yyyy-MM-dd")}
+                                    ${article.articleUpdateDate?string("yyyy-MM-dd")}
                                     </time>
                                 </span>
                         &nbsp; | &nbsp;

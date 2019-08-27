@@ -53,7 +53,7 @@
                             <span class="post-time">
                                 ${postTimeLabel}
                                 <time>
-                                    ${article.articleCreateDate?string("yyyy-MM-dd")}
+                                    ${article.articleUpdateDate?string("yyyy-MM-dd")}
                                 </time>
                             </span>
                             <span class="post-comments-count">

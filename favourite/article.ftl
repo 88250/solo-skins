@@ -56,18 +56,10 @@
                             </h2>
                             <div class="posttime-blue">
                                 <div class="posttime-MY">
-                                    <#if article.hasUpdated>
                                     ${article.articleUpdateDate?string("yyyy-MM")}
-                                    <#else>
-                                    ${article.articleCreateDate?string("yyyy-MM")}
-                                    </#if>
                                 </div>
                                 <div class="posttime-D">
-                                    <#if article.hasUpdated>
                                     ${article.articleUpdateDate?string("dd")}
-                                    <#else>
-                                    ${article.articleCreateDate?string("dd")}
-                                    </#if>
                                 </div>
                             </div>
                             <div class="article-abstract">
@@ -152,6 +144,6 @@
         <#if 0 != externalRelevantArticlesDisplayCount>
         page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>");
         </#if>
-        </@comment_script>    
+        </@comment_script>
     </body>
 </html>

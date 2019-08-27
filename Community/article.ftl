@@ -43,11 +43,7 @@
             <div class="marginBottom40">
                 <div class="article-header">
                     <div class="article-date">
-                        <#if article.hasUpdated>
                         ${article.articleUpdateDate?string("yyyy-MM-dd HH")}
-                        <#else>
-                        ${article.articleCreateDate?string("yyyy-MM-dd HH")}
-                        </#if>
                     </div>
                     <div class="arrow-right"></div>
                     <div class="clear"></div>
@@ -142,6 +138,6 @@
         <#if 0 != externalRelevantArticlesDisplayCount>
         page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>");
         </#if>
-        </@comment_script>    
+        </@comment_script>
     </body>
 </html>

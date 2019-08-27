@@ -55,11 +55,7 @@
                                             </sup>
                                             </#if>
                                             <span>
-                                                <#if article.hasUpdated>
                                                 ${article.articleUpdateDate?string("yyyy-MM-dd HH:mm:ss")}
-                                                <#else>
-                                                ${article.articleCreateDate?string("yyyy-MM-dd HH:mm:ss")}
-                                                </#if>
                                             </span>
                                         </a>
                                     </h2>
@@ -91,7 +87,7 @@
                                     </div>
                                     <div class="right">
                                         <span class="article-create-date left">
-                                            ${article.articleCreateDate?string("yyyy-MM-dd HH:mm:ss")}&nbsp;&nbsp;
+                                            ${article.articleUpdateDate?string("yyyy-MM-dd HH:mm:ss")}&nbsp;&nbsp;
                                         </span>
                                         <a rel="nofollow" href="${servePath}${article.articlePermalink}#comments" class="left">
                                             &nbsp;${article.articleCommentCount} ${commentLabel}&nbsp;&nbsp;
@@ -131,6 +127,6 @@
         <#if 0 != externalRelevantArticlesDisplayCount>
         page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>");
         </#if>
-        </@comment_script>    
+        </@comment_script>
     </body>
 </html>

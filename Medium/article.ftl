@@ -74,7 +74,7 @@
                 </footer>
                 <div class="post__share fn-clear">
                     <time class="ft-gray">
-                    ${article.articleCreateDate?string("yyyy-MM-dd")} •
+                    ${article.articleUpdateDate?string("yyyy-MM-dd")} •
                     </time>
                     <a class="post__view" href="${servePath}${article.articlePermalink}">
                     ${article.articleViewCount} ${viewLabel}</a>

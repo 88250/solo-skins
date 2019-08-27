@@ -42,14 +42,10 @@
                 <#include "header.ftl">
                 <div class="article-header">
                     <span class="article-date" data-ico="&#xe200;">
-                        <#if article.hasUpdated>
                         ${article.articleUpdateDate?string("yy-MM-dd HH:mm")}
-                        <#else>
-                        ${article.articleCreateDate?string("yy-MM-dd HH:mm")}
-                        </#if>
                     </span>
 
-                    <h2>  
+                    <h2>
                         <#if article.articlePutTop>
                         <span>
                             [${topArticleLabel}]
@@ -104,6 +100,6 @@
         <#if 0 != externalRelevantArticlesDisplayCount>
         MetroHot.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>");
         </#if>
-        </@comment_script>   
+        </@comment_script>
     </body>
 </html>

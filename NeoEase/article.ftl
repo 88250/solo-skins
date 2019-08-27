@@ -52,12 +52,8 @@
                             </#if>
                         </h2>
                         <div class="left article-element">
-                            <span class="date-ico" title="${dateLabel}">  
-                                <#if article.hasUpdated>
+                            <span class="date-ico" title="${dateLabel}">
                                 ${article.articleUpdateDate?string("yyyy-MM-dd HH:mm:ss")}
-                                <#else>
-                                ${article.articleCreateDate?string("yyyy-MM-dd HH:mm:ss")}
-                                </#if>
                             </span>
                             <span class="user-ico" title="${authorLabel}">
                                 <a rel="nofollow" href="${servePath}/authors/${article.authorId}">${article.authorName}</a>
@@ -93,7 +89,7 @@
                             <div class="right">
                                 <a href="${servePath}${nextArticlePermalink}">${nextArticle1Label}${nextArticleTitle}</a>
                             </div><div class="clear"></div>
-                            </#if>                            
+                            </#if>
                             <#if previousArticlePermalink??>
                             <div class="right">
                                 <a href="${servePath}${previousArticlePermalink}">${previousArticle1Label}${previousArticleTitle}</a>
@@ -126,6 +122,6 @@
         <#if 0 != externalRelevantArticlesDisplayCount>
         page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>");
         </#if>
-        </@comment_script>    
+        </@comment_script>
     </body>
 </html>

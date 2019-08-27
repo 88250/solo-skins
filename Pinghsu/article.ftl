@@ -53,7 +53,7 @@
             Published on
             <time>
                 <#setting locale="en_US">
-            ${article.articleCreateDate?string["MMM d, yyyy"]}
+                ${article.articleUpdateDate?string["MMM d, yyyy"]}
             </time>
             <#if article.category??>
                 in <a href="${servePath}/category/${article.category.categoryURI}">${article.category.categoryTitle}</a>

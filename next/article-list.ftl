@@ -41,6 +41,7 @@
 
             <div class="post-meta">
                 <span>
+                    ${article.articleCreateDate?string("yyyy-MM-dd")}
                     ${postTimeLabel}
                     <time>
                         ${article.articleUpdateDate?string("yyyy-MM-dd")}

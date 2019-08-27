@@ -44,8 +44,8 @@
                     <div class="main-content">
                         <div class="article">
                             <div class="date">
-                                <div class="month">${article.articleCreateDate?string("MM")}</div>
-                                <div class="day">${article.articleCreateDate?string("dd")}</div>
+                                <div class="month">${article.articleUpdateDate?string("MM")}</div>
+                                <div class="day">${article.articleUpdateDate?string("dd")}</div>
                             </div>
                             <div class="left">
                                 <h2 class="article-title">
@@ -57,11 +57,7 @@
                                     </#if>
                                 </h2>
                                 <div class="article-date">
-                                    <#if article.hasUpdated>
                                     ${article.articleUpdateDate?string("yyyy HH:mm:ss")}
-                                    <#else>
-                                    ${article.articleCreateDate?string("yyyy HH:mm:ss")}
-                                    </#if>
                                     by
                                     <a rel="nofollow" title="${article.authorName}" href="${servePath}/authors/${article.authorId}">
                                         ${article.authorName}</a> |
@@ -135,6 +131,6 @@
         <#if 0 != externalRelevantArticlesDisplayCount>
         page.loadExternalRelevantArticles("<#list article.articleTags?split(",") as articleTag>${articleTag}<#if articleTag_has_next>,</#if></#list>");
         </#if>
-        </@comment_script>    
+        </@comment_script>
     </body>
 </html>

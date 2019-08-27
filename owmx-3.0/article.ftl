@@ -51,11 +51,7 @@
                     <section class="meta">
                         <p>
                             ${author1Label}<a rel="nofollow" href="${servePath}/authors/${article.authorId}">${article.authorName}</a> |
-                            <#if article.hasUpdated>
                             ${updateDateLabel}:${article.articleUpdateDate?string("yyyy-MM-dd HH:mm:ss")}
-                            <#else>
-                            ${createDateLabel}:${article.articleCreateDate?string("yyyy-MM-dd HH:mm:ss")}
-                            </#if>
                             ${viewCount1Label}<a rel="nofollow" href="${servePath}${article.articlePermalink}">
                                 <span class="left article-browserIcon" title="${viewLabel}"></span>
                                 ${article.articleViewCount}

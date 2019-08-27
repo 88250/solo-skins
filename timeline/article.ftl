@@ -45,11 +45,7 @@ ${topBarReplacement}
                     <article class="article">
                         <time class="article-time">
                             <span>
-                                <#if article.hasUpdated>
-                                    ${article.articleUpdateDate?string("yy-MM-dd HH:mm")}
-                                <#else>
-                                    ${article.articleCreateDate?string("yy-MM-dd HH:mm")}
-                                </#if>
+                                ${article.articleUpdateDate?string("yy-MM-dd HH:mm")}
                             </span>
                         </time>
                         <h2 class="article-title">

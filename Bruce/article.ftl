@@ -58,7 +58,7 @@
 
                             <div class="row article-date">
                                 <#setting locale="en_US">
-                                ${article.articleCreateDate?string("MMMM d, yyyy")}
+                                ${article.articleUpdateDate?string("MMMM d, yyyy")}
                                 <#setting locale=localeString>
                             </div>
 
@@ -105,6 +105,6 @@
         <#if 0 != relevantArticlesDisplayCount>
         page.loadRelevantArticles('${article.oId}', '<h4>${relevantArticles1Label}</h4>');
         </#if>
-        </@comment_script>    
+        </@comment_script>
     </body>
 </html>
