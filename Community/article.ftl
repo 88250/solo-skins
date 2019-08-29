@@ -43,7 +43,7 @@
             <div class="marginBottom40">
                 <div class="article-header">
                     <div class="article-date">
-                        ${article.articleUpdateDate?string("yyyy-MM-dd HH:mm")}
+                        ${article.articleUpdateDate?string("yyyy-MM-dd")}
                     </div>
                     <div class="arrow-right"></div>
                     <div class="clear"></div>
