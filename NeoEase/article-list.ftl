@@ -41,7 +41,7 @@
         <span class="clear"></span>
     </h2>
     <div class="left article-element">
-        <span class="date-ico" title="${dateLabel}">  
+        <span class="date-ico" title="${dateLabel}">
             <#if article.hasUpdated>
             ${article.articleUpdateDate?string("yyyy-MM-dd HH:mm:ss")}
             <#else>
@@ -80,8 +80,8 @@
 <#if 0 != paginationPageCount>
 <div class="pagination">
     <#if 1 != paginationPageNums?first>
-    <a href="${servePath}${path}" title="${firstPageLabel}"><</a>
-    <a href="${servePath}${path}?p=${paginationPreviousPageNum}" title="${previousPageLabel}"><<</a>
+    <a href="${servePath}${path}" title="${firstPageLabel}"><<</a>
+    <a href="${servePath}${path}?p=${paginationPreviousPageNum}" title="${previousPageLabel}"><</a>
     </#if>
     <#list paginationPageNums as paginationPageNum>
     <#if paginationPageNum == paginationCurrentPageNum>
