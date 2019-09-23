@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 1.3.0.0, Aug 2, 2019
+ * @version 1.4.0.0, Sep 23, 2019
 */
 /* start common */
 @import "../../../scss/reset";
@@ -556,15 +556,18 @@ aside {
 }
 
 .post sup,
-.post sup  {
+.post sup {
   color: #aaa;
   font-weight: 300;
+
   a {
     color: #aaa;
     cursor: text;
+
     &:hover {
       color: #aaa;
     }
+
     &:visited {
       color: #fff;
     }
@@ -647,6 +650,50 @@ aside {
 
   .toc--current a {
     color: #ff4d3a
+  }
+}
+
+.article__share {
+  margin: 20px 0;
+  display: inline-block;
+  position: relative;
+
+  .item {
+    float: left;
+    text-align: center;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    color: #fdc200;
+    cursor: pointer;
+    transition: all .3s ease;
+    opacity: .86;
+
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+
+    &[data-type="wechat"] {
+      color: #3caf36;
+    }
+
+    &[data-type="twitter"] {
+      color: #18a3fa;
+    }
+
+    &[data-type="weibo"] {
+      color: #f93;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &__qr {
+      position: absolute;
+      top: 33px;
+      left: 60px;
+    }
   }
 }
 
@@ -791,6 +838,10 @@ aside {
 
   .responsive .list li.current {
     background-color: #eee;
+  }
+
+  .post {
+    padding: 10px;
   }
 }
 
