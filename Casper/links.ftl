@@ -49,6 +49,7 @@
         </div>
     </div>
     <#if pjax><!---- pjax {#pjax} end ----></#if>
+</div>
 <#include "footer.ftl">
 </body>
 </html>
