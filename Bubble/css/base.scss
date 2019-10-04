@@ -19,7 +19,7 @@
  * skin style
  *
  * @author <a href="http://vanessa.b3log.org">Liyuan Li</a>
- * @version 0.4.0.0, Aug 2, 2019
+ * @version 0.4.1.0, Oct 4, 2019
  */
 @import "../../../scss/reset";
 @import "../../../scss/usite";
@@ -431,7 +431,6 @@ a {
         padding: 0 10px 0 20px;
         overflow: hidden;
         white-space: nowrap;
-        text-overflow: ellipsis;
 
         &:after {
           display: inline-block;
