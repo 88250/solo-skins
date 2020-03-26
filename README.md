@@ -1,3 +1,5 @@
+**该仓库已废弃，最新的官方皮肤已经在 [Solo 项目中自带](https://github.com/88250/solo/tree/master/src/main/resources/skins)。**
+
 # Solo 官方皮肤
 
 ## 简介
